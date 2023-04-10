@@ -1,26 +1,74 @@
 
-\chapter{Methodology}
+\chapter{Perimeter Guarding}
 \thispagestyle{myheadings}
 
-The process of data collection began with analysis of the physical principles underlying optical light emission.
+\section{Perimeter Guarding with Homogeneous Defenders}
 
-\section{The Various Types of Light}
+\subsection{Introduction}
+\input{chapters/opg/01-introduction}
+\subsection{The Optimal Perimeter Guarding Problem}
+\input{chapters/opg/02-problem-statement}
 
-Depending on the energy of a photon, it may be referred to as ``light'' (in the case of optical photons) or as something else -- for example, a gamma ray. By convention, there are many names for these particles.
+\subsection{Structural Analysis}\label{section:opgext-analysis}
+\input{chapters/opg/03-structure-analysis}
 
-\subsection{Low-energy photons}
+\subsection{Efficient Algorithms for Perimeter Guarding}\label{section:opgext-opg-algorithm}
+\input{chapters/opg/04-algorithm}
 
-The lowest energy electromagnetic radiation is carried by radio waves.
+\subsection{Performance Evaluation and Applications}\label{section:opgext-opg-evaluation}
+\input{chapters/opg/05-evaluation}
 
-\subsection{Intermediate-energy photons}
+\subsection{Conclusion and Discussion}\label{section:opgext-opg-conclusion}
+\input{chapters/opg/06-conclusion}
 
-These include several types of radiation, including the usually-harmful \gls{uv}.
 
-\subsubsection{Microwaves}
 
-Microwaves have wavelengths on the order of \SI{1e-2}{\meter}, or a few \si{\centi\meter}.
 
-\subsubsection{Visible light}
 
-Visible light is that which is detectable by the human eye, with wavelengths about \SIrange{380}{750}{\nano\meter}.
 
+
+
+\section{Perimeter Guarding with Heterogeneous Defenders}
+
+\def\R{\mathcal R}
+\def\C{\mathcal C}
+\def\S{\mathcal S}
+\def\P{\mathcal P}
+\def\G{\mathcal G}
+\def\W{\mathcal W}
+\def\opg{{\sc {OPG}}\xspace}
+\def\opglr{{\sc {OPG${}_{LR}$}}\xspace}
+\def\opglrd{{\sc {D-OPG${}_{LR}$}}\xspace}
+\def\opgmc{{\sc {OPG${}_{MC}$}}\xspace}
+
+\newcommand{\argmin}[1]{\underset{#1}{\operatorname{arg}\,\operatorname{min}}\;}
+\newcommand{\argmax}[1]{\underset{#1}{\operatorname{arg}\,\operatorname{max}}\;}
+
+\def\twopart{\textbf{\textsc{Partition}}\xspace}
+\def\tpart{\textbf{\textsc{$3$-Partition}}\xspace}
+\def\ttkp{\textbf{\textsc{Knapsack}}\xspace}
+\def\ttukp{\textbf{\textsc{Unbounded Knapsack}}\xspace}
+\def\ttbp{\textbf{\textsc{Bin Packing}}\xspace}
+\def\subsetsum{\textbf{\textsc{Subset Sum}}\xspace}
+
+\subsection{Introduction}\label{sec:opgext-intro}
+\input{chapters/opg-ext/texs/01-intro}
+
+\subsection{Preliminaries}\label{sec:opgext-problem}
+\input{chapters/opg-ext/texs/02-problem}
+
+\subsection{Computational Complexity for Variable Number of Robot Types}\label{sec:opgext-hardness}
+\input{chapters/opg-ext/texs/03-hardness}
+
+% \section{Exact Algorithm via Dynamic Programming}\label{sec:algorithm}
+\subsection{Exact Algorithms for \opglr and \opgmc}\label{sec:opgext-algorithm}
+\input{chapters/opg-ext/texs/04-algorithm}
+
+%\section{Experimental Studies}\label{sec:experiments}
+%\input{texs/05-experiments}
+
+\subsection{Performance Evaluation and Applications}\label{sec:opgext-application}
+\input{chapters/opg-ext/texs/09-applications}
+
+\subsection{Conclusion and Discussions}\label{sec:opgext-conclusion}
+\input{chapters/opg-ext/texs/10-conclusion}

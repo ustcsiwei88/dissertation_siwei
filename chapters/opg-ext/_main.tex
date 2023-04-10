@@ -1,0 +1,261 @@
+\documentclass{article}
+\usepackage[letterpaper,top=1in,bottom=1in,left=1in,right=1in]{geometry}
+
+%\documentclass[letterpaper, 10 pt, conference]{formatting/ieeeconf}
+%\IEEEoverridecommandlockouts                              % This command is only needed if 
+                                                            % you want to use the \thanks command
+%\overrideIEEEmargins                                      % Needed to meet printer requirements.
+\pdfminorversion=4			% ICRA standard
+\let\labelindent\relax
+\usepackage{amsfonts}       % An extended set of fonts for use in mathematics
+\let\proof\relax
+\let\endproof\relax
+\usepackage{amsthm}
+\usepackage{mathtools}      % Loads amsmath
+\usepackage{amssymb}        % provides AMS fonts and symbols ex. \mathbb{...}
+\usepackage{filecontents}
+\usepackage{graphicx}       % enhanced support for graphics
+\usepackage{marginnote}     % Add notes
+\usepackage{marvosym}       % mvat
+\usepackage{overpic}        % Add text on figures
+\usepackage{tabularx}
+\usepackage{cite}
+\usepackage{color}
+\usepackage[linesnumbered,algoruled,boxed,lined]{algorithm2e}
+\usepackage[normalem]{ulem}
+\usepackage{epstopdf}
+
+\usepackage{enumitem}
+\usepackage[normalem]{ulem}
+\usepackage{lipsum}
+\usepackage{comment}
+\usepackage{url}
+
+\usepackage{diagbox}
+\usepackage{multirow}
+\usepackage[dvipsnames]{xcolor}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Side comments   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newif\ifdraft
+\draftfalse
+
+\newif\ifoc % Single column?
+\octrue
+
+\ifdraft
+\usepackage[paperheight=11in,paperwidth=9.5in,
+			left=1.25in,right=1.25in,
+			top=0.75in,bottom=0.75in,
+			heightrounded,marginparwidth=1.2in,
+			marginparsep=0.05in]{geometry}
+\usepackage{xcolor}
+\usepackage{xargs} 
+\usepackage[textsize=footnotesize]{todonotes}
+\newcommandx{\nt}[2][1=]{\todo[linecolor=red,
+			backgroundcolor=red!10,bordercolor=red,#1]{#2}}
+\newcommandx{\jy}[2][1=]{\todo[linecolor=green,
+			backgroundcolor=green!10,bordercolor=green,#1]{JY: #2}}
+\newcommandx{\sw}[2][1=]{\todo[linecolor=blue,
+			backgroundcolor=blue!10,bordercolor=blue,#1]{SW: #2}}
+\else
+\newcommand{\nt}[1]{{}}
+\newcommand{\jg}[1]{{}}
+\newcommand{\jy}[1]{{}}
+\newcommand{\sw}[1]{{}}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Spacing related commands.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newif\iftwocolumn
+\twocolumntrue
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Spacing related commands.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Space between figure and caption
+%\setlength{\abovecaptionskip}{0pt}
+%\setlength{\belowcaptionskip}{0pt}
+
+% Space between text and figs
+%\setlength{\dbltextfloatsep}{5pt plus .5pt minus .5pt}
+%\setlength{\textfloatsep}{5pt plus .5pt minus .5pt}
+%\setlength{\intextsep}{8pt plus .5pt minus .5pt}
+
+% Space between equations and text
+%\setlength{\belowdisplayskip}{3pt} \setlength{\belowdisplayshortskip}{3pt}
+%\setlength{\abovedisplayskip}{4pt} \setlength{\abovedisplayshortskip}{4pt}
+
+% Paragraph formatting 
+\setlength{\parskip}{1.5pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Environments and Theorems
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{observation}{Observation}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{theorem}{Theorem}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Algorithm2e setup
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\SetKwProg{Fn}{Function}{}{}
+\SetKwComment{Comment}{$\triangleright$\ }{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Edits
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\changed}[1]{\textcolor{black}{#1}}
+\def\ch#1#2{\sout{#1}\,\textcolor{blue}{#2}}
+\newcommand{\JY}[1]{\textcolor{red}{JY: #1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Adjusted indentation of subsubsections
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\def\subsubsection{\@startsection{subsubsection}% name
+                                 {3}% level
+                                 {\z@ \hspace*{1mm}}% indent (formerly \parindent)
+                                 {0ex plus 0.1ex minus 0.1ex}% before skip
+                                 {0ex}% after skip
+                                 {\normalfont\normalsize\itshape}}% style
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commands / Notation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\R{\mathcal R}
+\def\C{\mathcal C}
+\def\S{\mathcal S}
+\def\P{\mathcal P}
+\def\G{\mathcal G}
+\def\W{\mathcal W}
+\def\opg{{\sc {OPG}}\xspace}
+\def\opglr{{\sc {OPG${}_{LR}$}}\xspace}
+\def\opglrd{{\sc {D-OPG${}_{LR}$}}\xspace}
+\def\opgmc{{\sc {OPG${}_{MC}$}}\xspace}
+
+\newcommand{\argmin}[1]{\underset{#1}{\operatorname{arg}\,\operatorname{min}}\;}
+\newcommand{\argmax}[1]{\underset{#1}{\operatorname{arg}\,\operatorname{max}}\;}
+
+\def\twopart{\textbf{\textsc{Partition}}\xspace}
+\def\tpart{\textbf{\textsc{$3$-Partition}}\xspace}
+\def\ttkp{\textbf{\textsc{Knapsack}}\xspace}
+\def\ttukp{\textbf{\textsc{Unbounded Knapsack}}\xspace}
+\def\ttbp{\textbf{\textsc{Bin Packing}}\xspace}
+\def\subsetsum{\textbf{\textsc{Subset Sum}}\xspace}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{%\Large \bf
+Optimal Perimeter Guarding with Heterogeneous Robot Teams: 
+Complexity Analysis and Effective Algorithms
+}
+\author{
+Si Wei Feng  \qquad Jingjin Yu
+\thanks{
+S.-W. Feng and J. Yu are with the Department of Computer Science, 
+Rutgers, the State University of New Jersey, Piscataway, NJ, 
+USA. E-Mails: \{{\tt siwei.feng, jingjin.yu}\}\hspace*{.25em}
+\MVAt \hspace*{.25em}rutgers.edu. 
+%This work is supported by NSF awards IIS-1734419 and IIS-1845888.
+}
+}
+%\thanks{
+%This work is supported by NSF awards IIS-1617744 and IIS-1734419. 
+%Opinions or findings expressed here do not reflect the views of the sponsor.
+%}% <-this % stops a space
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Latex editing related instructions for draft mode
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifdraft
+\begin{picture}(0,0)%
+\put(-12,105){
+\framebox(505,40){\parbox{\dimexpr2\linewidth+\fboxsep-\fboxrule}{
+\textcolor{blue}{
+The file is formatted to look identical to the final compiled IEEE 
+conference PDF, with additional margins added for making margin 
+notes. Use $\backslash$todo$\{$...$\}$ for general side comments
+and $\backslash$jy$\{$...$\}$ for JJ's comments. Set 
+$\backslash$drafttrue to $\backslash$draftfalse to remove the 
+formatting. 
+}}}}
+\end{picture}
+\vspace*{-4mm}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Main text
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+We perform structural and algorithmic studies of significantly generalized
+versions of the optimal perimeter guarding (\opg) problem 
+\cite{FenHanGaoYu19RSS}. As compared with the original \opg  where robots 
+are uniform, in this paper, many mobile robots with heterogeneous sensing 
+capabilities are to be deployed to optimally guard a set of one-dimensional 
+segments. Two complimentary formulations are investigated where one limits 
+the number of available robots (\opglr) and the other seeks to minimize 
+the total deployment cost (\opgmc). In contrast to the original \opg which 
+admits low-polynomial time solutions, both \opglr and \opgmc are 
+computationally intractable with \opglr being strongly NP-hard. Nevertheless, 
+we develop fairly scalable pseudo-polynomial time algorithms for practical, 
+fixed-parameter subcase of \opglr; we also develop pseudo-polynomial time 
+algorithm for general \opgmc and polynomial time algorithm for the fixed-parameter
+\opgmc case. The applicability and effectiveness of selected 
+algorithms are demonstrated through extensive numerical experiments.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+\input{texs/01-intro}
+
+\section{Preliminaries}\label{sec:problem}
+\input{texs/02-problem}
+
+\section{Computational Complexity for Variable Number of Robot Types}\label{sec:hardness}
+\input{texs/03-hardness}
+
+% \section{Exact Algorithm via Dynamic Programming}\label{sec:algorithm}
+\section{Exact Algorithms for \opglr and \opgmc}\label{sec:algorithm}
+\begin{comment}
+\jy{We can be more precise with the section title. This is a balance between
+brevity and level of detail. Generally, I try to fill one line; sometimes
+I use two lines if I feel it needs that much detail.}
+\end{comment}
+\input{texs/04-algorithm}
+
+%\section{Experimental Studies}\label{sec:experiments}
+%\input{texs/05-experiments}
+
+\section{Performance Evaluation and Applications}\label{sec:application}
+\input{texs/09-applications}
+
+\section{Conclusion and Discussions}\label{sec:conclusion}
+\input{texs/10-conclusion}
+
+% \newpage
+\bibliographystyle{IEEEtran}
+\bibliography{../bib/bib}
+
+\end{document}

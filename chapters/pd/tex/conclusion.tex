@@ -1,0 +1,11 @@
+This paper studied the heterogeneous perimeter defense problem, as formulated in \cite{adler2022role}, with the aim of
+significantly boosting the scalability to work on many defenders while achieving high levels of solution optimality.
+Toward achieving this goal, we developed an exact integer programming-based algorithm with better scalability than the original dynamic programming (DP) based algorithm from \cite{adler2022role}. We then further developed a fast and highly-effective heuristic based on the pairwise application of DP for computing near-optimal solutions, scaling to dozens of defenders.
+%
+This pairwise application of DP is of independent algorithmic interest. 
+%
+In addition, we extend our solution to a more realistic online version in which only attackers within a finite time window are visible. 
+%
+The algorithms are thoroughly evaluated on a diverse set of boundary topologies including circles, intervals, spheres, and squares. 
+%
+The evaluation not only confirms that \ours is highly effective but clearly demonstrates the benefit of employing heterogeneous defenders. 

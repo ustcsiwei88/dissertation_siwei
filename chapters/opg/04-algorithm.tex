@@ -1,0 +1,24 @@
+\def\algoMRSimple{{\sc MultiRegionSingleComp}\xspace}
+\def\algoSRG{{\sc SingleRegionMultiComp}\xspace}
+\def\algoMRG{{\sc MultiRegionMultiComp}\xspace}
+\def\isLFeasible{{\sc IsFeasible}}
+\def\isLFeasibleByTilingPartial{{\sc IsTilingFeasiblePartial}}
+\def\isLFeasibleByTilingFull{{\sc IsTilingFeasibleFull}}
+%
+In presenting algorithms for \opg, we begin with the case 
+where each perimeter $P_i \in \P$ has a single connected component 
+(i.e., $P_i$ is homeomorphic to $\mathbb S^1$ or $[0, 1]$). Then, 
+we work on the general single region case where the only perimeter 
+is composed of $q > 1$ connected components, before moving to the 
+most general multiple regions case.
+
+\subsection{Perimeters Containing Single Components}
+\input{chapters/opg/04-01-single-comp.tex}
+
+\subsection{Single Perimeter Containing Multiple Components}
+\input{chapters/opg/04-02-single-perimeter-multi-comp.tex}
+
+\vspace*{-2mm}
+\subsection{Multiple Perimeters Containing Multiple Components}
+\vspace*{-1mm}
+\input{chapters/opg/04-03-multi-perimeter-multi-comp.tex}

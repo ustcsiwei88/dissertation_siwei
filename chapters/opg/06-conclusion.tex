@@ -1,0 +1,30 @@
+In this paper, we propose the \opg problem to model the allocation of 
+large robotic swarms to cover complex 1D topological domains with 
+optimality guarantees. For all variants under the \opg formulation 
+umbrella, we have developed highly efficient algorithms for solving 
+\opg exactly. In addition to rigorous proofs backed by formal analysis, 
+extensive computational experiments further confirm the effectiveness of 
+these algorithms. Moreover, practical relevance of \opg is demonstrated 
+through the integration of \opg into realistic task (assignment) and motion 
+planning scenarios. 
+
+The study raises many additional interesting open questions; we mention 
+a few here. 
+%
+First, the approach taken in this work is a {\em centralized} one where 
+decision is made at the global level. It would be highly interesting to 
+explore whether the same can be achieved with {\em decentralized} methods,
+which have many advantages. For example, it may be the case that the 
+gaps along the boundaries are not known {\em a priori} and must be measured
+by the robots. In such cases, a centralized plan can be hard to come by. 
+%
+Second, as mentioned in Section~\ref{section:opg-problem}, the 
+current \opg formulation assumes that the robots are confined to the 
+boundaries $\partial \R$, which is one of many possible choices 
+in terms of the robots' sensing and/or motion capabilities. In future study,
+we plan to examine additional practical robot sensing and motion models. 
+%
+Third, as exact optimal algorithms are emphasized here, issues including 
+uncertainty and robustness have not been touched in the current treatment, 
+which are important elements when it comes to the deployment of a robotic 
+swarm to tackle real-world challenges. 

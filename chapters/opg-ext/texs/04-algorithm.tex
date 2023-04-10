@@ -1,0 +1,321 @@
+In this section, we describe three exact algorithms for solving the two 
+variations of the \opg problem. First, we present a pseudo-polynomial time
+algorithm for \opglr when the number of robot types, $t$, is a fixed constant. 
+Given that \opglr is strongly NP-hard, this is in a sense a best possible 
+solution. 
+%
+For \opgmc, in addition to providing a pseudo-polynomial algorithm for 
+arbitrary $t$, which confirms that \opgmc is weakly NP-hard, we also provide
+a polynomial time approximation scheme (PTAS). We then further show the 
+possibility of solving \opgmc in polynomial time when $t$ is a fixed constant. 
+We mention that our development in this section focuses on the single 
+perimeter case, i.e., $m = 1$, as the generalization to arbitrary $m$ is 
+straightforward using techniques described in \cite{FenHanGaoYu19RSS}. With this in mind, 
+we also provide the running times for the general setting with arbitrary $m$ 
+but refer the readers to \cite{FenHanGaoYu19RSS} on how these running times can be derived. 
+
+For presenting the analysis and results, for the a perimeter $P$ that we work 
+with, assume that it has $q$ perimeter segments $S_1, \ldots, S_q$ that need 
+to be guarded; these segments are separated by $q$ gaps $G_1, \ldots, G_q$. 
+For $1 \le i, i' \le q$, define $S_{i\sim i'} = S_i \cup G_i \cup S_{i+1} \cup \ldots 
+\cup G_{i'-1} \cup S_{i'}$ where $i'$ may be smaller than $i$ (i.e., $S_{i\sim i'}$
+may wrap around $G_q$),
+For the general case with $m$ perimeters, assume that a perimeter $P_i$ has
+$q_i$ segments. 
+\begin{comment}
+\jy{A paper, or anything with some level of complexity to digest, should be 
+hierarchical. So, at the beginning of a section, it is good to explain a bit 
+of what will be covered so a reader will have an idea of the structure of 
+the section.}
+\end{comment}
+
+\subsection{Pseudo-Polynomial Time Algorithm for \opglr with Fixed Number
+of Robot Types}
+\SetKw{Continue}{continue}
+\SetKw{True}{true}
+\SetKw{False}{false}
+\SetKwComment{Comment}{\%}{}
+\SetKwInOut{Input}{Input}
+\SetKwInOut{Output}{Output}
+\def\inc{{\sc Inc}\xspace}
+\def\knapsack{\textbf{\textsc{Knapsack}}\xspace}
+\def\opglrfeasible{{\sc OPG-lr-Feasible}\xspace}
+\def\opgmcdp{{\sc OPG-mc-DP}\xspace}
+We set to develop an algorithm for \opglr for arbitrary $t$, the number of robot 
+types; the algorithm runs in pseudo-polynomial time when $t$ is a constant. 
+At a higher level, our proposed algorithm works as follows. First, our main effort 
+here goes into deriving a feasibility test for \opglrd as defined in 
+Section~\ref{subsec:opglr-hardness}. With such a feasibility test, we can then 
+find the optimal $\frac{len(C_j)}{a_{\tau_j}}$ in \eqref{eq:objective} via binary search.
+Let us denote the optimal value of $\frac{len(C_j)}{a_{\tau_j}}$ as $\ell^*$. 
+
+\subsubsection{Feasibility Test for \opglrd} The feasibility test for \opglrd 
+essentially tries different candidate $\ell$ to find $\ell^*$. Our implementation uses 
+ideas similar to the pseudo-polynomial time algorithm for the \knapsack problem which
+is based on dynamic programming (DP). In the test, we work with a fixed starting point on 
+$P$, which is set to be the counterclockwise end point of a segment $S_i$, $1 \le i \le q$. 
+Essentially, we maintain a $t$ dimensional array $M$ where dimension $\tau$
+has a size of $n_{\tau} +1$. An element of the array, $M[n_1']\ldots[n_t']$, holds the 
+maximal distance starting from $S_i$ that can be covered by $n_1'$ type 1 robots, 
+$n_2'$ type 2 robots, and so on. The DP procedure \opglrfeasible($i, \ell$), outlined in 
+Algorithm~\ref{algo:opglrd}, incrementally builds this array $M$. For convenience,
+in the pseudo code, $M[\vec{x}]$ denotes an element of $M$ with $\vec{x}$ being 
+a $t$ dimensional integer vector. 
+
+\begin{algorithm}\label{algo:opglrd}
+	\DontPrintSemicolon
+	% \KwData{$n_1, n_2, \cdots, n_k$ robots, $l_1, l_2, \cdots, l_n$ coverage distance}
+	\KwData{$n_1, \ldots, n_t$, $a_1, \ldots, a_t$,
+		$S_1, \ldots, S_q$, $G_1, \ldots, G_q$}
+	\KwResult{\True or \False,  indicating whether $S_1, \ldots, S_q$ can be covered}
+	%\Begin{
+		Initialize $M$ as a $t$ dimensional array with dimension $\tau$ having a size of $n_{\tau} + 1$;\;
+		$\ell_{\tau} \leftarrow a_{\tau}\ell$ for all $1\le \tau \le t$;\;
+		\For{$ \vec{x} \in [0, n_1]\times\dots\times[0,n_t]$}{
+            $M[\vec{x}]\leftarrow 0$;\;
+			\For{$j = 1$ \KwTo $t$}{
+				\lIf{$\vec{x}_j = 0$}{\Continue;}
+				$\vec{x'}\leftarrow\vec{x}$; $\vec{x'}_j \leftarrow \vec{x'}_j - 1$;\;
+				$M[\vec{x}]\leftarrow max$($M[\vec{x}]$, \inc($M[\vec{x'}], \ell_j$));\;
+			}
+			% \For{$i_2 \leftarrow 1$ \KwTo $n_2$}{
+			% $\cdots$\;
+			% \For{$i_k \leftarrow 1$ \KwTo $n_k$}{
+			% $DP[i_1][i_2]\cdots[i_k]\leftarrow$ min(Increment($DP[i_1-1][i_2]\dots[i_k],\cdots,l_1$), Increment($DP[i_1][i_2-1]\dots[i_k], l_2$), $\cdots$, Increment($DP[i_1][i_2]\cdots[i_k-1],l_k$)\;
+			% }
+			% }
+		}
+		\Return{$M[n_1]\ldots[n_t] \ge len(S_{i\sim {i-1}})$};
+	%}
+	\caption{\opglrfeasible($i, \ell$)}
+\end{algorithm}
+
+In Algorithm~\ref{algo:opglrd}, the procedure \inc($L, \ell$) checks how much of the 
+perimeter $P$ can be covered when an additional coverage length $\ell$ is added, 
+assuming that a distance of $L$ (starting from some $S_i$) is already covered. An 
+illustration of how \inc($L, \ell$) works is given in Fig.~\ref{fig:inc}.
+ 
+
+\begin{figure}[ht]
+	\begin{center}
+		\begin{overpic}[width=0.7\textwidth,tics=5]
+			{chapters/opg-ext/figures/inc-eps-converted-to.pdf}
+			\put(26,10){{\small $L$}}
+			\put(61,10){{\small $\ell$}}
+			\put(30,1){{\small \textsc{Inc}($L$, $\ell$)}}
+		\end{overpic}
+	\end{center}
+    \caption{\label{fig:inc}Suppose starting from the fixed left point, a 
+		length of $L$ on the boundary is successfully guarded by a group of 
+		robots. Then, a robot	with coverage capacity $\ell$ is appended to 
+		the end of the group of robots to increase the total guarded distance. 
+		In the figure, the added additional capacity $\ell$ can fully cover 
+		the third red segment plus part of the third (dashed) gap. Because 
+		there is no need to cover the rest of the third gap, 
+		\textsc{Inc}($L$, $\ell$) extends to the end of the gap.}
+\end{figure}
+
+%Denote procedure $Inc(L, \ell)$ as the length of boundary successfully guarded from $L$ using a continuous segment length of $\ell$.
+
+%It is straightforward to see that Algorithm~\ref{algo:opglrd} has a running 
+%time of $O(t\Pi_{i=1}^{t} (n_i+1))$ if we populate $M$ gradually.
+
+By simple counting, the complexity of the algorithm is
+$O(q\cdot t\cdot\Pi_{\tau=1}^{t} (n_{\tau}+1))$. However, the amortized
+complexity of \inc($\cdot$) for each $\tau$ is $O(q+n_{\tau})$; the algorithm thus 
+runs in $O(t\cdot\Pi_{{\tau}=1}^{t}(n_{\tau}+1)+q\cdot\sum_{{\tau}=1}^{t} 
+\Pi_{{\tau'}\neq {\tau}} (n_{\tau'} +1))$, 
+which is pseudo-polynomial for fixed $t$. After trying every possible starting 
+position $i$ with \opglrfeasible($i, \ell$), for a fixed candidate $\ell$, 
+\opglrd is solved in $O(q \cdot t\cdot\Pi_{{\tau}=1}^{t}(n_{\tau}+1) + 
+q^2\cdot\sum_{{\tau}=1}^{t} \Pi_{{\tau'}\neq {\tau}} (n_{\tau'} +1))$.
+
+\subsubsection{Solving \opglr using Feasibility Test for \opglrd}
+Using \opglrfeasible($i, \ell$) as a subroutine to check feasibility for a given $\ell$, 
+bisection can be applied over candidate $\ell$ to obtain $\ell^*$. For completing 
+the algorithm, one needs to establish when the bisection will stop (notice that, 
+even though we assume that $a_\tau \in \mathbb{Z^+}$, for each $1\leq \tau \leq t$, $\ell^*$ need not be 
+an integer). 
+
+To derive the stop criterion, we note that given the optimal $\ell^*$, there must 
+exist some $S_{i\sim i'}$ that is ``exactly'' spanned by the allocated robots.
+That is, assume that $S_{i\sim i'}$ is covered by $n_1'$ of type $1$ robots
+and $n_2'$ of type $2$ robots, and so on, then 
+\begin{align}\label{eq:exact}
+\ell^* = \frac{len(S_{i\sim i'})}{\sum_{1 \le \tau \le t} a_{\tau}\cdot n_{\tau}'}.
+\end{align}
+
+\eqref{eq:exact} must hold for some $S_{i\sim i'}$ because if not, the solution 
+is not tight and can be further improved. Therefore, the bisection process for 
+locating $\ell^*$ does not need to go on further after reaching a certain granularity\cite{FenHanGaoYu19RSS}.
+%$1/\sum_{1 \le \tau \le t} a_{\tau}\cdot n_{\tau}$. 
+With this established, using 
+similar techniques from \cite{FenHanGaoYu19RSS} (we omit the technical detail as it is quite 
+complex but without additional new ideas beyond beside what is already covered 
+in \cite{FenHanGaoYu19RSS}), we could prove that the full algorithm needs 
+no more than $O(q\log(\sum_{\tau}n_{\tau}+q)$ calls to \opglrfeasible($i, \ell$).
+%$O(t\Pi_{i=1}^{t}(n_i+1)+q\sum_{i=1}^{t} \Pi_{j\neq i} (n_j +1))$
+This directly implies that \opglr also admits a pseudo-polynomial algorithm for fixed $t$.
+% \sw{The complexity here is the decision version of single perimeters}
+\subsubsection{Multiple Perimeters}
+Also using techniques developed in \cite{FenHanGaoYu19RSS}, the single perimeter 
+result can be readily generalized to multiple perimeters. We omit the mechanical
+details of the derivation and point out that the computational complexity in this case becomes
+$\tilde{O}( (m-1)\cdot((\Pi_{\tau=1}^t n_\tau) / \max_\tau n_\tau)^2 + 
+\sum_{k=1}^{m} (t\cdot q_k\cdot \Pi_{{\tau}=1}^{t}(n_{\tau}+1)+
+q_k^2\sum_{{\tau}=1}^{t} \Pi_{{\tau'}\neq {\tau}} (n_{\tau'} +1)))$.
+% \sw{the complexity here is for decision version of multiple perimeters, starting
+%  from a specific starting point}
+%\jy{I updated the formula as it seems to be wrong. Also changed $r$ to $m$.}
+
+\subsection{Polynomial Time Algorithm for \opgmc with Fixed Number of Robot Types}
+%\subsection{$OPG_{MC}$}
+The solution to \opgmc will be discussed here. A method based on DP 
+will be provided first, which leads to a polynomial time algorithm for a 
+fixed number of robot types and a pseudo-polynomial time algorithm when the number 
+of robot types is not fixed. For the latter case, a polynomial time approximation 
+scheme (PTAS) will also be briefly described.
+\subsubsection{Dynamic Programming Procedure for \opgmc}
+\def\sol{{\sc Sol}}
+\def\presol{{\sc PreSolve}}
+When no gaps exist, the optimization problem becomes a covering 
+problem as follows. Let $c_{\tau}$, $\ell_{\tau}$, $n_{\tau}$ correspond to the cost, 
+coverage length, and quantity of robot type ${\tau}$, respectively, and let total 
+length to cover be $L$. We are to solve the optimization problem
+\begin{align}\label{eq:ip}
+    \min \sum_{\tau} c_{\tau} \cdot n_{\tau} \quad s.t.\, \quad
+    \sum_{\tau} \ell_{\tau} \cdot n_{\tau} \geq L, n_{\tau}\geq 0.
+\end{align}
+
+Let the solution to the above integer programming problem be \sol($L$).
+Notice that, for $S_{i\sim i'}:=\{S_i,\ G_i, \dots, 
+G_{i'-1}, S_{i'}\}$, the minimum cost cover is by either: {\em (i)} 
+covering the total boundary without skipping any gaps, 
+%
+or {\em (ii)} skipping or partially covering some gap, for example $G_k, 
+i \le k \le j-1$.
+%
+In the first case, the minimum cost is exactly \sol$(\lceil len(S_{i\sim(i+k)}\rceil)$.
+%
+In the second case, the optimal structure for the two subsets of perimeter 
+segments $S_{i\sim k}$ and $S_{(k+1)\sim j}$ still holds. This means that the 
+continuous perimeter segments $S_{i\sim j}$ can be divided into two parts, 
+each of which can be treated separately. This leads to a DP approach for \opgmc.
+With $M[i][j]$ denoting the minimum cost to cover $S_{i\sim j}$, the DP recursion 
+is given by
+\[
+	\scalebox{0.93}{$M[i][j] = \min(\textit{\sol}(\lceil len(S_{i\sim j})\rceil), \displaystyle\min_k(M[i][k]+M[k+1][j]))$}
+\]
+
+The DP procedure is outlined in Algorithm~\ref{alg:opgmc}. In the pseudo code, 
+it is assumed that indices of $M$ are modulo $q$, e.g., $M[2][q+1] 
+\equiv M[2][1]$. $tmp$ is a temporary variable. 
+\begin{comment}
+\jy{Generally mathematicians and theoretical computer scientists use 
+	$\ell_1, \ldots, \ell_t$ instead of $\ell_1, \ell_2, \ldots, \ell_t$. The later is more 
+	redundant. Also, normally we use ldots instead of cdots. I changed $C$ to $M$ since 
+    $C$ is used elsewhere. I changed $==$ to $=$ to save space.}
+\end{comment}
+\begin{algorithm}
+    \DontPrintSemicolon
+    % \KwData{$n_1, n_2, \cdots, n_k$ robots, $l_1, l_2, \cdots, l_n$ coverage distance}
+    \KwData{$\ell_1, \dots, \ell_t$, $c_1, \ldots, c_t$,
+    	$S_1, \ldots, S_q$, $G_1, \ldots, G_q$}
+    \KwResult{$c^*$, the minimum covering cost}
+   %\Begin{
+    $M \leftarrow$ a $q\times q$ matrix; $c^* \leftarrow \infty$; \;
+    \For{$k \leftarrow 0$ \KwTo $q-1$}{
+        \For{$i\leftarrow 1 $ \KwTo $q$}{
+            $tmp \leftarrow\ $\sol$(\lceil len(S_{i\sim(i+k)}) \rceil)$; \;
+            \For{$j\leftarrow i$ \KwTo $i+k-1$}{
+                $tmp \leftarrow \min(tmp, M[i][j] + M[j+1][i+k])$;
+            }
+            $M[i][i+k] \leftarrow c$;\;
+            \lIf{$k = q-1$}{$c^* \leftarrow \min(c^*, M[i][i+k])$;}
+        }
+    }
+    \Return{$c^*;$}
+    %}
+    \caption{\opgmcdp}
+    \label{alg:opgmc}
+\end{algorithm}
+
+\subsubsection{A Polynomial Time Algorithm for \opgmc for a Fixed Number of Robot Types}
+We mention briefly that, by a result of Lenstra \cite{len83}, the optimization problem 
+~\eqref{eq:ip} is in P (i.e., polynomial time) when $t$ is a constant. The running time of 
+the algorithm \cite{len83} is however exponential in $t$. 
+
+\subsubsection{A Pseudo-polynomial Time Algorithm for Arbitrary $t$}
+As demonstrated in the hardness proof, similarities exist between \opg and the \knapsack 
+problem. The connection actually allows the derivation of a pseudo-polynomial time algorithm
+for arbitrary $t$. To achieve this, we use a routine to pre-compute \sol($L$), called 
+\presol(), which is itself a DP procedure similar to that for the \knapsack problem. The 
+pseudo code of \presol() is given in Algorithm~\ref{algo:presol}.
+\presol() runs in time $O(t\cdot\lceil len(\partial R)\rceil))$. Overall, 
+Algorithm~\ref{alg:opgmc} then runs in time $O(q^3+t\cdot\lceil len(\partial R\rceil))$.
+%\jy{Is this running time correct?}
+
+\begin{algorithm}\label{algo:presol}
+	\DontPrintSemicolon
+	\KwData{$\ell_1, \ldots, \ell_t$, $c_1, \ldots, c_t$}
+	\KwResult{A lookup table for retrieving \sol($L$)}
+	%\Begin{
+		$I_{max} = \lceil len(\partial R)\rceil$; \Comment{\small $I_{max}$ is an integer.}
+		$M' \leftarrow$ an array of length $I_{max} + 1$; 
+		$M'[0]\leftarrow 0$;\;
+		\For{$L \leftarrow$ $1$ \KwTo $I_{max}$}{
+			$M'[L]\leftarrow \infty$; \;
+			\For{${\tau}\leftarrow 1$ \KwTo $t$}{
+				$tmp \leftarrow (L<\ell_{\tau}\ ?\ 0\ :\ M'[L-\ell_{\tau}]) + c_{\tau}$;\;
+				$M'[L] \leftarrow min(M'[L], tmp)$;\;
+			}
+		}
+		\Return{$M'$}
+	%}
+	\caption{{\sc PreSolve}}
+\end{algorithm}
+
+%After the preprocessing, 
+%the Solution(L) is just an access of $Sol[L]$. 
+%Algorithm \ref{alg:opgmc} still applies and the only modification is a simple replacement of 
+%\sol($L$) with $Sola[L]$. This make the complexity of \ref{alg:opgmc} drop to $O(q^3)$.
+% \begin{algorithm}
+%     \DontPrintSemicolon
+%     % \KwData{$n_1, n_2, \cdots, n_k$ robots, $l_1, l_2, \cdots, l_n$ coverage distance}
+%     \KwData{$l_1, l_2, \cdots, l_k$ coverage distance, $c_1, c_2,\cdots,c_k$ deployment cost}
+%     \KwResult{Minimum cost for covering the perimeter}
+%     \Begin{
+%     $DP \leftarrow$ 1-D array length of L with data initialized to $\infty$\;
+%     $DP[0]\leftarrow 0 $\;
+%     $Result\leftarrow \infty$\;
+%     \For{$l \leftarrow 0$ \KwTo $L$}{
+%     \If{$DP[l] = \infty$}{  \Continue\;}
+%     \For{$i \leftarrow 1$ \KwTo $k$}{
+%     $nextEnd \leftarrow $Increment($l, l_i$)\;
+%     $DP[nextEnd] = \min(DP[nextEnd], DP[l]+c_i)$\;
+%     \If{$nextEnd\geq L$}{Result$\leftarrow \min(Result,DP[nextEnd])$}
+%     }
+%     }
+%     \Return{Result}
+%     }
+%     \caption{} 
+% \end{algorithm}
+With the establishment of a pseudo-polynomial time algorithm for \opgmc, we  
+have the following corollary. 
+\begin{corollary}
+	\opgmc is weakly NP-hard. 
+\end{corollary}
+
+\subsubsection{FPTAS for Arbitrary $t$}
+When the number of robot types is not fixed, Lenstra's algorithm\cite{len83} or 
+its variants no longer run in polynomial time. We briefly mention that, 
+%via a linear time transformation, 
+by slight modifications of a FPTAS for \ttukp problem from \cite{ukpfptas}, a FPTAS 
+for \opgmc can be obtained that runs in time $O(q^3 + q^2 \cdot \frac{t}{\epsilon^3})$, 
+where $(1+\epsilon)$ is the approximation ratio for both \opgmc and ~\eqref{eq:ip}. 
+
+\subsubsection{Multiple Perimeters} For \opgmc, when there are multiple 
+perimeters, e.g., $P_1, \ldots, P_m$, a optimal solution can be obtained 
+by optimally solving \opgmc for each perimeter $P_i$ individually and 
+then put together the solutions. 
+

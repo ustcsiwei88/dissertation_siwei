@@ -1,0 +1,84 @@
+The algorithm for the multiple perimeter case is a direct 
+generalization Algorithm~\ref{algo:SRG}. To facilitate the description, 
+let the perimeter $P_i$, $1 \le i \le m$, contain $q_i$ maximal connected 
+components, i.e., $P_i = S_{i,1} \cup\ldots \cup S_{i,q_i}$ and the 
+boundary $\partial R_i = S_{i,1} \cup G_{i,1} \cup \ldots \cup S_{i,q_i} 
+\cup G_{i,q_i}$. We extend the definition of $S_{k-k'}$ for a single 
+perimeter to $S_{i,k-k'}$ for multiple perimeters. By a straightforward 
+generalization of Theorem~\ref{t:optimal-partition} to multiple perimeters,
+for an \opg instance, the length of some $S_{i,k-k'}$ must be an integer 
+multiple of $\ell^*$. Similar to the single perimeter case, we can try 
+all $S_{i,k-k'}$ and for each try all possible $1 \le n_{i,k-k'}^c \le n$. 
+This gives us $\ell_{i,k-k'}^c = \frac{len(S_{i,k-k'})}{n_{i,k-k'}^c}$ as 
+candidates for $\ell^*$; there are $n(\sum_{1\le i \le m} q_i^2)$ such 
+candidates. For checking the feasibility of $\ell_{i,k-k'}^c$, we may use 
+\isLFeasibleByTilingPartial($\cdot$) for the rest of $P_i$ (taking $O(q_i)$ 
+time) and \isLFeasibleByTilingFull($\cdot$) for all $1 \le i' \le m$ and $i' 
+\ne i$ (taking $O(\sum_{1 \le i' \le m, i' \ne i} q_{i'}^2)$ time). 
+This yields a baseline algorithm that runs in 
+$O(n(\sum_{1\le i \le m} q_i^2)^2)$ time. 
+
+From here, speedups can be obtained as in the single perimeter case using 
+the same reasoning. This yields a two-phase algorithm, which we call 
+\algoMRG, that runs in $O((\sum_{1\le i \le m} q_i^2) \log(n + 
+\sum_{1\le i \le m} q_i) + \sum_{1\le i \le m} M_i + n)$. 
+
+%%
+%The general strategy for computing $\ell^*$ remains the same: in this 
+%case with multiple perimeters, some robots must still cover the optimal 
+%length $\ell^*$ on some perimeter $P_i$. Following the basic reasoning, 
+%each $P_i$ is checked to compute a $\ell_i^c$ that is a candidate for 
+%$\ell^*$. Comparing all $\ell_i^c$ then yields $\ell^*$. For a fixed 
+%$P_i$, computing $\ell_i^c$ is completed using a modified version of 
+%Algorithm~\ref{algo:SRG} with the function \isLFeasibleByTilingPartial($\cdot$) 
+%updated so it can handle multiple regions. 
+%
+%Assuming that a $P_i$ is fixed and $\ell_i^c$ is being computed. Before 
+%\isLFeasibleByTilingPartial($\cdot$) is called, a candidate for $\ell_i^c$ (and 
+%in turn a candidate for $\ell^*$), denoted $\ell_{i, k-k'}^c$ to include 
+%an index for the perimeter, is computed. When called, 
+%\isLFeasibleByTilingPartial($\cdot$) first does what it does in 
+%Algorithm~\ref{algo:SRG}, which verifies that $\ell_{i, k-k'}^c$ works 
+%for the rest of $P_i$ (e.g., the procedure explained with the example 
+%around Fig.~\ref{fig:tiling}). At this point, a total of $n_i^c$ robots 
+%have been used to cover $P_i$, leaving $n - n_i^c$ robots to cover
+%all perimeters other than $P_i$ such that no robot may cover more than
+%$\ell_{i, k-k'}^c$. This can be achieved by finding the least number of 
+%robots needed to cover each $P_{i'}$, $i' \ne i$ and check 
+%the total is no more than $n - n_i^c$.
+%
+%To find the least number of robots needed to cover $P_{i'}$ such that 
+%no robot covers more than $\ell_{i, k-k'}^c$, the same tiling strategy 
+%is used. Unlike in the case for $P_i$, where the tiling starts from 
+%the right end of $G_{i,k'}$, a left starting point for tiling is not 
+%specified for $P_{i'}$. The straightforward thing to do is to try all 
+%possible choices; there are $q_{i'}$ such possibilities. With this, the  
+%algorithm for the general multiple perimeters case is fully specified. 
+%Given the similarity of the algorithm to Algorithm~\ref{algo:SRG},
+%an algorithm outline is omitted. For reference, we denote the algorithm 
+%\algoMRG.
+%
+%To analyze the running time, we start with the updated
+%\isLFeasibleByTilingPartial($\cdot$). Tiling of $P_i$ requires $O(q_i + n_i)$ 
+%running time where $n_i$ is the number of robots that are needed to 
+%cover $P_i$. Then, for any $P_{i'}$, $i'\ne i$, $q_{i'}$ locations on 
+%$P_{i'}$ must be checked, each taking $O(q_{i'} + n_{i'})$ time, where 
+%$n_{i'}$ is the number of robots needed to cover $P_{i}'$. The total time 
+%spent by \isLFeasibleByTilingPartial($\cdot$) every time is then bounded by
+%$O(q_i + n_i + \sum_{i' \ne i} (q_{i'}(q_{i'} + n_{i'})))$ which is 
+%bounded by $O(\sum_{1 \le i \le m} q_{i}(n_{i} + q_{i}))$. Then, 
+%checking all possible $k-k'$ combinations for $P_i$ (where $1 \le k, 
+%k' \le q_i$) adds a multiplicative factor of $O(q_i (q_i + n_i))$. 
+%Therefore, checking everything requires calling the routine
+%\isLFeasibleByTilingPartial($\cdot$) about $O(\sum_{1 \le i \le m} 
+%q_{i}(n_{i} + q_{i}))$ times. Similar to Algorithms~\ref{algo:MRS} 
+%and~\ref{algo:SRG}, bisection may be applied here which makes the 
+%total running time 
+%\[
+%O\big(\sum_{1 \le i \le m} \big[q_{i}(n_{i} + q_{i})\big]
+%\log\big[\sum_{1 \le i \le m} q_{i}(n_{i} + q_{i})\big]\big),
+%\]
+%which is nearly quadratic. Again, if we consider input complexity, an
+%additional $O(\sum_{1 \le i \le m} M_i)$ complexity needs to be added
+%to the total. 
+%

@@ -1,0 +1,194 @@
+In designing efficient algorithms, the solution structure of \opg induced by 
+the problem formulation is first explored, starting from the case where there 
+is a single region.
+
+\subsubsection{Guarding a Single Region}
+\noindent\textbf{Perimeter with a single connected component}. For 
+guarding a single region $\R = \{R\}$, i.e., there is a single 
+boundary $\partial R$ to be guarded, all $n$ robots can be directly 
+allocated to $\partial R$. If the single perimeter $P \subset 
+\partial R$ further has a single connected component that is either 
+homeomorphic to $\mathbb S^1$ or $[0, 1]$, then each robot $j$ can 
+be assigned a piece $C_j \subset P$ such that $\bigcup_{C_j \in \C} 
+C_j = P$ and $len(C_j) = len(P)/n$. Clearly, such a cover $\C$ is 
+also an optimal cover. 
+
+\noindent\textbf{Perimeter with multiple maximal connected components}. 
+When there are multiple maximal connected components (or segments) in a 
+single perimeter $P$, things become more complex. To facilitate the 
+discussion, assume here $P$ has $q$ segments $S_1, \ldots, S_q$ arranged 
+in the clockwise direction (i.e., $P = S_1 \bigcup \ldots \bigcup S_q$), 
+which leaves $q$ gaps $G_1, \ldots, G_q$ with $G_k$ immediately following 
+$S_k$. Fig.~\ref{fig:single-perimeter} shows a perimeter with five segments
+and five gaps. 
+\begin{figure}[ht]
+\vspace*{-1mm}
+\begin{center}
+\begin{overpic}[width=0.7\textwidth,tics=5]
+{./chapters/opg/figures/single-perimeter.eps}
+\put(16,7){{\small $S_1$}}
+\put(17,31){{\small $G_1$}}
+\put(46,30){{\small $S_2$}}
+\put(56.5,28){{\small $G_2$}}
+\put(72,27.5){{\small $S_3$}}
+\put(84.5,17.5){{\small $G_3$}}
+\put(85,6){{\small $S_4$}}
+\put(72,-4){{\small $G_4$}}
+\put(59,0){{\small $S_5$}}
+\put(45,4){{\small $G_5$}}
+\end{overpic}
+\end{center}
+\vspace*{-1mm}
+\caption{\label{fig:single-perimeter} A perimeter $P$ with five segments 
+$S_1, \ldots, S_5$, separated by five {\em gaps} $G_1, \ldots, G_5$.}
+\vspace*{-3mm}
+\end{figure}
+
+Suppose an optimal set of assignments for the $n$ robots guarding $P$ 
+and  satisfying~\eqref{eq:coverage} and~\eqref{eq:objective} is $\C^* 
+= \{C_j^*\}$. Let $G_{max}$ be a largest gap, i.e., $len(G_{max}) = 
+\max_{1 \le k \le q}len(G_k)$. Via small perturbations to the lengths 
+of $G_k$, we may also assume that $G_{max}$ is unique. If we exclude 
+the gap $G_{max}$ and have the $n$ robots cover the rest of $\partial 
+R$ evenly, then it must hold that $len(C_j^*) \le (len(\partial R) - 
+len(G_{max}))/n$. On the other hand, $len(C_j^*) \ge (\sum_{1\le k\le 
+q}len(S_k))/n$ always holds. These yield a pair of basic upper and 
+lower bounds for the optimal single robot coverage length $\ell^*$, 
+summarized as follows. 
+
+\begin{proposition}\label{p:single-bounds} Define 
+\[
+\ell_{min} = \frac{\sum_{1\le k\le q}len(S_k)}{n}\,\,and\,\,
+\ell_{max} = \frac{len(\partial R) -  len(G_{max})}{n},
+\]
+it holds that 
+\begin{align}\label{eq:lopt} 
+\ell_{min} \le \ell^* \le \ell_{max}.
+\end{align}
+\end{proposition}
+
+On the other hand, it is not always the case that a largest gap $G_{max}$, 
+even if unique, will be skipped by $\bigcup_{C_j \in \C^*} C_j^*$. 
+That is, an optimal cover $C^*$ may enclose the largest gap. 
+ 
+\begin{proposition}\label{p:max-no-exclusion}
+Given a region $R$ and perimeter $P \subset \partial R$, let
+$G_{max}$ be the unique longest connected component of $\partial R
+\backslash P$. Let $\C^*$ be an optimal cover of $P$. Then, it is 
+possible that $G_{max} \subset C_j^*$ for some $C_j^* \in \C^*$. 
+\end{proposition}
+\begin{proof}The claim may be proved via contradiction with the example 
+illustrated  in Fig.~\ref{fig:max-not-skipped} which readily generalizes. 
+In the figure, there are four gaps $G_1, \ldots, G_4$, in which three 
+gaps ($G_1$, $G_2$, and $G_4$) have the same length (i.e., $len(G_1)= 
+len(G_2)= len(G_4)$) and are evenly spaced (i.e., $len(S_1)= len(S_2) 
+= len(S_3\cup G_3\cup S_4)$). Here, $G_{max} = G_3$, which is 
+$1.5$ times the length of other gaps, i.e., $len(G_3) = 
+\frac{3}{2}len(G_1)$. 
+\begin{figure}[ht]
+\vspace*{0mm}
+\begin{center}
+\begin{overpic}[width=0.7\textwidth,tics=5]{./chapters/opg/figures/max-not-skipped.eps}
+\put(27,34){{\small $S_1$}}
+\put(48,44){{\small $G_1$}}
+\put(69,34){{\small $S_2$}}
+\put(69,9){{\small $G_2$}}
+\put(62,1){{\small $S_3$}}
+\put(48,-4){{\small $G_3$}}
+\put(32,2){{\small $S_4$}}
+\put(26,8){{\small $G_4$}}
+\end{overpic}
+\end{center}
+\vspace*{-3mm}
+\caption{\label{fig:max-not-skipped} A case where the perimeter has 
+four segments or maximal connected components. Three of the gaps, 
+$G_1$, $G_2$, and $G_4$ are of the same length and are evenly spaced, 
+$G_3$ is $0.5$ times longer.}
+\vspace*{-3mm}
+\end{figure}
+
+For $n = 3$ robots, the optimal cover $\C^*$ must allocate each robot 
+to guard each of $S_1$, $S_2$, and $(S_3\cup G_3\cup S_4)$. Without 
+loss of generality, let $C_1^* = S_1$, $C_2^* = S_2$, and $C_3^* = 
+(S_3\cup G_3\cup S_4)$. This means that $G_3$ is covered by $C_3^*$ 
+and not skipped by $\C^*$. In this case, $len(C_1^*) =len(C_2^*) = 
+len(C_3^*) = len (S_1)$.
+
+To see that this must be the case, suppose on the contrary that $G_3$ 
+is skipped and let $\C = \{C_1, C_2, C_3\}$ be an alternative cover. 
+By Lemma~\ref{l:no-partial-coverage}, an optimal cover must skip $G_3$ 
+entirely. In this case, some $C_j$, say $C_1$, must have its left end 
+point\footnote{In this paper, for a non-circular segment or gap, its 
+left end point is defined as the {\em limit point} along the 
+counterclockwise direction along the perimeter and its right end point 
+is defined as the limit point in the clockwise direction along the 
+perimeter. So, in Fig.~\ref{fig:max-not-skipped}, for $S_1$, its left 
+end point touches $G_4$ and its right end point touches $G_1$.} coincide 
+with the right end point of of $G_3$ (the point where $G_3$ meets $S_4$). 
+Then $C_1$ must cover $S_4$ and $G_4$; otherwise, $C_2$ and $C_3$ must 
+cover $S_1 \cup S_2 \cup S_3$, which makes $len(C_2) + len(C_3) \ge 
+len(S_1 \cup S_2 \cup S_3) > 2len(S_1)$ and $\C$ a worse cover than 
+$\C^*$. By symmetry, similarly, some $C_j$, say $C_3$, must have its 
+right end point coincide with the left end point of $G_3$ and cover 
+$S_3$ and $G_2$. However, this means that both $G_2$ and $G_4$ are 
+covered by $\C$. Even if $G_1$ is skipped, this makes $len(C_1 \cup 
+C_2 \cup C_3) = len(S_4 \cup G_4 \cup S_1 \cup S_2 \cup G_2 \cup S_3) 
+> len (S_1 \cup S_2 \cup S_3\cup G_3\cup S_4) > 3len(S_1)$, again making
+$\C$ sub-optimal. By the pigeonhole principle, at least one of the $C_1$, 
+$C_2$, or $C_3$ must be longer than $len(S_1)$. Therefore, skipping 
+$G_{max} = G_3$ in this case leads to a sub-optimal cover. The only 
+other alternative for an optimal cover with $n = 3$ is to have $C^* = 
+\{S_1, S_2, (S_3\cup G_3\cup S_4)\}$. 
+\end{proof}
+
+Proposition~\ref{p:max-no-exclusion} implies that in allocating robots 
+to guard a perimeter $P \subset \partial R$, an algorithm cannot simply 
+start by excluding the longest component from $\partial R 
+\backslash P$ and then the next largest, and so on. This makes solving
+\opg more challenging. Referring back to Fig.~\ref{fig:example}, if the 
+top gap is skipped by the cover, then the three robots on the right side 
+of the perimeter (two orange and one green) need to cover the part of the 
+perimeter between the two hexagons. This will cause $\ell^*$ to increase. 
+
+On the other hand, for an optimal cover $\C^* = \{C_1^*, \ldots, C_n^*\}$ 
+of $P$, some $C_j^*\in \C^*$ must have at least one of its end point 
+aligned with an endpoint of a component $S_k$ of $P$ (assuming that $P 
+\subsetneq \partial R$). 
+
+\begin{proposition}\label{p:endpoint-alignment}
+For an optimal cover $\C^* = \{C_1^*,\ldots, C_n^*\}$ of a perimeter 
+$P = S_1 \bigcup \ldots \bigcup S_q \subset \partial R = S_1 \bigcup G_1 
+\bigcup $ $\ldots \bigcup S_q \bigcup G_q$, for some $S_i \subset P$ and 
+$C_j^* \in C^*$, their right (or left) endpoints must coincide. 
+\end{proposition}
+\begin{proof}
+By Lemma~\ref{l:no-partial-coverage}, for any $G_k \subset \partial R 
+\backslash P$, and $C_j^* \in \C^*$, $G_k \cap C_j^* = G_k$ or 
+$G_k \cap C_j^* = \emptyset$. Since at least one $G_k$, $1 \le k \le q$, 
+must be skipped by $C_1^* \cup \ldots C_n^*$, some $C_j^*$, $1 \le j \le n$ 
+must have its right endpoint aligned with the right endpoint of $S_k$, 
+which is on the left of $G_k$. Following the same argument, some 
+$C_{j'}^*$ and $S_{k'}$ must have the same left endpoints. 
+\end{proof}
+
+Proposition~\ref{p:endpoint-alignment} suggests that we may attempt to cover 
+a perimeter $P$ starting from an endpoint of $S_1$, $S_2$, and so on. 
+%An algorithm can attempt a binary search approach to first test whether 
+%$\ell^* \le \frac{\ell_{min} + \ell_{max}}{2}$ or $\ell^* > \frac{\ell_{min} 
+%+ \ell_{max}}{2}$. For each candidate of $\ell^*$, we need to try at most $q$ 
+%left starting points for $C_1$. This yields an algorithm that allows the 
+%approximation of $\ell^*$ arbitrarily well for a given $P$ and $n$.  
+Indeed, as we will show in Section~\ref{section:algorithm}, an efficient 
+algorithm can be designed exploiting this important fact. 
+
+
+\subsubsection{Guarding Multiple Regions}
+In a multiple region setup, there is one additional level of complexity:
+the number of robots that will be assigned to an individual region is 
+no longer fixed. This introduces another set of variables $n_1, \ldots, 
+n_m$ with $n_1 + \ldots + n_m = n$ and $n_i$, $1 \le i \le m$ being the 
+number of robots allocated to guard $\partial R_i$. For a fixed $n_i$, 
+the results derived for a single region, i.e., 
+Propositions~\ref{p:single-bounds}--\ref{p:endpoint-alignment} continue 
+to hold.
+

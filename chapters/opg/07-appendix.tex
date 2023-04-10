@@ -1,0 +1,202 @@
+In this appendix, additional evaluation data and the associated analysis 
+are presented.
+
+\subsection{Algorithm Performance}
+First, Table~\ref{eval:mpsc} was truncated in the main text. The full set
+of test run results is given in Table~\ref{eval:mpsc:2}. It may be observed 
+that for most practical scenarios, deployment plans for large robotic 
+swarms can be readily computed. 
+
+\begin{table}[ht!]
+    \centering
+		\vspace*{-2mm}
+    \begin{footnotesize}
+    \begin{tabular}{|c|c|c|c|c|c|c|} 
+        \hline
+        \diagbox{$m$}{$n$}       & $10^8  $ & $10^9   $ & $10^{10}$ & $10^{11}$ & $10^{12}  $ \\ \hline
+        \rule{0pt}{2.5ex} $10^3$ & $0.001 $ & $0.001  $ & $0.001  $ & $0.001  $ & $0.001    $ \\ \hline
+        \rule{0pt}{2.5ex} $10^4$ & $0.006 $ & $0.007  $ & $0.008  $ & $0.008  $ & $0.008    $ \\ \hline
+        \rule{0pt}{2.5ex} $10^5$ & $0.075 $ & $0.088  $ & $0.102  $ & $0.107  $ & $0.106    $ \\ \hline
+        \rule{0pt}{2.5ex} $10^6$ & $1.152 $ & $1.442  $ & $1.508  $ & $1.652  $ & $1.617    $ \\ \hline
+        \rule{0pt}{2.5ex} $10^7$ & $13.963$ & $17.281 $ & $18.796 $ & $20.354 $ & $20.627   $ \\ \hline
+        \rule{0pt}{2.5ex} $10^8$ & NA       & $176.115$ & $223.186$ & $227.250$ & $230.000  $ \\ \hline
+    \end{tabular}
+		\end{footnotesize}
+		\vspace*{-2mm}
+    \caption{\label{eval:mpsc:2} \algoMRSimple~running time (seconds)}
+		\vspace*{-3mm}
+\end{table}
+
+
+To empirically verify the asymptotic running time upper bounds of 
+\algoMRSimple, we plot the running time over $m$ for a fixed value of 
+$n =10^{12}$. From the result (Fig.~\ref{fig:mpsc:mfixn} it may be 
+observed that the asymptotic running time appears to be tight. We point
+out that the $O(\sum_{1\le i \le m} M_i + n)$ part of the overall 
+running time $O(m(\log n + \log m) + \sum_{1\le i \le m} M_i + n)$ turns 
+out to be rather insignificant (at least up to $m = 10^8$ and $n = 10^12$) 
+and is subsequently ignored. The same applies to other algorithms as 
+well. 
+\begin{figure}[ht!]
+    \vspace*{-2mm}
+    \centering
+    \includegraphics[keepaspectratio, scale=0.85]{./figures/mpscn12.eps}
+    \vspace*{-4mm}
+    \caption{\label{fig:mpsc:mfixn}Running time: \algoMRSimple 
+		v.s. $O(m (\log m + \log 10^{12}))$.}
+    \vspace*{-3mm}
+\end{figure}
+%\jy{Fig~\ref{fig:mpsc:mfixn}: change ``Number of Perimeters'' to ``Number of regions''.}
+
+A similar study of checking the running time dependency over $n$ was 
+carried out as well but did not show a tight dependency of the running 
+time over $\log n$. This is because the $O(m\log n)$ part (from the 
+$\mathbf{while}$ loop in \algoMRSimple) is dominated by the 
+$O(m\log m)$ part (from the enhanced $\mathbf{while}$ loop with bisection). 
+
+For \algoSRG, the dependency of the running time over $q^2\log q$ 
+appears to be tight, as shown in Fig.~\ref{fig:spmc:qfixn}. Additional 
+examples of randomly generated test cases for \algoSRG are 
+given in Fig.~\ref{fig:more-spmc-ex}. 
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[keepaspectratio, scale=0.85]{./figures/spmcn5.eps}
+    \vspace*{-4mm}
+    \caption{\label{fig:spmc:qfixn}Running time of \algoSRG 
+		v.s. $O(q^2\log(q + 10^3))$.}
+    \vspace*{-2mm}
+\end{figure}
+
+\begin{figure}[ht!]
+    % \vspace*{-3mm}
+    \centering
+    \includegraphics[keepaspectratio, scale=0.4]{./figures/spmc-example-2-5.eps}
+    \includegraphics[keepaspectratio, scale=0.4]{./figures/spmc-solution-2-5.eps}
+    \vspace*{2mm} \\
+    \includegraphics[keepaspectratio, scale=0.4]{./figures/spmc-example-4-10.eps}
+    \includegraphics[keepaspectratio, scale=0.4]{./figures/spmc-solution-4-10.eps} \\
+    % \vspace{5mm}
+    \vspace*{2mm}
+    \includegraphics[keepaspectratio, scale=0.4]{./figures/spmc-example-5-15.eps}
+    \hspace{5mm}
+    \includegraphics[keepaspectratio, scale=0.4]{./figures/spmc-solution-5-15.eps}
+    \vspace*{-3mm}
+    \caption{\label{fig:more-spmc-ex} Three additional examples for the 
+		case of single region with multiple components. Problem parameters 
+		are as follows: first row, $q = 2$, $n = 5$; second row, $q = 4$, 
+		$n = 10$; third row, $q = 5$, $n = 15$.} 
+    \vspace*{-4mm}
+\end{figure}
+
+
+For \algoMRG, Tabel~\ref{eval:mpmc:2} is a full version of 
+Table~\ref{eval:mpmc}. As for running time, Fig.~\ref{fig:mpmc:m} shows 
+the dependency on the number of regions $m$ appears to be linear with 
+$q$ fixed (recall we set $q_i = q(0.5 + random(0,1))$). This is tight
+in viewing the main running time of \algoMRG which is 
+$O((\sum_{1\le i \le m} q_i^2) \log(n + \sum_{1\le i \le m} q_i))$; if
+$q_i$ is fixed, then the time is linear with respect to $m$. An example 
+computation result for $m = 3$ is illustrated in Fig.~\ref{fig:mpmc-ex}. 
+
+\begin{table}[ht!]
+    \vspace*{-2mm}
+    \footnotesize
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|} 
+        \hline
+        \multirow{2}{*}{$q$} & \multirow{2}{*}{$n$} & \multicolumn{5}{|c|}{$m$} \\ \cline{3-7}
+        \rule{0pt}{2.5ex} & & $10$ & $20$ & $30$ & $40$ & $50$ \\ \hline
+        \rule{0pt}{2.5ex} $10^1$ & $10^2$ & $ 0.015$ & $ 0.027$ & $ 0.039$ & $ 0.045$ & $ 0.054$ \\ \hline
+        \rule{0pt}{2.5ex} $10^1$ & $10^3$ & $ 0.047$ & $ 0.063$ & $ 0.076$ & $ 0.091$ & $ 0.108$ \\ \hline
+        \rule{0pt}{2.5ex} $10^2$ & $10^2$ & $ 1.492$ & $ 2.784$ & $ 4.168$ & $ 5.404$ & $ 6.444$ \\ \hline
+        \rule{0pt}{2.5ex} $10^2$ & $10^3$ & $ 2.191$ & $ 3.771$ & $ 5.523$ & $ 7.707$ & $ 9.369$ \\ \hline
+        \rule{0pt}{2.5ex} $10^2$ & $10^4$ & $ 7.105$ & $ 9.619$ & $11.369$ & $12.760$ & $15.107$ \\ \hline
+    \end{tabular}
+    \vspace*{-2mm}
+    \caption{\label{eval:mpmc:2} \algoMRG~computation time (seconds)}
+    \vspace*{-4mm}
+\end{table}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[keepaspectratio, scale=0.85]{./figures/mpmc_final.eps}
+    \vspace*{-2mm}
+    \caption{\label{fig:mpmc:m}Running time of \algoMRG 
+		v.s. the number of regions.}
+    \vspace*{-2mm}
+\end{figure}
+
+\begin{figure}[ht!]
+    % \vspace*{-3mm}
+    \centering
+    \includegraphics[keepaspectratio, scale=0.25]{./figures/mpmc-example.eps}
+    \includegraphics[keepaspectratio, scale=0.25]{./figures/mpmc-solution.eps}
+    \vspace*{-3mm}
+    \caption{\label{fig:mpmc-ex} An example instance when $m = 3$, $n = 10$.} 
+    \vspace*{-4mm}
+\end{figure}
+%\jy{Make Fig.~\ref{fig:mpmc-ex} smaller, side by side.}
+
+\subsection{Snapshots of Application Scenario Computations}
+Fig.~\ref{fig:more-edinburgh} shows the deployment plan for $n = 5, 10, 20, 
+30$ guards. As the number of guards changes from $5$ to $10$, the gap on the
+lower left side is no longer covered due to the availability of more guards.
+Similarly, as the number of guards changes from $20$ to $30$, the very small 
+gap on the top no longer needs to be covered.  
+
+\begin{figure}[ht!]
+	\begin{center}
+		\begin{overpic}[width={\ifoc 4in \else 2.05in \fi},tics=5]{./figures/castle_5.eps}
+		\end{overpic}
+    \end{center}
+	\begin{center}
+		\begin{overpic}[width={\ifoc 4in \else 2.05in \fi},tics=5]{./figures/castle_10.eps}
+		\end{overpic}
+    \end{center}
+	\begin{center}
+		\begin{overpic}[width={\ifoc 4in \else 2.05in \fi},tics=5]{./figures/castle_20.eps}
+		\end{overpic}
+    \end{center}
+	\begin{center}
+		\begin{overpic}[width={\ifoc 4in \else 2.05in \fi},tics=5]{./figures/castle_30.eps}
+		\end{overpic}
+	\end{center}
+	\vspace*{-2mm}
+	\caption{\label{fig:more-edinburgh} Optimal deployment of $5, 10, 20, 30$ 
+	guards around the Edinburgh Castle.}
+	%\vspace*{-3mm}
+\end{figure}
+
+Finally, additional computational results for the forest fire monitoring
+case is illustrated in Fig.~\ref{fig:more-forest}. Behavior similar to that 
+from the castle case can be observed here, e.g., from $30$ to $40$ 
+guards, the small gap on the right is no longer covered. 
+
+\begin{figure}[ht!]
+    \vspace*{-2mm}
+	\begin{center}
+		\begin{overpic}[width={\ifoc 4in \else 2.4in \fi},tics=5]{./figures/forest_solution5.eps}
+		\end{overpic}
+    \end{center}
+	\begin{center}
+		\begin{overpic}[width={\ifoc 4in \else 2.4in \fi},tics=5]{./figures/forest_solution10.eps}
+		\end{overpic}
+    \end{center}
+	\begin{center}
+		\begin{overpic}[width={\ifoc 4in \else 2.4in \fi},tics=5]{./figures/forest_solution20.eps}
+		\end{overpic}
+    \end{center}
+	\begin{center}
+		\begin{overpic}[width={\ifoc 4in \else 2.4in \fi},tics=5]{./figures/forest_solution30.eps}
+		\end{overpic}
+    \end{center}
+	\begin{center}
+		\begin{overpic}[width={\ifoc 4in \else 2.4in \fi},tics=5]{./figures/forest_solution40.eps}
+		\end{overpic}
+	\end{center}
+	\vspace*{-2mm}
+	\caption{\label{fig:more-forest}  Optimal deployment of $5, 10, 20, 30, 40$ firefighters for 
+	forest fire monitoring.}
+	\vspace*{-3mm}
+\end{figure}
+

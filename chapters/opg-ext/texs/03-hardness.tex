@@ -1,0 +1,192 @@
+We explore in this section the computational complexity of \opglr 
+and \opgmc. Both problems are shown to be NP-hard with \opglr 
+being strongly NP-hard. We later confirm that \opgmc is weakly 
+NP-hard (in Section~\ref{sec:algorithm}).
+
+\subsection{Strong NP-hardness of \opglr}\label{subsec:opglr-hardness}
+When the number of types $t$ is a variable, i.e., $t$ is not a constant
+and may be arbitrarily large,
+% (but bounded by $n$), 
+\opglr is shown to be NP-hard via the reduction from \tpart \cite{garey1975complexity}:
+
+\vspace*{1mm}
+\noindent
+PROBLEM: \tpart\\
+INSTANCE: A finite set A of $3m$ elements, a bound $B\in \mathbb{Z^+}$, 
+% $S$ with $|S| = 3m$,
+and a ``size'' $s(a)\in \mathbb{Z^+}$ for each $a\in A$,
+such that each $s(a)$ satisfies $B/4 < s(a) <B/2$ and $\sum_{a\in A} s(a) = mB$.\\
+QUESTION: Is there a partition of $S$ into $m$ disjoint subsets $S_1, 
+\ldots, S_m$ such that for $1\leq i\leq m$, 
+$\sum_{a\in S_i} s(a) = B$?
+\vspace*{1mm}
+
+%In a \tpart instance, let $\sum_{s \in S} s = B$ and for all $b \in B$, 
+%$1/4 < b <  1/2$. Under such conditions, \tpart remains strongly 
+%NP-hard \cite{garey1979computer}. We will use this version of the \tpart problem. We mention here that we use fractional values for 
+%the elements of $B$ to avoid adding additional variables; this is fine 
+%as long as we restrict the involved numbers to be rationals. 
+\tpart is shown to be NP-complete in the strong sense\cite{GarJoh79}, 
+i.e., it is NP-complete even when all numeric inputs are bounded by a polynomial 
+of the input size. 
+
+For the reduction, it is more convenient to work with a decision 
+version of the \opglr problem, denoted as \opglrd. In the \opglrd 
+problem, $a_{\tau}$ is the actual length robot type $\tau$ covers. 
+That is, the coverage length of a robot is fixed. The \opglrd problem 
+is specified as follows. 
+
+\vspace*{1mm}
+\noindent
+PROBLEM: \opglrd\\
+INSTANCE: $t$ types of robots where there are $n_{\tau}$ robots for 
+each type $1 \le \tau \le t$; $n = n_1 + \cdots + n_t$. A robot of 
+type $\tau$ has a coverage capacity $a_{\tau}$. A set of perimeters 
+$\P = \{P_1, \ldots, P_m\}$ of a set of 2D regions 
+$\R =\{R_1, \ldots, R_m\}$.\\ 
+QUESTION: Is there a deployment of $n$ disjoint subsets $C_1, \ldots, C_n$
+of $\{\partial R_1, \ldots, \partial R_m\}$ such that 
+$P_1 \cup \ldots \cup P_m \subset C_1 \cup \ldots \cup C_n$, where
+$C_j$ is a continuous segment for all $1 \le j \le n$, and for each 
+$1 \le j \le n$, there is a unique robot whose type $\tau$, $1 \le \tau 
+\le t$ satisfies $a_{\tau} \ge len(C_j)$?
+\vspace*{1mm}
+
+\begin{theorem}\label{t:opglr-hard}
+	\opglr is strongly NP-hard. 
+\end{theorem}
+\begin{proof}
+	A polynomial reduction from \tpart to \opglrd is constructed
+	by a restriction of \opglrd. Given a \tpart instance with former notations,
+	we apply several restrictions on \opglrd: {\em (i)} there are $3m$ types of robot
+	and there is a single robot 
+	for each type, i.e., $n_{\tau} = 1$ for $1 \le \tau \le t$, so $n=t=3m$ 
+	{\em (ii)} the $3m$ capacities $a_1, \ldots, a_{3m}$ are set to be equal to
+	$s(a)$ for each of the $3m$ elements $a\in A$, and {\em (iii)} 
+	there are $3m$ perimeters and each perimeter $P_i$ is continuous and
+	$len(P_i)=B$ for all $1 \le i \le m$.
+
+	% \begin{comment}
+	% In this proof, we work with a further restriction of \opglrd: {\em (i)}
+	% there is a single robot for each type, i.e., $n_{\tau} = 1$ for $1 
+	% \le \tau \le t$, and {\em (ii)} each perimeter $P_i$ is continuous and
+	% %$len(P_i)$ is the same for all $1 \le i \le m$.
+	
+	% $len(P_i) = B$ for all $1 \le i \le m$.
+	% Given a \tpart instance with $\sum_{b_i \in B} b = q$ and $1/4 \le b 
+	% \le  1/2$ for all $b_i \in B$, let the corresponding \opglrd instance 
+	% have $q$ perimeters, each with a single segment with the same length 
+	% $L$. Let there be $3q$ robots, each with a type $1 \le \tau \le 3q$ 
+	% and capability parameter $a_{\tau} = b_{\tau} \in B$. The restricted
+	% \opglrd problem instance asks a question similar to the \tpart problem: 
+	% is there a partition of the robots such that each perimeter of length 
+	% $1$ is covered by three robots (notice that it is impossible to reach 
+	% a total capacity of $1$ with fewer or more than $3$ robots)? 
+	% \end{comment}
+
+	% \begin{comment}
+	% We make some rudimentary observations regarding the \opglrd instance 
+	% and the related \opglr instance. Since all $q$ perimeters are of length 
+	% $L$ each and the total capability of the robots is $q$, the objective 
+	% \eqref{eq:objective} cannot be lower than $\frac{qL}{q} = L$, which is 
+	% achieved only when each perimeter is covered by robots with total 
+	% capability parameter of $1$. Then, because of the requirement $1/4 < 
+	% a_{\tau} < 1/2$, if the best possible solution to the related \opglr 
+	% instance is to be realized, each perimeter must be covered by exactly 
+	% three robots; otherwise, the total capability cannot sum up to $1$. 
+	% \end{comment}
+	
+	With the setup, the reduction proof is straightforward. Clearly, the 
+	\tpart instance admits a partition of $A$ into $S_1, \ldots, 
+	S_m$ such that $\sum_{a \in S_i} s(a) = B$ for all $1\leq i\leq m$ 
+	if and only if a
+	valid depolyment exists in the corresponding \opglrd instance. 
+	It is clear that the reduction from \tpart to 
+	\opglrd is polynomial (in fact, linear). Based on the 
+	reduction and because \tpart is strongly NP-hard, so is \opglrd 
+	%(by Lemma 4.1 of \cite{garey1975complexity}) 
+	and \opglr.
+\end{proof}
+
+\begin{remark}
+	One may also reduce weakly NP-hard problems, e.g., \twopart
+	\cite{karp1972reducibility}, to \opglr for variable number of robot 
+	types $t$. Being strongly NP-hard, \opglr is unlikely to admit pseudo-polynomial 
+	time solutions for variable $t$. This contrasts with a later result 
+	which provides a pseudo-polynomial time algorithm for \opglr for 
+	constant $t$, as one might expect in practice where robots have limited 
+	number of types. We also note that Theorem~\ref{t:opglr-hard} continues 
+	to hold for a single perimeter with multiple segments, each 
+	having a length $B$ in previous notation, separated by ``long'' gaps. Obviously, 
+	\opglrd is in NP, thus rendering it NP-complete. 
+\end{remark}
+
+\subsection{NP-hardness of \opgmc}
+The minimum cost \opg variant, \opgmc, is also NP-hard, which may be 
+established through reduction from the \subsetsum problem 
+\cite{karp1972reducibility}:
+
+\vspace*{1mm}
+\noindent
+PROBLEM: \subsetsum \\
+INSTANCE: A set $B$ with $|B| = n$ and a weight function $w: B \to 
+\mathbb Z^+$, and an integer $W$.\\ 
+QUESTION: Is there a subset $B' \subseteq B$ such that $\sum_{b \in B'} 
+w(b) = W$?
+\vspace*{1mm}
+
+\begin{theorem}\label{t:opgmc-hard}
+	\opgmc is NP-hard. 
+\end{theorem}
+\begin{proof}
+	Given a \subsetsum instance, we construct an \opgmc instance with a 
+	single perimeter containing a single segment with length $L$ to be 
+	specified shortly. Let there be $t=2n$ types of robots. For $1 \le i 
+	\le n$, let robot type $2i-1$ have $\ell_{2i-1} = c_{2i-1} = 
+	w(b_i) + (2^{n + 1} + 2^i)W'$ and let robot type $2i$ have $\ell_{2i} 
+	= c_{2i} = (2^{n + 1} + 2^i)W'$. Here, $W'$ can be any integer number no less than 
+	$\sum_{b\in B} w(b)$. Set $L = W + (n2^{n+1} + 2^n + \ldots 
+	+ 2^1)W'$. We ask the ``yes'' or ``no' decision question of whether there 
+	are robots that can be allocated to have a total cost no more than $L$ 
+	(equivalently, equal to $L$, as the cost density $c_\tau/l_\tau$
+	is always $1$).
+	
+	Suppose the \subsetsum instance has a yes answer that uses a subset
+	$B' \subseteq B$. Then, the \opgmc instance has a solution with cost $L$ 
+	that can be constructed as follows. For each $1 \le i \le n$, a single 
+	robot of type $2i - 1$ is taken if $b_i \in B'$. Otherwise, a single 
+	robot of type $2i$ is taken. This allocation of robots yields a total 
+	length and cost of $L$. 
+	
+	For the other direction, we first show that if the \opgmc instance 
+	is to be satisfied, it can only use a single robot from type $2i-1$ 
+	or $2i$ for all $1 \le i \le n$. First, if more than $n$ robots are 
+	used, then the total cost exceeds $(n + 1)2^{n+1}W' > L$ as $W\leq W'$.
+	% because $W' + (2^n + \ldots + 2)W' < 2^{n+1}W'$. 
+	Similarly, if less than $n$ 
+	robots are used, the total length is at most 
+	$(n-1)2^{n+1}W'+(2^{n+1}-1)W'+ W' < L$. 
+	Also, to match the $(2^n + \ldots + 2)W'$ part of the cost, exactly one robot 
+	from type $2i-1$ or $2i$ for all $1 \le i \le n$ must be taken. 
+	Now, if the \opgmc decision instance has a yes answer, if a robot 
+	of type $2i -1$ is used, let $b_i \in B$ be part of $B'$, which 
+	constructs a $B'$ that gives a yes answer to the \subsetsum instance.
+\end{proof}
+% add this citation because the proof the hardness probably comes from it
+\begin{remark}
+	It is also clear that the decision version of the \opgmc problem is 
+	NP-complete. The \subsetsum is a weakly NP-hard problem that admits 
+	a pseudo-polynomial time algorithm \cite{dantzig1957discrete}. 
+	As it turns out, \opgmc, which shares similarities with \subsetsum
+	and \ttkp (in particular, \ttukp \cite{ukphardness}), though NP-hard, 
+	does admit a pseudo-polynomial time algorithm as well. 
+\end{remark}
+
+\begin{comment}
+In concluding the section, we note that we have not determined the 
+hardness for the case with constant number of robot types. There are 
+some recent evidence that such problems may not be as hard as when 
+the number of robot types is a fixed input parameter 
+\cite{goemans2014polynomiality}.
+\end{comment}
+

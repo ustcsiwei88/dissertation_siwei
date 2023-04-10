@@ -1,0 +1,283 @@
+In computing $\ell^*$ for a single perimeter $P$ with multiple connected 
+components, assume that $P$ is composed of $q$ maximal connected 
+components $S_1, \ldots, S_q$ (e.g., Fig.~\ref{fig:single-perimeter}),
+leaving $G_1, \ldots, G_q$ as the gaps on $\partial R$. Given an 
+optimal cover $\C^* = \{C_1^*, \ldots, C_n^*\}$, by 
+Proposition~\ref{p:endpoint-alignment}, we may assume that the left
+end point of some $C_j^*$, $1 \le j \le n$ coincides with the left 
+end point of some $S_k$, $1 \le k \le q$. We then look at the right 
+end point of $C_j^*$. If it does not coincide with the right end point 
+of some $S_{k'}$ ($k$ and $k'$ may or may not be the same), it must 
+coincide with the left end point of $C_{j+1}^*$. Continuing like this, 
+eventually we will hit some $C_{j'}^*$ where the right end point of 
+$C_{j'}^*$ coincides with the right end point of some $S_{k'}$. 
+Within a partitioned subset $C_j^*, \ldots, C_{j'}^*$, the coverage of 
+each robot is minimized when $len(C_j^*) = \ldots = len(C_{j'}^*)$. 
+Because $\ell^* = len(C_j^*)$ for some $1 \le j \le n$, at least one 
+of the subsets must have all robots cover exactly a length of $\ell^*$. 
+These two key observations are summarized as follows. 
+
+\vspace*{-1mm}
+\begin{theorem}\label{t:optimal-partition}
+Let $\C^* = \{C_1^*, \ldots, C_n^*\}$ be a solution to an \opg instance
+with a single perimeter $P = S_1\cup \ldots\cup S_q$ and gaps $G_1, \ldots, 
+G_q$. Then, $\C^*$ may be partitioned into disjoint subsets with
+the following properties
+\begin{enumerate}
+\item the union of the individual elements from any subset forms a 
+continuous line segment, 
+\item the left end point of such a union coincides with the left end 
+point of some $S_k$, $1 \le k \le q$, 
+\item the right end point of such a union coincides with the right end 
+point of some $S_{k'}$, $1 \le k' \le q$,  and
+\item the respective unions of elements from any two subsets are 
+disjoint, i.e., they are separated by at least one gap. 
+\end{enumerate}
+Moreover, for at least one such subset, $\{C_j^*, \ldots, C_{j'}^*\}$, 
+it holds that $\ell^* = len(C_j^*) = \ldots = len(C_{j'}^*)$. 
+\vspace*{-1mm}
+\end{theorem}
+
+\noindent\textbf{A baseline algorithm}.
+In the example from Fig.~\ref{fig:example}, $\C^*$ is partitioned into 
+two subsets satisfying the conditions stated in 
+Theorem~\ref{t:optimal-partition}. The theorem provides a way for 
+computing $\ell^*$. For fixed $1 \le k, k' \le q$, denote the part of 
+$\partial R$ between $S_k$ and $S_{k'}$ following a clockwise direction 
+(with $S_k$ and $S_{k'}$ included) as $S_{k-k'}$.
+Theorem~\ref{t:optimal-partition} says that for some $k, k'$, $len(S_{k-k'})
+= n_{k-k'}^*\ell^*$ for some integer $n_{k-k'}^* \in [1, n]$. We may 
+find $k', k'$, and $n_{k-k'}^*$, $\ell^*$ by exhaustively going through all 
+possible $k, k'$, and $n_{k-k'}^c$ (as a candidate of $n_{k-k'}^*$). For 
+each combination of $k, k'$ and $n_{k-k'}^c$, we can compute a 
+\begin{align}\label{eq:lkkc}
+\vspace*{-2mm}
+\ell_{k-k'}^c = \frac{len(S_{k-k'})}{n_{k-k'}^c}
+\vspace*{-2mm}
+\end{align}
+and check $\ell_{k-k'}^c$'s feasibility. The largest feasible 
+$\ell_{k-k'}^c$ is $\ell^*$. 
+
+For checking feasibility of a particular $\ell_{k-k'}^c$, i.e., whether 
+$\ell_{k-k'}^c$ is long enough for the rest of the robots to cover the 
+rest of the perimeter, we simply {\em tile} $(n - n_{k-k'}^c)$ copies 
+$\ell_{k-k'}^c$ over the rest of the perimeter, starting from $S_{(k' 
+\mod q) + 1}$. As an example, see Fig.~\ref{fig:tiling} where $n = 6$ 
+robots are to cover the perimeter (in red, with five components $S_1, 
+\ldots, S_5$). Suppose that the algorithm is currently working with 
+$S_{1-2}$ (i.e., $k=1$ and $k' = 2$). If  $n_{1-2}^c = 2$, then 
+$\ell_{1-2}^c = len(S_{1-2})/2$. Each of the five green line segments 
+$C_1, \ldots, C_5$  in the figure has this length. As visualized in the 
+figure, it is possible to cover $P\backslash S_{1-2}$ with three more 
+robots, which is no more than $n - n_{1-2}^c = 4$. Therefore, this 
+$\ell_{1-2}^c$ is feasible; note that it is not necessary to exhaust 
+all $n = 6$ robots. In the figure, $C_3$ covers the entire $S_3$ and 
+$G_3$, as well as part of $S_4$. The rest of $S_4$ is covered by $C_4$. 
+As $C_4$ is tiled, it ends in the middle of $G_4$, so $C_5$ starts at 
+the beginning of $S_5$. 
+%
+On the other hand, if $n_{1-2}^c = 3$, the resulting $\ell_{1-2}^c$ 
+(each of the orange line segments has this length) is infeasible as part 
+of $S_5$ is now left uncovered.
+\begin{figure}[ht]
+	\vspace*{-2mm}
+	\begin{center}
+		\begin{overpic}[width=0.6\textwidth,tics=5]{./chapters/opg/figures/tiling.eps}
+			\put(13,2.7){{\small $S_1$}}
+			\put(27,2.7){{\small $S_2$}}
+			\put(45,2.7){{\small $S_3$}}
+			\put(60,2.7){{\small $S_4$}}
+			\put(86.5,2.7){{\small $S_5$}}
+			\put(12.5,10){{\small $C_1$}}
+			\put(25,10){{\small $C_2$}}
+			\put(48,10){{\small $C_3$}}
+			\put(61,10){{\small $C_4$}}
+			\put(86.5,10){{\small $C_5$}}
+			%\put(54,40){{\small \textcolor{green}{$P_2$}}}
+			%\put(82,44){{\small $\W$}}
+		\end{overpic}
+	\end{center}
+	\vspace*{-4.5mm}
+	\caption{\label{fig:tiling}  An illustration of the feasibility check of 
+		$\ell_{1-2}^c$. The single rectangular region and the perimeter (five red 
+		segments $S_1$--$S_5$) are shown at the bottom. The orange and green line 
+		segments show two potential	covers.}
+	\vspace*{-3mm}
+\end{figure}
+
+The tiling-based feasibility check takes $O(q)$ time since there are at 
+most $q$ segments to tile; it takes constant time to tile each segment 
+using a given length. Let us denote this feasibility check 
+\isLFeasibleByTilingPartial($k$, $k'$, $n_{k-k'}^c$), we have obtained 
+an algorithm that runs in $O(nq^3)$ times since it needs to go through 
+all $1 \le k \le q$, $1 \le k' \le q$, and $1 \le n_{k-k'}^c \le n$ and 
+for each combination of $k, k'$, and $n_{k-k'}^c$, it makes a call to 
+\isLFeasibleByTilingPartial($\cdot$). While a $O(nq^3)$ running time 
+is not bad, we can do significantly better. 
+
+\noindent\textbf{A much faster algorithm}.
+In the baseline algorithm, for each $k-k'$ combination, up to $n$ 
+candidate $n_{k-k'}^c$ may be attempted. To gain speedups, the first 
+phase of the improved algorithm reduces the range of $\ell^*$ to limit 
+the choice of $n_{k-k'}^c$. As a necessity, a feasibility check given 
+only a length $\ell$ is introduced. That is, given an $\ell$, a check
+is done to see whether $n$ robots are sufficient for covering $P$. 
+This feasibility check is performed in a way similar to the tiling process from 
+\isLFeasibleByTilingPartial($\cdot$) but now $k$ and $k'$ are not 
+specified. Therefore, we need to try all $S_k$, $1 \le k \le q$ as the 
+possible starting segment for the tiling. Let us denote this procedure
+\isLFeasibleByTilingFull($\ell$), which runs in $O(q^2)$.
+
+With \isLFeasibleByTilingFull($\ell$), starting from the initial bounds 
+for $\ell^*$ given in Proposition~\ref{p:single-bounds}, we can narrow the
+bound to be arbitrarily small, using bisection, since $\ell^*$ is the 
+minimum feasible $\ell$. To do this, we start with $\ell$ as the middle 
+point of initial lower bound $\ell_{min}$ and upper bound $\ell_{max}$, 
+and run \isLFeasibleByTilingFull($\ell$). If $\ell$ is feasible, the upper bound 
+is lowered to $\ell$. Otherwise, the lower bound is raised to $\ell$. In doing 
+this,  our goal in the first phase of the faster
+algorithm is to reduce the range for $\ell^*$ so that there is only a 
+constant number of choices for $n_{k-k'}^c$. We now derive when the 
+bisection process should end. 
+\setlength{\abovedisplayskip}{1.6pt}
+\setlength{\belowdisplayskip}{2.0pt}
+%\setlength{\abovedisplayskip}{4.2pt}
+%\setlength{\belowdisplayskip}{4.2pt}
+
+Assume that when the bisection ends, the lower and upper bounds are 
+$\ell_{min}^f$ and $\ell_{max}^f$. Then, for some $\ell_{k-k'}^c$
+(see~\eqref{eq:lkkc}), it holds that
+\[
+\ell_{min}^f \le \ell_{k-k'}^c = \frac{len(S_{k-k'})}{n_{k-k'}^c} \le \ell_{max}^f.
+\]
+Rearranging the above yields
+\[
+\frac{len(S_{k-k'})}{\ell_{max}^f} \le n_{k-k'}^c \le \frac{len(S_{k-k'})}{\ell_{min}^f}.
+\]
+To reduce the number of possible $n_{k-k'}^c$ to at most $1$, we want 
+\[
+\frac{len(S_{k-k'})}{\ell_{min}^f} - \frac{len(S_{k-k'})}{\ell_{max}^f} < 1, 
+\]
+which is the same as requiring 
+\begin{align}\label{eq:lmmd}
+\ell_{max}^f- \ell_{min}^f <
+\frac{\ell_{max}^f\ell_{min}^f}{len(S_{k-k'})}. 
+\end{align}
+Noting that $\ell_{min}^f, \ell_{max}^f \ge  \ell_{min}$ and $len(S_{k-k'}) < 
+len (\partial R)$, Equation~\eqref{eq:lmmd} is ensured by 
+\begin{align}\label{eq:lmmd2}
+\ell_{max}^f- \ell_{min}^f 
+< \frac{\ell_{min}^2}{len(\partial R)} 
+= \frac{\Big[\sum_{1\le k\le q}len(S_k)\Big]^2}{n^2len(\partial R)} 
+\end{align}
+
+Equation~\eqref{eq:lmmd2} gives the stopping criteria used for refining 
+the bounds for $\ell^*$. After completing the first phase, the faster algorithm
+moves to the second phase of actually pinning down $\ell^*$. In this phase, 
+instead of checking $\ell_{k-k'}^c$ one by one, we collect $\ell_{k-k'}^c$ for
+all possible combinations of $k, k'$. Because the first phase already ensures
+for each $k, k'$ combination there is at most one pair of $n_{k-k'}^c$ and 
+$\ell_{k-k'}^c$, there are 
+at most $q^2$ total candidates. After all candidates are collected, they are 
+sorted and another bisection is performed over these sorted candidates. 
+Feasibility check is done using \isLFeasibleByTilingPartial($\cdot$). The 
+complete algorithm is given in Algorithm~\ref{algo:SRG}. Note that 
+$\ell^{min}$ and $\ell^{max}$, which change as the algorithm runs, are not 
+the same as the fixed $\ell_{min}$ and $\ell_{max}$ from 
+Proposition~\ref{p:single-bounds}. 
+\newpage
+\vspace*{-7mm}
+\begin{algorithm}
+	\begin{small}
+		\SetKwInOut{Input}{Input}
+		\SetKwInOut{Output}{Output}
+		\SetKwComment{Comment}{\%}{}
+		\Input{$\partial R = S_1 \cup G_1 \cup \ldots \cup S_q \cup G_q$: a 
+			single boundary with the perimeter $P = S_1 \cup \ldots \cup S_q$.\\
+			$n$: the number of robots}
+		\Output{$\ell^*, k^*, k'^{*}$: the optimal coverage and the 
+			pair of $k$ and $k'$ that realize the optimal coverage}
+		\vspace{0.025in}
+		
+		\Comment{\footnotesize Phase one: narrow the range of $\ell^*$.}
+		$\ell^{min} \leftarrow \frac{\sum_{1\le k\le q}len(S_k)}{n}$, 
+		$\ell^{max} \leftarrow  \frac{len(\partial R) -  len(G_{max})}{n}$;
+		\vspace{0.025in}
+		
+		\While{$\ell^{max}-\ell^{min} > \frac{[\sum_{1\le k\le q}len(S_k)]^2}{n^2len(\partial R)}$}{
+			$\ell \leftarrow \frac{\ell^{max}+\ell^{min}}{2}$;
+
+			\vspace{0.025in}
+			(\,\isLFeasibleByTilingFull($\ell$)? $\ell^{max} \leftarrow \ell$ : 
+			$\ell^{min} \leftarrow \ell$\,);
+
+			%\uIf{\isLFeasibleByTilingFull($\ell$)}{$\ell^{max} \leftarrow \ell$;}
+			%\Else{$\ell^{min} \leftarrow \ell$;}
+		}
+		
+		\vspace{0.025in}
+		\Comment{\footnotesize Phase two: pin down $\ell^*$.}
+		$sm \leftarrow []$; \Comment{$sm$ is a sorted map.}
+		
+
+		\For{$k, k' \in \{1,\dots, q\}$ }{\label{algo:srg:for}
+			\vspace{0.025in}
+			
+			$n_{k-k'}^{max} \leftarrow \lfloor \frac{len(S_{k-k'})}{\ell^{min}} \rfloor$;
+			$n_{k-k'}^{min} \leftarrow \lceil \frac{len(S_{k-k'})}{\ell^{max}} \rceil$;
+			
+			\vspace{0.025in}
+			
+			\For{$n_{k-k'}^c \in \{n_{k-k'}^{min}, \ldots, n_{k-k'}^{max}\}$}{\label{algo:srg:for2}
+				$sm$.put($\frac{len(S_{k-k'})}{n_{k-k'}^c}$, $(n_{k-k'}^c, \frac{len(S_{k-k'})}{n_{k-k'}^c}, k, k')$);
+			}
+		}
+	
+		\vspace{0.025in}
+		$\ell^* \leftarrow \infty$; $k^* \leftarrow 0$; $k'^* \leftarrow 0$;
+		
+		\vspace{0.025in}
+		\While{$sm.\mathrm{size()}$ $> 1$}{
+			\Comment{\footnotesize Extract the element from sm in the middle.}
+			$(n^c, \ell^c, k, k') \leftarrow sm$.middleValue(); 
+	
+			\vspace{0.025in}
+			\uIf{\isLFeasibleByTilingPartial($k, k', n^c$)}{
+				$\ell^* \leftarrow \ell^c$; $k^* \leftarrow k$; $k'^* \leftarrow k'$;
+				
+				$sm \leftarrow sm.$range($sm.$minKey(), $\ell^c$);
+			}
+			\Else{
+				$sm \leftarrow sm.$removeRange($sm.$minKey(), $\ell^c$);
+			}
+		}		
+		
+		\Return{$\ell^*$, $k^*$, $k'^*$}
+		\caption{\algoSRG} \label{algo:SRG}
+	\end{small}
+\end{algorithm}
+\vspace*{-3mm}
+
+In terms of running time, the first $\mathbf{while}$ loop starts with 
+$\ell^{max} - \ell^{min} = \frac{len(\partial R) -  len(G_{max})}{n} -
+\frac{\sum_{1\le k\le q}len(S_k)}{n} \le \frac{len(\partial R)}{n}$ and 
+stops when $\ell^{max} - \ell^{min} \le 
+\frac{[\sum_{1\le k\le q}len(S_k)]^2}{n^2len(\partial R)}$. Therefore, 
+the bisection is executed 
+$\log \frac{n[len(\partial R)]^2}{[\sum_{1\le k\le q}len(S_k)]^2}$ times, 
+which by the assumption that $len(\partial R)$ is a polynomial factor over 
+$\sum_{1\le k\le q}len(S_k)$, is $O(\log (n + q))$. Since each feasibility 
+check takes $O(q^2)$ time, the first $\mathbf{while}$ loop takes 
+$O(q^2\log(n + q))$ time. The $\mathbf{for}$ loops work with a total of 
+$O(q^2)$ candidates and must sort them, taking time $O(q^2 \log q^2) = 
+O(q^2 \log q)$. Then, the second $\mathbf{while}$ loop bisects $O(q^2)$ 
+candidates and calls \isLFeasibleByTilingPartial($\cdot$) for each check, 
+taking time $O(q\log q^2) = O(q\log q)$. The total running time of 
+Algorithm~\ref{algo:SRG} is then $O(q^2\log (n + q) + M + n)$.\footnote{We note that 
+the assumption that $len(\partial R)$ is a polynomial factor over 
+$\sum_{1\le k\le q}len(S_k)$ is not necessary. However, the corresponding 
+analysis becomes much more involved without it. Since the assumption makes 
+practical sense and also due to space limit, the more general result is 
+omitted from the current paper. Many additional interesting but 
+non-essential details, including this one, will be included in an extended 
+version.}

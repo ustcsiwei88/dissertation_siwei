@@ -1,0 +1,264 @@
+\def\algomed{\textsc{Min\_Enclose\_Disc}\xspace}
+In this section, we present several algorithmic solutions for \osgt. 
+First, a fully polynomial approximation scheme (FPTAS)
+is presented that solve \opgt with the additional requirement 
+that each sensor is responsible for a continuous perimeter segment. 
+This contrasts Theorem~\ref{them:twoconthard}. Then, we show that 
+there exist polynomial time algorithms that readily guarantee a
+$(2+\varepsilon)$-approximation for \osgt. This is followed by an 
+integer linear programming (ILP) method that delivers high-quality
+solutions (as compared with the $(2 + \varepsilon)$-approximate one)
+and has good scalability. 
+
+In preparation for introducing the result, we first describe a method
+that is used for discretizing the problem. For a simple polygon $P$, 
+we can approximately represent its boundary $\partial P$ as a set of 
+balls with radius $\varepsilon$ along $\partial P$, by splitting  
+$\partial P$ into $N=\lceil{len(\partial P)}/({2\varepsilon})\rceil$ 
+continuous pieces of length at most $2\varepsilon$ and putting the balls' 
+centers at their midpoints. 
+%
+Denote set of $\varepsilon$-balls as $S_B$, and the set of their centers 
+as $S_O=\{o_1,\dots, o_N\}$. Since it holds that $size(k,\partial P) \leq 
+size(k, S_B) \leq size(k, S_O) + \varepsilon \leq size(k, \partial P) 
++ \varepsilon$, the minimum coverage radius of the discritized version 
+of covering $S_O$ will differ no more than $\varepsilon$ from the original 
+problem of covering $\partial P$. Similarly, for covering the interior 
+of $P$, we can put $P$ into a grid with cell side length $\varepsilon$, 
+and set the center of the grid cells intersecting with $P$ as $S_O$, 
+creating at most $N=O(({len(\partial P)}/{\varepsilon})^2)$ samples. 
+The discretization process converts guarding $P$ or $\partial P$ to 
+guarding $S_O$. 
+
+\subsection{\opgt with Single Segment Guarding Limitation}\label{subsec:singleseg}
+By Theorem.~\ref{them:twoconthard}, if a mobile sensor can guard up to two 
+continuous perimeter segments, \osgt is hard to approximate within 
+$1.152$-optimal. 
+Translating this into guarding elements of $S_O$, this means that a sensor
+can guard two {\em chains} of elements from $S_O$, where each chain contains 
+some $m$ elements $o_1, \ldots, o_m$ that are neighbors along $\partial P$. 
+Interestingly, if each sensor may only guard a single chain of elements 
+from $S_O$, we may compute an optimal cover for $S_O$ using $O(N^2 \log N)$ 
+time. This readily turns into a fully polynomial time approximation scheme 
+(FPTAS) for \opgt. 
+% based on efficent implementation of the expected linear time 
+% implementation to get the Minimum Enclosing Disc of a set of points \cite{welzl1991smallest}\cite{Mark1997computation}.  
+The algorithm operates by checking multiple times whether a given radius 
+$r$ is sufficient for $k$ discs of the given radius to cover elements of 
+$S_O$ where each disc covers only a single chain of elements. 
+
+A single feasibility check is outlined in Algorithm~\ref{algo:cont}.
+In the pseudo code, it is assumed that the indices are modulo $N$, e.g. 
+$M[N+1] = M[1]$, $o_{N+1} = o_1$. 
+%
+Algorithm~\ref{algo:cont} is based on an efficient implementation of 
+a subroutine \algomed (from e.g., \cite{welzl1991smallest,
+Mark1997computation}) that computes the disc with minimum radius to 
+enclose a given set of points in expected linear time. With this, a sliding 
+window can be applied to find the rightmost $end$ for each $1\leq i\leq 
+N$ such that $o_i, \dots, o_{end}$ can be enclosed in a circle of radius 
+$r$. The length of this sequence is stored in $M[i]$. 
+
+As $o_{end}$ cannot come around and meet $o_i$, the total call to 
+\algomed is no more than $2N$. After this, the algorithm simply tries to put 
+discs from each $o_i$ to cover as many centers as possible to see 
+whether $S_O$ can be enclosed with $k$ discs. An optimization can be made 
+by only examining starting point as $o_1, \dots, o_{M[1]+1}$, since there 
+is no circle of radius of $r$ that can cover them together by the 
+definition of $M$.
+%
+The apparent complexity of Algorithm~\ref{algo:cont} is $O(N^2)$. Since 
+there are a total of $N$ points and $k$ robots, in a majority 
+of cases a circle would enclose about $N/k$ points, which effectively 
+lowers the time complexity to $O(N^2/k)$.
+
+\def\algoptfeasi{\textsc{Opg\_2D\_Cont\_Feasible}}
+\SetKw{Continue}{continue}
+\SetKw{True}{true}
+\SetKw{False}{false}
+\begin{algorithm}
+\begin{small}
+\DontPrintSemicolon
+\SetKwComment{Comment}{\%}{}
+\caption{\textsc{Opg\_2D\_Cont\_Feasible}}    %($P$, $k$, $r$, $\varepsilon$)}}
+\label{algo:cont}
+\SetKwInOut{Input}{Input}
+\SetKwInOut{Output}{Output}
+\KwData{$S_O=\{o_1, \dots, o_N\}$, sample points in circular order\\
+\qquad\quad$k$, the number of robots\\
+\qquad\quad $r$, the candidate sensing radius}
+\KwResult{\True or \False, indicating whether $S_O$ can be covered with k discs with radius $r$}
+\vspace{2mm}
+
+\If{{\sc Min\_Enclose\_Disc}($o_1, \dots, o_N$)$\leq r$} {\Return{\True}}
+\vspace{1.5mm}
+
+\Comment{\small Phase 1: find the maximum number of consecutive points a disc of radius $r$ can enclose
+from each $c_i$.}%$arr[i]$ \small stores the number of continuous points the disc can enclose from $c_i$.}
+\vspace{1.5mm}
+
+$M\leftarrow$ an array of length $N$; $end\leftarrow 1$;\;
+\vspace{1.5mm}
+
+\For{$i=1$ \KwTo N}{
+\While{{\sc Min\_Enclose\_Disc($o_i, \dots, o_{end+1}$) $\leq r$ }}{
+    $end\leftarrow end+1$;\;
+}
+$M[i]\leftarrow end - i + 1$;\;
+}
+\vspace{1.5mm}
+
+\Comment{\small Phase 2: try to tile from each $o_i$.}
+\vspace{1.5mm}
+
+\For{$i=1$ \KwTo $N$}{
+$j \leftarrow i$, \quad $cnt \leftarrow k$;\;
+\While{$cnt > 0$}{
+    $j \leftarrow j + M[j]$;\;
+    \If{$j-i \geq N$}{\Return{\True}}
+    $cnt\leftarrow cnt-1$\;
+}
+}
+\Return{\False}
+\end{small}
+\end{algorithm}
+
+
+
+Note that for the optimal coverage radius $r^*$, it holds that $r_{min} = 
+0 < r^* \leq {len(\partial P)}/({2k}) = r_{max}$. 
+Recall that $N=\lceil len(\partial P)/(2\varepsilon)\rceil$.
+Hence, after at most 
+\[
+  \log\frac{r_{max} - r_{min}}{\varepsilon} = \log(\frac{len(\partial P)}{2k\varepsilon})  = O(\log\frac{N}{k} )
+\]
+times of binary search on the optimal radius $r^*$ by calling \algoptfeasi, 
+the search range of $r^*$ or the gap between $r_{max}$ and $r_{min}$ will 
+be reduced to within $\varepsilon$. So, it takes expected $O(N^2 \log (N/k))$ 
+time in total to get an approximate solution with radius at most $\varepsilon$ 
+more than $size(k, S_O)$ or $size(k, \partial P)$.
+\begin{theorem}\label{t:opgtsseg}
+    Under the rule of continuous coverage, \opgt for a simple 
+		polygon can be approximated to $(1 + \varepsilon)$-optimal in expected 
+		$O(N^2\log N)$ time, and $O(({N^2}/{k} )\log(N/k))$ in most cases,
+    where $N=\lceil{len(\partial P)}/({2\varepsilon})\rceil$.
+\end{theorem}
+
+\remark{In the running time complexity analysis, we implicitly 
+used the assumption that $len(\partial P)$ is polynomial to problem input 
+size (see Section~\ref{sec:problem}). Also, the algorithm given above
+computes an $OPT + \varepsilon$ optimal solution. However, 
+% due to the 
+it can be naturally assumed that the optimal
+sensing radius $OPT$ is lower bounded in realistic scenarios. 
+So, an $(OPT + \varepsilon)$ solution
+directly translates into a $(1 + \varepsilon)$-optimal solution. 
+Lastly, using techniques similar to those from \cite{FenHanGaoYuRSS19,FenYu2020RAL}, 
+we mention that results in this subsection readily extends to multiple 
+simple polygons with gaps along the boundary. 
+These arguments continue to apply throughout the rest of  
+this section. 
+%
+
+Regarding the choice in implementation, the minimum enclosing disc problem 
+(1-center problem) also has deterministic solution 
+\cite{megiddo1983linear} in linear time, but a randomized algorithm is considered to be 
+more efficient\cite{welzl1991smallest} and easier to implement.}
+
+\subsection{$(2 + \varepsilon)$ Approximation}
+In dealing with Euclidean $k$-clustering problems, two seminal methods 
+are often brought out, both of which compute $2$-approximation solutions
+for $k$-center problem in polynomial time. This is fairly close to the 
+inapproximability gap of $1.822$ for Euclidean $k$-center
+problem\cite{feder1988optimal}. The first 
+\cite{hochbaum1985best, vazirani2013approximation} transforms the 
+clustering problem to a dominating set problem and then applies parametric 
+search on the cluster size (radius), resulting in a $2$-approximation in 
+time $O(n^2\log n)$ with $n$ being the number of points to cover. 
+A second method \cite{gonzalez1985clustering} takes 
+a simpler farthest clustering approach by iteratively choosing the 
+furthest point from the current centers as the new center. The method runs 
+in $O(nk)$ but is subsequently improved to $O(n\log k)$ in 
+\cite{feder1988optimal}. So, by applying either of them on $S_O$, we have
+
+\begin{proposition}
+    \osgt can be approximated to $(2 +\varepsilon)$-optimal in polynomial time 
+		with $N=O({len(\partial P)}/{\varepsilon})$ samples for perimeter 
+		guarding and $N=O(({len(\partial P)}/{\varepsilon})^2)$ samples for
+    region guarding.
+\end{proposition}
+
+For evaluation, we implemented the farthest clustering approach 
+\cite{gonzalez1985clustering}.
+
+\subsection{Grid and Integer Programming-based Algorithm}
+Approximation using grids \cite{har2011geometric} often exhibits good 
+optimality guarantees and bounded time complexity. Seeing that and knowing
+that \osgt is hard in general, we attempted grid-based integer linear programming 
+(ILP) methods for solving \osgt with good success. Our ILP model 
+construction is done as follows. 
+
+%Grid-based representation
+%and approximation, suprisingly, achieve close to optimal solution quality guarentee 
+%as well as computational efficiency with nowadays mathematical programming libraries as 
+%Gurobi\cite{optimization2019gurobi} or CPLEX \cite{cplex2009v12} etc.
+
+Consider bounding the polygon $P$ of interest by an $m\times n$ square grid 
+where each cell is $\varepsilon \times \varepsilon$, and denote $g_{ij}$ as the center 
+of the cell at row $i$ and column $j$. If we limit the possible locations of 
+each robot to the center of some grid cell, the optimal radius with this 
+limitation will only be at most $\sqrt{2}\,\varepsilon / 2$ away from 
+$size(k, S_O)$. This could be seen by moving the robot locations in the optimal deployment
+to their nearest grid centers respectively and applying triangle inequality.
+
+So, given a candidate radius $r$, to check the feasibility of whether 
+$\partial P$ can be covered by $k$ circles of radius $r$, we adapt an 
+approach for solving the $k$-center problem\cite{daskin2000new} with 
+integer linear programming. Specifically, we create $m\times n$ boolean 
+variables $y_{ij}$, $1\leq i\leq m$, $1\leq j \leq n$, indicating whether 
+there is a robot at $g_{ij}$, then start to check the feasibility of 
+following integer programming model.
+\begin{align}
+    \sum_{ 1\leq i\leq m }\,\sum_{1\leq j \leq n} y_{ij} \leq k\qquad \qquad \qquad \\
+    \sum_{i,\ j\ s.t.\ \lVert g_{ij} - o_\ell\rVert_2\ \leq\ r} y_{ij} \geq 1 \text{ for each }\, 1\leq \ell \leq N\\
+    y_{ij} \in \{0,1\}\ \qquad 1\leq i\leq m,\ 1\leq j \leq n
+\end{align}
+The first constraint says the number of locations is no more than $k$, and 
+the second ensures each $o_\ell$ can be covered by at least one circle 
+with radius $r$ illustrated in Fig.~\ref{fig:ilpexample}.
+
+\begin{figure}[!ht]
+    \centering
+		\vspace*{1mm}
+		\begin{overpic}[width=1\columnwidth]{chapters/osg/figures/ilp_example-eps-converted-to.pdf}
+        \linethickness{0.4mm}
+        \put(40.2,25.3){\color{red}\vector(0.8,1.05){15.6}}
+        \put(40.2,17){\color{red}\vector(1.45,-1.1){15.5}}
+        \put(40,19){\color{blue}$o_{67}$}
+        \put(69,24){\color{blue}$o_{67}$}
+    \end{overpic}
+		\vspace*{1mm}
+    \caption{This perimeter guarding example illustrates constraint 
+		($2$) for $o_{67}$ with $r=7$. The black dots are the sampled $S_O = 
+		\{o_1, \dots, o_{100}\}$. In order to cover $o_{67}$, at least one 
+		among the red color grid cell centers need to be selected as robot location.}
+    \label{fig:ilpexample}
+\end{figure}
+
+
+When the ILP model has a feasible solution, $r^* = size(k, S_O) \leq r$ 
+and $r\leq r^* = size(k, S_O) $ otherwise. This means that we can do a binary 
+search on $r^*$, from an initial range of $r^* = size(k, S_O)$: $r_{min}^i=0 
+<  r^* \leq {len(\partial P)}/({2k})=r_{max}^i$, until finally $r^f_{max} - 
+r^f_{min}$ is reduced to the selected granularity of $\varepsilon$.
+
+\begin{remark}
+    With minor modifications, the ILP model applies to 2D region 
+		guarding, where the number of constraint $(2)$ will then be $O(mn)$ 
+		with one for each grid that intersects with the polygon in an $m\times n$ 
+		grid. The initial upper bound set as $r^*$ be $len(\partial P)$ and 
+		lower bound set as $\sqrt{{area(P)}/({k\pi})}$. It is also possible to 
+		apply the $(2+\varepsilon)$-approximation algorithm and set the result 
+		as the initial upper bound with the half of it as the initial lower 
+		bound.
+\end{remark}

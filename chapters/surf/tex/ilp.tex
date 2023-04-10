@@ -1,0 +1,72 @@
+With Problems~\ref{p:1}-\ref{p:3} being computationally intractable, a natural algorithmic alternative is mathematical programming. In \cite{FenYuRSS20}, an integer linear programming (ILP) model was shown to be effective for a 2D setting. For our 3D problems, visibility constraints must be effectively handled. We pre-compute pairwise visibility at a given sample granularity. The information is then fed to an ILP model. As the discretization granularity gets smaller, we can then realize \emph{globally optimal} $(1\pm \varepsilon)$-approximations (depending whether it is a maximization or a minimization). 
+
+As a first step to building the ILP model, visibility information must be computed. 
+We work with two discretizations, the surface $S$ to be covered and the space where the sensors may be deployed (as discussed in Section~\ref{sec:preliminary}, this is a 3D space though in practice it is frequently a 2D subset). For each pair of samples, we use a collision checker \cite{cgal:aabb-20b} to determine whether the line segments between the two samples intersects $\mathcal E$. During the process, we also compute for each sample $p\in S$ its normal $\hat{n}_p$.
+
+%For the actual computation, we first work only with samples of $S$. For each sample $p \in S$, we then sample the $2$-sphere $\mathbb S^2$ around $p$ to get a unit vector $\vec{v}$. For each $(p, \vec{v})$, we compute the point $p' \in \mathcal E$ that blocks the ray starting at $p$ in the direction of $\vec{v}$. This information is then used to compute pairwise visibility information between the surface samples and sensor location samples. Such an approach decouples the visibility computation between the two sample sets. 
+
+%
+With the visibility pre-computation performed, we are ready to construct the fully ILP models. For all three problems, recall that we have $S_N = \{o_1, \ldots, o_N\}$ for discretizing the surface $S$ through grid-based sampling. 
+We use boolean variable $y_i$ to indicate whether sample $o_i$ is covered. 
+Candidate sensor locations are also discretized to obtain a sample set $\{c_1, \ldots, c_M\}$, from which $k$ locations would be selected with $z_i$ indicating whether $c_i$ is selected. The ILP model for For Problem~\ref{p:1} is
+\begin{gather}
+    y_i   \leq \sum_{j\ s.t.\ vis(o_i, c_j) = 1} z_j   \text{\quad for each } o_i\\
+    \sum_j z_j \leq k\\
+    \max\ \ y_1 + \dots + y_N
+\end{gather}
+
+
+%In the integer linear problem framework, we first discretize the candidate 
+%robot locations using grids. 
+%Then, pairwise sensing quality was computed between each pair
+%of candidate sensor location and sampled points on the surface. 
+% So, we can obtain the 
+% following integer programming model to approximately computing the maximum number 
+% of surface being computed.
+%In these models, we have $N$ samples on the surface $\{o_1, \dots, o_N\}$ and $y_i$ indicates whether sample $o_i$ is covered. Also, there are $M$ candidate sensor locations $\{c_1, \dots, c_M\}$ and $z_j$ indicates whether $c_j$  is selected as sensor location.
+%For the visibility model, we have the following integer programming model. 
+%\begin{gather}
+%    y_i   \leq \sum_{j} vis(c_j, o_i)\cdot y_i   %\text{\quad for each } o_i\\
+%    \sum_j c_j \leq k\\
+%    \max\ \ y_1 + \dots + y_N
+%\end{gather}
+
+The cumulative quality case (Problem~\ref{p:3}) is similar. Denoting the sensing
+quality between sensor location $c_j$ and surface point $p$ 
+as $\phi(p, c_j) = vis(p, c_j) \cdot (
+\hat{n}_p, \hat{n}_{p c_j} )/||p c_j||^2$, the ILP model may be constructed as
+
+\begin{gather}
+    y_i \cdot \Phi  \leq \sum_{j} \phi(o_i, c_j)\cdot z_j   \text{\quad for each }o_i\\
+    \sum_j z_j \leq k\\
+    \max\ \ y_1 + \dots + y_N
+\end{gather}
+
+% Reason for comment, 
+% We note that although $\phi(o_i, c_j)$ is computed as a floating 
+% point value, using such values significantly increases computational 
+% burden. Therefore, in transferring the values to the ILP model, 
+% we further discretize $\phi(o_i, c_j)$ to be an integer within some 
+% certain range, e.g. $0\sim 10$.
+
+For quality maximization (Problem~\ref{p:2}), the objective is to maximize 
+the minimum distance of a sampled point on the surface to its nearest sensor 
+location. 
+%If we further consider visibility here, then if there exists a point 
+%that is not visible to any deployed sensor, then the objective can never be 
+%%positive. So, its more natural to apply this formulation to scenarios where no
+%visibility issues were raised. 
+For a required coverage ratio $\rho$ and radius $r$, we can verify whether it is possible to put $k$ sensors and cover $N\rho$ discretized points by checking the 
+feasibility of the following model:
+% Then, the essentially same method as our previous work can be applied. 
+\begin{gather}
+    y_i \leq \sum_{j\ s.t.\ ||c_j - o_i|| \leq r}  z_j \text{\quad for each } o_i\\
+    \sum_j z_j \leq k\\
+    N \rho \leq \sum_i y_i 
+    % \max\ \ y_1 + \dots + y_N
+\end{gather}
+A subsequent binary search can be applied to find the smallest feasible $r$. 
+%When $\rho = 1$, the optimization is applied to all visible points in $S_N$ 
+%to $k$ sensors.
+%\sw{all points in S\_N ?}
+

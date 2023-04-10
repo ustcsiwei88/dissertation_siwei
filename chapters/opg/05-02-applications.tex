@@ -1,0 +1,54 @@
+\noindent\textbf{Securing a perimeter}. As a first application, consider
+a situation where a crime has just been committed at the Edinburgh 
+Castle (see Fig.~\ref{fig:edinburgh}). The culprit remains in the confines 
+of the castle but is mixed within many guests at the scene. As the 
+situation is being investigated and suppose that the brick colored 
+buildings are secured, guards (either personnel or a number of drones) may 
+be deployed to ensure the culprit does not escape by climbing down the 
+castle walls. Using \algoSRG, a deployment plan can be quickly computed 
+given the amount of resources at hand so that each guard only needs to 
+secure a minimum length along the castle walls. Fig.~\ref{fig:edinburgh} 
+shows the optimal deployment plan for $15$ guards. 
+
+\begin{figure}[ht]
+	\vspace*{-2mm}
+	\begin{center}
+		\begin{overpic}[width=0.7\textwidth, tics=5]{./chapters/opg/figures/castle_15.eps}
+			% \put(82,44){{\small $\W$}}
+		\end{overpic}
+	\end{center}
+	\vspace*{-4.5mm}
+	\caption{\label{fig:edinburgh} Optimal deployment of $15$ guards around 
+	walls of the Edinburgh Castle. The brick colored structures are buildings 
+	that create gaps along the boundary.}
+	%\vspace*{-3mm}
+\end{figure}
+
+\noindent\textbf{Fire monitoring}. In a second application, consider 
+Fig.~\ref{fig:forest} where a forest fire has just been put out in 
+multiple regions. As there is still some chance that the fire may 
+rekindle and spread, for prevention, a team of firefighters is to be 
+deployed to watch for the possible spreading of the fire. Here, in 
+addition to using \algoMRG to compute optimal locations for deploying 
+the firefighters, we also generate minimum time trajectories for the 
+firefighters to reach their target locations while avoiding going 
+through the dangerous forests. This is done via solving a bottleneck 
+assignment problem \cite{burkard1999linear}.
+Note that the lake region creates gaps that cannot be traveled by the 
+firefighters; this can be handled by making these gaps infinitely large. 
+Fig.~\ref{fig:forest} shows the optimal locations for $34$ firefighters. 
+Animations of the deployment process and other test cases can be found 
+in the accompanying video. 
+
+\begin{figure}[ht]
+	\vspace*{-2mm}
+	\begin{center}
+		\begin{overpic}[width=0.7\textwidth,tics=5]{./chapters/opg/figures/forest_solution.eps}
+			%\put(82,44){{\small $\W$}}
+		\end{overpic}
+	\end{center}
+	\vspace*{-4.5mm}
+	\caption{\label{fig:forest}  Optimal deployment of $34$ firefighters for 
+	forest fire rekindling prevention.}
+	\vspace*{-3mm}
+\end{figure}

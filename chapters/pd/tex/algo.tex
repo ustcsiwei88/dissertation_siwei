@@ -1,0 +1,234 @@
+In this section, we describe three methods for solving infinite-horizon \prob (Problem~\ref{prob:1}).
+Sec.~\ref{sec:dp} provide a dynamic programming (DP) algorithm based on one developed in \cite{adler2022role}, 
+followed by Sec.~\ref{sec:ilp} formulating an integer linear programming model,
+and Sec.~\ref{sec:dp_local} discusses a heuristic search algorithm based on the DP algorithm. 
+The extension to an infinite attack stream with a finite look-ahead horizon  (Problem~\ref{prob:2}) will be discussed in Sec.~\ref{sec:hor}.
+
+
+\subsection{Exact Dynamic Programming Based Method}%for A Fixed Number of Defenders}
+\label{sec:dp}
+
+The DP algorithm builds a recursion formula on the last attacks intercepted by the defenders.
+Without loss of generality, we assume that each attack is only intercepted by one defender.
+For a DP state $a_1, \dots, a_k$ where $a_i$ is the last attack defender $i$ intercepts, 
+let $T[a_1]\dots[a_k]$ store the maximum number of attacks that can be intercepted when the $i^{th}$ defender's last intercepted attack events is $a_i$ $(i\in[1,k])$,
+and denote $a_{ma}$ as the maximum of $a_1, \dots, a_k$.
+Base on which attack the $ma^{th}$ defender intercepts before intercepting attack $a_{ma}$,
+we can write the DP recursion formula as follows.
+\begin{equation}
+\begin{split}
+T[a_1]\dots[a_{ma}]\dots[a_k] &= \\ 
+\max_{p\in prev(a_{ma}, ma) \wedge p\neq a_1 \dots a_k} &  T[a_1]\dots[p]\dots[a_k] + 1
+\end{split}
+\end{equation}
+
+Pseudo-code in Alg.~\ref{alg:dp} provides a sketch of a possible implementation of the dynamic programming algorithm.
+Effectively implemented, the time complexity of running Alg.~\ref{alg:dp} is $O( (n+1)^{k+1})$, which is polynomial when $k$, the number of defenders, is fixed.
+\vspace{-2mm}
+
+\begin{algorithm}
+%\begin{small}
+\DontPrintSemicolon
+\KwData{
+$E=\big \langle loc_i, t_i\big\rangle_{i=1}^{n}$: $n$ attack events\;
+$loc^1,\dots,loc^k$: initial locations of the $k$ defenders\;
+$v_1,\dots,v_k$: speeds of the $k$ defenders\;
+}
+\KwResult{Maximum number of attacks intercepted}
+\vspace{1mm}
+$T\gets$ an $(n+1)^k$-length array initialized to $-\infty$\;
+\vspace{1mm}
+$result\gets 0$\;
+\vspace{1mm}
+$T[0]\gets 0$\;
+\vspace{1mm}
+\For{$mask\gets 0 $ \KwTo $(n+1)^k - 1$}{
+\vspace{1mm}
+    $\overline{a_1 a_2\dots a_k} \leftarrow mask$\;
+    \Comment{$\overline{a_1 a_2\dots a_k}$ represents a base-($n+1$) number, i.e., $a_1\cdot (n+1)^{k-1} + a_2 \cdot (n+1)^{k-2} +\dots+ a_k$}
+    \If{$\exists\ a_i = a_j$}{
+        \Continue\;
+    }
+\vspace{1mm}
+    $ma \leftarrow argmax_i a_i$\;
+\vspace{1mm}
+    \For{$p\in prev(a_{ma}, ma)$}{
+        \If{$\forall i\ pos_i \neq p$}{
+            $pm\gets mask - (a_{ma} - p)\cdot (n+1)^{k-ma}$\;
+            \Comment{$pm$ is the result of replacing $a_{ma}$ with $p$}
+            $T[mask]\gets \max(T[mask], T[pm] + 1)$\;
+        }
+    }
+\vspace{1mm}
+    $result\gets \max(result, T[mask])$\;
+}
+\vspace{1mm}
+\Return{$result$}\;
+
+\caption{Dynamic Programming for \prob}
+\label{alg:dp}
+%\end{small}
+\end{algorithm}
+\vspace{-2mm}
+%\vspace{-15mm}
+
+The algorithm presented here is a slight modification of the DP algorithm in \cite{adler2022role} with two subtle differences. First, we enforce that an attack event can only be handled by one defender.
+Second, we explicitly use the initial locations of the defenders in the algorithm, which is essential for handling the finite horizon extension.
+
+\subsection{Solving \prob with Integer Linear Programming Model based on a Flow Formulation}
+\label{sec:ilp}
+
+It is not difficult to see that \prob can also be seen as a network flow problem by treating each attack event as a node and the reachability between each pair of attack events for each defender as the edges in the graph. 
+
+Specifically, there are $n$ nodes in the graph, representing the $n$ attack events. 
+There are also $O(n^2k)$ connections between nodes inside the graph.
+If defender $j$ can reach attack event $i'$ from $i$, there is an connection 
+$edge[i][i'][j]$ between node $i$ and $i'$. 
+Also, we use a binary variable $intercept[i]$ to denote whether attack event $i$ is successfully intercepted. 
+These give rise to the following integer linear programming (ILP) formulation of the problem.
+
+% \begin{gather}
+Eq. \eqref{eq:intercept} sets the criteria of an attack $i$ being intercepted as at least one defender to come into the node $i$, which means intercept attack $i$.
+Eq. \eqref{eq:flow} sets the defender flow conservation rule that the number of type $j$ defender exiting node $i$ must be larger than or equal to the number of type $j$ defender coming to node $i$.
+Eq. \eqref{eq:initial} sets the initial constraints on the number of each type of defender used (coming out from node 0).
+
+\begin{gather}
+\sum_{j\in[1, k],\ i'\in prev(i, j)} edge[i'][i][j] \geq intercept[i] \label{eq:intercept}\\
+\sum_{nxt_i\in next(i, j)} edge[i][nxt_i][j] \leq \sum_{prv_i \in prev(i,j)} edge[prv_i][i][j]  \label{eq:flow} \\
+\sum_{nxt_0 \in next(0, j)} edge[0[nxt_0][j] \leq 1 \label{eq:initial}  \\
+Objective\quad \max \sum_i intercept[i]
+\end{gather}
+
+% \end{gather}
+Denote $M$ as the number of connections in the graph, clearly $M<n^2k$.
+This integer linear programming formulation uses $M + n$ variables, and 
+$nk + n$ constraints. 
+
+%It may not be worth mentioning
+\begin{remark}
+The flow formulation of the problem is an NP-hard problem. The proof is similar to the NP-completeness proof of the two-commodity flow in \cite{even1975complexity}. This seems to suggest that \prob is NP-hard as well. 
+\end{remark}
+
+% \begin{proof}
+% \end{proof}
+
+\subsection{Exhaustive Defenders Pairing Heuristic Search Method}
+\label{sec:dp_local}
+We now develop a heuristic search method using the dynamic programming algorithm discussed in Alg.~\ref{alg:dp} applied on two defenders.
+The DP algorithm that computes the optimal solution for two defenders is used as a local improvement primitive for the local search heuristic algorithm. 
+
+We call the resulting algorithm \emph{exhaustive defender pairing} (\ours).  
+In each iteration, \ours pick two defenders, and the attack events the two defenders have intercepted and the attack events that have not been intercepted by any defender. 
+Then, \ours uses the DP algorithm in Alg.~\ref{alg:dp} to increase the number of attack events intercepted by the two defenders selected. 
+The complete algorithm is sketched in Alg.~\ref{alg:dp_local}.
+
+\begin{algorithm}[h]
+\DontPrintSemicolon
+\KwData{
+$E=\big \langle loc_i, t_i\big\rangle_{i=1}^{n}$: $n$ attack events\;
+$loc^1,\dots,loc^k$: initial locations of the $k$ defenders\;
+$v_1,\dots,v_k$: speeds of the $k$ defenders\;
+}
+\KwResult{Number of attacks intercepted}
+
+$Intercept \gets$ a length-$n$ array initialized to $-1$\;
+\Comment{$Intercept$ array stores for each event the defender that intercepts it}
+$result\gets 0$\;
+\vspace{1mm}
+\For{$u, v \in \{1, \dots, k\}\times\{1, \dots, k\}, u\neq v$}{
+    $E'\gets \{w\ |\ Intercept[w] \in\{u, v, -1\}\}$ \;
+    \Comment{$E'$ stores the set of attack events intercepted by defender $u,v$ and the attacks not intercepted by any defender}
+\vspace{1mm}
+    $\tilde{n}\gets E'.size$\;
+\vspace{1mm}
+    T $\gets$ an $(\tilde{n}+1)^2$-length array initialized to $-\infty$\;
+\vspace{1mm}
+    $T[0]\gets 0$\;
+    \Comment{Apply the DP algorithm for defender $u$ and $v$}
+\vspace{1mm}
+    \For{$mask\gets 0 $ \KwTo $(\tilde{n}+1)^2-1$}{
+        $\overline{a_1 a_2} \leftarrow mask$\;
+        \If{$a_1 =a_2$}{
+            \Continue\;
+        }
+\vspace{1mm}
+        $ma \leftarrow argmax_i a_i$\;
+\vspace{1mm}
+        \For{$p\in prev(a_{ma}, ma)$}{
+            \If{$\forall i\ a_i \neq p$}{
+                $pm\gets mask - (a_{ma} - p)\cdot (n+1)^{2-ma}$\;
+                $T[mask]\gets \max(T[mask], T[pm] + 1)$\;
+            }
+        }
+        % $result\gets \max(result, T[mask])$\;
+    }
+\vspace{1mm}
+    \If{Solution is improved}{
+        Update $Intercept, result$\;
+    }
+}
+\vspace{1mm}
+\Return{$result$}
+\caption{Exhaustive Defender Pairing}
+\label{alg:dp_local}
+\end{algorithm}
+
+We can try different defender pairing orders and choose the best one. 
+In our \ours implementation, we choose to run line 3 of Alg.~\ref{alg:dp_local} in 3 different iteration ordering of $u, v$.
+Alg.~\ref{alg:dp_local}'s running time is $O(k^2 n^3)$ as we try $O(k^2)$ pairs of defenders, and each run of the DP algorithm takes $O(n^3)$.
+% ($u$ increasing from $1$ to $k$, decreasing from $k$ to $1$, increasing from $k/2$ to $k$ after which go back to $1$ and increase to $k/2-1$). 
+
+\subsection{Handling Infinite Attack Streams with a Finite Look-Ahead Horizon }
+\label{sec:hor}
+For Problem~\ref{prob:2} where the attacks $\big \langle loc_i, t_i\big \rangle_{i=1}^{\infty}$ may be infinite, and the look-ahead horizon is finite, not all attacks are revealed at once. As such, previous methods cannot be directly applied. 
+As the future attack sequence cannot be foreseen, defenders need to \emph{react} to information (e.g., the attack events in the next $T$ time interval) obtained so far. 
+
+Towards addressing the problem, a greedy \emph{replanning} approach can be applied. Whenever an attack event is observed, the defender team replans the capture sequence given the new attacks added to the attack queue. 
+This gives rise to an online algorithm sketched in Alg.~\ref{alg:horizon}.
+
+\begin{algorithm}[h]
+\DontPrintSemicolon
+\KwData{
+$E=\big \langle loc_i, t_i\big\rangle_{i=1}^{\infty}$: a stream of attack events\;
+$loc^1,\dots,loc^k$: initial locations of the $k$ defenders\;
+$v_1,\dots,v_k$: speeds of the $k$ defenders\;
+}
+$E'\gets $ an empty queue\;
+\Comment{$E'$ stores attack events seen so far}
+\vspace{1mm}
+\While{new attack events added to $E'$ }{
+    Apply Alg.~\ref{alg:dp_local} to compute a plan for the defenders and attack events $E'$\;
+    Execute the plan, pop out from $E'$ attack events passed, and update $loc^1,\dots,loc^k$ to the defenders' current locations until new attacks are foreseen\;
+}
+% \KwResult{Number of attacks intercepted}
+
+% $Intercept \gets$ a length-$n$ array initialized to $-1$\;
+% \Comment{$Intercept$ array stores for each event the defender that intercepts it}
+% $result\gets 0$\;
+% \For{$u, v \in \{1, \dots, k\}\times\{1, \dots, k\}, u\neq v$}{
+%     $E'\gets \{w\ |\ Intercept[w] \in\{u, v, -1\}\}$ \;
+%     \Comment{$E'$ stores the set of attack events intercepted by defender $u,v$ and the attacks not intercepted by any defender}
+%     $\tilde{n}\gets E'.size$\;
+%     T $\gets$ an $(\tilde{n}+1)^2$-length array initialized to $-\infty$\;
+%     $T[0]\gets 0$\;
+%     \For{$mask\gets 0 $ \KwTo $(\tilde{n}+1)^2-1$}{
+%         $\overline{a_1 a_2} \leftarrow mask$\;
+%         \If{$pos_0 = pos_1$}{
+%             \Continue\;
+%         }
+%         $ma \leftarrow argmax_i pos_i$\;
+%         \For{$p\in prev(a_{ma}, ma)$}{
+%             \If{$\forall i\ pos_i \neq p$}{
+%                 $T[mask]\gets \max(T[mask], 1 + T[\overline{a_1\dots p \dots a_k}])$\;
+%             }
+%         }
+%         % $result\gets \max(result, T[mask])$\;
+%     }
+%     \If{Solution is improved}{
+%         Update $Intercept, result$\;
+%     }
+% }
+% \Return{$result$}
+\caption{Online Exhaustive Defender Pairing}
+\label{alg:horizon}
+\end{algorithm}

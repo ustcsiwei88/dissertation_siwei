@@ -1,0 +1,90 @@
+In this section, we will apply the structural results of the barrier forming problem and provide effective method to tackle it.
+First, we start with a general method for obtaining the optimal solution among a set of candidate barriers.
+Then, based on different ways to generate the candidate barriers, two approaches are given while one is based on 
+using bitangent line segments and the other is based on sampling.
+
+\subsection{Optimal Solution for Given Line Separator Candidates}
+\label{sec:algo:ilp}
+In the barrier forming problem, if the candidate barriers are available as a finite set, we can tackle the problem with integer programming (IP). 
+To solve it, we first perform a decomposition of the workspace using the candidate barriers, which partitions the workspace into cells whose edges are part of some candidate barriers. 
+Denote  $N$ as the number of candidate barrier line segments, and $M$ as the number of 
+cells dissected using the candidate barriers. Fig.~\ref{fig:ilp_example} shows an example of dissecting the workspace into six cells with three candidate barriers.
+Then, we can start to construct an IP model to solve the problem of minimizing the number of selected barriers. 
+First, we use $\lceil\log k\rceil$ binary variables for each cell, 
+resulting in $M\cdot\lceil \log k \rceil$ such variables $c_{11}, \dots, c_{M\lceil\log k\rceil}$. 
+The value of $\overline{c_{i1}c_{i2}\dots c_{i\lceil \log k\rceil}}$ will represent the class of cell $i$. 
+Thus, if there is an object in cell $i$, $\overline{c_{i1}c_{i2}\dots c_{i\lceil \log k\rceil}}$ should have a fixed value according to the class of the object.
+A binary variable for each candidate line segment is used to indicate whether that line candidate is selected,
+resulting in $N$ such variables: $\ell_1, \dots, \ell_N$. 
+
+\begin{figure}
+    \centering
+    \begin{overpic}[width=0.3\textwidth]{chapters/bc/fig/ilp_example.png}
+    \put(0, 60) {$\ell_1$}
+    \put(40, 95) {$\ell_2$}
+    \put(55, 95) {$\ell_3$}
+    
+    \put(15, 80) {$c_1$}
+    \put(50, 75) {$c_2$}
+    \put(80, 80) {$c_3$}
+    \put(15, 30) {$c_4$}
+    \put(50, 15) {$c_5$}
+    \put(80, 30) {$c_6$}
+    \end{overpic}
+    % \includegraphics
+    \caption{In this example, we aim to separate two groups of objects with the given candidate barriers. The workspace is decomposed into 6 cells by the 3 candidate barriers. As an example of constraint setup, the pair of adjacent cells $c_1$ and $c_4$ create a constraint of
+    $\ell_1\geq c_1 \oplus c_4$, which is equivalent to $\ell_1\geq c_1 - c_4 \wedge \ell_1\geq c_4 -c_1$. (Since there is only $k=2$ classes of objects and $\log k =1$ here, the second index of $c_{i*}$ is eliminated.)} 
+    \label{fig:ilp_example}
+    \vspace{-0.2in}
+\end{figure}
+
+Between each pair of adjacent cells $i$ and $ j$ (let the candidate line segment between them correspond to $\ell_\sigma$), we have ($\oplus$ denotes ``exclusive or'')
+\begin{equation}
+\begin{split}
+    &\ell_\sigma \geq c_{i\tau} \oplus c_{j\tau}  \Leftrightarrow \ell_\sigma \geq c_{i\tau} - c_{j\tau} \wedge \ell_\sigma\geq c_{j\tau} - c_{i\tau}, \\
+    &\text{  for each adjacent cell $i$, $j$, and $1\leq \tau \leq \lceil \log k \rceil$},
+\end{split}
+\end{equation}
+which means if two adjacent cells belong to different classes, then the line segment candidate between them must be selected. An example of the constraint setup is illustrated in Fig.~\ref{fig:ilp_example}.
+Naturally, we have fixed $c_{i1},\dots,c_{i\lceil \log k\rceil}$ if ceil $i$ contains an object to be separated, and the value of $\overline{c_{i1}c_{i2}\dots c_{i\lceil \log k\rceil}}$ is set to be the same as its class index: $0\sim k-1$.
+The objective is set to minimize the total number of line candidates selected, i.e., $\min \sum_{i=1}^{M} l_i$.
+
+\subsection{Near-optimal Solution Using Bitangent Lines}
+As the results in Section~\ref{sec:structure} show, using bitangent line segments 
+can always provide optimal solution for the problem of barrier forming for point objects, 
+and at least 2-OPT
+solution for separating polygonal objects. 
+Since the number of bitangent line segments is at 
+most quadratic to the number of object or obstacle vertices, 
+we can enumerate them, and apply IP method in Section~\ref{sec:algo:ilp} to find a solution. Fig.~\ref{fig:barrier_candidates} illustrates the candidate barriers constructed for point objects and polygonal objects.
+It is worth noting that for enumerating bitangent barriers for point objects, the side of the point to the barrier also matters. For example, a pair of point objects will create $4$ bitangent barrier candidates as there are 4 different possible cases depending on the how the corresponding objects are placed with respect to the line. 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[trim=80 20 80 20,clip, width = .24\textwidth]{chapters/bc/fig/candidate_1.png}
+    \hspace{-.1in}
+    \includegraphics[trim=80 20 80 20,clip, width = .24\textwidth]{chapters/bc/fig/candidate_2.png}
+    \caption{Illustration of bitangent barrier candidates. The left picture shows the bitangent
+    candidates for $2$ point sets, each with $2$ points. In this case, a pair of points will create $4$ candidates. We note that we made the points non-zero-dimensional for visibility purposes. The right picture shows the bitangent candidates for $12$ polygonal objects in four sets.}
+    \label{fig:barrier_candidates}
+\end{figure}
+
+\subsection{Sampling-based Resolution Complete Algorithm}
+Although using bitangent line segments works well in most of the cases, it unfortunately cannot provide an optimal guarantee for the barriers formed when dealing with polygonal objects.
+However, theorem~\ref{theorem:sin_tan} provides a good starting point for sampling line segments: we may limit candidate barrier sets to single tangents, i.e., we sample line segments passing through each object vertex in a radial manner. Hence, if we gradually increase the sampling resolution around each object and obstacle vertex and use the sampled line segments as candidate barriers, we can guarantee the asymptotic optimality of the resulting solution.
+
+% In this section, we first describe a polynomial time approximation algorithm for a restricted version of Problem~\ref{p:2}. Then, we describe a general integer linear programming framework for solving Problems~\ref{p:1}-\ref{p:3},
+% and local improvement techniques for enhancing solution quality.
+
+% \subsection{Polynomial Time Approximation Algorithm}
+% % Briefly mention the hardness results
+% \input{tex/approx}
+
+% \vspace{-2mm}
+% \subsection{Integer Programming-Based Algorithmic Framework}
+% \input{tex/ilp}
+
+% \vspace{-1mm}
+% \subsection{Local Enhancement of Coverage Quality}
+% %\sw{``Enhancing Coverage Quality Locally" instead ?}
+% \input{tex/localimprv}

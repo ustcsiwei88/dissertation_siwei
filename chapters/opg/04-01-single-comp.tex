@@ -1,0 +1,171 @@
+When there is a single perimeter $P$, the solution is straightforward 
+with $\ell^* = len(P)/n$. With $\ell^*$ determined, $\C^*$ is also readily computed. 
+
+In the case where there are $m > 1$ regions, let the optimal 
+distribution of the $n$ robots among the $m$ regions are given by 
+$n_1^*, \ldots, n_m^*$. For a given region $R_i$, the $n_i^*$ robots 
+must each guard a length $\ell_i = len(P_i)/n_i^*$. At this point, we
+observe that for at least one region, say $R_i$, 
+the corresponding $\ell_i$ must be maximal, i.e., $\ell_i = \ell^*$. 
+The observation directly leads to a naive strategy for finding $\ell^*$: 
+for each $R_i$, one may simply try all possible $1 \le n_i \le n$ and 
+find the maximum $len(P_i)/n_i$ that is feasible, i.e., $n - n_i$ robots
+can cover all other $R_{i'}$, $i' \ne i$, with each robot covering no 
+more than $len(P_i)/n_i$. Denoting this $len(P_i)/n_i$ as $\ell_i^c$ and 
+the corresponding $n_i$ as $n_i^c$, the smallest $\ell_i^c$ overall $1 
+\le i \le m$ is then $\ell^*$.
+
+The basic strategy mentioned above works and runs in polynomial time. 
+However, it is possible to carry out the computation much more 
+efficiently if the longest $P_i$ is examined first. Without loss of 
+generality, assume that $P_1$ is the longest perimeter, i.e., $len(P_1)
+\ge len(P_{i})$ for all $1 \le i \le m$. Recall that $n_1^c$ is the 
+number of robots allocated to $P_1$ that yields $\ell_1^c$, it must hold 
+that 
+\begin{align}\label{eq:l1}
+\frac{len(P_1)}{n_1^c + 1} < \ell^* \le \frac{len(P_1)}{n_1^c} = \ell_1^c .
+\end{align}
+For an arbitrary $P_i$, simple manipulating of~\eqref{eq:l1} yields
+\begin{align}\label{eq:li}
+\frac{len(P_i)}{(n_1^c + 1)\frac{len(P_i)}{len(P_1)}} < \ell^* \le 
+\frac{len(P_i)}{n_1^c\frac{len(P_i)}{len(P_1)}}.
+\end{align}
+This means that we only need to consider
+$
+n_i^c \in 
+\big[\lceil n_1^c\frac{len(P_i)}{len(P_1)} \rceil, 
+\lfloor (n_1^c + 1)\frac{len(P_i)}{len(P_1)}\rfloor].
+$
+However, since $P_1$ is the longest perimeter, $\frac{len(P_i)}{len(P_1)} 
+\le 1$. Therefore, the difference between the two denominators 
+of~\eqref{eq:li} is no more than $1$, i.e., 
+\[
+(n_1^c + 1)\frac{len(P_i)}{len(P_1)} - n_1^c\frac{len(P_i)}{len(P_1)} \le 1. 
+\]
+When $len(P_i) \ne len(P_1)$, $(n_1^c + 1)\frac{len(P_i)}{len(P_1)} 
+- n_1^c\frac{len(P_i)}{len(P_1)} < 1$ and there are two possibilities. One 
+of these is 
+$
+\lceil n_1^c\frac{len(P_i)}{len(P_1)} \rceil =
+\lfloor (n_1^c + 1)\frac{len(P_i)}{len(P_1)}\rfloor,
+$
+which leaves a single possible candidate for $n_i^c$. The other 
+possibility 
+is 
+$
+\lceil n_1^c\frac{len(P_i)}{len(P_1)} \rceil =
+\lfloor (n_1^c + 1)\frac{len(P_i)}{len(P_1)}\rfloor + 1,
+$
+in which case there is actually no valid candidate for $n_i^c$. 
+That is, after computing $n_1^c$ and $\ell_1^c$, if $len(P_i) = len(P_i)$ 
+then no computation is needed for $P_i$. If $len(P_i) < len(P_1)$ then we 
+only need to check at most one candidate for $n_i^c$. 
+
+%The observation directly leads to an algorithm for computing $\ell^*$: 
+%for each $P_i$, $1 \le i \le m$, we test all possible $1 \le n_i \le n 
+%- m + 1$ (the rest of the $m -1$ regions need at least $m -1$ guards) 
+%and for a fixed $n_i$ compute a candidate $\ell_i =  len(P_i)/n_i$. 
+%This $\ell_i$ is assumed to be a potential $\ell^*$, which should be 
+%the largest single robot coverage. Then, we check whether $n - n_i$ 
+%robots can cover all perimeters except $P_i$ where each robot cannot 
+%have coverage larger than $\ell_i$. For all feasible $1 \le n_i \le n$,
+%the one that yields the smallest $\ell_i$ is kept. Denote this pair of 
+%$n_i$ and $\ell_i$ as $n_i^{c}$ and $\ell_i^{c}$ where the superscript 
+%means ``candidate''. Then, the smallest $\ell_i^{c}$ over all 
+%$1 \le i \le m$ must be the desired $\ell^*$. 
+
+Additional heuristics can be applied to reduce the required computation. 
+First, in finding $n_1^c$, we may use bisection (binary search) over 
+$[1, m]$ since if a given $n_1$ is infeasible, any $n_1' < n_1$ cannot 
+be feasible either because $len(P_1)/n_1 < len(P_1)/n_1'$. Second, let 
+$\ell = (\sum_{1\le i\le m}len(P_i))/n$, it holds that $\ell_i^c \ge 
+\ell^* \ge \ell$. This means that for each $1 \le i \le m$, it is not 
+necessary to try any $n_i > \lfloor \frac{len(P_i)}{\ell} \rfloor$. 
+Third, if a candidate $\ell_i^c$ is at any time larger than the current 
+candidate for $\ell^*$, that $i$ does not need to be checked further. 
+We only use the first and the third in our implementation since the 
+second does not help much once the bisection is applied. The 
+pseudo code is outlined in Algorithm~\ref{algo:MRS}. Note that we 
+assume the problem instance is feasible ($n \ge m$), which is easy to check. 
+
+It is straightforward to verify that Algorithm~\ref{algo:MRS} runs in 
+time $O(m\log n + m^2)$. The $O(m\log n)$ comes from the $\mathbf{while}$ 
+loop, which calls the function \isLFeasible($\ell_i^c$, $n_i^c$, $i$) 
+$\log n$ time. The function checks whether the current $\ell_i^c$ is 
+feasible for perimeters other than $P_i$ (note that it is assumed that 
+\isLFeasible($\cdot$) has access to the input to Algorithm~\ref{algo:MRS} 
+as well). This is done by computing for $i' \ne i$, $n_{i'} = \lceil 
+len(P_{i'})/\ell_i^c \rceil$ and checking whether $\sum_{{i'} \ne i}n_{i'} 
+\le n - n_i^c$. The $O(m^2)$ term comes from the $\mathbf{for}$ loop. 
+The running time of Algorithm~\ref{algo:MRS} may be further reduced by 
+noting that the $\mathbf{for}$ loop examines $(m-1)$ candidate 
+$\ell_i^c$. These $\ell_i^c$ can be first computed and sorted, on which 
+bisection can be applied. This drops the main running time to 
+$O(m(\log n + \log m))$. This second bisection is not reflected in 
+Algorithm~\ref{algo:MRS} to keep the logic and notation more 
+straightforward. If we also consider input complexity, an additional 
+$O(\sum_{1\le i \le m} M_i)$ is needed to compute $len(P_i)$ from the raw polygonal 
+input and an additional $O(n)$ time is needed for generating the actual
+locations for the $n$ robots. The total complexity is then $O(m(\log n + 
+\log m) + \sum_{1\le i \le m} M_i + n)$.
+%\sh{Algorithm style: 
+%(1) Change displaystyle to remove small font.
+%(2) Tighten up by using lIf instead of If.}
+%\jy{We can do some of these if needed. I used this style for some 
+%particular reason that I can tell you :).}
+\vspace*{-3mm}
+\begin{algorithm}
+\begin{small}
+    \SetKwInOut{Input}{Input}
+    \SetKwInOut{Output}{Output}
+    \SetKwComment{Comment}{\%}{}
+    \Input{$P_1, \ldots, P_m$: each $P_i$ a continuous polygonal line; 
+		assume that $P_1$ is a longest perimeter \\
+		$n$: the number of robots}
+    \Output{$\ell^*, i^*$: the optimal coverage and the $i$ realizing it}
+\vspace{0.025in}
+
+$\ell^* \leftarrow \infty$; $i^* \leftarrow 1$;
+\vspace{0.025in}
+
+\Comment{\footnotesize Compute $n_1^c$ and initial $\ell^*$.}
+
+$n_1^{min} \leftarrow 1$; $n_1^{max} \leftarrow n$; $n_1^c \leftarrow 1$;
+\vspace{0.025in}
+
+\While{$n_1^{min} \ne n_1^{max}$}{
+\vspace{0.025in}
+$n_1 \leftarrow \lceil \frac{n_1^{min} + n_1^{max}}{2} \rceil$;
+$\ell_1 \leftarrow \frac{len(P_1)}{n_1}$;
+
+\vspace{0.025in}
+\uIf{\isLFeasible($\ell_1$, $n_1$, $1$)}{
+	\vspace{0.025in}
+	$\ell^* \leftarrow \ell_1$; 
+	$n_1^c \leftarrow n_1$;
+	$n_1^{min} \leftarrow n_1$; 
+}
+\Else{
+	$n_1^{max} \leftarrow n_1 - 1$; 
+}
+}
+
+\vspace{0.05in}
+\Comment{\footnotesize Optimize $\ell^*$ over all $2 \le i \le m$.}
+
+
+\For{$i \in \{2,\dots, m\}$ }{\label{algo:mrs:for}
+	$n_i^- = \lceil \frac{n_1^clen(P_i)}{len(P_1)} \rceil$;
+	$n_i^+ = \lfloor \frac{(n_1^c +1)len(P_i)}{len(P_1)} \rfloor$; 
+	$\ell_i \leftarrow \frac{len(P_i)}{n_i^+}$;
+				
+		\If{$n_i^- == n_i^+$ and \isLFeasible($\ell_i$, $n_i^+$, $i$) and $\ell_i < \ell^*$}{
+			\vspace{0.025in}
+			$\ell^* \leftarrow \ell_i$; $i^* \leftarrow i$;
+		}
+}
+\Return{$\ell^*$, $i^*$}
+\caption{\algoMRSimple} \label{algo:MRS}
+\end{small}
+\end{algorithm}
+\vspace*{-6mm}

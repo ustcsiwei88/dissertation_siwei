@@ -1,0 +1,149 @@
+
+
+\def\R{\mathcal R}
+\def\C{\mathcal C}
+\def\S{\mathcal S}
+\def\P{\mathcal P}
+\def\G{\mathcal G}
+\def\W{\mathcal W}
+%\thickmuskip=0mu
+\def\opg{{\sc {OPG}}\xspace}
+
+Consider the scenario from Fig.~\ref{fig:example}, which contains a closed region with its boundary (or border) demarcated by the red and dotted blue lines. To secure the region, either from intrusions from the outside or unwanted escapes from within, it is desirable to deploy a number of autonomous agents to monitor or guard either the entire boundary or selected portions of it (e.g., the red line segments), with each agent responsible for a continuous section. 
+%
+Naturally, one might also want to have even coverage by the agents, e.g., minimizing the maximum effort from any agent. In practice, such efforts may correspond to sensing ranges or motion capabilities of robots, which are always limited. 
+%
+As an intuitive example, the figure may represent the top view of a castle, with its entire boundary being a high wall that may be traversed by agents. 
+%
+The portion of the wall marked with the three red line segments must be protected, whereas the art marked by the dotted blue lines may not need active monitoring (e.g., the outside may be a cliff or a body of deep water). The green and orange lines show an optimal distribution of the workload by $8$ agents that cover all red segments but skip two of the three-dotted line segments. 
+
+More formally, in this paper, we study the problem of deploying a large 
+number of robots to guard a set of one-dimensional boundary segments 
+called perimeters. Each perimeter is comprised of one or more 1D segments 
+that are part of a circular boundary (e.g., the red segments in 
+Fig.~\ref{fig:example}). Each robot is tasked to guard a continuous 1D 
+segment that covers a portion of a perimeter. As the main objective, 
+we seek an allocation of robots such that {\em (i)} the union of the 
+robots' coverage encloses all perimeters and {\em (ii)} the 
+maximum coverage of any robot is minimized. We call this 1D deployment
+problem the Optimal Perimeter Guarding (\opg) problem. 
+\begin{figure}[ht]
+\vspace*{0mm}
+\begin{center}
+\begin{overpic}[width=0.7\textwidth,tics=5]{./chapters/opg/figures/example.eps}
+%\put(26,20){{\small $R_1$}}
+%\put(20,39){{\small \textcolor{red}{$P_1$}}}
+%\put(66,28){{\small $R_2$}}
+%\put(54,40){{\small \textcolor{green}{$P_2$}}}
+%\put(82,44){{\small $\W$}}
+\end{overpic}
+\end{center}
+\vspace*{-5mm}
+\caption{\label{fig:example} An illustrative scenario where a perimeter, 
+in this case represented as the red line segments, must be guarded by 
+$n = 8$ robots, which are constrained to 
+only travel along the perimeter boundary (the red line segments plus the 
+dotted blue lines, which are gaps that do not need to be guarded). An 
+optimal set of locations for the $8$ robots and the coverage region for 
+each robot are marked on the perimeter boundary in green and orange, 
+which minimizes the maximum coverage required for any robot.}
+\vspace*{-8mm}
+\end{figure}
+
+
+In this work, three main \opg variants are examined. The settings 
+regarding the perimeter in these three variants are: {\em (i)}
+multiple perimeters with each having a single connected component; 
+{\em (ii)} a single perimeter containing multiple connected components; 
+and {\em (iii)} multiple perimeters with each containing multiple 
+connected components (the most general case). For all three variants, 
+we have developed exact algorithms for solving \opg that runs in low
+polynomial time. More specifically, let there be $n$ robots, $m$ 
+perimeters, with perimeter $i$ ($1 \le i \le m$) containing $q_i$ 
+connected components. If $m = 1$, then let the only perimeter contains
+$q$ connected components. For the three variants, our algorithm 
+computes an optimal solution in time $O(m(\log n + \log m) + n)$, 
+$O(q^2\log(n+q) + n)$, and $O((\sum_{1\le i \le m} q_i^2) \log(n + 
+\sum_{1\le i \le m} q_i) + n)$, respectively, which
+are roughly quadratic in the worst case. 
+In addition to computing locations for deploying the robots, we 
+further compute shortest paths for deploying the robots, given some 
+initial configuration of the robots. The modeling of the \opg 
+problem and the development of the efficient algorithms for \opg 
+constitute the main contribution of this paper. 
+
+With an emphasis on robotic swarm deployment, within multi-robot 
+systems research \cite{arai2002advances,gerkey2004formal,ren2008distributed,bullo2009distributed}, 
+our study is closely related to {\em formation control}, e.g., 
+\cite{ando1999distributed,jadbabaie2003coordination,olfati2004consensus,ren2005consensus,cheng2008almost,mesbahi2010graph,yu2012rendezvous},
+where the goal is to achieve certain {\em distributions} through 
+continuous (often, local sensing based) interactions among the 
+agents or robots. Depending on the particular setting, the 
+distribution in question may be spatial, e.g., rendezvous
+\cite{ando1999distributed,yu2012rendezvous}, or maybe an agreement 
+in agent velocity is sought \cite{jadbabaie2003coordination,ren2005consensus}. 
+In these studies, the resulting formation often have some 
+degree-of-freedoms left unspecified. For example, rendezvous 
+results \cite{ando1999distributed,yu2012rendezvous} often come 
+with exponential convergence guarantee, but the location of
+rendezvous is generally unknown {\em a priori}. 
+
+On the other hand, in multi-robot task and motion planning problems (e.g.,
+\cite{smith2009monotonic,ayanian2010decentralized,liu2011multi,liu2013optimal,turpin2014goal,turpin2014capt,alonso2015multi,SolYu15}), 
+especially ones with a {\em task allocation} element 
+\cite{smith2009monotonic,liu2011multi,liu2013optimal,turpin2014goal,turpin2014capt,SolYu15},
+the (permutation-invariant) target configuration is often mostly 
+known. The goal here is finding a one-to-one mapping between individual 
+robots and the target locations (e.g., deciding a {\em matching}) and 
+then plan (possibly collision-free) trajectories for the robots to reach 
+their respective assigned targets \cite{turpin2014goal,turpin2014capt,SolYu15}.  
+In contrast to formation control and multi-robot motion planning research, 
+our study of \opg seeks to determine an exact, optimal distribution 
+pattern of robots (in this case, over a fairly arbitrary, bounded 1D 
+topological domain). Thus, solutions to \opg may serve as the target 
+distributions for multi-robot task and motion planning, which is a main 
+motivation behind our work. The generated distribution pattern is 
+also potentially useful in multi-robot persistent monitoring 
+\cite{soltero2014decentralized} and coverage \cite{howard2002mobile,schwager2009optimal} 
+applications, where robots are asked to carry out sensing tasks in some 
+optimal manner. 
+	
+As a multi-robot coverage problem, \opg is intimately connected to Art 
+Gallery problems \cite{o1987art,shermer1992recent}, with origins traceable 
+to half a century ago \cite{klee1969every}. Art Gallery problems assume 
+a visibility-based \cite{lozano1979algorithm} sensing model; in a typical 
+setup \cite{o1987art}, the {\em interior} of a polygon must be visible to at 
+least one of the guards, which may be placed on the boundaries, corners, 
+or the interior of the polygon. Finding the optimal number of guards are 
+often NP-hard \cite{lee1986computational}. Alternatively, disc-based sensing 
+model may be used, which leads to the classical {\em packing} problem 
+\cite{thue1910dichteste,hales2005proof}, where no overlap is allowed between 
+the sensors' coverage area, the {\em coverage} problem 
+\cite{drezner1995facility,cortes2004coverage,pavone2009equitable,martinez2010distributed,pierson2017adapting}, 
+where all 
+workspace must be covered with overlaps allowed, or the {\em tiling} problem 
+\cite{kershner1968paving}, where the goal is to have the union of sensing
+ranges span the entire workspace without overlap. For a more complete 
+account on Art Gallery, packing, and covering, see Chapters 2, 3, and 33 of
+\cite{toth2017handbook}. Despite the existence of a large body of literature 
+performing extensive studies on these intriguing computational geometry 
+problems, these types of research mostly address domains that are 2D and 
+higher. To our knowledge, \opg, as an optimal coverage problem over 
+a non-trivial 1D topological space, represents a practical and novel formulation 
+yet to be fully investigated. 
+
+The rest of the section is organized as follows. 
+%
+The \opg problem and some of its most basic properties are described 
+in Section~\ref{section:opg-problem}. 
+%
+In Section~\ref{section:analysis}, a thorough structural analysis of \opg 
+with single and multiple perimeters is performed, paving the way for 
+introducing the full algorithmic solutions in Section~\ref{section:opg-algorithm}.
+%
+Then, in Section~\ref{section:opg-evaluation}, comprehensive numerical 
+evaluations of the multiple polynomial-time algorithms are carried out. 
+In addition, two realistic application scenarios are demonstrated. 
+%
+In Section~\ref{section:opg-conclusion}, we conclude with  
+additional discussions. 

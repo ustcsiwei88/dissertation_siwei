@@ -1,0 +1,280 @@
+\documentclass[letterpaper, 10 pt, conference]{formatting/ieeeconf}
+\IEEEoverridecommandlockouts                              % This command is only needed if 
+                                                            % you want to use the \thanks command
+\overrideIEEEmargins                                      % Needed to meet printer requirements.
+\pdfminorversion=4			% ICRA standard
+\let\labelindent\relax
+\usepackage{amsfonts}       % An extended set of fonts for use in mathematics
+\let\proof\relax
+\let\endproof\relax
+\usepackage{amsthm}
+\usepackage{mathtools}      % Loads amsmath
+\usepackage{amssymb}        % provides AMS fonts and symbols ex. \mathbb{...}
+\usepackage{filecontents}
+\usepackage{graphicx}       % enhanced support for graphics
+\usepackage{marginnote}     % Add notes
+\usepackage{marvosym}       % mvat
+\usepackage{overpic}        % Add text on figures
+\usepackage{tabularx}
+\usepackage{cite}
+\usepackage{color}
+\usepackage[linesnumbered,algoruled,boxed,lined]{algorithm2e}
+\usepackage[normalem]{ulem}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+
+\usepackage{epstopdf}
+\usepackage{enumitem}
+\usepackage[normalem]{ulem}
+\usepackage{lipsum}
+\usepackage{comment}
+
+\usepackage{diagbox}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{CJKutf8}
+\usepackage[dvipsnames]{xcolor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Side comments   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newif\ifdraft
+\draftfalse
+
+\newif\ifoc % Single column?
+\ocfalse
+
+\usepackage[textsize=footnotesize]{todonotes}
+\ifdraft
+\usepackage[paperheight=11in,paperwidth=9.5in,
+			left=1.25in,right=1.25in,
+			top=0.75in,bottom=0.75in,
+			heightrounded,marginparwidth=1.2in,
+			marginparsep=0.05in]{geometry}
+\usepackage{xcolor}
+\usepackage{xargs} 
+\newcommandx{\nt}[2][1=]{\todo[linecolor=red,
+			backgroundcolor=red!10,bordercolor=red,#1]{#2}}
+\newcommandx{\jy}[2][1=]{\todo[linecolor=green,
+			backgroundcolor=green!10,bordercolor=green,#1]{JY: #2}}
+\newcommandx{\sw}[2][1=]{\todo[linecolor=blue,
+			backgroundcolor=blue!10,bordercolor=blue,#1]{SW: #2}}
+\else
+\newcommand{\nt}[1]{{}}
+\newcommand{\jy}[1]{{}}
+\newcommand{\sw}[1]{{}}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Spacing related commands.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newif\iftwocolumn
+\twocolumntrue
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Spacing related commands.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Space between figure and caption
+\setlength{\abovecaptionskip}{0pt}
+\setlength{\belowcaptionskip}{0pt}
+
+% Space between text and figs
+\setlength{\dbltextfloatsep}{5pt plus .5pt minus .5pt}
+\setlength{\textfloatsep}{5pt plus .5pt minus .5pt}
+\setlength{\intextsep}{8pt plus .5pt minus .5pt}
+
+% Space between equations and text
+%\setlength{\belowdisplayskip}{3pt} \setlength{\belowdisplayshortskip}{3pt}
+%\setlength{\abovedisplayskip}{4pt} \setlength{\abovedisplayshortskip}{4pt}
+
+% Paragraph formatting 
+\setlength{\parskip}{1.5pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Environments and Theorems
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{observation}{Observation}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{theorem}{Theorem}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Algorithm2e setup
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\SetKwProg{Fn}{Function}{}{}
+\SetKwComment{Comment}{$\triangleright$\ }{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Edits
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\changed}[1]{\textcolor{black}{#1}}
+\def\ch#1#2{\sout{#1}\,\textcolor{blue}{#2}}
+\newcommand{\JY}[1]{\textcolor{red}{JY: #1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Adjusted indentation of subsubsections
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\def\subsubsection{\@startsection{subsubsection}% name
+                                 {3}% level
+                                 {\z@ \hspace*{1mm}}% indent (formerly \parindent)
+                                 {0ex plus 0.1ex minus 0.1ex}% before skip
+                                 {0ex}% after skip
+                                 {\normalfont\normalsize\itshape}}% style
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commands / Notation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\R{\mathbf{R}}
+\def\C{\mathcal C}
+% \def\S{\mathcal S}
+% \def\P{\mathcal P}
+% \def\G{\mathcal G}
+\def\W{\mathcal W}
+
+\def\opt{\textsc{OPT}\xspace}
+
+\def\osgt{\textsc{OSG${}_{\mathrm{2D}}$}\xspace}
+
+\def\opg{\textsc{OPG}\xspace}
+\def\opgt{\textsc{OPG${}_{\mathrm{2D}}$}\xspace}
+\def\orgt{\textsc{{ORG}${}_{\mathrm{2D}}$}\xspace}
+\def\dopgt{\textsc{{D-OPG}${}_{\mathrm{2D}}$}\xspace}
+\def\dorgt{\textsc{{D-ORG}${}_{\mathrm{2D}}$}\xspace}
+
+
+% \def\opglr{{\sc {OPG${}_{LR}$}}\xspace}
+% \def\opglrd{{\sc {D-OPG${}_{LR}$}}\xspace}
+% \def\opgmc{{\sc {OPG${}_{MC}$}}\xspace}
+
+% \newcommand{\argmin}[1]{\underset{#1}{\operatorname{arg}\,\operatorname{min}}\;}
+% \newcommand{\argmax}[1]{\underset{#1}{\operatorname{arg}\,\operatorname{max}}\;}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{%\Large \bf
+% Polygon Cover Problem Revisited
+Optimally Guarding Perimeters and Regions with Mobile Range Sensors
+}
+%\author{Author Names Omitted for Anonymous Review. Paper-ID 1251}
+\author{
+Si Wei Feng  \and Jingjin Yu
+ \thanks{
+ S.-W. Feng and J. Yu are with the Department of Computer Science, 
+ Rutgers, the State University of New Jersey, Piscataway, NJ, 
+ USA. E-Mails: \{{\tt siwei.feng, jingjin.yu}\}\hspace*{.25em}
+ \MVAt \hspace*{.25em}rutgers.edu. 
+}
+}
+%\thanks{
+%This work is supported by NSF awards IIS-1617744 and IIS-1734419. 
+%Opinions or findings expressed here do not reflect the views of the sponsor.
+%}% <-this % stops a space
+
+\pdfinfo{
+   /Author (TODO)
+   /Title  (TODO)
+   /CreationDate (TODO)
+   /Subject (TODO)
+   /Keywords (TODO)
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Latex editing related instructions for draft mode
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifdraft
+\begin{picture}(0,0)%
+\put(-12,105){
+\framebox(505,40){\parbox{\dimexpr2\linewidth+\fboxsep-\fboxrule}{
+\textcolor{blue}{
+The file is formatted to look identical to the final compiled IEEE 
+conference PDF, with additional margins added for making margin 
+notes. Use $\backslash$todo$\{$...$\}$ for general side comments
+and $\backslash$jy$\{$...$\}$ for JJ's comments. Set 
+$\backslash$drafttrue to $\backslash$draftfalse to remove the 
+formatting. 
+}}}}
+\end{picture}
+\vspace*{-4mm}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Main text
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+We investigate the problem of using mobile robots equipped with 2D range 
+sensors to optimally guard perimeters or regions, i.e., 1D or 2D sets. 
+%
+Given such a set of arbitrary shape to be guarded, and $k$ mobile sensors 
+where the $i$-th sensor can guard a circular region with a variable radius 
+$r_i$, we seek the optimal strategy to deploy the $k$ sensors to fully 
+cover the set such that $\max r_i$ is minimized. 
+%
+On the side of computational complexity, we show that computing a 
+$1.152$-optimal solution for guarding a perimeter or a region is NP-hard, 
+%\sw{even when the boundary length is bounded}
+i.e., the problem is hard to approximate.
+%
+The hardness result on perimeter guarding holds when each sensor 
+may guard at most two disjoint perimeter segments. 
+%
+%\sw{will need to say the boundary length is bounded by a polynomial of the input size}
+On the side of computational methods, for the guarding perimeters, 
+we develop a fully polynomial time approximation scheme (FPTAS) for the 
+special setting where each sensor may only guard a single continuous 
+perimeter segment, suggesting that the aforementioned hard-to-approximate 
+result on the two-disjoint-segment sensing model is tight. 
+%
+For the general problem, we first describe a polynomial-time 
+(2+$\varepsilon)$-approximation algorithm as an upper bound, applicable to 
+both perimeter guarding and region guarding. 
+%
+This is followed by a high-performance integer linear programming (ILP) 
+based method that computes near-optimal solutions. 
+%
+Thorough computational benchmarks as well as evaluation on potential 
+application scenarios demonstrate the effectiveness of these algorithmic 
+solutions. 
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+\input{texs/01-intro}
+
+\section{Preliminaries}\label{sec:problem}
+\input{texs/02-problem}
+
+\section{Intractability of Approximate Optimal Guarding of Simple Polygon}\label{sec:complexity}
+\input{texs/03-complexity}
+
+\section{Effective Algorithmic Solutions for \osgt}\label{sec:algo}
+\input{texs/04-algo}
+
+\section{Evaluation and Application Scenarios}\label{sec:expr}
+\input{texs/05-evaluation}
+
+\section{Conclusion and Discussions}\label{sec:conc}
+\input{texs/06-conclusion}
+
+% \newpage
+\bibliographystyle{formatting/IEEEtran}
+\bibliography{bib/bib,bib/bib2} 
+\end{document}

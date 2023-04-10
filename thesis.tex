@@ -1,5 +1,35 @@
-
 \documentclass[12pt]{rutgersthesis}
+\usepackage{tabularx}
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage[mathcal]{euscript}
+\usepackage{epsfig}
+\usepackage{textcomp}
+\usepackage{epstopdf}
+\usepackage{url}
+%\usepackage{titlesec}
+\usepackage{wrapfig}
+% \usepackage{enumerate}
+\usepackage{soul}
+\usepackage{tipa}
+% \usepackage{cite}
+\usepackage[percent]{overpic}
+\usepackage{tikz}
+\usepackage{pgfgantt}
+\usepackage{xspace}
+\usepackage[linesnumbered,ruled]{algorithm2e}
+\usepackage{diagbox}
+\usepackage{multirow}
+% \usepackage{remark}
+\usepackage{enumitem}
+% \usepackage{align}
+
+\usepackage{xcolor}
+% \usepackage{xargs} 
+\usepackage{tikz} 
+\usepackage[textsize=footnotesize]{todonotes}
+\usepackage{overpic}
+
+\usepackage{comment}
 
 % preamble
 
@@ -8,18 +38,17 @@
 % !IMPORTANT!
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\thesisType}{Dissertation } % Dissertation for PhD and Thesis for Master
-\newcommand{\thesisTitle}{Title} % your thesis/dissertation title, e.g., How to Write A Thesis
-\newcommand{\yourName}{Name} % your name, e.g., Tim Cook
+\newcommand{\thesisTitle}{Some Geometric Problems for Sensor Layout Optimization} % your thesis/dissertation title, e.g., How to Write A Thesis
+\newcommand{\yourName}{Si Wei Feng} % your name, e.g., Tim Cook
 \newcommand{\yourDegree}{Doctor of Philosophy} % your degree to be obtained, e.g., Master of Science, Doctor of Philosophy
 \newcommand{\yourProgram}{Graduate Program} %insert your graduate program’s official name
-\newcommand{\yourDirectorTitle}{Prof.} % the title of your thesis director
-\newcommand{\yourDirector}{Dissertation/Thesis Director} % your thesis director name here, his/her title not included
+\newcommand{\yourDirectorTitle}{Associate Professor} % the title of your thesis director
+\newcommand{\yourDirector}{Prof. Jingjin Yu} % your thesis director name here, his/her title not included
 \newcommand{\yourCommitteeNumber}{4} % IMPORTANT! the number of the committee members for your defense
-\newcommand{\yourMonth}{Month} % your graduation month, not your defense month
-\newcommand{\yourYear}{Year} % your graduation year
+\newcommand{\yourMonth}{May} % your graduation month, not your defense month
+\newcommand{\yourYear}{2023} % your graduation year
 
 
-\bibliography{references}
 
 % document body
 \begin{document}
@@ -28,22 +57,23 @@
 \input{copyright}
 
 \makeTitlePage{Month}{Year}
-
+ 
 \begin{frontmatter}
     \input{abstract}
     \input{acknowledgments}
     \makeTOC
-    \makeListOfTables
-    \makeListOfFigures
+    % \makeListOfTables
+    % \makeListOfFigures
     \input{abbrevs}
 \end{frontmatter}
 
 \begin{thesisbody}
     \input{chapters/chapter1}
     \input{chapters/chapter2}
-    % \input{chapters/chapter3}
-    % \input{chapters/chapter4}
-    % \input{chapters/chapter5.tex}
+    \input{chapters/chapter3}
+    \input{chapters/chapter4}
+    \input{chapters/chapter5}
+    \input{chapters/chapter6}
     % \input{chapters/appendix.tex}
     \input{publications.tex}
     \makeBibliography

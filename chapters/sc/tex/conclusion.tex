@@ -1,0 +1,14 @@
+\section{Conclusion }%\& Future work}
+
+In this paper, we studied the problem of allocating a minimum number of robots for a sweep schedule with a probabilistic line sensing model, where a desired level of scanning quality can be guaranteed. 
+Towards this, a novel decomposition technique is proposed that generalizes the well-known boustrophedon decomposition. The decomposition leads naturally to  a transformation of the problem into a network-flow problem. Due to the decomposition and the transformation, our proposed algorithm runs in low polynomial time and even near $\Tilde{O}(n)$ in simulation experiments for polygonal environments, where $n$ is the complexity of the environment, measured as the number of vertices of polygons. Extensive simulation-based evaluation corroborates the effectiveness of our algorithm, which is applicable to multiple types of environments.  
+
+% In future work, we would like to take the current study in several directions. 
+% One further step is to overcome the discontinuities in the robot paths generated. 
+% As can be seen in the example trajectory of the robots, 
+% when the sweep line crosses vertices, there exists position ``jumps'', though these jumps are transitions inside the sweep line and does not cross objects.
+% Intuitively, this requires the sweep line to stop at that position until the robot moved to the next point, or the robot is much faster than the sweep line.
+% A second direction is the adaptation to more versatile sweeping plan.
+% This work limits the robot to stay on the given search frontier;
+% it will be more natural to allow robots to shortly leave the search frontier, e.g., possibly going into or out of a concave region.
+

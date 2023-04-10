@@ -1,0 +1,120 @@
+Let $\W \subset \mathbb R^2$ be a compact (closed and bounded) 
+two-dimensional workspace. There are  $m$ pairwise disjoint {\em 
+	regions} $\R = \{R_1, \ldots, R_m\}$ where each region $R_i \subset \W$ 
+is homeomorphic to the closed unit disc, i.e., there exists a continuous 
+bijection $f_i: R_i \to \{(x, y) \mid x^2 + y^2 \le 1\}$ for all $1 \le 
+i \le m$. For a given region $R_i$, let $\partial R_i$ be its (closed) 
+boundary (therefore, $f_i$ maps $\partial R_i$ to the unit circle  
+$\mathbb S^1$). With a slight abuse of notation, define $\partial \R 
+= \{\partial R_1, \ldots, \partial R_m\}$. Let $P_i \subset \partial R_i$ 
+be the part of $\partial R_i$ that is accessible, specifially, not blocked by 
+obstacles in $\W$. This means that each $P_i$ is either a single closed 
+curve or formed by a finite number of (possibly curved) line segments. 
+Define  $\P = \{P_1, \ldots, P_m\} \subset \W$ as the {\em perimeter} 
+of $\R$ which must be {\em guarded}. More formally, each $P_i$ is 
+homeomorphic to a compact subset of the unit circle (i.e., it is 
+assumed that the maximal connected components of $P_i$ are closed 
+line segments). For a given $P_i$, each one of its maximal connected 
+component is called a {\em perimeter segment} or simply a {\em segment}, 
+whereas each maximal connected component of $\partial R_i \backslash P_i$ 
+is called a {\em perimeter gap} or simply a {\em gap}. An example setting is 
+illustrated in Fig.~\ref{fig:example-boundaries} with two regions. 
+\definecolor{BrickRed}{RGB}{176, 50, 28}
+\definecolor{ForestGreen}{RGB}{0, 155, 85}
+\begin{figure}[ht]
+	\begin{center}
+		\begin{overpic}[width=0.7\textwidth,tics=5]
+			{chapters/opg-ext/figures/example-boundaries-eps-converted-to.pdf}
+			\put(26,20){{\small $R_1$}}
+			\put(20,39){{\small \textcolor{BrickRed}{$P_1$}}}
+			\put(66,28){{\small $R_2$}}
+			\put(54,40){{\small \textcolor{ForestGreen}{$P_2$}}}
+			%\put(79.6,18){{\small $h$}}
+			\put(82,44){{\small $\W$}}
+		\end{overpic}
+	\end{center}
+	\caption{\label{fig:example-boundaries} An example of a workspace $\W$ 
+		with two regions $\{R_1, R_2\}$. Due to three {\em gaps} on $\partial R_1$, 
+		marked as dotted lines within long rectangles, $P_1 \subset \partial R_1$ 
+		has three {\em segments} (or maximal connected components); $P_2 = \partial 
+		R_2$ has a single segment with no gap.}
+\end{figure}
+
+After deployment, some number of robots are to {\em cover} the perimeter 
+$\P$ such that a robot $j$ is assigned a continuous closed subset $C_j$ 
+of some $\partial R_i, 1 \le i \le m$. All of $\P$ must be {\em covered} 
+by $\C$, i.e., 
+%
+$\bigcup_{P_i \in \P} P_i  \subset \bigcup_{C_j \in \C} C_j$,
+%
+which implies that elements of $\C$ need not intersect on their interiors. 
+Hence, it is assumed that any two elements of $\C$ may share at most their 
+endpoints. Such a $\C$ is called a {\em cover} of $\P$. Given a cover 
+$\C$, for a $C_j \in \C$, let $len(C_j)$ denote its length (more formally, 
+measure). 
+
+To model heterogeneity of the robots, two models are explored in this
+study. In either model, there are $t$ types of robots. In the first model,
+the number of robots of each type is fixed to be $n_1, \ldots, n_t$ with 
+$n = n_1 + \cdots + n_t$. For a robot $1 \le j \le n$, let $\tau_j$ denote 
+its type. Each $1 \le \tau \le t$ type of robots has some 
+level of {\em capability} or {\em ability} $a_{\tau} \in \mathbb Z^+$. We 
+wish to balance the load among all robots based on their capabilities, 
+i.e., the goal is to find cover $\C$ for all robots such that the quantity 
+\[
+\max_{C_j \in \C} \frac{len(C_j)}{a_{\tau_j}},
+\]
+which represents the largest coverage-capacity ratio, is minimized. 
+We note that when all capacities are the same, e.g., $a_{\tau} = 1$ for 
+all robots, this becomes the standard \opg problem studied in \cite{FenHanGaoYu19RSS}. 
+We call this version of the perimeter guarding problem {\em optimal 
+	perimeter guarding with limited resources} or \opglr. The formal 
+definition is as follows.
+
+\begin{problem}[Optimal Perimeter Guarding with Limited Resources 
+	(\opglr)] Let there be $t$ types of robots. For each type $1\le \tau 
+	\le t$, there are $n_{\tau}$ such robots, each having the same 
+	capability parameter $a_{\tau}$. Let $n = n_1 + \cdots + n_t$. 
+	Given the perimeter set $\P = \{P_1, \ldots, P_m\}$ of a set of 
+	2D regions $\R =\{R_1, \ldots, R_m\}$, find a set of $n$ continuous 
+	line segments $\C^* = \{C_1^*, \ldots, C_n^*\}$ such that $\C^*$ covers 
+	$\P$, i.e., \begin{align}\label{eq:coverage}
+	\bigcup_{P_i \in \P} P_i  \subset \bigcup_{C_j^* \in \C^*} C_j^*,
+	\end{align}
+	such that a $C_j^*$ is covered by robot $j$ of type $\tau_j$, and such that,
+	among all covers $\C$ satisfying~\eqref{eq:coverage}, 
+	\begin{align}\label{eq:objective}
+	\C^* = \underset{\C}{\mathrm{argmin}} \max_{C_j \in \C} 
+	\frac{len(C_j)}{a_{\tau_j}}.
+	\end{align}
+\end{problem}
+
+Whereas the first model caps the number of robots, the second
+model fixes the maximum coverage of each type of robot. That is, for 
+each robot type $1 \le \tau \le t$, $n_{\tau}$, the number of robots of type $\tau$,
+is unlimited as long as it is non-negative, but each such robot can only cover 
+a maximum length of $\ell_{\tau}$. 
+At the same time, using each such robot incurs a cost of $c_{\tau}$. The 
+goal here is to guard the perimeters with the minimum total cost. We 
+denote this problem {\em optimal perimeter guarding with minimum 
+	cost} or \opgmc. 
+
+\begin{problem}[Optimal Perimeter Guarding with Minimum Cost
+	(\opgmc)] Let there be $t$ types of robots of unlimited quantities. 
+	For each robot of type $1\le \tau \le t$, it can guard a length of 
+	$\ell_{\tau}\in\mathbb{Z^+}$ with a cost of $c_{\tau}\in\mathbb{Z^+}$. Given the perimeter set
+	$\P = \{P_1, \ldots, P_m\}$ of a set of 2D regions $\R =\{R_1, \ldots, 
+	R_m\}$, find a set of $n = n_1 + \cdots + n_t$ continuous line segments 
+	$\C^* = \{C_1^*, \ldots, C_n^*\}$ where $n_{\tau}$ such segments are 
+	guarded by type $\tau$ robots, such that $\C^*$ covers $\P$, i.e., 
+	\begin{align}\label{eq:coverage2}
+	\bigcup_{P_i \in \P} P_i  \subset \bigcup_{C_j^* \in \C^*} C_j^*,
+	\end{align}
+	such that a $C_j^*$ is covered by robot $j$ of type $\tau_j$, i.e., 
+	$C_j^* \le \ell_{\tau_j}$, and such that,
+	among all covers $\C$ satisfying~\eqref{eq:coverage2}, 
+	\begin{align}\label{eq:objective2}
+	\C^* = \underset{\C}{\mathrm{argmin}} \sum_{1 \le \tau \le t} 
+	n_{\tau}c_{\tau}.
+	\end{align}
+\end{problem}

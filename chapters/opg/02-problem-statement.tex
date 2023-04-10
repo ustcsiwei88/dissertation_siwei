@@ -1,0 +1,191 @@
+%\subsection{Problem Statement for Perimeter Guarding}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{problem}{Problem}
+\newtheorem{prob}[theorem]{Problem}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{obj}[theorem]{Objective}
+\newtheorem{prop}[theorem]{Property}
+\newtheorem{schedule}[theorem]{Schedule}
+
+
+Let $\W \subset \mathbb R^2$ be a compact (i.e., closed and bounded) 
+two-dimensional workspace. There are  $m$ pairwise disjoint {\em 
+regions} $\R = \{R_1, \ldots, R_m\}$ where each region $R_i \subset \W$ 
+is homeomorphic to the closed unit disc, i.e., there exists a continuous 
+bijection $f_i: R_i \to \{(x, y) \mid x^2 + y^2 \le 1\}$ for all $1 \le 
+i \le m$. For a given region $R_i$, let $\partial R_i$ be its (closed) 
+boundary (therefore, $f_i$ maps $\partial R_i$ to the unit circle  
+$\mathbb S^1$). With a slight abuse of notation, define $\partial \R 
+= \{\partial R_1, \ldots, \partial R_m\}$. Let $P_i \subset \partial R_i$ 
+be the part of $\partial R_i$ that is accessible, e.g., not blocked by 
+obstacles in $\W$. This means that each $P_i$ is either a single closed 
+curve or formed by a finite number of (possibly curved) line segments. 
+Define  $\P = \{P_1, \ldots, P_m\} \subset \W$ as the {\em perimeter} 
+of $\R$ which must be {\em guarded}. More formally, each $P_i$ is 
+homeomorphic to a compact subset of the unit circle (i.e., it is 
+assumed that the maximal connected components of $P_i$ are closed 
+line segments). For a given $P_i$, each one of its maximal connected 
+component is called a {\em perimeter segment} or simply a {\em segment}, 
+whereas each maximal connected components of $\partial R_i \backslash P_i$ 
+is called a {\em perimeter gap} or simply a {\em gap}. An example setting is 
+illustrated in Fig.~\ref{fig:example-boundaries} with two regions. 
+
+\begin{figure}[ht]
+\vspace*{-1mm}
+\begin{center}
+\begin{overpic}[width=0.7\textwidth,tics=5]
+{./chapters/opg/figures/example-boundaries.eps}
+\put(26,20){{\small $R_1$}}
+\put(20,39){{\small \textcolor{red}{$P_1$}}}
+\put(66,28){{\small $R_2$}}
+\put(54,40){{\small \textcolor{green}{$P_2$}}}
+%\put(79.6,18){{\small $h$}}
+\put(82,44){{\small $\W$}}
+\end{overpic}
+\end{center}
+\vspace*{-4mm}
+\caption{\label{fig:example-boundaries} An example of a workspace $\W$ 
+with two regions $\{R_1, R_2\}$. Due to three {\em gaps} on $\partial R_1$, 
+marked as dotted lines within long rectangles, $P_1 \subset \partial R_1$ 
+has three {\em segments} (or maximal connected components); $P_2 = \partial 
+R_2$ has a single segment with no gap.}
+\vspace*{-3mm}
+\end{figure}
+
+There are $n$ indistinguishable point robots residing in $\W$.
+%and outside of any $R_i \in \R$, $1 \le i \le m$. 
+These robots are to be deployed to {\em cover} the perimeter $\P$ such 
+that each robot $1 \le j \le n$ is assigned a continuous closed subset 
+$C_j$ of some $\partial R_i, 1 \le i \le m$. All of $\P$ must be 
+{\em covered} by $\C$, i.e., 
+%
+$\bigcup_{P_i \in \P} P_i  \subset \bigcup_{C_j \in \C} C_j$,
+%
+which implies that elements of $\C$ need not intersect on their
+interiors. Hence, it is assumed that any two elements of $\C$ may share 
+at most their endpoints. Such a $\C$ is called a cover of $\P$. 
+
+Given a cover $\C$, for a $C_j \in \C$, $1 \le j \le n$, let $len(C_j)$ 
+denote its length (more formally, measure). It is desirable to minimize 
+the maximum $len(C_j)$, i.e., the goal is to find a cover $\C$ such that 
+the value 
+%
+$\max_{C_j \in \C} len(C_j)$
+%
+is minimized. This corresponds to minimizing the maximum workload for 
+each robot or agent. The formal definition of the Optimal Perimeter 
+Guarding (\opg) problem is provided as follows. 
+
+\begin{problem}[Optimal Perimeter Guarding (\opg)] Given the perimeter 
+$\P = \{P_1, \ldots, P_m\}$ of a set of 2D regions $\R =\{R_1, \ldots, 
+R_m\}$, find a set of $n$ continuous line segments $\C^* = \{C_1^*, 
+\ldots, C_n^*\}$ such that $\C^*$ covers $\P$, i.e., 
+\begin{align}\label{eq:coverage}
+\bigcup_{P_i \in \P} P_i  \subset \bigcup_{C_j^* \in \C^*} C_j^*,
+\end{align}
+with the maximum of $len(C_j^*), 1 \le j \le n$ minimized, i.e., among all 
+covers $\C$ satisfying~\eqref{eq:coverage}, 
+\begin{align}\label{eq:objective}
+\C^* = \underset{\C}{\mathrm{argmin}} \max_{C_j \in \C} len(C_j).
+\end{align}
+\end{problem}
+
+Here, we introduce the technical assumption that the ratio between 
+the length of $\partial \R$ and the length of $\partial \P$ is polynomial
+in the input parameters. That is, the length of $\partial \R$ is not much 
+bigger than the length of $\partial \P$ . 
+The assumption makes intuitive sense as any 
+gap should not be much bigger than the perimeter in pratice. We note 
+that the assumption is not strictly necessary but helps simplify the 
+correctness proof of some algorithms. 
+
+Henceforth, in general, $\C^*$ is used when an optimal cover is meant 
+whereas $\C$ is used when a cover is meant. We further define the optimal 
+single robot coverage length as 
+\begin{align}\label{eq:l-star}
+\vspace*{-1mm}
+\ell^* = \min_{\C} \max_{C_j \in \C} len(C_j).
+\vspace*{-1mm}
+\end{align}
+
+Fig.~\ref{fig:example} shows an example of an optimal cover by $8$ robots 
+of a perimeter with three components. Note that one of the three gaps 
+(the one on the top area as part of the hexagon) is fully covered 
+by a robot, which leads to a smaller $\ell^*$ as compared to other 
+feasible solutions. This interesting phenomenon, which is 
+actually a main source of the difficulty in solving \opg, is explored 
+more formally in Section~\ref{section:analysis} 
+(Proposition~\ref{p:max-no-exclusion}).
+
+Given the \opg formulation, additional details on $\partial \R$ must 
+be specified to allow the precise characterization of the computational 
+complexity (of any algorithm developed for \opg). For this purpose, it 
+is assumed that each $\partial R_i \in \partial \R$, $1 \le i \le m$, 
+is a simple (i.e., non-intersecting and without holes) polygon with an 
+input complexity $O(M_i)$, i.e., $\partial R_i$ has about $M_i$ vertices 
+or edges. If an \opg has a single region $R$, then let $\partial R$ have 
+an input complexity of $M$. Note that the algorithms developed in this 
+work apply to curved boundaries equally well, provided that the curves 
+have similar input complexity and are given in a format that allow the 
+computation of their lengths with the same complexity. 
+Alternatively, curved boundaries may be approximated to arbitrary 
+precision with polygons. 
+
+%\jy{Add an example showing an optimal cover for maybe some $6-10$ robots?
+%This can probably go in the introduction to motivate the paper. We need 
+%some 1-2 good examples. Need to refer back to the example here.}
+
+For deploying a robot to guard a $C_j$, one natural choice is to send the 
+robot to a location $t_j \in C_j$ such that $t_j$ is the centroid of $C_j$. 
+Since $C_j$ is one dimensional, $t_j$ is the center (or midpoint) of $C_j$. 
+After solving an \opg, there is the remaining problem of assigning the $n$ 
+robots to the centers of $\C^* = \{C_j^*\}$ and actually moving the robots 
+to these assigned locations. As a secondary objective, it may also be 
+desirable to provide guarantees on the execution time required for 
+deploying the robots to reach target guarding locations. We note that, 
+the task assignment (after determining target locations) and motion 
+planning component for handling robot deployment, essential for applications 
+but not a key part of this work's contribution, is briefly addressed in 
+Section~\ref{section:opg-evaluation}. 
+
+With some $\C^*$ satisfying~\eqref{eq:opg-coverage} 
+and~\eqref{eq:objective}, we may further require that $len(C_j^*)$ is 
+minimized for all $C_j^* \in \C^*$. This means that a gap $G \subset 
+((\bigcup \partial R_i)\backslash (\bigcup P_i))$ will never be partially 
+covered by some $C_j^* \in \C^*$ because if that is the case, $C_j^*$ 
+needs not cover any part of $G$ at all (and should not, to limit the 
+coverage of the assigned robot). In the example from 
+Fig.~\ref{fig:example-boundaries}, $G$ may be one of the three dotted 
+lines on $\partial R_1$; clearly, it is not beneficial to have some 
+$C_j^*$ partially cover (i.e., intersect the interior of) one of these. 
+This rather useful condition (note that this is not an assumption but 
+a solution property) yields the following lemma. 
+
+\begin{lemma}\label{l:no-partial-coverage} 
+For a set of perimeters $\P = \{P_1,\ldots, P_m\}$ where $P_i \subset 
+\partial R_i$ for $1 \le i \le m$, there exists an optimal cover $\C^* 
+= \{C_1^*, \ldots, C_n^*\}$ such that, for any gap (or maximal connected
+component) $G \subset ((\bigcup \partial R_i)\backslash (\bigcup P_i))$ 
+and any $C_j^* \in \C^*$, $C_j^* \cap G = G$ or $C_j^* \cap G = 
+\varnothing$. 
+\end{lemma}
+
+\begin{remark} Our definition of coverage is but one of the possible 
+models of coverage. The definition restricts a robot deployed to 
+$C_j, 1 \le j \le n$, to essential {\em live} on $C_j$. The definition 
+models scenarios where a guarding robot must travel along $C_j$, which 
+is one-dimensional. Nevertheless, the algorithms developed for \opg have 
+broader applications. For example, subroutines in our algorithms readily 
+solve the problem of finding the minimum number of guards needed if each 
+guard has a predetermined maximum coverage. 
+%As we will demonstrate later, by selecting the 
+%boundaries (i.e., $\{\partial R_i\}$) carefully, the model applies 
+%to diverse practical application scenarios.
+\end{remark}

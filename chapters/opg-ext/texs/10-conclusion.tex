@@ -1,0 +1,61 @@
+In this paper, we investigate two natural models of optimal perimeter 
+guarding using heterogeneous robots, where one model (\opglr) limits 
+the number of available robots and the second (\opgmc) seeks to 
+optimize the total cost of coverage. 
+
+These formulations have many potential applications. One application 
+scenario we envision is the deployment of multiple agents or robots 
+as ``emergency responders'' that are constrained to travel on the 
+boundary. An optimal coverage solution will then translate to minimizing 
+the maximum response time anywhere on the perimeter (the part that 
+needs guarding). The scenario applies to \opg, \opglr, and \opgmc. 
+
+Another application scenario is the monitoring of the perimeter 
+using robots with different sensing capabilities. A simple heterogeneous 
+sensing model here would be robots equipped with cameras with different 
+resolutions, which may also be approximated as discs of different radii. 
+The model makes sense provided that the region to be covered is much 
+larger than the sensing range of individual robots and assuming that the 
+boundary has relatively small curvature as compared to the inverse of the 
+radius of the smallest sensing disc of the robots. For boundary with 
+relatively small curvature, our solutions would apply well to the sensing 
+model by using the diameter of the sensing disc as the 1D sensing range. 
+As the region to be covered is large, covering the boundary will require
+much fewer sensors than covering the interior. 
+
+
+On the computational complexity 
+side, we prove that both \opglr and \opgmc are NP-hard, with \opglr 
+directly shown to be strongly NP-hard. This is in stark contrast to 
+the homogeneous case, which admits highly efficient low polynomial 
+time solutions \cite{FenHanGaoYu19RSS}. The complexity study also 
+establishes structural similarities between these problems and 
+classical NP-hard problems including \tpart, \ttkp, and \subsetsum.
+
+On the algorithmic side, we provide methods for solving both \opglr 
+and \opgmc exactly. For \opglr, the algorithm runs in pseudo-polynomial 
+time in practical settings with limited types of robots. In 
+this case, the approach is shown to be computationally effective. 
+For \opgmc, a pseudo-polynomial time algorithm is derived for the 
+general problem, which implies that \opgmc is weakly NP-hard. In 
+practice, this allows us to solve large instances of \opgmc. We 
+further show that a polynomial time algorithm is possible for 
+\opgmc when the types of robots are fixed. 
+
+With the study of \opg \cite{FenHanGaoYu19RSS} for homogeneous and 
+heterogeneous cases, some preliminary understanding has been 
+obtained on how to approach complex 1D guarding problems. 
+Nevertheless, the study so far is limited to {\em one-shot} settings
+where the perimeters do not change. In future research, we would like 
+to explore the more challenging case where the perimeters evolve 
+over time, which requires the solution to be dynamic as well. Given 
+the results on the one-shot settings, we expect the dynamic setting
+to be generally intractable if global optimal solutions are desired, 
+potentially calling for iterative and/or approximate solutions. 
+
+We recognize that our work 
+does not readily apply to a visibility-based sensing model, which is also 
+of interest. Currently, we are also exploring covering of the interior
+using range-based sensing. As with the OPG work, we want to push for 
+optimal or near-optimal solutions when possible.
+\vspace*{-1mm}

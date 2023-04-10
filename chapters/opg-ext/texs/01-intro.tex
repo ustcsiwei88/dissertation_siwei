@@ -1,0 +1,133 @@
+Consider the scenario where many mobile guards (or sensors) are to be deployed 
+to patrol 
+the perimeter of some 2D regions (Fig.~\ref{fig:ex}) against intrusion, where 
+each guard may effectively cover a continuous segment of a region's boundary. 
+When part of a boundary need not be secured, e.g., there may already be 
+some existing barriers (the blue segments in Fig.~\ref{fig:ex}), optimally 
+distributing the robots so that each robot's coverage is minimized becomes 
+an interesting and non-trivial computational task \cite{FenHanGaoYu19RSS}. 
+It is established \cite{FenHanGaoYu19RSS} that, when the guards have 
+the same capabilities, the problem, called the {\em optimal perimeter guarding} 
+(\opg), resides in the complexity class P (polynomial time class), 
+even when the robots must be distributed across many different boundaries. 
+
+\begin{figure}[ht]
+\begin{center}
+\begin{overpic}[width=0.7\textwidth,tics=5]{chapters/opg-ext/figures/opg-eps-converted-to.pdf}
+%\put(26,20){{\small $R_1$}}
+%\put(20,39){{\small \textcolor{red}{$P_1$}}}
+%\put(66,28){{\small $R_2$}}
+%\put(54,40){{\small \textcolor{green}{$P_2$}}}
+%\put(82,44){{\small $\W$}}
+\end{overpic}
+\end{center}
+\caption{\label{fig:ex} A scenario where boundaries of three (gray) 
+regions must be secured. Zooming in on part of the boundary of one 
+of the regions (the part inside the small circle), portions of the 
+boundary (the red segments) must be guarded while the rest (the 
+blue dotted segments) does not need guarding. For example, the zoomed-in 
+part of the boundary may be monitored by two mobile robots, each patrolling
+along one of the green segments.}
+\end{figure}
+
+In this work, we investigate a significantly more general version of \opg 
+where the mobile guards may be heterogeneous. More specifically, two 
+formulations with different guarding/sensing models are addressed in our 
+study. 
+%
+In the first, the number of available robots is fixed where robots of 
+different types have a fixed ratio of capability (e.g., one type of 
+robot may be able to run faster or may have better sensor). The guarding task 
+must be evenly divided among the robots so that each robot, regardless of 
+type, will not need to bear a too large coverage/capability ratio. This 
+formulation is denoted as {\em optimal perimeter guarding with limited 
+resources} or \opglr.
+%
+In the second, the number of robots is unlimited; instead, for each type, 
+the sensing range is fixed with a fixed associated cost. The goal here is 
+to find a deployment plan so as to fully cover the perimeter while minimizing 
+the total cost. We call this the {\em optimal perimeter guarding with 
+minimum cost} problem, or \opgmc. 
+
+Unlike the plain vanilla version of the \opg problem, we establish that both 
+\opglr and \opgmc are NP-hard when the number of robot types is part of the 
+problem input. They are, however, at different hardness levels. \opglr is shown 
+to be NP-hard in the strong sense, thus reducing the likelihood of finding a fully
+polynomial time approximation scheme (FPTAS).
+% solutions to even approximately solving it to arbitrary precision. 
+Nevertheless, for the more practical case where the number of robot types 
+is a constant, we show that \opglr can be solved using a pseudo-polynomial 
+time algorithm with reasonable scalability. On the other hand, we show that 
+\opgmc is weakly NP-hard through the establishment of a pseudo-polynomial 
+time algorithm for \opgmc with arbitrary number of robot types. 
+We further show that, when the number of robot types is fixed, \opgmc can be 
+solved in polynomial time through a fixed-parameter tractable (FPT) approach.
+This paragraph also summarizes the main contributions of this work. 
+
+A main motivation behind our study of the \opg formulations is to address 
+a key missing element in executing autonomous, scalable, and optimal robot 
+deployment tasks. Whereas much research has been devoted to multi-robot 
+motion planning \cite{ErdLoz86,arai2002advances} with great success, e.g., 
+\cite{blm-rvo,smith2009monotonic,ayanian2010decentralized,turpin2014capt,
+alonso2015multi,SolYu15}, existing results in the robotics literature appear 
+to generally assume that a target robot distribution is already provided; the 
+problem of how to effectively generate optimal deployment patterns is largely 
+left unaddressed. It should be noted that control-based solutions to the 
+multi-agent deployment problem do exist, e.g.,\cite{ando1999distributed,
+jadbabaie2003coordination,cortes2004coverage,ren2005consensus,
+schwager2009optimal,yu2012rendezvous,morgan2016swarm}, but the final solutions 
+are obtained through many local iterations and generally do not come with 
+global optimality guarantees. For example, in \cite{cortes2004coverage}, 
+Voronoi-based iterative methods compute locally optimal target formations 
+for various useful tasks. In contrast, this work, as well as 
+\cite{FenHanGaoYu19RSS}, targets the scalable computation of globally optimal 
+solutions. 
+%To have an end-to-end system, the autonomous generation
+%of deployment plan is clearly crucial. Where computational solutions for 
+%\cite{alphago}. 
+%\jy{Maybe mention alphago?}
+
+As a coverage problem, \opg may be characterized as a 1D version 
+of the well-studied Art Gallery problems  \cite{o1987art,shermer1992recent},
+which commonly assume a sensing model based on line-of-sight 
+visibility\cite{lozano1979algorithm}; the goal is to ensure that every point
+in the  interior of a given region is visible to at least one of the deployed 
+guards. Depending on the exact formulation, guards may be placed on 
+boundaries, corners, or the interior of the region. Not surprisingly, Art
+Gallery problems are typically NP-hard \cite{lee1986computational}. Other
+than Art Gallery, 2D coverage problems with other sensing models, e.g., 
+disc-based, have also been considered \cite{thue1910dichteste,hales2005proof,
+drezner1995facility,cortes2004coverage,pavone2009equitable
+,pierson2017adapting}, where some formulations prevent the overlapping 
+of individual sensing ranges \cite{thue1910dichteste,hales2005proof} while 
+others seek to ensure a full coverage which often requires intersection
+of sensor ranges. 
+%
+In viewing of these studies, this study helps painting a broader landscape 
+of sensor coverage research.
+
+In terms of structural resemblance, \opglr and \opgmc share many similarities 
+with {\em bin packing}  \cite{johnson1973near} and other related problems. 
+In a bin packing problem, objects are to be selected to fit within bins of 
+given sizes. Viewing the segments (the red ones in Fig.~\ref{fig:ex}) as 
+bins, \opg seeks to place guards so that the segments are fully contained in 
+the union of the guards' joint coverage span. In this regard, \opg is a dual
+problem to bin packing since the former must overfill the bins and the later 
+cannot fully fill the bins. In the extreme, however, both bin packing and 
+\opg converge to a \subsetsum \cite{karp1972reducibility} like problem where 
+one seeks to partition objects into halves of equal total sizes, i.e., the 
+objects should fit exactly within the bins. With an additional cost term, 
+\opgmc has further similarities with the \ttkp problem \cite{ukphardness}, 
+which is weakly NP-hard \cite{dantzig1957discrete}.
+
+The rest of the paper is organized as follows. In Section~\ref{sec:opgext-problem},
+mathematical formulations of the two \opg variants are fully specified. In
+Section~\ref{sec:opgext-hardness}, both \opglr and \opgmc are shown to be 
+NP-hard. Despite the hardness hurdles, in Section~\ref{sec:opgext-algorithm}, 
+multiple algorithms are derived for \opglr and \opgmc, including effective
+implementable solutions for both. In Section~\ref{sec:opgext-application},
+we perform numerical evaluation of selected algorithms and demonstrate 
+how they may be applied to address multi-robot deployment problems. We 
+discuss and conclude our study in Section~\ref{sec:opgext-conclusion}. Please
+see \url{https://youtu.be/6gYL0_B3YTk} for an illustration of the problems 
+and selected instances/solutions. 

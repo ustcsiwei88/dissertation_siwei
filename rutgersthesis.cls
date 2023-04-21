@@ -1,6 +1,7 @@
 
-% rutgersthesis class - for use in preparation of Theses and Dissertations at Rutgers ECE
-% revised for May 2021 based on the the latex template from Georgia Tech Thesis Templates.
+% rutgersthesis class - for use in preparation of Theses and Dissertations at Rutgers
+% revised in May 2021 based on the the latex template from Georgia Tech Thesis Templates.
+% revised for IEEE bilibography 
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{rutgersthesis}[2021/05/07 Rutgers PhD Dissertation Class]

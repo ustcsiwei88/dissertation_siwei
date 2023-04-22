@@ -12,9 +12,9 @@ Lastly, some background knowledge of the theories and tools used in this paper w
 Sensor systems are ubiquitous. To list a few, systems of radar antennas 
 or other sensor sources are frequently used as base stations for signal transmission, 
 or intruder detection system (IDS) for monitoring hazards. 
-The defense system can date back to ancient China where
+Early intruder defense system can date back to ancient China, where 
 watchtowers of the great wall are used as signal points when invaders appear. 
-It can be seen as sensors from the broad sense
+It can be seen as sensors from the broad sense 
 since ancient soldiers lit woods to create smoke and inform others when invaders appear. 
 % Surveilence or tracking cameras surveillance and tracking system, 
 \begin{figure}[ht]
@@ -29,26 +29,34 @@ since ancient soldiers lit woods to create smoke and inform others when invaders
         \caption{The great wall of China} 
         \label{fig:intro_great_wall} 
     \end{subfigure} 
-\end{figure}
+\end{figure} 
 
 On top of autonomous vehicles, sensor systems are indispensible for obstacle avoidance and interactions between vehicles, 
 e.g., Tesla car (Fig.~\ref{fig:intro_tesla}) used 12 ultrasonic sensors 
-near the front and rear bumper \footnote{\url{https://www.tesla.com/en_eu/support/transitioning-tesla-vision}}
-and later changed into a vision system with only cameras. 
-TuSimple, a truck company, employs a combination of cameras, radars and lidars 
-for their perception system \footnote{\url{https://www.tusimple.com/blogs/tusimple-1000-meter-perception-system}}. 
+near the front and rear bumper 
+and later changed into a vision system with only cameras 
+\footnote{\url{https://www.tesla.com/en_eu/support/transitioning-tesla-vision}}. 
+TuSimple, an autonomous truck company, employs a combination of cameras, radars and lidars 
+for their perception system \footnote{\\ \url{https://www.tusimple.com/blogs/tusimple-1000-meter-perception-system}}. 
 
 \begin{figure}[ht] 
     \centering 
 
     \begin{subfigure}[b]{0.49\textwidth} 
         \includegraphics[width=\textwidth]{figures/tesla.png} 
-        \caption{Tesla model Y's sensor system} 
+        \caption{
+        Tesla model Y's sensing system
+        equipped with cameras (\circled{\small{1}}, 
+        \circled{\small{3}}, 
+        \circled{\small{4}}, \circled{\small{5}}),
+        ultrasonic sensors \circled{\small{2}}, and a radar \circled{6}.
+        }
+
         \label{fig:intro_tesla} 
-    \end{subfigure} 
-    \begin{subfigure}[b]{0.3\textwidth} 
-        \includegraphics[width=\textwidth]{figures/truck_cam.jpeg} 
-        \caption{TuSimple autonomous truck's sensor system} 
+    \end{subfigure} \hfill
+    \begin{subfigure}[b]{0.4\textwidth} 
+        \includegraphics[width=\textwidth]{figures/tusimple.jpg} 
+        \caption{TuSimple autonomous truck equipped with CMOS long-range cameras, LiDARs and radars} 
         \label{fig:intro_truckcam} 
     \end{subfigure} 
     
@@ -69,6 +77,7 @@ sensors like laser beams or cameras are deployed to detect thiefs.
         \caption{Optical tracking system} 
         \label{fig:intro_optitrack} 
     \end{subfigure} 
+    \hfill
     \begin{subfigure} [b]{0.46\textwidth} 
         \includegraphics[width=\textwidth]{figures/laser.jpg} 
         \caption{Laser system} 

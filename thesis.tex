@@ -31,6 +31,9 @@
 \usepackage{overpic}
 
 \usepackage{comment}
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=0.1pt, scale=0.7] (char) {#1};}}
 
 % preamble
 

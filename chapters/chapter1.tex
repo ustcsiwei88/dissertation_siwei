@@ -91,21 +91,26 @@ capturing motions, tracking poses and so on.
 
 \section{Background}
 In this section, we discuss some background knowledge and terms used in this thesis,
-these terms will be used without explaination in the later chapters.
+they will be used without explaination in the later chapters. 
 
 \subsection{NP-completeness and NP-hardness}
 % In the area of optimization, which this thesis is focusing on, NP-hardness has the 
 The definition of NP-completeness is taken from \cite{vazirani2001approximation}
 \begin{definition}[NP-completeness]
-    A language $L\in NP$ if there is a polynomial $p$ and $a$ polynomial time bounded Turing machine M, 
-    called the verifier, such that for each string $x\in \{0, 1\}$:
+    A language $L\in NP$ if there is a polynomial $p$ and a polynomial time bounded Turing machine M, 
+    called the {\textit verifier}, such that for each string $x\in \{0, 1\}^*$: 
+\begin{itemize}
+    \item if $x\in L$, then there is a string $y$ (the certificate) of polynomially bounded length, i.e., $|y| \leq p(|x|)$,
+    such that $M(x, y)$ accepts, and 
+    \item if $x\notin L$, then for any string $y$, such that $|y|\leq p(|x|)$, $M(x,y)$ rejects.
+\end{itemize}
 \end{definition}
 
+In the area of combinatorial optimization, 
 \subsection{Integer programming}
 
 \section{Literature review} 
-\subsection{Coverage-related problems in computational geometry} 
-
-\subsection{Sensor network} 
-
-\subsection{}
+\subsection{Coverage Control}
+\subsection{Multi-robot Coordination}
+\subsection{Coverage-related problems in computational geometry}
+\subsection{Sensor network}

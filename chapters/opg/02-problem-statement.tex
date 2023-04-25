@@ -19,7 +19,7 @@ line segments). For a given $P_i$, each one of its maximal connected
 component is called a {\em perimeter segment} or simply a {\em segment}, 
 whereas each maximal connected components of $\partial R_i \backslash P_i$ 
 is called a {\em perimeter gap} or simply a {\em gap}. An example setting is 
-illustrated in Fig.~\ref{fig:example-boundaries} with two regions. 
+illustrated in Fig.~\ref{fig:opg-example-boundaries} with two regions. 
 
 \begin{figure}[ht]
 \vspace*{-1mm}
@@ -75,7 +75,7 @@ R_m\}$, find a set of $n$ continuous line segments $\C^* = \{C_1^*,
 \bigcup_{P_i \in \P} P_i  \subset \bigcup_{C_j^* \in \C^*} C_j^*,
 \end{align}
 with the maximum of $len(C_j^*), 1 \le j \le n$ minimized, i.e., among all 
-covers $\C$ satisfying~\eqref{eq:coverage}, 
+covers $\C$ satisfying~\eqref{eq:opg-coverage}, 
 \begin{align}\label{eq:opg-objective}
 \C^* = \underset{\C}{\mathrm{argmin}} \max_{C_j \in \C} len(C_j).
 \end{align}
@@ -140,7 +140,7 @@ but not a key part of this work's contribution, is briefly addressed in
 Section~\ref{section:opg-evaluation}. 
 
 With some $\C^*$ satisfying~\eqref{eq:opg-coverage} 
-and~\eqref{eq:objective}, we may further require that $len(C_j^*)$ is 
+and~\eqref{eq:opg-objective}, we may further require that $len(C_j^*)$ is 
 minimized for all $C_j^* \in \C^*$. This means that a gap $G \subset 
 ((\bigcup \partial R_i)\backslash (\bigcup P_i))$ will never be partially 
 covered by some $C_j^* \in \C^*$ because if that is the case, $C_j^*$ 

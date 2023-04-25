@@ -78,12 +78,12 @@ definition is as follows.
 	Given the perimeter set $\P = \{P_1, \ldots, P_m\}$ of a set of 
 	2D regions $\R =\{R_1, \ldots, R_m\}$, find a set of $n$ continuous 
 	line segments $\C^* = \{C_1^*, \ldots, C_n^*\}$ such that $\C^*$ covers 
-	$\P$, i.e., \begin{align}\label{eq:coverage}
+	$\P$, i.e., \begin{align}\label{eq:opg-coverage}
 	\bigcup_{P_i \in \P} P_i  \subset \bigcup_{C_j^* \in \C^*} C_j^*,
 	\end{align}
 	such that a $C_j^*$ is covered by robot $j$ of type $\tau_j$, and such that,
-	among all covers $\C$ satisfying~\eqref{eq:coverage}, 
-	\begin{align}\label{eq:objective}
+	among all covers $\C$ satisfying~\eqref{eq:opg-coverage}, 
+	\begin{align}\label{eq:opg-objective}
 	\C^* = \underset{\C}{\mathrm{argmin}} \max_{C_j \in \C} 
 	\frac{len(C_j)}{a_{\tau_j}}.
 	\end{align}
@@ -107,13 +107,13 @@ denote this problem {\em optimal perimeter guarding with minimum
 	R_m\}$, find a set of $n = n_1 + \cdots + n_t$ continuous line segments 
 	$\C^* = \{C_1^*, \ldots, C_n^*\}$ where $n_{\tau}$ such segments are 
 	guarded by type $\tau$ robots, such that $\C^*$ covers $\P$, i.e., 
-	\begin{align}\label{eq:coverage2}
+	\begin{align}\label{eq:opg-coverage2}
 	\bigcup_{P_i \in \P} P_i  \subset \bigcup_{C_j^* \in \C^*} C_j^*,
 	\end{align}
 	such that a $C_j^*$ is covered by robot $j$ of type $\tau_j$, i.e., 
 	$C_j^* \le \ell_{\tau_j}$, and such that,
-	among all covers $\C$ satisfying~\eqref{eq:coverage2}, 
-	\begin{align}\label{eq:objective2}
+	among all covers $\C$ satisfying~\eqref{eq:opg-coverage2}, 
+	\begin{align}\label{eq:opg-objective2}
 	\C^* = \underset{\C}{\mathrm{argmin}} \sum_{1 \le \tau \le t} 
 	n_{\tau}c_{\tau}.
 	\end{align}

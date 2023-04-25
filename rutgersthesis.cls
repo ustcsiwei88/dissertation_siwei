@@ -385,7 +385,9 @@ by \MakeUppercase{\yourName}\\
 }
 
 % ------------------ appendix environment definition ------------------
-% A note on layout: in the Chicago (and by extension IEEE) style manual, appendices are first in the end matter, then bibliography or references. In APA, bibliography is first, then appendices. The thesis manual on which this template is based assumes the Chicago convention.
+% A note on layout: in the Chicago (and by extension IEEE) style manual, appendices are first in the end matter, 
+% then bibliography or references. 
+% In APA, bibliography is first, then appendices. The thesis manual on which this template is based assumes the Chicago convention.
 
 % remove the page number on the appendices cover and move bookmark up the page, create a group-subgroup structure for the appendices in the TOC/bookmarks
 \makeatletter

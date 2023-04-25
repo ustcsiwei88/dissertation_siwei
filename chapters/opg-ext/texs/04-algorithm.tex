@@ -45,8 +45,8 @@ We set to develop an algorithm for \opglr for arbitrary $t$, the number of robot
 types; the algorithm runs in pseudo-polynomial time when $t$ is a constant. 
 At a higher level, our proposed algorithm works as follows. First, our main effort 
 here goes into deriving a feasibility test for \opglrd as defined in 
-Section~\ref{subsec:opglr-hardness}. With such a feasibility test, we can then 
-find the optimal $\frac{len(C_j)}{a_{\tau_j}}$ in \eqref{eq:opg-objective} via binary search.
+Section~\ref{subsec:opgext-opglr-hardness}. With such a feasibility test, we can then 
+find the optimal $\frac{len(C_j)}{a_{\tau_j}}$ in \eqref{eq:opgext-opg-objective} via binary search.
 Let us denote the optimal value of $\frac{len(C_j)}{a_{\tau_j}}$ as $\ell^*$. 
 
 \subsubsection{Feasibility Test for \opglrd} The feasibility test for \opglrd 
@@ -58,11 +58,11 @@ Essentially, we maintain a $t$ dimensional array $M$ where dimension $\tau$
 has a size of $n_{\tau} +1$. An element of the array, $M[n_1']\ldots[n_t']$, holds the 
 maximal distance starting from $S_i$ that can be covered by $n_1'$ type 1 robots, 
 $n_2'$ type 2 robots, and so on. The DP procedure \opglrfeasible($i, \ell$), outlined in 
-Algorithm~\ref{algo:opglrd}, incrementally builds this array $M$. For convenience,
+Algorithm~\ref{algo:opgext-opglrd}, incrementally builds this array $M$. For convenience,
 in the pseudo code, $M[\vec{x}]$ denotes an element of $M$ with $\vec{x}$ being 
 a $t$ dimensional integer vector. 
 
-\begin{algorithm}\label{algo:opglrd}
+\begin{algorithm}\label{algo:opgext-opglrd}
 	\DontPrintSemicolon
 	% \KwData{$n_1, n_2, \cdots, n_k$ robots, $l_1, l_2, \cdots, l_n$ coverage distance}
 	\KwData{$n_1, \ldots, n_t$, $a_1, \ldots, a_t$,
@@ -90,10 +90,10 @@ a $t$ dimensional integer vector.
 	\caption{\opglrfeasible($i, \ell$)}
 \end{algorithm}
 
-In Algorithm~\ref{algo:opglrd}, the procedure \inc($L, \ell$) checks how much of the 
+In Algorithm~\ref{algo:opgext-opglrd}, the procedure \inc($L, \ell$) checks how much of the 
 perimeter $P$ can be covered when an additional coverage length $\ell$ is added, 
 assuming that a distance of $L$ (starting from some $S_i$) is already covered. An 
-illustration of how \inc($L, \ell$) works is given in Fig.~\ref{fig:inc}.
+illustration of how \inc($L, \ell$) works is given in Fig.~\ref{fig:opgext-inc}.
  
 
 \begin{figure}[ht]
@@ -105,7 +105,7 @@ illustration of how \inc($L, \ell$) works is given in Fig.~\ref{fig:inc}.
 			\put(30,1){{\small \textsc{Inc}($L$, $\ell$)}}
 		\end{overpic}
 	\end{center}
-    \caption{\label{fig:inc}Suppose starting from the fixed left point, a 
+    \caption{\label{fig:opgext-inc}Suppose starting from the fixed left point, a 
 		length of $L$ on the boundary is successfully guarded by a group of 
 		robots. Then, a robot	with coverage capacity $\ell$ is appended to 
 		the end of the group of robots to increase the total guarded distance. 
@@ -141,11 +141,11 @@ To derive the stop criterion, we note that given the optimal $\ell^*$, there mus
 exist some $S_{i\sim i'}$ that is ``exactly'' spanned by the allocated robots.
 That is, assume that $S_{i\sim i'}$ is covered by $n_1'$ of type $1$ robots
 and $n_2'$ of type $2$ robots, and so on, then 
-\begin{align}\label{eq:exact}
+\begin{align}\label{eq:opgext-exact}
 \ell^* = \frac{len(S_{i\sim i'})}{\sum_{1 \le \tau \le t} a_{\tau}\cdot n_{\tau}'}.
 \end{align}
 
-\eqref{eq:exact} must hold for some $S_{i\sim i'}$ because if not, the solution 
+\eqref{eq:opgext-exact} must hold for some $S_{i\sim i'}$ because if not, the solution 
 is not tight and can be further improved. Therefore, the bisection process for 
 locating $\ell^*$ does not need to go on further after reaching a certain granularity\cite{FenHanGaoYu19RSS}.
 %$1/\sum_{1 \le \tau \le t} a_{\tau}\cdot n_{\tau}$. 
@@ -182,7 +182,7 @@ When no gaps exist, the optimization problem becomes a covering
 problem as follows. Let $c_{\tau}$, $\ell_{\tau}$, $n_{\tau}$ correspond to the cost, 
 coverage length, and quantity of robot type ${\tau}$, respectively, and let total 
 length to cover be $L$. We are to solve the optimization problem
-\begin{align}\label{eq:ip}
+\begin{align}\label{eq:opgext-ip}
     \min \sum_{\tau} c_{\tau} \cdot n_{\tau} \quad s.t.\, \quad
     \sum_{\tau} \ell_{\tau} \cdot n_{\tau} \geq L, n_{\tau}\geq 0.
 \end{align}
@@ -207,7 +207,7 @@ is given by
 	\scalebox{0.93}{$M[i][j] = \min(\textit{\sol}(\lceil len(S_{i\sim j})\rceil), \displaystyle\min_k(M[i][k]+M[k+1][j]))$}
 \]
 
-The DP procedure is outlined in Algorithm~\ref{alg:opgmc}. In the pseudo code, 
+The DP procedure is outlined in Algorithm~\ref{alg:opgext-opgmc}. In the pseudo code, 
 it is assumed that indices of $M$ are modulo $q$, e.g., $M[2][q+1] 
 \equiv M[2][1]$. $tmp$ is a temporary variable. 
 \begin{comment}
@@ -242,7 +242,7 @@ it is assumed that indices of $M$ are modulo $q$, e.g., $M[2][q+1]
 
 \subsubsection{A Polynomial Time Algorithm for \opgmc for a Fixed Number of Robot Types}
 We mention briefly that, by a result of Lenstra \cite{len83}, the optimization problem 
-~\eqref{eq:ip} is in P (i.e., polynomial time) when $t$ is a constant. The running time of 
+~\eqref{eq:opgext-ip} is in P (i.e., polynomial time) when $t$ is a constant. The running time of 
 the algorithm \cite{len83} is however exponential in $t$. 
 
 \subsubsection{A Pseudo-polynomial Time Algorithm for Arbitrary $t$}
@@ -250,12 +250,12 @@ As demonstrated in the hardness proof, similarities exist between \opg and the \
 problem. The connection actually allows the derivation of a pseudo-polynomial time algorithm
 for arbitrary $t$. To achieve this, we use a routine to pre-compute \sol($L$), called 
 \presol(), which is itself a DP procedure similar to that for the \knapsack problem. The 
-pseudo code of \presol() is given in Algorithm~\ref{algo:presol}.
+pseudo code of \presol() is given in Algorithm~\ref{algo:opgext-presol}.
 \presol() runs in time $O(t\cdot\lceil len(\partial R)\rceil))$. Overall, 
-Algorithm~\ref{alg:opgmc} then runs in time $O(q^3+t\cdot\lceil len(\partial R\rceil))$.
+Algorithm~\ref{alg:opgext-opgmc} then runs in time $O(q^3+t\cdot\lceil len(\partial R\rceil))$.
 %\jy{Is this running time correct?}
 
-\begin{algorithm}\label{algo:presol}
+\begin{algorithm}\label{algo:opgext-presol}
 	\DontPrintSemicolon
 	\KwData{$\ell_1, \ldots, \ell_t$, $c_1, \ldots, c_t$}
 	\KwResult{A lookup table for retrieving \sol($L$)}
@@ -312,7 +312,7 @@ its variants no longer run in polynomial time. We briefly mention that,
 %via a linear time transformation, 
 by slight modifications of a FPTAS for \ttukp problem from \cite{ukpfptas}, a FPTAS 
 for \opgmc can be obtained that runs in time $O(q^3 + q^2 \cdot \frac{t}{\epsilon^3})$, 
-where $(1+\epsilon)$ is the approximation ratio for both \opgmc and ~\eqref{eq:ip}. 
+where $(1+\epsilon)$ is the approximation ratio for both \opgmc and ~\eqref{eq:opgext-ip}. 
 
 \subsubsection{Multiple Perimeters} For \opgmc, when there are multiple 
 perimeters, e.g., $P_1, \ldots, P_m$, a optimal solution can be obtained 

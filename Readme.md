@@ -7,4 +7,6 @@ $ sudo apt-get install texlive-science
 ### Compilation
 ```
 $ pdflatex thesis.tex
+$ biber thesis
+$ pdflatex thesis.tex
 ```

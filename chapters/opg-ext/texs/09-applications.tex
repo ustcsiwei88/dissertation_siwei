@@ -9,7 +9,7 @@ computations are performed on an Intel(R) Core(TM) i7-7700 CPU@3.6GHz
 with 16GB RAM. 
 
 \subsection{Basic Optimal Solution Structure}
-Fig.~\ref{fig:opglrm} shows the typical outcome of solving an \opglr 
+Fig.~\ref{fig:opgext-opglrm} shows the typical outcome of solving an \opglr 
 instance with two perimeters ($m = 2$) for two types of robots with 
 $n_1 = 3, a_1 = 5$, and $n_2 = 5, a_2 = 8$. 
 %That is, the second type of robots is more capable than the first type. 
@@ -34,10 +34,10 @@ not be covered (The adjustment procedure is also shown in the video).
 		illustration.
 		%, which does not affect the computation or the solution.
 		}
-		\label{fig:opglrm}
+		\label{fig:opgext-opglrm}
 \end{figure}
 
-Shifting our attention to \opgmc, Fig.~\ref{fig:opgmc} illustrates the 
+Shifting our attention to \opgmc, Fig.~\ref{fig:opgext-opgmc} illustrates the 
 structure of an optimal solution to a problem with three types of robots 
 with capacities and costs being $\ell_1=11, c_1=2$, $\ell_t=30, 
 c_2=4$, and $\ell_3=55, c_3=7$, respectively. In this case, the majority 
@@ -61,14 +61,14 @@ the unnecessary coverage of some gaps.
 		problem has four (red) perimeter segments and three types of robots
 		with $\ell_1=11, c_1=2$ (orange), $\ell_t=30, c_2=4$ (green), 
 		and $\ell_3=55, c_3=7$ (purple), respectively.}
-		\label{fig:opgmc}
+		\label{fig:opgext-opgmc}
 \end{figure}
 
 \subsection{A Robotic Guarding and Patrolling Application}
 In this subsection, as a potential application, the DP algorithms for 
 \opglr and \opgmc are employed to solve the problem of securing the 
 perimeter of the Edinburgh castle, an example used in 
-\cite{FenHanGaoYu19RSS}. As shown in Fig.~\ref{fig:castle} (minus 
+\cite{FenHanGaoYu19RSS}. As shown in Fig.~\ref{fig:opgext-castle} (minus 
 the orange and green segments showing the solutions), the central 
 region of the Edinburgh castle has tall buildings on its boundary 
 (the blocks in brick red); these parts of the boundary are the gaps 
@@ -92,7 +92,7 @@ a total of $11$ robots. The bottom sub-figure is a slightly updated
 		type $2$) robots are shown in orange (resp., green).
 		%, which does not affect the computation or the solution.
 		}
-		\label{fig:castle}
+		\label{fig:opgext-castle}
 \end{figure}
 
 It can be observed that the results, while having non-trivial structures, 
@@ -105,7 +105,7 @@ small changes are made to the cost, because the longer segment is more
 expensive to use now, the first type of robot is used mainly. 
 
 \subsection{Computational Performance}
-With Section~\ref{sec:algorithm} fully establishing the correctness and 
+With Section~\ref{sec:opgext-algorithm} fully establishing the correctness and 
 asymptotic complexity of the pseudo-polynomial time algorithms, here, the 
 running time of these algorithms are experimentally evaluated. In doing 
 so, the main goal is demonstrating that, despite the hardness of \opglr 
@@ -114,8 +114,8 @@ reasonably broad settings in a scalable way. For results presented in
 this subsection, each data point is an average over 10 randomly generated 
 instances. 
 
-The first two numerical evaluations (Table~\ref{tab:opglr} and 
-Table~\ref{tab:mopglr}) focus on the running times of the pseudo-polynomial 
+The first two numerical evaluations (Table~\ref{tab:opgext-opglr} and 
+Table~\ref{tab:opgext-mopglr}) focus on the running times of the pseudo-polynomial 
 time algorithms for \opglr over single and multiple perimeters, 
 respectively. In these two tables, $t$ and $q$ are the number of types 
 and the number of segments, respectively. For each type $\tau$, a 
@@ -125,7 +125,7 @@ is sampled uniformly between $5$ and $15$, inclusive. For the multiple
 perimeters case, the parameter $m$ represents the number of perimeters for 
 a given instance.
 
-For the single perimeter case (Table~\ref{tab:opglr}), the results show 
+For the single perimeter case (Table~\ref{tab:opgext-opglr}), the results show 
 that the pseudo-polynomial time algorithm is effective for up to five 
 types of robots, for dozens of robots. We expect a more efficient 
 (e.g., C++ based) implementation should be able to effectively handle 
@@ -155,7 +155,7 @@ for larger $t$ as expected.
 \vspace*{-1mm}
 \end{table}
 
-Table~\ref{tab:mopglr} illustrates the running time of the DP algorithm for 
+Table~\ref{tab:opgext-mopglr} illustrates the running time of the DP algorithm for 
 \opglr over multiple perimeters. As can be readily observed, the impact of 
 the number of perimeters $m$ on the running time is relatively small; the 
 number of robot types is still the determining factor for running time. In 
@@ -180,7 +180,7 @@ slow down a robot types become larger than $4$.
 \vspace*{-1mm}
 \end{table}
 
-Table~\ref{tab:opgmc} provides performance evaluation of \opgmcdp. Since 
+Table~\ref{tab:opgext-opgmc} provides performance evaluation of \opgmcdp. Since 
 there is no difference between single and multiple perimeters for \opgmc,
 only problems with single perimeters are attempted. Here, for each robot 
 type, the cost is an integer randomly sampled between $1$ and $20$, and 
@@ -208,7 +208,7 @@ with ease.
         300&0.030 &0.091 &2.652 &2.938 &275.6 &270.7 \\\hline
     \end{tabularx}
     \caption{Running time in seconds used by \opgmcdp algorithm.}
-    \label{tab:opgmc}
+    \label{tab:opgext-opgmc}
 \end{table}
 \vspace*{-1mm}
 \begin{comment}

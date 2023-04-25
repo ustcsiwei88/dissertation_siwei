@@ -1,9 +1,9 @@
 Consider the scenario where many mobile guards (or sensors) are to be deployed 
 to patrol 
-the perimeter of some 2D regions (Fig.~\ref{fig:ex}) against intrusion, where 
+the perimeter of some 2D regions (Fig.~\ref{fig:opgext-ex}) against intrusion, where 
 each guard may effectively cover a continuous segment of a region's boundary. 
 When part of a boundary need not be secured, e.g., there may already be 
-some existing barriers (the blue segments in Fig.~\ref{fig:ex}), optimally 
+some existing barriers (the blue segments in Fig.~\ref{fig:opgext-ex}), optimally 
 distributing the robots so that each robot's coverage is minimized becomes 
 an interesting and non-trivial computational task \cite{FenHanGaoYu19RSS}. 
 It is established \cite{FenHanGaoYu19RSS} that, when the guards have 
@@ -21,7 +21,7 @@ even when the robots must be distributed across many different boundaries.
 %\put(82,44){{\small $\W$}}
 \end{overpic}
 \end{center}
-\caption{\label{fig:ex} A scenario where boundaries of three (gray) 
+\caption{\label{fig:opgext-ex} A scenario where boundaries of three (gray) 
 regions must be secured. Zooming in on part of the boundary of one 
 of the regions (the part inside the small circle), portions of the 
 boundary (the red segments) must be guarded while the rest (the 
@@ -109,7 +109,7 @@ of sensor coverage research.
 In terms of structural resemblance, \opglr and \opgmc share many similarities 
 with {\em bin packing}  \cite{johnson1973near} and other related problems. 
 In a bin packing problem, objects are to be selected to fit within bins of 
-given sizes. Viewing the segments (the red ones in Fig.~\ref{fig:ex}) as 
+given sizes. Viewing the segments (the red ones in Fig.~\ref{fig:opgext-ex}) as 
 bins, \opg seeks to place guards so that the segments are fully contained in 
 the union of the guards' joint coverage span. In this regard, \opg is a dual
 problem to bin packing since the former must overfill the bins and the later 

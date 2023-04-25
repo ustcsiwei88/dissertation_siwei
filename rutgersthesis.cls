@@ -21,7 +21,8 @@
 \RequirePackage[titles]{tocloft}  % table of contents control and formatting
 \RequirePackage{ifoddpage} % logical page parity checking, used with rotating
 \RequirePackage{rotating}  % for rotated, landscape images
-\RequirePackage[backend=biber,sorting=none,bibstyle=ieee]{biblatex}  % reference manager
+% \RequirePackage[backend=biber,sorting=none,bibstyle=ieee,citestyle=numeric]{biblatex}  % reference manager
+\RequirePackage[backend=biber,bibstyle=ieee,citestyle=numeric]{biblatex}  % reference manager
 \RequirePackage[toc,page]{appendix}  % for appendices
 \RequirePackage[normalem]{ulem}  % for underlining text
 \RequirePackage{url} % in case explicit URL's are needed
@@ -443,12 +444,14 @@ by \MakeUppercase{\yourName}\\
 
 \newcommand{\makeBibliography}{
     \clearpage
+    
     \bookmarksetupnext{level=part}
     \phantomsection
     \addcontentsline{toc}{chapter}{References}
     \begin{centering}
     \textbf{REFERENCES}\\
     \end{centering}
+
     \begin{singlespace}  % use single-line spacing for multi-line text within a single reference
     \setlength\bibitemsep{\baselineskip}  % manually set separation between items in bibliography to double space
     \printbibliography[heading=none]

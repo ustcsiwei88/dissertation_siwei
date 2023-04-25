@@ -1,9 +1,9 @@
 We explore in this section the computational complexity of \opglr 
 and \opgmc. Both problems are shown to be NP-hard with \opglr 
 being strongly NP-hard. We later confirm that \opgmc is weakly 
-NP-hard (in Section~\ref{sec:algorithm}).
+NP-hard (in Section~\ref{sec:opgext-algorithm}).
 
-\subsection{Strong NP-hardness of \opglr}\label{subsec:opglr-hardness}
+\subsection{Strong NP-hardness of \opglr}\label{subsec:opgext-opglr-hardness}
 When the number of types $t$ is a variable, i.e., $t$ is not a constant
 and may be arbitrarily large,
 % (but bounded by $n$), 
@@ -52,7 +52,7 @@ $1 \le j \le n$, there is a unique robot whose type $\tau$, $1 \le \tau
 \le t$ satisfies $a_{\tau} \ge len(C_j)$?
 \vspace*{1mm}
 
-\begin{theorem}\label{t:opglr-hard}
+\begin{theorem}\label{t:opgext-opglr-hard}
 	\opglr is strongly NP-hard. 
 \end{theorem}
 \begin{proof}
@@ -115,7 +115,7 @@ $1 \le j \le n$, there is a unique robot whose type $\tau$, $1 \le \tau
 	time solutions for variable $t$. This contrasts with a later result 
 	which provides a pseudo-polynomial time algorithm for \opglr for 
 	constant $t$, as one might expect in practice where robots have limited 
-	number of types. We also note that Theorem~\ref{t:opglr-hard} continues 
+	number of types. We also note that Theorem~\ref{t:opgext-opglr-hard} continues 
 	to hold for a single perimeter with multiple segments, each 
 	having a length $B$ in previous notation, separated by ``long'' gaps. Obviously, 
 	\opglrd is in NP, thus rendering it NP-complete. 
@@ -135,7 +135,7 @@ QUESTION: Is there a subset $B' \subseteq B$ such that $\sum_{b \in B'}
 w(b) = W$?
 \vspace*{1mm}
 
-\begin{theorem}\label{t:opgmc-hard}
+\begin{theorem}\label{t:opgext-opgmc-hard}
 	\opgmc is NP-hard. 
 \end{theorem}
 \begin{proof}

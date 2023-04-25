@@ -18,7 +18,7 @@ line segments). For a given $P_i$, each one of its maximal connected
 component is called a {\em perimeter segment} or simply a {\em segment}, 
 whereas each maximal connected component of $\partial R_i \backslash P_i$ 
 is called a {\em perimeter gap} or simply a {\em gap}. An example setting is 
-illustrated in Fig.~\ref{fig:example-boundaries} with two regions. 
+illustrated in Fig.~\ref{fig:opgext-example-boundaries} with two regions. 
 \definecolor{BrickRed}{RGB}{176, 50, 28}
 \definecolor{ForestGreen}{RGB}{0, 155, 85}
 \begin{figure}[ht]
@@ -33,7 +33,7 @@ illustrated in Fig.~\ref{fig:example-boundaries} with two regions.
 			\put(82,44){{\small $\W$}}
 		\end{overpic}
 	\end{center}
-	\caption{\label{fig:example-boundaries} An example of a workspace $\W$ 
+	\caption{\label{fig:opgext-example-boundaries} An example of a workspace $\W$ 
 		with two regions $\{R_1, R_2\}$. Due to three {\em gaps} on $\partial R_1$, 
 		marked as dotted lines within long rectangles, $P_1 \subset \partial R_1$ 
 		has three {\em segments} (or maximal connected components); $P_2 = \partial 
@@ -78,12 +78,12 @@ definition is as follows.
 	Given the perimeter set $\P = \{P_1, \ldots, P_m\}$ of a set of 
 	2D regions $\R =\{R_1, \ldots, R_m\}$, find a set of $n$ continuous 
 	line segments $\C^* = \{C_1^*, \ldots, C_n^*\}$ such that $\C^*$ covers 
-	$\P$, i.e., \begin{align}\label{eq:opg-coverage}
+	$\P$, i.e., \begin{align}\label{eq:opgext-opg-coverage}
 	\bigcup_{P_i \in \P} P_i  \subset \bigcup_{C_j^* \in \C^*} C_j^*,
 	\end{align}
 	such that a $C_j^*$ is covered by robot $j$ of type $\tau_j$, and such that,
-	among all covers $\C$ satisfying~\eqref{eq:opg-coverage}, 
-	\begin{align}\label{eq:opg-objective}
+	among all covers $\C$ satisfying~\eqref{eq:opgext-opg-coverage}, 
+	\begin{align}\label{eq:opgext-opg-objective}
 	\C^* = \underset{\C}{\mathrm{argmin}} \max_{C_j \in \C} 
 	\frac{len(C_j)}{a_{\tau_j}}.
 	\end{align}
@@ -107,13 +107,13 @@ denote this problem {\em optimal perimeter guarding with minimum
 	R_m\}$, find a set of $n = n_1 + \cdots + n_t$ continuous line segments 
 	$\C^* = \{C_1^*, \ldots, C_n^*\}$ where $n_{\tau}$ such segments are 
 	guarded by type $\tau$ robots, such that $\C^*$ covers $\P$, i.e., 
-	\begin{align}\label{eq:opg-coverage2}
+	\begin{align}\label{eq:opgext-opg-coverage2}
 	\bigcup_{P_i \in \P} P_i  \subset \bigcup_{C_j^* \in \C^*} C_j^*,
 	\end{align}
 	such that a $C_j^*$ is covered by robot $j$ of type $\tau_j$, i.e., 
 	$C_j^* \le \ell_{\tau_j}$, and such that,
-	among all covers $\C$ satisfying~\eqref{eq:opg-coverage2}, 
-	\begin{align}\label{eq:opg-objective2}
+	among all covers $\C$ satisfying~\eqref{eq:opgext-opg-coverage2}, 
+	\begin{align}\label{eq:opgext-opg-objective2}
 	\C^* = \underset{\C}{\mathrm{argmin}} \sum_{1 \le \tau \le t} 
 	n_{\tau}c_{\tau}.
 	\end{align}

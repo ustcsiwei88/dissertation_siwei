@@ -12,8 +12,8 @@ Lastly, some background knowledge of the theories and tools used in this paper w
 Sensor systems are ubiquitous. To list a few, systems of radar antennas 
 or other sensor sources are frequently used as base stations for signal transmission, 
 or intruder detection system (IDS) for monitoring hazards. 
-Early intruder defense system can date back to ancient China, where 
-watchtowers of the great wall are used as signal points when invaders appear. 
+Early intruder defense system can date back to ancient times, where 
+watchtowers of the Great Wall of China are used as signal points when invaders appear. 
 It can be seen as sensors from the broad sense 
 since ancient soldiers lit woods to create smoke and inform others when invaders appear. 
 % Surveilence or tracking cameras surveillance and tracking system, 
@@ -26,7 +26,7 @@ since ancient soldiers lit woods to create smoke and inform others when invaders
     \end{subfigure} 
     \begin{subfigure}[b]{0.48\textwidth} 
         \includegraphics[width=\textwidth]{figures/great_wall.jpg} 
-        \caption{The great wall of China} 
+        \caption{Watch towers on the great wall} 
         \label{fig:intro_great_wall} 
     \end{subfigure} 
 \end{figure} 
@@ -83,11 +83,22 @@ sensors like laser beams or cameras are deployed to detect thiefs.
         \caption{Laser system} 
         \label{fig:intro_laser} 
     \end{subfigure} 
-\end{figure} 
+\end{figure}
 
 \section{Background}
-\subsection{NP-hardness}
+In this section, we discuss some background knowledge and terms used in this thesis,
+these terms will be used without explaination in the later chapters.
+
+\subsection{NP-completeness and NP-hardness}
+% In the area of optimization, which this thesis is focusing on, NP-hardness has the 
+The definition of NP-completeness is taken from \cite{vazirani2001approximation}
+\begin{definition}[NP-completeness]
+    A language $L\in NP$ if there is a polynomial $p$ and $a$ polynomial time bounded Turing machine M, 
+    called the verifier, such that for each string $x\in \{0, 1\}$:
+\end{definition}
+
 \subsection{Integer programming}
+
 \section{Literature review} 
 \subsection{Coverage-related problems in computational geometry} 
 

@@ -1,9 +1,9 @@
 In computing $\ell^*$ for a single perimeter $P$ with multiple connected 
 components, assume that $P$ is composed of $q$ maximal connected 
-components $S_1, \ldots, S_q$ (e.g., Fig.~\ref{fig:single-perimeter}),
+components $S_1, \ldots, S_q$ (e.g., Fig.~\ref{fig:opg-single-perimeter}),
 leaving $G_1, \ldots, G_q$ as the gaps on $\partial R$. Given an 
 optimal cover $\C^* = \{C_1^*, \ldots, C_n^*\}$, by 
-Proposition~\ref{p:endpoint-alignment}, we may assume that the left
+Proposition~\ref{p:opg-endpoint-alignment}, we may assume that the left
 end point of some $C_j^*$, $1 \le j \le n$ coincides with the left 
 end point of some $S_k$, $1 \le k \le q$. We then look at the right 
 end point of $C_j^*$. If it does not coincide with the right end point 
@@ -18,7 +18,7 @@ of the subsets must have all robots cover exactly a length of $\ell^*$.
 These two key observations are summarized as follows. 
 
 \vspace*{-1mm}
-\begin{theorem}\label{t:optimal-partition}
+\begin{theorem}\label{t:opg-optimal-partition}
 Let $\C^* = \{C_1^*, \ldots, C_n^*\}$ be a solution to an \opg instance
 with a single perimeter $P = S_1\cup \ldots\cup S_q$ and gaps $G_1, \ldots, 
 G_q$. Then, $\C^*$ may be partitioned into disjoint subsets with
@@ -39,18 +39,18 @@ it holds that $\ell^* = len(C_j^*) = \ldots = len(C_{j'}^*)$.
 \end{theorem}
 
 \noindent\textbf{A baseline algorithm}.
-In the example from Fig.~\ref{fig:example}, $\C^*$ is partitioned into 
+In the example from Fig.~\ref{fig:opg-example}, $\C^*$ is partitioned into 
 two subsets satisfying the conditions stated in 
-Theorem~\ref{t:optimal-partition}. The theorem provides a way for 
+Theorem~\ref{t:opg-optimal-partition}. The theorem provides a way for 
 computing $\ell^*$. For fixed $1 \le k, k' \le q$, denote the part of 
 $\partial R$ between $S_k$ and $S_{k'}$ following a clockwise direction 
 (with $S_k$ and $S_{k'}$ included) as $S_{k-k'}$.
-Theorem~\ref{t:optimal-partition} says that for some $k, k'$, $len(S_{k-k'})
+Theorem~\ref{t:opg-optimal-partition} says that for some $k, k'$, $len(S_{k-k'})
 = n_{k-k'}^*\ell^*$ for some integer $n_{k-k'}^* \in [1, n]$. We may 
 find $k', k'$, and $n_{k-k'}^*$, $\ell^*$ by exhaustively going through all 
 possible $k, k'$, and $n_{k-k'}^c$ (as a candidate of $n_{k-k'}^*$). For 
 each combination of $k, k'$ and $n_{k-k'}^c$, we can compute a 
-\begin{align}\label{eq:lkkc}
+\begin{align}\label{eq:opg-lkkc}
 \vspace*{-2mm}
 \ell_{k-k'}^c = \frac{len(S_{k-k'})}{n_{k-k'}^c}
 \vspace*{-2mm}
@@ -62,7 +62,7 @@ For checking feasibility of a particular $\ell_{k-k'}^c$, i.e., whether
 $\ell_{k-k'}^c$ is long enough for the rest of the robots to cover the 
 rest of the perimeter, we simply {\em tile} $(n - n_{k-k'}^c)$ copies 
 $\ell_{k-k'}^c$ over the rest of the perimeter, starting from $S_{(k' 
-\mod q) + 1}$. As an example, see Fig.~\ref{fig:tiling} where $n = 6$ 
+\mod q) + 1}$. As an example, see Fig.~\ref{fig:opg-tiling} where $n = 6$ 
 robots are to cover the perimeter (in red, with five components $S_1, 
 \ldots, S_5$). Suppose that the algorithm is currently working with 
 $S_{1-2}$ (i.e., $k=1$ and $k' = 2$). If  $n_{1-2}^c = 2$, then 
@@ -98,7 +98,7 @@ of $S_5$ is now left uncovered.
 		\end{overpic}
 	\end{center}
 	\vspace*{-4.5mm}
-	\caption{\label{fig:tiling}  An illustration of the feasibility check of 
+	\caption{\label{fig:opg-tiling}  An illustration of the feasibility check of 
 		$\ell_{1-2}^c$. The single rectangular region and the perimeter (five red 
 		segments $S_1$--$S_5$) are shown at the bottom. The orange and green line 
 		segments show two potential	covers.}
@@ -129,7 +129,7 @@ possible starting segment for the tiling. Let us denote this procedure
 \isLFeasibleByTilingFull($\ell$), which runs in $O(q^2)$.
 
 With \isLFeasibleByTilingFull($\ell$), starting from the initial bounds 
-for $\ell^*$ given in Proposition~\ref{p:single-bounds}, we can narrow the
+for $\ell^*$ given in Proposition~\ref{p:opg-single-bounds}, we can narrow the
 bound to be arbitrarily small, using bisection, since $\ell^*$ is the 
 minimum feasible $\ell$. To do this, we start with $\ell$ as the middle 
 point of initial lower bound $\ell_{min}$ and upper bound $\ell_{max}$, 
@@ -184,7 +184,7 @@ Feasibility check is done using \isLFeasibleByTilingPartial($\cdot$). The
 complete algorithm is given in Algorithm~\ref{algo:SRG}. Note that 
 $\ell^{min}$ and $\ell^{max}$, which change as the algorithm runs, are not 
 the same as the fixed $\ell_{min}$ and $\ell_{max}$ from 
-Proposition~\ref{p:single-bounds}. 
+Proposition~\ref{p:opg-single-bounds}. 
 \newpage
 \vspace*{-7mm}
 \begin{algorithm}
@@ -220,7 +220,7 @@ Proposition~\ref{p:single-bounds}.
 		$sm \leftarrow []$; \Comment{$sm$ is a sorted map.}
 		
 
-		\For{$k, k' \in \{1,\dots, q\}$ }{\label{algo:srg:for}
+		\For{$k, k' \in \{1,\dots, q\}$ }{\label{algo:opg-srg:for}
 			\vspace{0.025in}
 			
 			$n_{k-k'}^{max} \leftarrow \lfloor \frac{len(S_{k-k'})}{\ell^{min}} \rfloor$;
@@ -253,7 +253,7 @@ Proposition~\ref{p:single-bounds}.
 		}		
 		
 		\Return{$\ell^*$, $k^*$, $k'^*$}
-		\caption{\algoSRG} \label{algo:SRG}
+		\caption{\algoSRG} \label{algo:opg-SRG}
 	\end{small}
 \end{algorithm}
 \vspace*{-3mm}
@@ -273,7 +273,7 @@ $O(q^2)$ candidates and must sort them, taking time $O(q^2 \log q^2) =
 O(q^2 \log q)$. Then, the second $\mathbf{while}$ loop bisects $O(q^2)$ 
 candidates and calls \isLFeasibleByTilingPartial($\cdot$) for each check, 
 taking time $O(q\log q^2) = O(q\log q)$. The total running time of 
-Algorithm~\ref{algo:SRG} is then $O(q^2\log (n + q) + M + n)$.\footnote{We note that 
+Algorithm~\ref{algo:opg-SRG} is then $O(q^2\log (n + q) + M + n)$.\footnote{We note that 
 the assumption that $len(\partial R)$ is a polynomial factor over 
 $\sum_{1\le k\le q}len(S_k)$ is not necessary. However, the corresponding 
 analysis becomes much more involved without it. Since the assumption makes 

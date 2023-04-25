@@ -1,19 +1,3 @@
-%\subsection{Problem Statement for Perimeter Guarding}
-\newtheorem{theorem}{Theorem}
-\newtheorem{remark}{Remark}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{observation}[theorem]{Observation}
-\newtheorem{axiom}[theorem]{Axiom}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{problem}{Problem}
-\newtheorem{prob}[theorem]{Problem}
-\newtheorem{conjecture}[theorem]{Conjecture}
-\newtheorem{obj}[theorem]{Objective}
-\newtheorem{prop}[theorem]{Property}
-\newtheorem{schedule}[theorem]{Schedule}
-
 
 Let $\W \subset \mathbb R^2$ be a compact (i.e., closed and bounded) 
 two-dimensional workspace. There are  $m$ pairwise disjoint {\em 
@@ -51,7 +35,7 @@ illustrated in Fig.~\ref{fig:example-boundaries} with two regions.
 \end{overpic}
 \end{center}
 \vspace*{-4mm}
-\caption{\label{fig:example-boundaries} An example of a workspace $\W$ 
+\caption{\label{fig:opg-example-boundaries} An example of a workspace $\W$ 
 with two regions $\{R_1, R_2\}$. Due to three {\em gaps} on $\partial R_1$, 
 marked as dotted lines within long rectangles, $P_1 \subset \partial R_1$ 
 has three {\em segments} (or maximal connected components); $P_2 = \partial 
@@ -87,12 +71,12 @@ Guarding (\opg) problem is provided as follows.
 $\P = \{P_1, \ldots, P_m\}$ of a set of 2D regions $\R =\{R_1, \ldots, 
 R_m\}$, find a set of $n$ continuous line segments $\C^* = \{C_1^*, 
 \ldots, C_n^*\}$ such that $\C^*$ covers $\P$, i.e., 
-\begin{align}\label{eq:coverage}
+\begin{align}\label{eq:opg-coverage}
 \bigcup_{P_i \in \P} P_i  \subset \bigcup_{C_j^* \in \C^*} C_j^*,
 \end{align}
 with the maximum of $len(C_j^*), 1 \le j \le n$ minimized, i.e., among all 
 covers $\C$ satisfying~\eqref{eq:coverage}, 
-\begin{align}\label{eq:objective}
+\begin{align}\label{eq:opg-objective}
 \C^* = \underset{\C}{\mathrm{argmin}} \max_{C_j \in \C} len(C_j).
 \end{align}
 \end{problem}
@@ -109,20 +93,20 @@ correctness proof of some algorithms.
 Henceforth, in general, $\C^*$ is used when an optimal cover is meant 
 whereas $\C$ is used when a cover is meant. We further define the optimal 
 single robot coverage length as 
-\begin{align}\label{eq:l-star}
+\begin{align}\label{eq:opg-l-star}
 \vspace*{-1mm}
 \ell^* = \min_{\C} \max_{C_j \in \C} len(C_j).
 \vspace*{-1mm}
 \end{align}
 
-Fig.~\ref{fig:example} shows an example of an optimal cover by $8$ robots 
+Fig.~\ref{fig:opg-example} shows an example of an optimal cover by $8$ robots 
 of a perimeter with three components. Note that one of the three gaps 
 (the one on the top area as part of the hexagon) is fully covered 
 by a robot, which leads to a smaller $\ell^*$ as compared to other 
 feasible solutions. This interesting phenomenon, which is 
 actually a main source of the difficulty in solving \opg, is explored 
-more formally in Section~\ref{section:analysis} 
-(Proposition~\ref{p:max-no-exclusion}).
+more formally in Section~\ref{section:opg-analysis} 
+(Proposition~\ref{p:opg-max-no-exclusion}).
 
 Given the \opg formulation, additional details on $\partial \R$ must 
 be specified to allow the precise characterization of the computational 
@@ -162,13 +146,13 @@ minimized for all $C_j^* \in \C^*$. This means that a gap $G \subset
 covered by some $C_j^* \in \C^*$ because if that is the case, $C_j^*$ 
 needs not cover any part of $G$ at all (and should not, to limit the 
 coverage of the assigned robot). In the example from 
-Fig.~\ref{fig:example-boundaries}, $G$ may be one of the three dotted 
+Fig.~\ref{fig:opg-example-boundaries}, $G$ may be one of the three dotted 
 lines on $\partial R_1$; clearly, it is not beneficial to have some 
 $C_j^*$ partially cover (i.e., intersect the interior of) one of these. 
 This rather useful condition (note that this is not an assumption but 
 a solution property) yields the following lemma. 
 
-\begin{lemma}\label{l:no-partial-coverage} 
+\begin{lemma}\label{l:opg-no-partial-coverage} 
 For a set of perimeters $\P = \{P_1,\ldots, P_m\}$ where $P_i \subset 
 \partial R_i$ for $1 \le i \le m$, there exists an optimal cover $\C^* 
 = \{C_1^*, \ldots, C_n^*\}$ such that, for any gap (or maximal connected

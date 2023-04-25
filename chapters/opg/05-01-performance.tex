@@ -20,7 +20,7 @@ the $n \le m$ case does not make much sense here).
     \centering
     \includegraphics[keepaspectratio, scale=0.32]{./chapters/opg/figures/mpsc-example.eps}
     \vspace*{-6mm}
-    \caption{\label{fig:mpsc-example} 
+    \caption{\label{fig:opg-mpsc-example} 
     An example problem instance when $m = 10$ and $n = 30$. The black dots
 		indicate deployed robot locations; the green and orange lines indicate
 		the coverage.
@@ -49,7 +49,7 @@ the $n \le m$ case does not make much sense here).
     \end{tabular}
 		\end{footnotesize}
 		\vspace*{-3mm}
-    \caption{\label{eval:mpsc} \algoMRSimple~running time (seconds)}
+    \caption{\label{eval:opg-mpsc} \algoMRSimple~running time (seconds)}
 		\vspace*{-4mm}
 \end{table}
 
@@ -69,15 +69,15 @@ For the case of a single perimeter with multiple components, a random
 polygon is generated on which $2q$ points are randomly sampled that 
 yield $q$ segments (that form the perimeter) and $q$ gaps. An example 
 instance and the optimal solution with $q=3$ and $n = 10$ is illustrated 
-in Fig.~\ref{fig:spmc-example}. The computation time for various $q$ and 
-$n$ combinations is given in Table~\ref{eval:spmc}.
+in Fig.~\ref{fig:opg-spmc-example}. The computation time for various $q$ and 
+$n$ combinations is given in Table~\ref{eval:opg-spmc}.
 \begin{figure}[ht!]
     \vspace*{-3mm}
     \centering
     \includegraphics[keepaspectratio, scale=0.4]{./chapters/opg/figures/spmc-example.eps}
     \includegraphics[keepaspectratio, scale=0.4]{./chapters/opg/figures/spmc-solution.eps}
     \vspace*{-3mm}
-    \caption{\label{fig:spmc-example} 
+    \caption{\label{fig:opg-spmc-example} 
     An example problem instance when $q = 3$ and $n = 10$. In this case, the 
 		optimal cover actually covers one gap.}
     \vspace*{-4mm}
@@ -95,7 +95,7 @@ $n$ combinations is given in Table~\ref{eval:spmc}.
         \rule{0pt}{2.5ex} $10^4$ & $159.404$ & $188.497$ & $210.492$ & $212.473$ & $212.780$\\ \hline   
     \end{tabular}
     \vspace*{-3mm}
-    \caption{\label{eval:spmc} \algoSRG~computation time (seconds)}
+    \caption{\label{eval:opg-spmc} \algoSRG~computation time (seconds)}
     \vspace*{-4mm}
 \end{table}
 
@@ -131,7 +131,7 @@ Table~\ref{eval:mpmc}.
         \rule{0pt}{2.5ex} $10^2$ & $10^4$ & $ 7.105$ & $ 9.619$ & $11.369$ & $12.760$ & $15.107$ \\ \hline
     \end{tabular}
     \vspace*{-3mm}
-    \caption{\label{eval:mpmc} \algoMRG~computation time (seconds)}
+    \caption{\label{eval:opg-mpmc} \algoMRG~computation time (seconds)}
     \vspace*{-4mm}
 \end{table}
 

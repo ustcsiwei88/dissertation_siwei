@@ -9,7 +9,7 @@
 %\thickmuskip=0mu
 \def\opg{{\sc {OPG}}\xspace}
 
-Consider the scenario from Fig.~\ref{fig:example}, which contains a closed region with its boundary (or border) demarcated by the red and dotted blue lines. To secure the region, either from intrusions from the outside or unwanted escapes from within, it is desirable to deploy a number of autonomous agents to monitor or guard either the entire boundary or selected portions of it (e.g., the red line segments), with each agent responsible for a continuous section. 
+Consider the scenario from Fig.~\ref{fig:opg-example}, which contains a closed region with its boundary (or border) demarcated by the red and dotted blue lines. To secure the region, either from intrusions from the outside or unwanted escapes from within, it is desirable to deploy a number of autonomous agents to monitor or guard either the entire boundary or selected portions of it (e.g., the red line segments), with each agent responsible for a continuous section. 
 %
 Naturally, one might also want to have even coverage by the agents, e.g., minimizing the maximum effort from any agent. In practice, such efforts may correspond to sensing ranges or motion capabilities of robots, which are always limited. 
 %
@@ -21,7 +21,7 @@ More formally, in this paper, we study the problem of deploying a large
 number of robots to guard a set of one-dimensional boundary segments 
 called perimeters. Each perimeter is comprised of one or more 1D segments 
 that are part of a circular boundary (e.g., the red segments in 
-Fig.~\ref{fig:example}). Each robot is tasked to guard a continuous 1D 
+Fig.~\ref{fig:opg-example}). Each robot is tasked to guard a continuous 1D 
 segment that covers a portion of a perimeter. As the main objective, 
 we seek an allocation of robots such that {\em (i)} the union of the 
 robots' coverage encloses all perimeters and {\em (ii)} the 
@@ -39,7 +39,7 @@ problem the Optimal Perimeter Guarding (\opg) problem.
 \end{overpic}
 \end{center}
 \vspace*{-5mm}
-\caption{\label{fig:example} An illustrative scenario where a perimeter, 
+\caption{\label{fig:opg-example} An illustrative scenario where a perimeter, 
 in this case represented as the red line segments, must be guarded by 
 $n = 8$ robots, which are constrained to 
 only travel along the perimeter boundary (the red line segments plus the 
@@ -137,7 +137,7 @@ The rest of the section is organized as follows.
 The \opg problem and some of its most basic properties are described 
 in Section~\ref{section:opg-problem}. 
 %
-In Section~\ref{section:analysis}, a thorough structural analysis of \opg 
+In Section~\ref{section:opg-analysis}, a thorough structural analysis of \opg 
 with single and multiple perimeters is performed, paving the way for 
 introducing the full algorithmic solutions in Section~\ref{section:opg-algorithm}.
 %

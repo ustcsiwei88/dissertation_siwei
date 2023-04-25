@@ -22,11 +22,11 @@ generality, assume that $P_1$ is the longest perimeter, i.e., $len(P_1)
 \ge len(P_{i})$ for all $1 \le i \le m$. Recall that $n_1^c$ is the 
 number of robots allocated to $P_1$ that yields $\ell_1^c$, it must hold 
 that 
-\begin{align}\label{eq:l1}
+\begin{align}\label{eq:opg-l1}
 \frac{len(P_1)}{n_1^c + 1} < \ell^* \le \frac{len(P_1)}{n_1^c} = \ell_1^c .
 \end{align}
-For an arbitrary $P_i$, simple manipulating of~\eqref{eq:l1} yields
-\begin{align}\label{eq:li}
+For an arbitrary $P_i$, simple manipulating of~\eqref{eq:opg-l1} yields
+\begin{align}\label{eq:opg-li}
 \frac{len(P_i)}{(n_1^c + 1)\frac{len(P_i)}{len(P_1)}} < \ell^* \le 
 \frac{len(P_i)}{n_1^c\frac{len(P_i)}{len(P_1)}}.
 \end{align}
@@ -38,7 +38,7 @@ n_i^c \in
 $
 However, since $P_1$ is the longest perimeter, $\frac{len(P_i)}{len(P_1)} 
 \le 1$. Therefore, the difference between the two denominators 
-of~\eqref{eq:li} is no more than $1$, i.e., 
+of~\eqref{eq:opg-li} is no more than $1$, i.e., 
 \[
 (n_1^c + 1)\frac{len(P_i)}{len(P_1)} - n_1^c\frac{len(P_i)}{len(P_1)} \le 1. 
 \]
@@ -85,24 +85,24 @@ Third, if a candidate $\ell_i^c$ is at any time larger than the current
 candidate for $\ell^*$, that $i$ does not need to be checked further. 
 We only use the first and the third in our implementation since the 
 second does not help much once the bisection is applied. The 
-pseudo code is outlined in Algorithm~\ref{algo:MRS}. Note that we 
+pseudo code is outlined in Algorithm~\ref{algo:opg-MRS}. Note that we 
 assume the problem instance is feasible ($n \ge m$), which is easy to check. 
 
-It is straightforward to verify that Algorithm~\ref{algo:MRS} runs in 
+It is straightforward to verify that Algorithm~\ref{algo:opg-MRS} runs in 
 time $O(m\log n + m^2)$. The $O(m\log n)$ comes from the $\mathbf{while}$ 
 loop, which calls the function \isLFeasible($\ell_i^c$, $n_i^c$, $i$) 
 $\log n$ time. The function checks whether the current $\ell_i^c$ is 
 feasible for perimeters other than $P_i$ (note that it is assumed that 
-\isLFeasible($\cdot$) has access to the input to Algorithm~\ref{algo:MRS} 
+\isLFeasible($\cdot$) has access to the input to Algorithm~\ref{algo:opg-MRS} 
 as well). This is done by computing for $i' \ne i$, $n_{i'} = \lceil 
 len(P_{i'})/\ell_i^c \rceil$ and checking whether $\sum_{{i'} \ne i}n_{i'} 
 \le n - n_i^c$. The $O(m^2)$ term comes from the $\mathbf{for}$ loop. 
-The running time of Algorithm~\ref{algo:MRS} may be further reduced by 
+The running time of Algorithm~\ref{algo:opg-MRS} may be further reduced by 
 noting that the $\mathbf{for}$ loop examines $(m-1)$ candidate 
 $\ell_i^c$. These $\ell_i^c$ can be first computed and sorted, on which 
 bisection can be applied. This drops the main running time to 
 $O(m(\log n + \log m))$. This second bisection is not reflected in 
-Algorithm~\ref{algo:MRS} to keep the logic and notation more 
+Algorithm~\ref{algo:opg-MRS} to keep the logic and notation more 
 straightforward. If we also consider input complexity, an additional 
 $O(\sum_{1\le i \le m} M_i)$ is needed to compute $len(P_i)$ from the raw polygonal 
 input and an additional $O(n)$ time is needed for generating the actual
@@ -165,7 +165,7 @@ $\ell_1 \leftarrow \frac{len(P_1)}{n_1}$;
 		}
 }
 \Return{$\ell^*$, $i^*$}
-\caption{\algoMRSimple} \label{algo:MRS}
+\caption{\algoMRSimple} \label{algo:opg-MRS}
 \end{small}
 \end{algorithm}
 \vspace*{-6mm}

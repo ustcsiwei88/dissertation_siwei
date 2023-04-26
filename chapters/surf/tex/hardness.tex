@@ -1,21 +1,33 @@
 %\vspace{-1mm}
-\subsection{Computational Complexity}\label{subsec:complexity}
+\subsection{Computational Complexity}\label{subsec:surf-complexity}
 \vspace{-1mm}
 As the computation of 3D visibility is a well-known hard problem \cite{canny1987new}
 %\sw{it seems to me this paper is about robot motion planning and has nothing to do with visibility?}, 
-Problems~\ref{p:1}-\ref{p:3} are all computationally intractable because they all involve, as part of the solution, computation of 3D visibility sets. The involvement of multiple robots/sensors introduces additional sources of computational complexity, which we briefly discuss. 
+Problems~\ref{p:surf-1}-\ref{p:surf-3} are all computationally intractable because they all involve, as part of the solution, computation of 3D visibility sets. The involvement of multiple robots/sensors introduces additional sources of computational complexity, which we briefly discuss. 
 
-Problem~\ref{p:1} may be viewed as an Art Gallery \cite{o1987art} problem in 3D. The basic 2D Art Gallery problem, which asks the question that how many guards with omnidirectional visibility are needed to ensure that every point in a simply-connected (2D) polygon is visible to at least one guard, is shown to be NP-hard\cite{lee1986computational}. Problem~\ref{p:1} is then also NP-hard through reducing the 2D Art Gallery problem to a 3D one by creating a third dimension that is very ``thin''.
+Problem~\ref{p:surf-1} may be viewed as an Art Gallery \cite{o1987art} problem in 3D. 
+The basic 2D Art Gallery problem, which asks the question that how many guards with omnidirectional visibility are needed to ensure that 
+every point in a simply-connected (2D) polygon is visible to at least one guard, is shown to be NP-hard \cite{lee1986computational}. 
+Problem~\ref{p:surf-1} is then also NP-hard through reducing the 2D Art Gallery problem to a 3D one by 
+creating a third dimension that is very ``thin''.
 
-Our recent work \cite{fengyu2020optimally} shows that a 2D version of Problem~\ref{p:2}, called Optimal Set Guarding (\osg), is NP-hard to approximate within a factor of 1.152. Similarly, we may reduce \osg to Problem~\ref{p:2} by adding a thin third dimension. Therefore, through this route, we know that optimal solutions to Problem~\ref{p:2} is hard to approximate within a factor of 1.152, even when the surface $S$  is a simple polygon. 
+Our recent work \cite{fengyu2020optimally} shows that a 2D version of Problem~\ref{p:surf-2}, called Optimal Set Guarding (\osg), 
+is NP-hard to approximate within a factor of 1.152. Similarly, we may reduce \osg to Problem~\ref{p:surf-2} by adding a thin third dimension. 
+Therefore, through this route, we know that optimal solutions to Problem~\ref{p:surf-2} is hard to approximate within a factor of 1.152, 
+even when the surface $S$  is a simple polygon. 
 
-From an instance of Problem~\ref{p:2}, reduced from an instance of \osg, we can add further 3D structures to obtain an instance of Problem~\ref{p:3} such that cumulative effect from multiple sensors are limited. That is, when sensors are forced to have no interactions, a version of Problem~\ref{p:3} that is similar to Problem~\ref{p:2} is obtained, which is again NP-hard. 
+From an instance of Problem~\ref{p:surf-2}, reduced from an instance of \osg, 
+we can add further 3D structures to obtain an instance of Problem~\ref{p:surf-3} such that cumulative effect from multiple sensors are limited. 
+That is, when sensors are forced to have no interactions, a version of Problem~\ref{p:surf-3} that is similar to Problem~\ref{p:surf-2} is obtained, 
+which is again NP-hard. 
 
-We summarize the discussion in Theorem~\ref{t:hardness}. Full proofs of these complexity results, which are too lengthy to be included here and are not as essential in comparison to the problem formulations and the algorithmic results, will be detailed in an extended version of this work. 
+We summarize the discussion in Theorem~\ref{t:surf-hardness}. Full proofs of these complexity results, 
+which are too lengthy to be included here and are not as essential in comparison to the problem formulations and the algorithmic results, 
+will be detailed in an extended version of this work. 
 \vspace{-1mm}
 
-\begin{theorem}\label{t:hardness}
-Problems~\ref{p:1}-\ref{p:3} are NP-hard.
+\begin{theorem}\label{t:surf-hardness}
+Problems~\ref{p:surf-1}-\ref{p:surf-3} are NP-hard.
 \end{theorem}
     \vspace{-2mm}
 

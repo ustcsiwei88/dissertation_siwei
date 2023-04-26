@@ -1,9 +1,9 @@
 % As for 2D OSG, it is similar to the metric k-center problem and therefore
 % the approximation algorithms solving k-center problem can be applied to 2D OSG. 
 
-In their general forms, Problems~\ref{p:1}-\ref{p:3} require the computation of 3D visibility, a hard task on its own. Due to this reason, a polynomial time algorithm with guaranteed good approximation ratio for these problems appear difficult to come by. It is an interesting question to ask whether some form of approximation scheme can be derived. Here, we show that for Problem~\ref{p:2}, if one relax the visibility requirement, i.e. letting $vis(\cdot, \cdot)\equiv 1$, then a polynomial time $(2+\varepsilon)$-approximation algorithm can be obtained. 
+In their general forms, Problems~\ref{p:surf-1}-\ref{p:surf-3} require the computation of 3D visibility, a hard task on its own. Due to this reason, a polynomial time algorithm with guaranteed good approximation ratio for these problems appear difficult to come by. It is an interesting question to ask whether some form of approximation scheme can be derived. Here, we show that for Problem~\ref{p:surf-2}, if one relax the visibility requirement, i.e. letting $vis(\cdot, \cdot)\equiv 1$, then a polynomial time $(2+\varepsilon)$-approximation algorithm can be obtained. 
 
-Taking Problem~\ref{p:2}, we examine a setup assuming that each point $p \in S$ has good visibility, i.e., $p$ is always visible to the nearest sensor. Such scenarios happen when the 3D domain does not have large curvatures that would easily block sensors' view, e.g., covering the earth with GPS satellites or using drones to survey a vineyard. To drive a specific approximation bound, 
+Taking Problem~\ref{p:surf-2}, we examine a setup assuming that each point $p \in S$ has good visibility, i.e., $p$ is always visible to the nearest sensor. Such scenarios happen when the 3D domain does not have large curvatures that would easily block sensors' view, e.g., covering the earth with GPS satellites or using drones to survey a vineyard. To drive a specific approximation bound, 
 we further assume that sensors have spherical range sensing and are in a plane of some fixed 
 \begin{wrapfigure}[5]{r}{1.3in}
   \vspace*{0mm}
@@ -16,7 +16,7 @@ The figure on the right provides an illustration of the target environment setti
 
 The main idea is to first obtain a dense sample of $S$ and then adapt $2$-approximation algorithms for the corresponding 2D setting, which requires some non-trivial reasoning. Two well-known approximation algorithms for $k$-center like problem in 2D are based on \emph{farthest point clustering} \cite{gonzalez1985clustering} and \emph{dominating set} \cite{hochbaum1985best, vazirani2013approximation}. Both of these approaches work for our purpose; we show how to work with the former.
 
-Let a uniformly sampled set of point of $S$ be $S_N = \{o_1, \ldots, o_N\}$. We apply farthest point clustering \cite{gonzalez1985clustering} on $S_N$ as follows. As the name suggest, it picks farthest sensor locations until the number of sensors are exhausted. In the original approach, the points to be clustered are also sensor locations, which is not true here. Instead, we perform clustering in the set $S_N$ and project the selected samples to $H_C$ gradually. The relatively straightforward process is given in Algorithm~\ref{alg:greedy} (($d(\cdot$,$\ \cdot)$ denotes the distance between the inputs, one or both of which may be sets).
+Let a uniformly sampled set of point of $S$ be $S_N = \{o_1, \ldots, o_N\}$. We apply farthest point clustering \cite{gonzalez1985clustering} on $S_N$ as follows. As the name suggest, it picks farthest sensor locations until the number of sensors are exhausted. In the original approach, the points to be clustered are also sensor locations, which is not true here. Instead, we perform clustering in the set $S_N$ and project the selected samples to $H_C$ gradually. The relatively straightforward process is given in Algorithm~\ref{alg:surf-greedy} (($d(\cdot$,$\ \cdot)$ denotes the distance between the inputs, one or both of which may be sets).
 
 
 \begin{algorithm}
@@ -25,7 +25,7 @@ Let a uniformly sampled set of point of $S$ be $S_N = \{o_1, \ldots, o_N\}$. We 
     \SetKwInOut{Output}{Output}
     \SetKwComment{Comment}{\% }{}
     \caption{Farthest Point Clustering}
-		\label{alg:greedy}
+		\label{alg:surf-greedy}
     \SetAlgoLined
 		\vspace{1mm}
     \Input{$S_N$=\{$o_1, \dots, o_N$\}: $N$ sampled points on the surface $S\subset \partial \mathcal E$; $k$: number of sensors;\\
@@ -49,7 +49,7 @@ Let a uniformly sampled set of point of $S$ be $S_N = \{o_1, \ldots, o_N\}$. We 
 \end{algorithm}
 
 To prove the claimed $(2+\varepsilon)$-approximation bound,  
-denote the optimal sensor location set and the sensor location set derived by Algorithm~\ref{alg:greedy} as $\mathcal{C}_{OPT}$ and $\mathcal{C}$, respectively. Since these are centers of spherical sensing ranges, we call them center set for short. Denote the minimum coverage radius in the spherical sensing model as $r_{OPT}$. Let $h$ be the minimum distance between surface $S$ and sensor space $H_C$, i.e. $h:=d(S,H_C)$. $r_{OPT}$ and $r_{\mathcal{C}}$ are defined as follows:
+denote the optimal sensor location set and the sensor location set derived by Algorithm~\ref{alg:surf-greedy} as $\mathcal{C}_{OPT}$ and $\mathcal{C}$, respectively. Since these are centers of spherical sensing ranges, we call them center set for short. Denote the minimum coverage radius in the spherical sensing model as $r_{OPT}$. Let $h$ be the minimum distance between surface $S$ and sensor space $H_C$, i.e. $h:=d(S,H_C)$. $r_{OPT}$ and $r_{\mathcal{C}}$ are defined as follows:
 \begin{equation}
     r_{OPT}:=\max_{o\in S_N} d(o, \mathcal{C}_{OPT})
 \end{equation}
@@ -58,8 +58,8 @@ denote the optimal sensor location set and the sensor location set derived by Al
 \end{equation}
 
 \begin{proposition}
-\label{prop:algo1t}
-The center set obtained by Algorithm~\ref{alg:greedy} achieves coverage radius of at most
+\label{prop:surf-algo1t}
+The center set obtained by Algorithm~\ref{alg:surf-greedy} achieves coverage radius of at most
 %$r_{OPT} + \sqrt{r_{OPT}^2 - h^2}$
 $\sqrt{4r_{OPT}^2 - 3h^2}$.
 \vspace{-1mm}
@@ -73,7 +73,7 @@ $\sqrt{4r_{OPT}^2 - 3h^2}$.
 
 Denote the center set generated at the 
 $i$th round as $\mathcal{C}_{i}$, and $r_i$ as the cluster radius $r_i := \max_{o_\tau}\min_{c_j \in \mathcal{C}_i} d(o_\tau, c_j)$. It is straightforward to observe that $r_k\leq r_{k-1} \leq \dots \leq r_1$.
-Consider the relationship between the optimal center set $\mathcal{C}_{OPT}$ and the center set obtained by Algorithm~\ref{alg:greedy}, we have the following 2 cases.
+Consider the relationship between the optimal center set $\mathcal{C}_{OPT}$ and the center set obtained by Algorithm~\ref{alg:surf-greedy}, we have the following 2 cases.
 
 Case 1: For each sphere $\mathcal{B}_{c}$ centered at a point $c\in\mathcal{C}_{OPT}$ with radius of $r_{OPT}$, the projection of $\mathcal{B}_{c}\bigcap S$ onto the sensor space $H_C$
 contains exactly one point of $\mathcal{C}_k$. 
@@ -106,7 +106,7 @@ In this case, denote the two centers by $c_i$ and $c_j$ $(i<j)$, and their proje
     % &\leq \sqrt{r_{OPT}^2 - h^2} + r_{OPT}\\
     \end{split}
 \end{equation}
-Summarizing the two cases proves Proposition~\ref{prop:algo1t}.
+Summarizing the two cases proves Proposition~\ref{prop:surf-algo1t}.
 \vspace{-2mm}
 \end{proof}
 

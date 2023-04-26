@@ -10,7 +10,7 @@ Then, the problem of finding the minimum number of robots for a certain
 sweep schedule is formally defined.
 
 \subsubsection{Robot Sensing Model}
-\label{sec:sensing}
+\label{sec:sc-sensing}
 
 In this work, a robot is assumed to be a \emph{line guard} capable of sensing 
 relevant events happening on a continuous line segment passing through the
@@ -30,13 +30,17 @@ Individual robots' 1D sensing range aligns to form a \emph{sweep line} or \emph{
 It is assumed that robots carry out their sensing functions independently 
 without interfering with each other.
 %
-For a point $p$ in the sweep line, if it falls between two robots $r_1, 
-r_2$, the coverage of that point is provided by $r_1$ and $r_2$, and the 
-probability of target detection at that point is computed as $1-(1-\rho(\ell_1))\cdot(1-\rho(\ell_2))=\rho(\ell_1) + \rho(\ell_2) - \rho(\ell_1) \cdot \rho(\ell_2)$, where $\ell_1$ (resp., $\ell_2$) is the distance between $p$ and $r_1$ (resp., $r_2$).
+For a point $p$ in the sweep line, if it falls between two robots $r_1, r_2$, 
+the coverage of that point is provided by $r_1$ and $r_2$, and the 
+probability of target detection at that point is computed as $1-(1-\rho(\ell_1))\cdot(1-\rho(\ell_2))=\rho(\ell_1) + \rho(\ell_2) - \rho(\ell_1) \cdot \rho(\ell_2)$, 
+where $\ell_1$ (resp., $\ell_2$) is the distance between $p$ and $r_1$ (resp., $r_2$).
 %
-If it lies at the ends of the segment, the coverage of that point is only provided by the closest robot, and the coverage probability is simply $\rho(\ell)$, where $\ell$ is the distance between $p$ and the robot. These are illustrated in ~\ref{fig:sensing}.
+If it lies at the ends of the segment, the coverage of that point is only provided by the closest robot, 
+and the coverage probability is simply $\rho(\ell)$, where $\ell$ is the distance between $p$ and the robot. 
+These are illustrated in ~\ref{fig:sc-sensing}.
 %
-We note that \emph{sweep lines} are not necessarily straight. For example, a sweep line could be part of a circle in the case of circular sweeps (~\ref{fig:sweep}(c)).
+We note that \emph{sweep lines} are not necessarily straight. 
+For example, a sweep line could be part of a circle in the case of circular sweeps (~\ref{fig:sc-sweep}(c)).
 
 \begin{figure}[ht]
     \centering
@@ -72,7 +76,7 @@ We note that \emph{sweep lines} are not necessarily straight. For example, a swe
         
     \end{tikzpicture}
     \caption{Illustration of the robot sensing model. The segment is being covered by three robot guards $r_1 \sim r_3$. The coverage probability of $p_1$, falling between robots $r_1$ and $r_2$, is given as $\rho(\ell_1)+\rho(\ell_2)-\rho(\ell_1)\cdot\rho(\ell_2)$, and the coverage probability of $p_2$, covered only by $r_1$ is given as $\rho(\ell_3)$.}
-    \label{fig:sensing}
+    \label{fig:sc-sensing}
 \end{figure}
 
 

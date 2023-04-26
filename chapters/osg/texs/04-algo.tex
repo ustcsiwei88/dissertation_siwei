@@ -3,7 +3,7 @@ In this section, we present several algorithmic solutions for \osgt.
 First, a fully polynomial approximation scheme (FPTAS)
 is presented that solve \opgt with the additional requirement 
 that each sensor is responsible for a continuous perimeter segment. 
-This contrasts Theorem~\ref{them:twoconthard}. Then, we show that 
+It contrasts Theorem~\ref{them:osg-twoconthard}. Then, we show that 
 there exist polynomial time algorithms that readily guarantee a
 $(2+\varepsilon)$-approximation for \osgt. This is followed by an 
 integer linear programming (ILP) method that delivers high-quality
@@ -30,8 +30,8 @@ creating at most $N=O(({len(\partial P)}/{\varepsilon})^2)$ samples.
 The discretization process converts guarding $P$ or $\partial P$ to 
 guarding $S_O$. 
 
-\subsection{\opgt with Single Segment Guarding Limitation}\label{subsec:singleseg}
-By Theorem.~\ref{them:twoconthard}, if a mobile sensor can guard up to two 
+\subsection{\opgt with Single Segment Guarding Limitation}\label{subsec:osg-singleseg}
+By Theorem.~\ref{them:osg-twoconthard}, if a mobile sensor can guard up to two 
 continuous perimeter segments, \osgt is hard to approximate within 
 $1.152$-optimal. 
 Translating this into guarding elements of $S_O$, this means that a sensor
@@ -47,11 +47,11 @@ The algorithm operates by checking multiple times whether a given radius
 $r$ is sufficient for $k$ discs of the given radius to cover elements of 
 $S_O$ where each disc covers only a single chain of elements. 
 
-A single feasibility check is outlined in Algorithm~\ref{algo:cont}.
+A single feasibility check is outlined in Algorithm~\ref{algo:osg-cont}.
 In the pseudo code, it is assumed that the indices are modulo $N$, e.g. 
 $M[N+1] = M[1]$, $o_{N+1} = o_1$. 
 %
-Algorithm~\ref{algo:cont} is based on an efficient implementation of 
+Algorithm~\ref{algo:osg-cont} is based on an efficient implementation of 
 a subroutine \algomed (from e.g., \cite{welzl1991smallest,
 Mark1997computation}) that computes the disc with minimum radius to 
 enclose a given set of points in expected linear time. With this, a sliding 
@@ -67,7 +67,7 @@ by only examining starting point as $o_1, \dots, o_{M[1]+1}$, since there
 is no circle of radius of $r$ that can cover them together by the 
 definition of $M$.
 %
-The apparent complexity of Algorithm~\ref{algo:cont} is $O(N^2)$. Since 
+The apparent complexity of Algorithm~\ref{algo:osg-cont} is $O(N^2)$. Since 
 there are a total of $N$ points and $k$ robots, in a majority 
 of cases a circle would enclose about $N/k$ points, which effectively 
 lowers the time complexity to $O(N^2/k)$.
@@ -76,51 +76,51 @@ lowers the time complexity to $O(N^2/k)$.
 \SetKw{Continue}{continue}
 \SetKw{True}{true}
 \SetKw{False}{false}
-\begin{algorithm}
-\begin{small}
-\DontPrintSemicolon
-\SetKwComment{Comment}{\%}{}
-\caption{\textsc{Opg\_2D\_Cont\_Feasible}}    %($P$, $k$, $r$, $\varepsilon$)}}
-\label{algo:cont}
-\SetKwInOut{Input}{Input}
-\SetKwInOut{Output}{Output}
-\KwData{$S_O=\{o_1, \dots, o_N\}$, sample points in circular order\\
-\qquad\quad$k$, the number of robots\\
-\qquad\quad $r$, the candidate sensing radius}
-\KwResult{\True or \False, indicating whether $S_O$ can be covered with k discs with radius $r$}
-\vspace{2mm}
 
-\If{{\sc Min\_Enclose\_Disc}($o_1, \dots, o_N$)$\leq r$} {\Return{\True}}
-\vspace{1.5mm}
+\begin{algorithm} 
+  % \begin{small}
+  \DontPrintSemicolon
+  \SetKwComment{Comment}{\%}{}
+  \SetKwInOut{Input}{Input}
+  \SetKwInOut{Output}{Output}
+  \KwData{$S_O=\{o_1, \dots, o_N\}$, sample points in circular order\\
+  \qquad\quad$k$, the number of robots\\
+  \qquad\quad $r$, the candidate sensing radius}
+  \KwResult{\True or \False, indicating whether $S_O$ can be covered with k discs with radius $r$}
+  \vspace{2mm}
 
-\Comment{\small Phase 1: find the maximum number of consecutive points a disc of radius $r$ can enclose
-from each $c_i$.}%$arr[i]$ \small stores the number of continuous points the disc can enclose from $c_i$.}
-\vspace{1.5mm}
+  \If{{\sc Min\_Enclose\_Disc}($o_1, \dots, o_N$)$\leq r$} {\Return{\True}}
+  \vspace{1.5mm}
 
-$M\leftarrow$ an array of length $N$; $end\leftarrow 1$;\;
-\vspace{1.5mm}
+  \Comment{\small Phase 1: find the maximum number of consecutive points a disc of radius $r$ can enclose
+  from each $c_i$.}%$arr[i]$ \small stores the number of continuous points the disc can enclose from $c_i$.}
+  \vspace{1.5mm}
 
-\For{$i=1$ \KwTo N}{
-\While{{\sc Min\_Enclose\_Disc($o_i, \dots, o_{end+1}$) $\leq r$ }}{
-    $end\leftarrow end+1$;\;
-}
-$M[i]\leftarrow end - i + 1$;\;
-}
-\vspace{1.5mm}
+  $M\leftarrow$ an array of length $N$; $end\leftarrow 1$;\;
+  \vspace{1.5mm}
 
-\Comment{\small Phase 2: try to tile from each $o_i$.}
-\vspace{1.5mm}
+  \For{$i=1$ \KwTo N}{
+  \While{{\sc Min\_Enclose\_Disc($o_i, \dots, o_{end+1}$) $\leq r$ }}{
+      $end\leftarrow end+1$;\;
+  }
+  $M[i]\leftarrow end - i + 1$;\;
+  }
+  \vspace{1.5mm}
 
-\For{$i=1$ \KwTo $N$}{
-$j \leftarrow i$, \quad $cnt \leftarrow k$;\;
-\While{$cnt > 0$}{
-    $j \leftarrow j + M[j]$;\;
-    \If{$j-i \geq N$}{\Return{\True}}
-    $cnt\leftarrow cnt-1$\;
-}
-}
-\Return{\False}
-\end{small}
+  \Comment{\small Phase 2: try to tile from each $o_i$.}
+  \vspace{1.5mm}
+
+  \For{$i=1$ \KwTo $N$}{
+  $j \leftarrow i$, \quad $cnt \leftarrow k$;\;
+  \While{$cnt > 0$}{
+      $j \leftarrow j + M[j]$;\;
+      \If{$j-i \geq N$}{\Return{\True}}
+      $cnt\leftarrow cnt-1$\;
+  }
+  }
+  \Return{\False}
+  % \end{small}
+  \caption{\textsc{Opg\_2D\_Cont\_Feasible}}\label{algo:osg-cont}
 \end{algorithm}
 
 
@@ -137,16 +137,17 @@ the search range of $r^*$ or the gap between $r_{max}$ and $r_{min}$ will
 be reduced to within $\varepsilon$. So, it takes expected $O(N^2 \log (N/k))$ 
 time in total to get an approximate solution with radius at most $\varepsilon$ 
 more than $size(k, S_O)$ or $size(k, \partial P)$.
-\begin{theorem}\label{t:opgtsseg}
+\begin{theorem}%\label{t:opgtsseg}
     Under the rule of continuous coverage, \opgt for a simple 
 		polygon can be approximated to $(1 + \varepsilon)$-optimal in expected 
 		$O(N^2\log N)$ time, and $O(({N^2}/{k} )\log(N/k))$ in most cases,
     where $N=\lceil{len(\partial P)}/({2\varepsilon})\rceil$.
 \end{theorem}
 
-\remark{In the running time complexity analysis, we implicitly 
+\begin{remark}
+In the running time complexity analysis, we implicitly 
 used the assumption that $len(\partial P)$ is polynomial to problem input 
-size (see Section~\ref{sec:problem}). Also, the algorithm given above
+size (see Section~\ref{sec:osg-problem}). Also, the algorithm given above
 computes an $OPT + \varepsilon$ optimal solution. However, 
 % due to the 
 it can be naturally assumed that the optimal
@@ -158,12 +159,13 @@ we mention that results in this subsection readily extends to multiple
 simple polygons with gaps along the boundary. 
 These arguments continue to apply throughout the rest of  
 this section. 
-%
+\end{remark}
 
 Regarding the choice in implementation, the minimum enclosing disc problem 
 (1-center problem) also has deterministic solution 
 \cite{megiddo1983linear} in linear time, but a randomized algorithm is considered to be 
-more efficient\cite{welzl1991smallest} and easier to implement.}
+more efficient \cite{welzl1991smallest} and easier to implement.
+
 
 \subsection{$(2 + \varepsilon)$ Approximation}
 In dealing with Euclidean $k$-clustering problems, two seminal methods 
@@ -225,7 +227,7 @@ following integer programming model.
 \end{align}
 The first constraint says the number of locations is no more than $k$, and 
 the second ensures each $o_\ell$ can be covered by at least one circle 
-with radius $r$ illustrated in ~\ref{fig:ilpexample}.
+with radius $r$ illustrated in ~\ref{fig:osg-ilpexample}.
 
 \begin{figure}[!ht]
     \centering
@@ -242,7 +244,7 @@ with radius $r$ illustrated in ~\ref{fig:ilpexample}.
 		($2$) for $o_{67}$ with $r=7$. The black dots are the sampled $S_O = 
 		\{o_1, \dots, o_{100}\}$. In order to cover $o_{67}$, at least one 
 		among the red color grid cell centers need to be selected as robot location.}
-    \label{fig:ilpexample}
+    \label{fig:osg-ilpexample}
 \end{figure}
 
 

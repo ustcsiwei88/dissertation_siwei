@@ -2,27 +2,27 @@ In this section, we prove that \osgt with the set being a simple polygon is
 strongly NP-hard to approximate within a factor of $\alpha = 1.152$, through 
 a sequence of auxiliary NP-hardness results. 
 %
-First, in Section~\ref{subsec:3regular}, we prove an intermediate result 
+First, in Section~\ref{subsec:osg-3regular}, we prove an intermediate result 
 that the vertex cover problem is NP-complete on planar bridgeless 
 $3$-regular graphs.
 % 
-Next, in Section~\ref{complexity:3netcomp}, starting from a planar bridgeless 
+Next, in Section~\ref{complexity:osg-3netcomp}, starting from a planar bridgeless 
 $3$-regular graph, we construct a structure which we call {\em $3$-net} and 
 prove the the problem of finding the minimum coverage radius of the 
 $3$-net is NP-hard to approximate within $\alpha$. 
 % 
-Then, in Section~\ref{subsec:osgthard}, we apply a straightforward 
+Then, in Section~\ref{subsec:osg-osgthard}, we apply a straightforward 
 reduction to transform the $3$-net into a simple polygon to complete
 the hard-to-approximate proof for \osgt for simple polygons.
 %
 
 We then further show the inapproximability of the special \opgt setup 
 when each robot can only guard at most two disjoint perimeter segments 
-(Section~\ref{subsec:2-seghard}), contrasting the FPTAS for the special 
+(Section~\ref{subsec:osg-2-seghard}), contrasting the FPTAS for the special 
 \opgt setup when each robot can only guard a continuous perimeter 
-segment in Section~\ref{subsec:singleseg}.
+segment in Section~\ref{subsec:osg-singleseg}.
 
-\subsection{Vertex Cover on Planar Bridgeless $3$-Regular Graph}\label{subsec:3regular}
+\subsection{Vertex Cover on Planar Bridgeless $3$-Regular Graph}\label{subsec:osg-3regular}
 Our reduction uses the hardness result on the vertex cover problem for planar 
 graphs with maximum degree $3$ \cite{garey1977rectilinear}. Such a vertex cover 
 problem can be fully specified with a 2-tuple $(G, k)$ where $G = (V, E)$ is a 
@@ -66,11 +66,11 @@ if $G''$ has a vertex cover of size $k''$.
 		degree $3$. With each addition of the gadget, we increase the vertex 
 		cover by a size of $3$, regardless of whether $A$ is part of a vertex 
 		cover.}
-    \label{fig:structure-hook}
+    \label{fig:osg-structure-hook}
 \end{figure}
 
 The reduction first makes $G$ $3$-regular by attaching (one or two of) the 
-gadget shown in ~\ref{fig:structure-hook} to $v \in G$ that are not 
+gadget shown in ~\ref{fig:osg-structure-hook} to $v \in G$ that are not 
 degree $3$. This results in a $3$-regular graph $G'$. For each attached 
 gadget, $k$ is bumped up by $3$, i.e., we let $k'$ for $G'$ be $k' = k 
 + 3(3|V(G)| - 2|E(G)|)$. It is straightforward to see that $G$ has a vertex 
@@ -92,7 +92,7 @@ cover size of $k$ if and only if $G'$ has a vertex cover size of $k'$.
         \filldraw[black] (1,0) circle (1.5pt) node[anchor=north] {$Q\,\,$};
     \end{tikzpicture}
     }
-    \hfill
+    % \hfill
     \begin{tikzpicture}
         \coordinate(p1) at (-1.5, 0);
         \coordinate(p2) at (-0.5, 0);
@@ -159,11 +159,11 @@ cover size of $k$ if and only if $G'$ has a vertex cover size of $k'$.
     \vspace{.5mm}
     \caption{Transformation that removes bridge $PQ$ and does not introduce new bridges.
     The minimum vertex cover number is increased by $6$ after each transformation.}
-    \label{fig:rmbridge}
+    \label{fig:osg-rmbridge}
 \end{figure}
 
 In the second and last step, we remove bridges in $G'$. As in 
-~\ref{fig:rmbridge}, for a bridge $PQ$ that divides $G'$ into $G_1'$ 
+~\ref{fig:osg-rmbridge}, for a bridge $PQ$ that divides $G'$ into $G_1'$ 
 (containing $P$) and $G_2'$ (containing $Q$), we split the bridge edge 
 $PQ$ using the illustrated transformation, which yields a new graph $G''$
 that is planar, bridgeless, and $3$-regular, after all bridges are removed
@@ -174,7 +174,7 @@ of size $k'' = k'+6br(G')$. This completes the proof.
 \end{proof}
 
 
-\subsection{Hardness on Optimally Guarding a $3$-Net}\label{complexity:3netcomp}
+\subsection{Hardness on Optimally Guarding a $3$-Net}\label{complexity:osg-3netcomp}
 Starting from a planar cubic graph $G$, we construct a structure that we call 
 $3$-net, $T_G$, as follows. 
 %
@@ -201,11 +201,11 @@ path $u\cdots w = uv_1\ldots v_{2m}w$, for each $v_iv_{i+1}$, $1 \le i
 \le 2m-1$, we add a line segment of length $\sqrt{3}$ that is 
 perpendicular to $v_iv_{i+1}$ such that $v_iv_{i+1}$ and the line 
 segment divide each other in the middle. A graphical illustration is
-given in ~\ref{fig:path-bar}. 
+given in ~\ref{fig:osg-path-bar}. 
 % We note that the bars do not need to be connected to the backbone $G'$. 
 $G'$ and the bars form the 
 $3$-net, which we denote as $T_G$. An example of transforming $K_4$
-into a {\em 3-net} is given in ~\ref{fig:3-net}.
+into a {\em 3-net} is given in ~\ref{fig:osg-3-net}.
 
 \begin{figure}[ht]
 % \vspace*{-4mm}
@@ -226,7 +226,7 @@ into a {\em 3-net} is given in ~\ref{fig:3-net}.
     % for the proof due to the inapproximability gap in the result.
     }
 		\vspace*{-1mm}
-    \label{fig:path-bar}
+    \label{fig:osg-path-bar}
 \end{figure}
 
 \begin{figure}[ht]
@@ -245,12 +245,12 @@ into a {\em 3-net} is given in ~\ref{fig:3-net}.
     % \caption{A $3$-net constructed over the backbone in ~\ref{fig:backbone}.
         % \textcolor{red}{Siwei: update this to be based on $G'$ from ~\ref{fig:backbone}}
         % }
-    \label{fig:3-net}
+    \label{fig:osg-3-net}
 \end{figure}
 
 Let $L$ be the number of (unit length) edges of $G'$ (i.e., $L = 
 \sum_{uv \in E(G)}len(u\cdots w)$). 
-\begin{lemma}\label{l:bl}
+\begin{lemma}\label{l:osg-bl}
 A planar bridgeless $3$-regular graph $G$ has a vertex cover of size 
 $k$ if and only if its transformed 3-net $T_G$ can be covered
 by $K = k + (L-|E(G)|)/2$ circles of radius approximately $\alpha = 1.152$.
@@ -261,7 +261,7 @@ at the centers of the corresponding vertices in $T_G$.
 %
 For each odd length path $u\cdots w$, since either $u$ or $w$ is already 
 selected as the circle center, applying one coverage pattern shown
-in ~\ref{fig:pathcover} with $(len(u\cdots w) - 1)/2$ circles will cover 
+in ~\ref{fig:osg-pathcover} with $(len(u\cdots w) - 1)/2$ circles will cover 
 the rest of $u\cdots w$ and all bars on it. So, the total number of circles
 used is $K$ to cover all of $T_G$. 
 
@@ -269,12 +269,12 @@ used is $K$ to cover all of $T_G$.
   \vspace*{0mm}
       \centering
       \includegraphics[scale=0.3]{chapters/osg/figures/edgepath1-eps-converted-to.pdf}\vspace{3mm}
-      \hfill
+      % \hfill
       \includegraphics[scale=0.3]{chapters/osg/figures/edgepath2-eps-converted-to.pdf}
   \vspace*{0mm}
      \caption{Two coverage patterns on an odd length path with robots of 
       range sensing radius $1$ which is less than $\alpha$.}
-      \label{fig:pathcover}
+      \label{fig:osg-pathcover}
   \end{figure}
   
   \begin{figure}[!ht]
@@ -283,14 +283,14 @@ used is $K$ to cover all of $T_G$.
   \vspace*{1mm}
     \caption{Asymmetrical coverage of $4$ endpoints requiring a circle of 
     radius at least $2\sqrt{3}/3\approx 1.155$.}
-    \label{fig:pathcovert}
+    \label{fig:osg-pathcovert}
   \end{figure}
 
 The ``if'' part requires more analysis. Consider $T_G$ that can be covered 
 by $K$ circles of radius $r \approx \alpha$. For a path $u\cdots w$ on $T_G$ whose 
 length is $2m+1$, there are $2m-1$ vertical bars associated with it. Consider 
 the $4m-2$ endpoints of these vertical bars. We note that (as shown in 
-~\ref{fig:pathcovert}), it requires a radius of $2\sqrt{3}/3\approx 1.155$ 
+~\ref{fig:osg-pathcovert}), it requires a radius of $2\sqrt{3}/3\approx 1.155$ 
 for a circle to cover $4$ bar endpoints in an asymmetrical manner (three endpoints
 on one side of the path, one on the other). Since 
 we set the radius of coverage circle to be about $\alpha = 1.152$ (actually, 
@@ -309,7 +309,7 @@ left side, assuming the path $u\cdots w$ is horizontal. If there are more
 than two bars to the left, then it is always beneficial to cover the two bars 
 immediately to the left of $S$ using another circle. To see that this is the 
 case, look at the two bars ($DE$ and $FH$) and the two associated unit 
-length edges ($AB$ and $BC$) to the left of $S$ in ~\ref{fig:two-bar}.
+length edges ($AB$ and $BC$) to the left of $S$ in ~\ref{fig:osg-two-bar}.
 It can be computed that the circle $S$ to the right can cover a maximum 
 length of $0.412$ of $AB$ to $A'$. Circles to the left of $S$ then must cover 
 $A'B$. Let the circle covering $A'$ be $S'$. We may assume that 
@@ -337,7 +337,7 @@ must also cover $A'$).
 		two bars at a time with a circle. Two extremal cases of $S'$ covering
 		$A'$ and $D$ but not $E$ are shown (as dashed circles), which amounts 
 		to rotating the circle $S'$ around $D$.}
-    \label{fig:two-bar}
+    \label{fig:osg-two-bar}
   \end{figure}
 
 If $S'$ covers $A'$ and only one of $D$ or $E$, say $D$, some other circle 
@@ -365,11 +365,11 @@ and $b_3$, from left to right. We call the end of a path with two bars the
 end of the path with one bar the {\em odd end} (e.g., the side ending with one 
 bar $b_3$). 
 
-We now examine the coverage of $b_2$ (see ~\ref{fig:end-two-bar} where 
+We now examine the coverage of $b_2$ (see ~\ref{fig:osg-end-two-bar} where 
 $b_1$ corresponds to $CD$ and $b_2$ corresponds to $AB$). Again, if the two 
 endpoints $A$ and $B$ of $b_2$ are covered by more than one circle, then one 
 of these two circles can be replaced with one that fully covers $b_1$ and 
-$b_2$ (the solid circle in ~\ref{fig:end-two-bar}), since a circle 
+$b_2$ (the solid circle in ~\ref{fig:osg-end-two-bar}), since a circle 
 covering only one endpoint of $b_2$ (e.g., $B$) will not be able to reach 
 structures outside $u\cdots w$. By now, $m-1$ circles have been used and to 
 cover $u \cdots w$, at least two more circles are needed at the two ends 
@@ -390,7 +390,7 @@ cover $u \cdots w$, at least two more circles are needed at the two ends
 		to cover them with a single circle (in red). The dotted circle shows that 
 		a circle of radius $2*\alpha$ covering $B$ will not be able to reach 
 		structures outside $u\cdots w$.}
-    \label{fig:end-two-bar}
+    \label{fig:osg-end-two-bar}
   \end{figure}
 
 
@@ -398,13 +398,13 @@ Next, instead of examining $b_3$, we examine the possible configurations at
 junctions where paths meet. There are four possible cases that contains 
 $0$-$3$ odd ends. For the case where only even ends meet, one additional 
 circle is needed to cover the rest of the junction 
-(~\ref{fig:junction}(a)). When there is one odd end and two even ends 
-(~\ref{fig:junction}(b)), it requires one more circle to cover the 
+(~\ref{fig:osg-junction}(a)). When there is one odd end and two even ends 
+(~\ref{fig:osg-junction}(b)), it requires one more circle to cover the 
 junction. This constraint is how the radius $\alpha = 1.152$ is obtained 
 (more precisely, with circles with radius 1.153, no additional circles are 
 needed at the junction). When there are two odd ends and one even end 
-(~\ref{fig:junction}(c)), at least one more circle is needed to cover 
-the the junction. For the last case (~\ref{fig:junction}(d)), no 
+(~\ref{fig:osg-junction}(c)), at least one more circle is needed to cover 
+the the junction. For the last case (~\ref{fig:osg-junction}(d)), no 
 additional circles are needed. The cases where additional cycles are needed 
 correspond to the junction vertex being selected as a vertex cover. 
 It is straightforward to observe that the constructed vertex cover is a valid 
@@ -425,17 +425,17 @@ one. The cover has size of $K-(L-|E(G)|)/2$.
 	less than $\alpha = 1.152$. When we increase the radius to $r = 1.152259$, 
 	circles shown in (b) and (c) can successfully cover the junction and the odd 
 	ends.}
-  \label{fig:junction}
+  \label{fig:osg-junction}
 \end{figure}
 \end{proof}
 
-It is clear that Lemma~\ref{l:bl} holds for discs with radius in 
+It is clear that Lemma~\ref{l:osg-bl} holds for discs with radius in 
 $[1, \alpha)$. Thus, approximating $size(T_G, K)$ to less than a 
 factor of $\alpha$ will decide whether $G$ has a vertex cover of 
 $k$, yielding the hard-to-approximate result.
 Also, it can be observed that all lengths are polynomial with respect to 
 the problem input size, which implies strongly NP-hardness.
-\begin{theorem}\label{t:3nethard}
+\begin{theorem}\label{t:osg-3nethard}
 The minimum radius for cover a $3$-net using 
 % $(({L-|E|})/{2}+k)$ 
 $k$ circular discs 
@@ -445,11 +445,11 @@ factor of $\alpha = 1.152$.
 \end{theorem}
 
 
-\subsection{From $3$-Nets to Simple Polygons}\label{subsec:osgthard}
+\subsection{From $3$-Nets to Simple Polygons}\label{subsec:osg-osgthard}
 We proceed to show that \osgt is hard to approximate for a simply polygon 
 by converting a $3$-net into one. Along the backbone $G'$ of a $3$-net 
 $T_G$, we first expand the line segments by $\delta$ to get a 2D region  
-(see ~\ref{fig:door}(a)). We may describe the interior of the resulting 
+(see ~\ref{fig:osg-door}(a)). We may describe the interior of the resulting 
 polygon as 
 \vspace*{-1mm}
 \[P=\{p\in \R^2\ |\ \min_{q\in T_G}(\lVert p-q\rVert_1)\leq \delta/2\}\]
@@ -466,7 +466,7 @@ Let $K = (({L-|E|}){2}+k)$, it holds that
 
 To convert the structure into a simple polygon, we can open ``doors'' of 
 width $\delta$ on the structure to get rid of the holes (see 
-~\ref{fig:door}(b)). Each opening removes one hole from $P$. This is 
+~\ref{fig:osg-door}(b)). Each opening removes one hole from $P$. This is 
 straightforward to check; we omit the details. 
 \begin{figure}[ht]
 		\centering
@@ -484,7 +484,7 @@ straightforward to check; we omit the details.
     \caption{(a) A $3$-net $T_G$ maybe readily converted into a simple polygon 
 		$P$ with holes by expanding along its backbone. (b) Creating a ``door'' 
 		of width $\delta$ will remove one hole from $P$.}
-    \label{fig:door}
+    \label{fig:osg-door}
 \end{figure}
 
 Denoting the resulting simple polygon as $P'$, we have
@@ -501,26 +501,26 @@ $\partial P'$ or $P'$ has a polynomial approximation algorithm with
 approximation ratio $1.152 - \varepsilon$ where $\varepsilon > 0$, let $\delta = 
 \varepsilon/2$, then the optimal guarding problem for the $T_G$ can 
 be approximated within 1.152 disobeying the inapproximability gap by 
-Theorem~\ref{t:3nethard}. Therefore,
+Theorem~\ref{t:osg-3nethard}. Therefore,
 
-\begin{theorem}\label{t:osgthard}
+\begin{theorem}\label{t:osg-osgthard}
 \osgt is NP-hard and does not admit a polynomial time approximation 
 within a factor of $\alpha$ with $\alpha = 1.152$, unless 
 P$=$NP.
 \end{theorem}
 
-\subsection{\opgt with Sensor Guarding Restrictions}\label{subsec:2-seghard}
-The inapproximability gap from Theorem~\ref{t:osgthard} prompts us to 
+\subsection{\opgt with Sensor Guarding Restrictions}\label{subsec:osg-2-seghard}
+The inapproximability gap from Theorem~\ref{t:osg-osgthard} prompts us to 
 further consider restrictions on the setup with the hope that meaningful 
 yet more tractable problems may arise. On natural restriction is to 
 limit the number of continuous segments a mobile sensor may cover. As 
-will be shown in Section~\ref{subsec:singleseg}, if a mobile sensor may 
+will be shown in Section~\ref{subsec:osg-singleseg}, if a mobile sensor may 
 only guard a single continuous perimeter segment, a 
 $(1 + \varepsilon)$-optimal solution can be computed efficiently. 
 On the other hand, it turns out that if a sensor can guard up to two 
 continuous perimeter segments, \opgt remains hard to approximate. 
 
-\begin{theorem}\label{them:twoconthard}
+\begin{theorem}\label{them:osg-twoconthard}
 \opgt of a simple polygon cannot be approximated within $\alpha\approx 1.152$ 
 even when each robot can guard no more than two continuous boundary segments,
 unless P$=$NP.
@@ -543,13 +543,13 @@ graph $G'$.
 		\vspace*{6mm}
     \caption{(a) Part of the augmented Eulerian path for non-doubled 
 		paths. (b) Part of the augmented Eulerian path for doubled paths.}
-    \label{fig:path_exp}
+    \label{fig:osg-path_exp}
 		\vspace*{-1mm}
 \end{figure}
 
 The Eulerian tour on $T_G$ may have self-intersections, which 
 will prevent the tour from being a simple polygon. To address this, we may use 
-one of two possible solutions outlined in ~\ref{fig:eliminter} to eliminate
+one of two possible solutions outlined in ~\ref{fig:osg-eliminter} to eliminate
 the self-intersections. 
 \begin{figure}[ht]
     		\vspace*{2mm}
@@ -564,14 +564,14 @@ the self-intersections.
 				(a), we may transform it into one of the solutions given in 
 				(b) and (c) to make the Eulerian tour remain connected (one 
 				of the two solutions will satisfy this).}
-        \label{fig:eliminter}
+        \label{fig:osg-eliminter}
 \end{figure}
 
-At this point, we readily observe that Theorem~\ref{t:osgthard} applies. 
+At this point, we readily observe that Theorem~\ref{t:osg-osgthard} applies. 
 Furthermore, an optimal solution always allows each mobile sensor to 
 cover only two continuous perimeter segments. This is clear in the middle 
 of any paths of $T_G$; at junctions, the polygon boundary will be either 
-one of two possibilities shown in ~\ref{fig:2types}, where a sensor
+one of two possibilities shown in ~\ref{fig:osg-2types}, where a sensor
 again covers at most two continuous segments of the simple polygon. 
 \begin{figure}[!ht]
     \centering
@@ -581,6 +581,6 @@ again covers at most two continuous segments of the simple polygon.
 		vertex with degree of $4$. A robot near the vertex will only be able 
 		to cover two disjoint but individually continuous boundary segments 
 		with sensing radius less than $\alpha$ if the solution is to be optimal.}
-    \label{fig:2types}
+    \label{fig:osg-2types}
 \end{figure}
 \end{proof}

@@ -10,7 +10,7 @@ Through careful structural analysis, we notice that the barriers to be considere
 %
 This allows us to significantly reduce the number of candidates to be examined at the later selection stage.
 
-\begin{theorem}\label{theorem:sin_tan}
+\begin{theorem}\label{theorem:bf-sin_tan}
 For any $k$ sets of polygonal or point objects $S_1, \dots, S_k$ in the workspace $\mathcal W$, the set of line segments that are tangential to the objects and obstacles contains a set of minimum cardinality that separates $S_1, \dots, S_k$. 
 \end{theorem}
 
@@ -21,7 +21,8 @@ For any $k$ sets of polygonal or point objects $S_1, \dots, S_k$ in the workspac
 Consider a set of line segments $L^*$ with minimum cardinality that separates $S_1,\dots, S_k$. 
 Without loss of generality, we assume all line segments in $L^*$ do not end in the free space, i.e., each line segment in $L^*$ ends
 at either object boundaries or workspace boundaries.
-If some line segment in a minimum barrier is not tangent to any object vertex, denoted it as $\ell=OA$ (shown in ~\ref{fig:proof}), we show that it can be replaced by a line segment that is tangent to some object vertex. 
+If some line segment in a minimum barrier is not tangent to any object vertex, denoted it as $\ell=OA$ (shown in ~\ref{fig:bf-proof}), 
+we show that it can be replaced by a line segment that is tangent to some object vertex. 
 %
 Fix one end of $\ell$, $O$ in this case, and rotate $\ell$ around $O$ in both clockwise and counterclockwise directions until it hits some object vertex and becomes tangential to the object.
 %
@@ -86,7 +87,7 @@ It will eventually result in a set of tangent barriers with minimum cardinality 
 
 \end{tikzpicture}
     \caption{Rotating non-tangent barrier line segment $\ell$ in clockwise and counterclockwise directions around its endpoint $O$ until it becomes tangential to some objects.}
-    \label{fig:proof}
+    \label{fig:bf-proof}
     \vspace{-2mm}
 \end{figure}
 % Then, we show that there exists a set of lines with minimum cardinality that separates $S1$ and $S2$. Similarly, when a line is only tangent to one vertex
@@ -95,10 +96,13 @@ It will eventually result in a set of tangent barriers with minimum cardinality 
 Although we can limit the candidate barriers to line segments tangent to object vertices, there can
 still be infinite number of candidates. 
 One may consider using line segments that are bitangent to
-object vertices, i.e. line segments crossing two object or obstacle vertices. If there are $n$ object/obstacle vertices, there can be at most $n^2$, i.e., a quadratic number of bitangents. 
-Unfortunately, bitangent lines are insufficient to act as candidate barriers by themselves for polygonal objects. A counterexample in ~\ref{fig:counter} shows that there is an instance where an optimal solution must contain line segments that are not bitangents. 
+object vertices, i.e. line segments crossing two object or obstacle vertices. 
+If there are $n$ object/obstacle vertices, there can be at most $n^2$, i.e., a quadratic number of bitangents. 
+Unfortunately, bitangent lines are insufficient to act as candidate barriers by themselves for polygonal objects. 
+A counterexample in ~\ref{fig:bf-counter} shows that there is an instance where an optimal solution must contain line segments that are not bitangents. 
 %
-In this counterexample, we need separate the orange objects from the lime object. A minimum of three line segments are used, and it is not possible that all of them are bitangent, i.e.
+In this counterexample, we need separate the orange objects from the lime object. A minimum of three line segments are used, 
+and it is not possible that all of them are bitangent, i.e.
 
 \begin{proposition}
 Bitangent line segments do not always contain optimal solution for the barrier forming problem for polygonal objects.
@@ -107,10 +111,10 @@ Bitangent line segments do not always contain optimal solution for the barrier f
 \begin{figure}[ht]
     \centering
     \vspace{-.2in}
-    \includegraphics[width = .25\textwidth]{chapters/bc/fig/counter_example.png}
+    \includegraphics[width = .25\textwidth]{chapters/bf/fig/counter_example.png}
     \vspace{0.0in}
     \caption{Counterexample that shows using only bitangent line segments cannot create the optimal solution}
-    \label{fig:counter}
+    \label{fig:bf-counter}
 \end{figure}
 
 Despite the caveat, for the first two formulations that deal with barrier forming for point sets, even with polygonal obstacles, bitangent line segments
@@ -122,12 +126,12 @@ and only consists of bitangent line segments.
 \end{theorem}
 
 \begin{proof}
-From Theorem~\ref{theorem:sin_tan}, we can see using single tangent line segments is always enough
+From Theorem~\ref{theorem:bf-sin_tan}, we can see using single tangent line segments is always enough
 for an optimal solution. 
 Now we turn an optimal solution, $L^*$, with only tangent line segments, into
 a solution with only bitangent line segments while still maintaining the same number of barriers. 
 
-For a tangent line segment $\ell=AB\in L^*$ with tangent point $O$ (shown in ~\ref{fig:proof_bi}), and if $O$ is a point object, assume it is beneath $\ell$,
+For a tangent line segment $\ell=AB\in L^*$ with tangent point $O$ (shown in ~\ref{fig:bf-proof_bi}), and if $O$ is a point object, assume it is beneath $\ell$,
 rotate $\ell$ clockwise around $O$ until it hits a point object or an obstacle vertex.
 Denote the resulting line segment as $\ell'$, and replace $\ell$ with $\ell'$.
 Since the objects are point objects, so $BB'$ and $AA'$ must belong to obstacles or workspace boundary, 
@@ -141,48 +145,48 @@ Continuing the replacement until all line segments are bitangent will result in 
 
 \begin{figure}[ht]
     \centering
-\begin{tikzpicture}
-% \draw[gray, thick] (0, 0) -- (1, 2);
-\draw[gray, thick] (2.5, -1) -- (1.75, 2);
-\draw[gray, thick] (-1, -1) -- (-1, 1.3);
+    \begin{tikzpicture}
+    % \draw[gray, thick] (0, 0) -- (1, 2);
+    \draw[gray, thick] (2.5, -1) -- (1.75, 2);
+    \draw[gray, thick] (-1, -1) -- (-1, 1.3);
 
-\draw[gray, thick] (0.7, -1.5) -- (1, -0.14);
-\draw[gray, thick] (1.2, -1.6) -- (1, -0.14);
+    \draw[gray, thick] (0.7, -1.5) -- (1, -0.14);
+    \draw[gray, thick] (1.2, -1.6) -- (1, -0.14);
 
-% \draw[gray, thick] (3, -1) -- (2.5, 2.5);
+    % \draw[gray, thick] (3, -1) -- (2.5, 2.5);
 
-% \draw[gray, thick] (1, -1) -- (1.5, 0.34);
-% \draw[gray, thick] (1.65, -1.1) -- (1.5, 0.34);
-% 
-% \draw[gray, thick, dashed] (0.3, 0.6) -- (2.66666, 1.333);
-\draw[gray, thick, dashed] (-1., -0.5) -- (2., 1.);
+    % \draw[gray, thick] (1, -1) -- (1.5, 0.34);
+    % \draw[gray, thick] (1.65, -1.1) -- (1.5, 0.34);
+    % 
+    % \draw[gray, thick, dashed] (0.3, 0.6) -- (2.66666, 1.333);
+    \draw[gray, thick, dashed] (-1., -0.5) -- (2., 1.);
 
-\draw[gray, thick, dashed] (-1., 0.1) -- (2.35, -0.3);
+    \draw[gray, thick, dashed] (-1., 0.1) -- (2.35, -0.3);
 
-% \draw[gray, thick, dashed] (0.3, 0.6) -- (2.5, 2.5);
-% \draw[gray, thick, dashed] (0.3, 0.6) -- (2.85, 0);
+    % \draw[gray, thick, dashed] (0.3, 0.6) -- (2.5, 2.5);
+    % \draw[gray, thick, dashed] (0.3, 0.6) -- (2.85, 0);
 
-\node[text width=1cm] at (1.4, 0.3) 
-                        {$\ell$};
-% \node[text] at (1.8, 1.63) 
-                        % {$\ell_2'$};
-\node[text width=1cm] at (1.8, -0.6) 
-                        {$\ell'$};
+    \node[text width=1cm] at (1.4, 0.3) 
+                            {$\ell$};
+    % \node[text] at (1.8, 1.63) 
+                            % {$\ell_2'$};
+    \node[text width=1cm] at (1.8, -0.6) 
+                            {$\ell'$};
 
-\filldraw[black] (0.0, -0.1) circle (2pt) node[anchor=north] {$O$};
-\filldraw[black] (2, 1.) circle (2pt) node[anchor=west] {$A$};
-% \filldraw[black] (2.5, 2.5) circle (2pt) node[anchor=west] {$C$};
-\filldraw[black] (-1, -0.5) circle (2pt) node[anchor=east] {$B$};
+    \filldraw[black] (0.0, -0.1) circle (2pt) node[anchor=north] {$O$};
+    \filldraw[black] (2, 1.) circle (2pt) node[anchor=west] {$A$};
+    % \filldraw[black] (2.5, 2.5) circle (2pt) node[anchor=west] {$C$};
+    \filldraw[black] (-1, -0.5) circle (2pt) node[anchor=east] {$B$};
 
-\filldraw[black] (2.35, -0.3) circle (2pt) node[anchor=west] {$A'$};
-\filldraw[black] (-1, 0.1) circle (2pt) node[anchor=east] {$B'$};
+    \filldraw[black] (2.35, -0.3) circle (2pt) node[anchor=west] {$A'$};
+    \filldraw[black] (-1, 0.1) circle (2pt) node[anchor=east] {$B'$};
 
-% \filldraw[black] (2.7583, 0.6666) circle (2pt) node[anchor=west] {$P_1$};
-% \filldraw[black] (2.5833, 1.917) circle (2pt) node[anchor=west] {$P_2$};
+    % \filldraw[black] (2.7583, 0.6666) circle (2pt) node[anchor=west] {$P_1$};
+    % \filldraw[black] (2.5833, 1.917) circle (2pt) node[anchor=west] {$P_2$};
 
-\end{tikzpicture}
+    \end{tikzpicture}
     \caption{Rotating a single tangent barrier line segment $\ell$ around its tangent point $O$ clockwise until it becomes bitangent.}
-    \label{fig:proof_bi}
+    \label{fig:bf-proof_bi}
 \end{figure}
 \end{proof}
 
@@ -195,48 +199,50 @@ For any $k$ sets of polygonal objects $S_1, \dots, S_k$ in the workspace $\mathc
 
 \begin{figure}[ht]
     \centering
-\begin{tikzpicture}
+    \begin{tikzpicture}
 
-\draw[gray, thick] (2.5, -1) -- (1.75, 2);
-\draw[gray, thick] (-1.5, -1) -- (-1, 1.5);
-\draw[gray, thick] (0, 0) -- (-0.3, 1);
-\draw[gray, thick] (0, 0) -- (.2, 1.5);
+    \draw[gray, thick] (2.5, -1) -- (1.75, 2);
+    \draw[gray, thick] (-1.5, -1) -- (-1, 1.5);
+    \draw[gray, thick] (0, 0) -- (-0.3, 1);
+    \draw[gray, thick] (0, 0) -- (.2, 1.5);
 
-\draw[gray, thick] (-0.8, -1.2) -- (-0.5, -0.25);
-\draw[gray, thick] (-0.45, -1.25) -- (-0.5, -0.25);
+    \draw[gray, thick] (-0.8, -1.2) -- (-0.5, -0.25);
+    \draw[gray, thick] (-0.45, -1.25) -- (-0.5, -0.25);
 
-\draw[gray, thick] (0.6, -0.9) -- (0.9, -0.22);
-\draw[gray, thick] (1.1, -1.2) -- (0.9, -0.22);
-
-
-\draw[gray, thick, dashed] (-1.45, -0.75) -- (2., 1.);
-\draw[gray, thick, dashed] (-1.3, -0.0) -- (2.2, 0);
-
-\draw[gray, thick, dashed] (-1.2, 0.32) -- (2.45, -0.6);
+    \draw[gray, thick] (0.6, -0.9) -- (0.9, -0.22);
+    \draw[gray, thick] (1.1, -1.2) -- (0.9, -0.22);
 
 
+    \draw[gray, thick, dashed] (-1.45, -0.75) -- (2., 1.);
+    \draw[gray, thick, dashed] (-1.3, -0.0) -- (2.2, 0);
 
-\node[text width=1cm] at (2.2, -0.2) 
-                        {$\ell$};
-
-\node[text width=1cm] at (1.8, -0.6) 
-                        {$\ell'_1$};
-
-\node[text width=1cm] at (1.8, 0.4) 
-                        {$\ell'_2$};
-
-\filldraw[black] (0.0, -0.0) circle (2pt) node[anchor=north] {$O$};
+    \draw[gray, thick, dashed] (-1.2, 0.32) -- (2.45, -0.6);
 
 
-\end{tikzpicture}
+
+    \node[text width=1cm] at (2.2, -0.2) 
+                            {$\ell$};
+
+    \node[text width=1cm] at (1.8, -0.6) 
+                            {$\ell'_1$};
+
+    \node[text width=1cm] at (1.8, 0.4) 
+                            {$\ell'_2$};
+
+    \filldraw[black] (0.0, -0.0) circle (2pt) node[anchor=north] {$O$};
+
+
+    \end{tikzpicture}
     \caption{Rotating tangent barrier line segment $\ell$ both clockwise and counterclockwise around its tangent point $O$ until it becomes bitangent.}
-    \label{fig:proof_bi_2opt}
+    \label{fig:bf-proof_bi_2opt}
 \end{figure}
 
 Starting from an optimal solution $L^*$ with only tangent line segments,
 we will replace each tangent line segment with two bitangent line segments.
 
-Rotate each non-bitangent line segment $\ell\in L^*$ around its tangent point $O$ in clockwise or counterclockwise directions until the line segment become bitangent, as illustrated in ~\ref{fig:proof_bi_2opt}. 
+Rotate each non-bitangent line segment $\ell\in L^*$ around its tangent point $O$ in clockwise or 
+counterclockwise directions until the line segment become bitangent, 
+as illustrated in ~\ref{fig:bf-proof_bi_2opt}. 
 Since any path connecting two objects in different classes and is cut by barrier $\ell$ will still be cut by $\ell'_1$ and $\ell'_2$.
 The replacement can still guarantee the separation among the object groups.
 After replacing all barriers, we can obtain a 2-OPT solution with the number of line segments twice the minimum.

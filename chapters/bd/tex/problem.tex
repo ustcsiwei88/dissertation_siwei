@@ -12,13 +12,13 @@ The (look ahead) \textit{horizon} $T$ of the defenders is defined as the amount 
 
 Now, we provide formulations of the two versions of the \prob problem studied in this paper. In the infinite horizon setting, $T = \infty$, all attack events are given in a single batch.
 
-\begin{problem}[Infinite-horizon \prob]\label{prob:1}
+\begin{problem}[Infinite-horizon \prob]\label{prob:bd-1}
 Given $k$ defenders with speed $v_1, \dots, v_k$ and initial locations $loc^1, \ldots, loc^k$, and $n$ attack events $\big\langle loc_i, t_i\big\rangle_{i=1}^{n}$, intercept as many attacks as possible. 
 \end{problem}
 
 In a finite-horizon setting, the attack events are not all revealed at $t=0$ but are given as a stream of attacks $\big\langle loc_i, t_i\big\rangle_{i=1}^{\infty}$. The defenders can only know the attack events within a horizon or time window of $T < \infty$ in the future.
 
-\begin{problem}[Finite-horizon \prob]\label{prob:2}
+\begin{problem}[Finite-horizon \prob]\label{prob:bd-2}
 There are $k$ defenders with speed $v_1, \dots, v_k$ and initial locations $loc^1, \ldots, loc^k$, and a stream of attack events.
 %
 At each time instance $t$, the defenders only know attack events happening no later than time $T$ in the future (i.e. $t_i \le t+T$).
@@ -38,7 +38,7 @@ attack events that can be reached from the location of the $a^{th}$ attack event
 And $prev(a,d)$ is the set of attack events from whose location defender $d$ can reach the $a^{th}$ attack event. 
 Additionally, $next(0, d)$ denotes the set of attack events that can be reached by defender $d$ from its initial location.
 Similarly, $prev(a, d)$ contains $0$ if defender $d$ can reach the location of attack $a$ from its initial location.
-~\ref{fig:next_prev} gives an example for defender $1$.
+~\ref{fig:bd-next_prev} gives an example for defender $1$.
 
 \begin{figure}[h]
     \centering
@@ -68,6 +68,6 @@ Similarly, $prev(a, d)$ contains $0$ if defender $d$ can reach the location of a
     For example, $next(1, 1) = \{2,4,5\}$, $next(0,1)=\{2,5\}$, $prev(2, 1) =\{0, 1\}$, $prev(1,1)=\varnothing$.
     $loc^1$ cannot reach $a_1$ since $v_1$ is not sufficiently large. For the same reason, defender $1$ cannot reach $a_3$ from $a_1$.
     }
-    \label{fig:next_prev}
+    \label{fig:bd-next_prev}
 \end{figure}
 

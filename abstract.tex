@@ -6,20 +6,20 @@ For range sensors, be it acoustic like sonar, photic like cameras, laser beams o
 the sensing range can, to some extent, be ideally abstracted as either 1D lines or 2D circles.
 Hence, it would be helpful to study the properties of the underlying geometric problems.
 
-The dissertation starts with a general review of different sorts of range sensors, 
+The thesis starts in the first chapter with a general review of different sorts of range sensors, 
 especially range and line sensors used in real world applications. 
-Then, we will introduce the general overview of the mathematical background and tools used for this thesis. 
-The main body of this dissertation is divided into five parts, each of them comes with 
+Then, we will give the general overview of the theoretical background and tools used for this thesis. 
+The main body of this thesis is divided into five parts, each of them comes with 
 a specific research problem. 
 
-The first chapter talks about perimeter guarding with 1D sensors, where the sensing range 
+The second chapter talks about perimeter guarding with 1D sensors, where the sensing range 
 is assumed to be a continous line on top of the perimeter of some regions. Two problems are 
 introduced, perimeter guarding with homogeneous sensors and with heterogeneous sensors. 
 The homogeneous case can be solved using only classical algorithms. 
 While the heterogeneous case is NP-hard, but can still be solved with dynamic programming under a reasonable
 amount of time. 
 
-The second chapter continues with perimeter guarding but uses circles to represent the 
+The third chapter continues with perimeter guarding but uses circles to represent the 
 coverage range of sensors. The study extends to guarding 2D regions beyond the perimeters. 
 Our study turns out that even for covering the boundary of a simple polygon, 
 the problem of find the minimum sensing radius is NP-hard to approximate within a factor of 1.152. 
@@ -27,19 +27,21 @@ the problem of find the minimum sensing radius is NP-hard to approximate within 
 % Guess it can result in a journal? And there are some typos in the previous RSS 2020 paper.}
 However, effective approximation algorithms are developed to solve this problem. 
 
-After the two chapters talking about covering perimeters or regions, which is essentially separating 
+After the two chapters about covering perimeters or regions, which is essentially separating 
 some crtical polygonal regions from the outside. 
-The third chapter digs deeper into this problem by studying the separation of more than two polygonal sets. 
+The fourth chapter digs deeper into this problem by studying the separation of more than two polygonal sets. 
 To simplify the problem, a line-of-sight sensing model will be adopted. 
 The problem is NP-hard even for the problem of separating two sets of regions with the minimum number of lines.
 Still, a near-optimal solution using integer programming is provided.
 
-The fourth chapter duels with the dynamical setting, two different but related problems are studied. 
+The fifth chapter duels with the dynamical setting, two different but related problems are studied. 
 The first problem is the boundary defense problem in the context of heterogeneous defenders,
 which is an extension of the perimeter defense probelm. 
 The second problem is the coordinated sweeping problem where a group of robots coordinated to sweep a region with obstacles. 
 
-The last chapter goes into reality by discussing a relevant real-world application on the placement of UV (ultra violet) lights
+The sixth chapter dicusses a real-world application on the placement of UV (ultra violet) lights
 to cover the surface of some regions for the sanitization purpose. 
+
+Lastly, we bring out potential future work and studies on this subject.
 
 \end{my_abstract}

@@ -16,13 +16,13 @@ Formally, we capture the different sensor models under a unified function $f(c_1
 \begin{itemize}[leftmargin=4mm]
     \item Let $vis(p, c) = 1$ if the point $p$ is visible to the sensor $c$. Otherwise, $vis(p, c) = 0$. For example, an omni-directional visibility model would have $vis(p, c) = 1$ if the open line segment between $p$ and $c$ does not intersect $\mathcal E$. In a model based purely on \textbf{visibility},  
     \begin{align}
-    f(c_1, \ldots, c_k, p) := \max_{1\le i \le k}vis(p, c_i).\label{f:1}
+    f(c_1, \ldots, c_k, p) := \max_{1\le i \le k}vis(p, c_i).\label{f:surf-1}
     \end{align}
     \item Let the \emph{coverage quality} of a point $p$ by a sensor $c_i$ be represented as a function $\phi(p, c_i) \in \mathbb R_+\cup\{0\}$. In a \textbf{quality maximization} sensor model,  the coverage quality for a point $p$ is determined by a single best sensor:  
-    \begin{align}f(c_1, \ldots, c_k, p) := \max_{1\le i \le k} \phi(p, c_i)vis(p, c_i).\label{f:2}
+    \begin{align}f(c_1, \ldots, c_k, p) := \max_{1\le i \le k} \phi(p, c_i)vis(p, c_i).\label{f:surf-2}
     \end{align}
     \item In a \textbf{cumulative quality} sensor model, the overall quality of coverage at a point $p$ is the sum of the effects of all visible sensors:
-    \begin{align}f(c_1, \ldots, c_k, p) := \sum_{1\le i \le k}\phi(p, c_i)vis(p, c_i).\label{f:3}
+    \begin{align}f(c_1, \ldots, c_k, p) := \sum_{1\le i \le k}\phi(p, c_i)vis(p, c_i).\label{f:surf-3}
     \end{align}
 \end{itemize}
 
@@ -38,23 +38,23 @@ Here, a cumulative quality model clearly makes sense.
 
 To fully ground the discussion that follows, we formulate three concrete optimization problems, one for each of the above-mentioned sensor models. 
 
-\begin{problem}[Visibility Maximization]\label{p:1} 
+\begin{problem}[Visibility Maximization]\label{p:surf-1} 
     Given $S \subset \partial \mathcal E$ with $\mathcal E \subset \mathbb R^{3}$, $c_i \in \mathbb R^3$, 
-    $1 \le i \le k$, and $f(c_1, \ldots, c_k, p)$ from \eqref{f:1}, 
+    $1 \le i \le k$, and $f(c_1, \ldots, c_k, p)$ from \eqref{f:surf-1}, 
     determine a placement of $c_1, \ldots, c_k$ that maximizes the \ul{support of $f$}, i.e., 
     $supp(f) = \{p \in S \mid \max_{1\le i \le k}vis(p, c_i) >0\}.$  
 \end{problem}
 
-\begin{problem}[Quality Maximization]\label{p:2} 
+\begin{problem}[Quality Maximization]\label{p:surf-2} 
     Given $S \subset \partial \mathcal E$ with $\mathcal E \subset \mathbb R^{3}$, $c_i \in \mathbb R^3$, 
-    $1 \le i \le k$, and $f(c_1, \ldots, c_k, p)$ from \eqref{f:2} with $\phi(p, c_i) = \lVert pc_i\rVert^{-1}$, 
+    $1 \le i \le k$, and $f(c_1, \ldots, c_k, p)$ from \eqref{f:surf-2} with $\phi(p, c_i) = \lVert pc_i\rVert^{-1}$, 
     determine a placement of $c_1, \ldots, c_k$ that maximizes the \ul{minimum coverage quality}, i.e., 
     $\min_{p \in S} \max_{1\le i \le k} \frac{vis(p, c_i)}{ \lVert pc_i\rVert}.$
 \end{problem}
 
-\begin{problem}[Cumulative Quality]\label{p:3} 
+\begin{problem}[Cumulative Quality]\label{p:surf-3} 
     Given $S \subset \partial \mathcal E$ with $\mathcal E \subset \mathbb R^{3}$, 
-    $c_i \in \mathbb R^3$, $1 \le i \le k$, and $f(c_1, \ldots, c_k, p)$ from \eqref{f:3} with $\phi(p, c_i) = |lVert pc_i\rVert^{-2}\langle \hat{n}_p, \hat{n}_{pc_i} \rangle$ where $\hat{n}_p$ is the unit normal of $S$ at $p$ and $\hat{n}_{pc_i}$ is the unit vector in the direction from $p$ to $c_i$, 
+    $c_i \in \mathbb R^3$, $1 \le i \le k$, and $f(c_1, \ldots, c_k, p)$ from \eqref{f:surf-3} with $\phi(p, c_i) = |lVert pc_i\rVert^{-2}\langle \hat{n}_p, \hat{n}_{pc_i} \rangle$ where $\hat{n}_p$ is the unit normal of $S$ at $p$ and $\hat{n}_{pc_i}$ is the unit vector in the direction from $p$ to $c_i$, 
     determine a placement of $c_1, \ldots, c_k$ that maximizes the \ul{coverage area where $f$ is above a given threshold} $\Phi > 0$,
     $supp(f - \Phi) = \{p \in S \mid \sum_{1\le i \le k} \frac{vis(p, c_i)\langle \hat{n}_p, \hat{n}_{pc_i} \rangle}{ \lVert pc_i|rVert ^2} > \Phi \}.$  
 \end{problem}
@@ -66,16 +66,16 @@ To fully ground the discussion that follows, we formulate three concrete optimiz
 	\end{overpic}
 \vspace*{-3.5mm}
 \caption{For a point with the normal shown as the arrow, light sources on the same dotted curve provide same level of exposure.}
-\label{fig:exposure}
+\label{fig:surf-exposure}
 \end{wrapfigure}
-An implicit assumption for Problem~\ref{p:2} to be meaningful is that an arbitrary $p \in S$ is visible to the closest sensor, 
-which limits the choice of $S$. Problem~\ref{p:2} is a suitable model for, 
+An implicit assumption for Problem~\ref{p:surf-2} to be meaningful is that an arbitrary $p \in S$ is visible to the closest sensor, 
+which limits the choice of $S$. Problem~\ref{p:surf-2} is a suitable model for, 
 e.g., surveillance applications that cannot tolerate any blind spots. 
 A generalization with less limitation can require a certain percentage of $S$, e.g., $80\%$, to have optimized coverage. 
-Problem~\ref{p:3}, which computes coverage quality using the formula  $\langle \hat{n}_p, \hat{n}_{pc_i} \rangle \lVert pc_i\rVert^{-2}$, 
-takes after a standard light exposure model that depends on the inverse of the squared distance and incoming light angle with respect to a local surface region (see ~\ref{fig:exposure}). 
+Problem~\ref{p:surf-3}, which computes coverage quality using the formula  $\langle \hat{n}_p, \hat{n}_{pc_i} \rangle \lVert pc_i\rVert^{-2}$, 
+takes after a standard light exposure model that depends on the inverse of the squared distance and incoming light angle with respect to a local surface region (see ~\ref{fig:surf-exposure}). 
 
-A 2D illustration of the three models is given in ~\ref{fig:models}. 
+A 2D illustration of the three models is given in ~\ref{fig:surf-models}. 
 
 \begin{figure}[ht]
     \vspace{1mm}
@@ -89,12 +89,13 @@ A 2D illustration of the three models is given in ~\ref{fig:models}.
     Only a 2D slice of a simple ICU with a bed and a counter is shown for clarity. \
     [left] A visibility-based sensing model where the green segments show the visible surfaces. \
     [middle] A quality maximization model where the dotted lines show the equal-quality level sets. \
-    $\phi(p, c_i) = \lVert pc_i\rVert^{-1}$ [right] A cumulative quality model with $\phi(p, c_i) = \lVert pc_i\rVert^{-2}\langle \hat{n}_p, \hat{n}_{pc_i} \rangle$. \
+    $\phi(p, c_i) = \lVert pc_i\rVert^{-1}$ [right] A cumulative quality model with \
+    $\phi(p, c_i) = \lVert pc_i\rVert^{-2}\langle \hat{n}_p, \hat{n}_{pc_i} \rangle$. \
     Again, the dotted lines show the additive quality. The impact of the surface normal is not displayed in the figure.} 
-    \label{fig:models}
+    \label{fig:surf-models}
 \end{figure}
 
-Problems~\ref{p:1}-\ref{p:3} allow sensor locations to be anywhere in $\mathcal E$. 
+Problems~\ref{p:surf-1}-\ref{p:surf-3} allow sensor locations to be anywhere in $\mathcal E$. 
 In practice, sensor locations are often limited to a 2D surface. 
 For example, in a museum or a bus, cameras are mounted on walls and ceilings. 
 For drones surveying an area, there is often a preferred height to fly at. 

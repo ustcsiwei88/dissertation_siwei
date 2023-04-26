@@ -28,10 +28,10 @@ The heterogeneous setting for perimeters is first carefully investigated in \cit
 
 \begin{figure}[t]
     \centering
-    \includegraphics[width=1\linewidth]{chapters/pd/fig/bdhd.png}
+    \includegraphics[width=1\linewidth]{chapters/bd/fig/bdhd.png}
     \vspace{-6mm}
     \caption{Illustration of the problem of boundary defense with heterogeneous defenders, where multiple defenders with different capabilities must do their best to intercept incoming attacks (signified as red balls moving downwards). The defenders are constrained to move on the boundary, which is a 1D perimeter in this case.}
-    \label{fig:bdhd}
+    \label{fig:bd-bdhd}
     \vspace{-5mm}
 \end{figure}
 % \textbf{Related Work.}
@@ -51,8 +51,11 @@ The main contribution of our work lies with the development of efficient computa
 %3) a natural extension of the algorithm for the one-shot setting to the finite horizon continuous setting, where the robot team only know the attack events within a certain time frame in the future.
 
 The rest of the paper is organized as follows. 
-In Sec.~\ref{sec:preliminary}, we formulate the problems studied in this paper and introduce the notations used. 
-In Sec.~\ref{sec:algorithm}, we describe the previous dynamic programming method in \cite{adler2022role}, and our ILP-based algorithms and \ours. 
-We discuss the performance of our algorithms and solution characteristics of \prob under different settings in Sec.~\ref{sec:evaluation}, and conclude with Sec.~\ref{sec:conclusion}.
+In Sec.~\ref{sec:bd-preliminary}, we formulate the problems studied in this paper and introduce the notations used. 
+In Sec.~\ref{sec:bd-algorithm}, we describe the previous dynamic programming method in \cite{adler2022role}, 
+and our ILP-based algorithms and \ours. 
+We discuss the performance of our algorithms and solution characteristics of \prob under different settings in 
+Sec.~\ref{sec:bd-evaluation}, 
+and conclude with Sec.~\ref{sec:bd-conclusion}.
 % The papers concludes with 
 

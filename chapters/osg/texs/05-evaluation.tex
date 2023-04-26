@@ -1,6 +1,6 @@
-For the three algorithms described in Section~\ref{sec:algo}, we developed
+For the three algorithms described in Section~\ref{sec:osg-algo}, we developed
 implementations in C++ and evaluated them on an Intel Core i7 PC with a 
-boost clock of 4.2GHz and 16GB RAM. For solving ILP models, 
+boost clock of 4.2GHz and 16GiB RAM. For solving ILP models, 
 Gurobi solver \cite{optimization2019gurobi} is used. 
 %
 To evaluate the algorithms, we first generate a set of performance 
@@ -21,7 +21,7 @@ For each instance of the tested polygon, vertices are picked uniform at
 random from $[0,1]\times[0,1]$ and the TSP tour among these vertices are 
 used for generating a simple polygon of a reasonable shape.
 %
-An example is given in ~\ref{fig:ilpexample}.
+An example is given in ~\ref{fig:osg-ilpexample}.
 
 \def\opgtc{\textsc{Al\_OPG\_2D\_Cont}\xspace}
 \def\opgtilp{\textsc{Al\_OPG\_2D\_ILP}\xspace}
@@ -30,15 +30,15 @@ We first evaluate the computational performance of the special \opgt
 algorithm where each sensor may cover a single continuous perimeter
 segment; denote this algorithm as \opgtc.
 %
-Table~\ref{tab:opgcont} lists the running time in seconds for 
+Table~\ref{tab:osg-opgcont} lists the running time in seconds for 
 various $N$ (number of discretized samples) and $k$ (number of guards). 
 Various values of $N$ suggest the choices of $\varepsilon$ according to 
-the setup of $N$ in Section~\ref{sec:algo}, in this case 
+the setup of $N$ in Section~\ref{sec:osg-algo}, in this case 
 $N=\lceil {len(\partial P)}/{(2\varepsilon)} \rceil$.
 Each data point is an average of $100$ examples. As we can observe, the 
 method has very good scalability. It also demonstrates the behavior that 
 running time is inverse proportional to the number of guards, 
-conforming with the statement about time complexity in Section~\ref{subsec:singleseg}. 
+conforming with the statement about time complexity in Section~\ref{subsec:osg-singleseg}. 
 % This is due to the larger range of sensing radius that must be searched. In 
 % practice, sensing radius is often lower and upper bounded, which means 
 % that the algorithm will generally perform better. 
@@ -69,14 +69,14 @@ average standard deviation is about $0.06$, which is pretty small.
     \caption{
         Running time (seconds) for \opgtc.
     }
-    \label{tab:opgcont}
+    \label{tab:osg-opgcont}
 \vspace*{-1mm}
 \end{table}
 
 
 Since the $(2 + \varepsilon)$-optimal algorithm is extremely efficient, 
-we do not report its running time. For the ILP methods, Table~\ref{tab:opgilp}
-and Table~\ref{tab:orgilp} provide the running times for solving \opgt
+we do not report its running time. For the ILP methods, Table~\ref{tab:osg-opgilp}
+and Table~\ref{tab:osg-orgilp} provide the running times for solving \opgt
 \begin{table}[htbp]
     % \resizebox{1}{1}
     \centering
@@ -100,7 +100,7 @@ and Table~\ref{tab:orgilp} provide the running times for solving \opgt
     \caption{
         Running time (seconds) for \opgtilp.
     }
-    \label{tab:opgilp}
+    \label{tab:osg-opgilp}
 \end{table}
 and \orgt, respectively (for convenience, denote these two methods as
 \opgtilp and \orgtilp).
@@ -131,7 +131,7 @@ The normalized average standard deviation is about $0.125$ for \opgtilp
     \caption{
         Running time (seconds) for \orgtilp.
     }
-    \label{tab:orgilp}
+    \label{tab:osg-orgilp}
 \end{table}
 
 For solution quality, we compare \opgtc, \opgtilp,
@@ -142,7 +142,7 @@ the $(2+\varepsilon)$-optimal algorithm be $r_2$, we compute the optimality
 gain as the reduce of coverage radius over $r_2$ in percentage, 
 that is $(r_2 - r_1)/r_2 \cdot 100$. These are then averaged over $10$ cases.
 Selected representative results (only three out of a total of 18 rows) are 
-given in Table~\ref{tab:comp}. 
+given in Table~\ref{tab:osg-comp}. 
 In the table, m denotes the method where $\mathbf{1} = $ \opgtc, $\mathbf{2} =$ \opgtilp, 
 and $\mathbf{3} = $\orgtilp. Number of samples for \opgtc is set to $2000$. Grid
 size for \opgtilp is $200\times 200$. Grid size for \orgtilp is set 
@@ -170,14 +170,14 @@ no more than around $50$).
     \vspace{0.1in}
     \caption{Optimality gain of \opgtc, \opgtilp,
 and \orgtilp over the $(2 + \varepsilon)$-optimal method.}
-    \label{tab:comp}
+    \label{tab:osg-comp}
 \end{table}
 
 \subsection{Two Application Scenarios}
 Next, we demonstrate the solutions computed by our algorithms on two 
 potential application scenarios. For the first one, we apply algorithms
 for \opgt on the outer boundary of the Warwick Castle in England (data
-retrieved from openstreetmap.org\cite{haklay2008openstreetmap}). ~\ref{fig:wc} shows the 
+retrieved from openstreetmap.org\cite{haklay2008openstreetmap}). ~\ref{fig:osg-wc} shows the 
 solution for $15$ guards computed by the $(2 + \varepsilon)$-optimal 
 algorithm, \opgtc, and \opgtilp, respectively. Both \opgtc and \opgtilp 
 do about $40\%$ better when compared with the $(2 + \varepsilon)$-optimal 
@@ -197,12 +197,12 @@ by the chosen resolution.
     \caption{Solutions for deploying $15$ mobile sensors to guard
 		the perimeter of the Warwick Castle. Methods: (a) 
 		$(2+\varepsilon)$-optimal. (b) \opgtc. (c) \opgtilp. }
-    \label{fig:wc}
+    \label{fig:osg-wc}
 \end{figure}
 
 In a second application, we took the footprint of the Brazil 
 National Museum and use $40$ mobile robots to monitor it. The solution,
-shown in ~\ref{fig:museum}, is computed using \orgtilp. This could be
+shown in ~\ref{fig:osg-museum}, is computed using \orgtilp. This could be
 useful when a building is on fire and drones equipped with heat sensors 
 can monitoring ``hot spots'' on top of the building to prioritize fire 
 extinguishing effort. There are also many other similar application 
@@ -214,5 +214,5 @@ scenarios.
 		\vspace*{1mm}
     \caption{A near-optimal solution for deploying $40$ mobile robots for 
 		monitoring the Brazil National Museum, which caught fire in $2019$.}
-    \label{fig:museum}
+    \label{fig:osg-museum}
 \end{figure}

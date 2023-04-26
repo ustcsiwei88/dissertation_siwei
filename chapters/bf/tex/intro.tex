@@ -11,7 +11,8 @@ Alternatively, the computed line segments can serve as patrolling routes for aut
 %These applications shares the common objective of better coverage or sensing of the environment with guards. 
 %In reality, the types of barriers varies from barriers with range sensibility like lidar, visibility-based barriers like cameras or guards, to physical straight line fences or walls.
 %
-Motivated by the above stated scenarios and inspired by earlier research in robotics on barrier forming \cite{kloder2007barrier,kloder2008partial}, i.e., erecting barriers for separating regions of interest, in this paper, we examine the variation of finding the minimum number of straight line segments for isolating multiple sets of points of polygons in a two-dimensional workspace. Fig~\ref{fig:ex}[left] illustrates an instance where three colored polygonal sets are to be separated from each other and the grey polygons are obstacles. Fig~\ref{fig:ex}[right] shows a possible solution which is fairly non-trivial 
+Motivated by the above stated scenarios and inspired by earlier research in robotics on barrier forming \cite{kloder2007barrier,kloder2008partial}, i.e., erecting barriers for separating regions of interest, in this paper, we examine the variation of finding the minimum number of straight line segments for isolating multiple sets of points of polygons in a two-dimensional workspace. 
+Fig~\ref{fig:bf-ex}[left] illustrates an instance where three colored polygonal sets are to be separated from each other and the grey polygons are obstacles. Fig~\ref{fig:surf-ex}[right] shows a possible solution which is fairly non-trivial 
 to obtain. 
 %
 %The problem finds applications in many practical scenarios where geometric separation is needed, for example, the deployment of a minimum set of  line-of-sight security beams to guard critical areas from intrusions. 
@@ -22,9 +23,9 @@ to obtain.
 
 \begin{figure}[t]
     \centering
-    \includegraphics[width=\columnwidth]{chapters/bc/fig/intro_pic.png}
+    \includegraphics[width=\columnwidth]{chapters/bf/fig/intro_pic.png}
     \caption{Example of barrier forming for separating three sets of complex polygonal shapes. Different colors represent different sets with the grey ones representing obstacles. The red line segments are the barriers computed by our algorithm.}
-    \label{fig:ex}
+    \label{fig:bf-ex}
     \vspace{-0.2in}
 \end{figure}
 As a summary of this work and its contributions, we study three settings in using line segments to separate sets of disjoint geometric shapes in a 2D workspace: (1) separating point sets, (2) separating point sets among polygonal obstacles, and (3) separating polygonal sets among polygonal obstacles. 
@@ -77,9 +78,10 @@ Bichromatic point sets or polyherdral separation problem uses wedges, axis-align
 Work on these problems often put on specific constraints such as working with convex objects or simple polygons without holes, adopting non-crossing or parallel lines as the separator, and so on. 
 
 \noindent \textbf{Paper Structure}.
-The rest of the paper starts with formulating the barrier formation problem and introducing the three variants studied in Section~\ref{sec:preliminary}. 
-Then, we describe the structure analysis of the problem in Section~\ref{sec:structure}, which will base the algorithm
-proposed in Section~\ref{sec:algorithm}. Lastly, in Section~\ref{sec:evaluation} we evaluate the algorithm on four different scenarios. %\r{associate each with a specific section.}
+The rest of the paper starts with formulating the barrier formation problem and 
+introducing the three variants studied in Section~\ref{sec:bf-preliminary}. 
+Then, we describe the structure analysis of the problem in Section~\ref{sec:bf-structure}, which will base the algorithm
+proposed in Section~\ref{sec:bf-algorithm}. Lastly, in Section~\ref{sec:bf-evaluation} we evaluate the algorithm on four different scenarios. %\r{associate each with a specific section.}
 
 %  methods take
 % The problem of constructing a set of barriers appears in various robotics applications 

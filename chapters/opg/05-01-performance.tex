@@ -9,10 +9,10 @@ Some additional performance results can be found in the Appendix.
 %\subsubsection{\algoMRSimple} 
 For the case of $m$ perimeters each containing a single segment, for 
 each $1 \le i \le m$, we set $len(\partial R_i) = 1$ and let $len(P_i)$ 
-be uniformly distributed in $(0, 1]$. ~\ref{fig:mpsc-example} shows 
+be uniformly distributed in $(0, 1]$. ~\ref{fig:opg-mpsc-example} shows 
 the result for an example with $m = 10$ and $n = 30$. For various values 
 of $m, n$, the running time of \algoMRSimple is summarized in 
-Table~\ref{eval:mpsc}, which scales very well with $m$ and $n$ (note that 
+Table~\ref{eval:opg-mpsc}, which scales very well with $m$ and $n$ (note that 
 the $n \le m$ case does not make much sense here). 
 
 \begin{figure}[ht!]
@@ -48,9 +48,9 @@ the $n \le m$ case does not make much sense here).
         \rule{0pt}{2.5ex} $10^8$ & NA       & $176.115$ & $223.186$ & $227.250$ & $230.000  $ \\ \hline
     \end{tabular}
 		\end{footnotesize}
-		\vspace*{-3mm}
+		% \vspace*{-3mm}
     \caption{\label{eval:opg-mpsc} \algoMRSimple~running time (seconds)}
-		\vspace*{-4mm}
+		% \vspace*{-4mm}
 \end{table}
 
 %Recall that when the problem has multiple perimeters with single components, 
@@ -112,7 +112,7 @@ For multiple perimeters containing multiple components, $m$ polygons
 are created with $len(\partial R_i)$ randomly distributed in $[1, 10]$. 
 For setting $q_i$, we fix a $q$ and let $q_i = q(0.5 + random(0, 1))$. 
 Representative computation results of \algoMRG are listed in 
-Table~\ref{eval:mpmc}.
+Table~\ref{eval:opg-mpmc}.
 %whose perimeters' lengths are uniformly randomly sampled from interval $(1, 10)$. 
 %The computation time under different $m$, $q$, and $n$ values are provided in Table~\ref{eval:mpmc}. 
 %We observe that with the same $q$, $n$ parameters, the computation time is directly proportional to $m$.

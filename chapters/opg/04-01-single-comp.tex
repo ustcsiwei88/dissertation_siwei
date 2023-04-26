@@ -115,57 +115,55 @@ locations for the $n$ robots. The total complexity is then $O(m(\log n +
 %particular reason that I can tell you :).}
 \vspace*{-3mm}
 \begin{algorithm}
-\begin{small}
-    \SetKwInOut{Input}{Input}
-    \SetKwInOut{Output}{Output}
-    \SetKwComment{Comment}{\%}{}
-    \Input{$P_1, \ldots, P_m$: each $P_i$ a continuous polygonal line; 
+	\SetKwInOut{Input}{Input}
+	\SetKwInOut{Output}{Output}
+	\SetKwComment{Comment}{\%}{}
+	\Input{$P_1, \ldots, P_m$: each $P_i$ a continuous polygonal line; 
 		assume that $P_1$ is a longest perimeter \\
 		$n$: the number of robots}
-    \Output{$\ell^*, i^*$: the optimal coverage and the $i$ realizing it}
-\vspace{0.025in}
-
-$\ell^* \leftarrow \infty$; $i^* \leftarrow 1$;
-\vspace{0.025in}
-
-\Comment{\footnotesize Compute $n_1^c$ and initial $\ell^*$.}
-
-$n_1^{min} \leftarrow 1$; $n_1^{max} \leftarrow n$; $n_1^c \leftarrow 1$;
-\vspace{0.025in}
-
-\While{$n_1^{min} \ne n_1^{max}$}{
-\vspace{0.025in}
-$n_1 \leftarrow \lceil \frac{n_1^{min} + n_1^{max}}{2} \rceil$;
-$\ell_1 \leftarrow \frac{len(P_1)}{n_1}$;
-
-\vspace{0.025in}
-\uIf{\isLFeasible($\ell_1$, $n_1$, $1$)}{
+	\Output{$\ell^*, i^*$: the optimal coverage and the $i$ realizing it}
 	\vspace{0.025in}
-	$\ell^* \leftarrow \ell_1$; 
-	$n_1^c \leftarrow n_1$;
-	$n_1^{min} \leftarrow n_1$; 
-}
-\Else{
-	$n_1^{max} \leftarrow n_1 - 1$; 
-}
-}
 
-\vspace{0.05in}
-\Comment{\footnotesize Optimize $\ell^*$ over all $2 \le i \le m$.}
+	$\ell^* \leftarrow \infty$; $i^* \leftarrow 1$;
+	\vspace{0.025in}
+
+	\Comment{\footnotesize Compute $n_1^c$ and initial $\ell^*$.}
+
+	$n_1^{min} \leftarrow 1$; $n_1^{max} \leftarrow n$; $n_1^c \leftarrow 1$;
+	\vspace{0.025in}
+
+	\While{$n_1^{min} \ne n_1^{max}$}{
+	\vspace{0.025in}
+	$n_1 \leftarrow \lceil \frac{n_1^{min} + n_1^{max}}{2} \rceil$;
+	$\ell_1 \leftarrow \frac{len(P_1)}{n_1}$;
+
+	\vspace{0.025in}
+	\uIf{\isLFeasible($\ell_1$, $n_1$, $1$)}{
+		\vspace{0.025in}
+		$\ell^* \leftarrow \ell_1$; 
+		$n_1^c \leftarrow n_1$;
+		$n_1^{min} \leftarrow n_1$; 
+	}
+	\Else{
+		$n_1^{max} \leftarrow n_1 - 1$; 
+	}
+	}
+
+	\vspace{0.05in}
+	\Comment{\footnotesize Optimize $\ell^*$ over all $2 \le i \le m$.}
 
 
-\For{$i \in \{2,\dots, m\}$ }{\label{algo:mrs:for}
-	$n_i^- = \lceil \frac{n_1^clen(P_i)}{len(P_1)} \rceil$;
-	$n_i^+ = \lfloor \frac{(n_1^c +1)len(P_i)}{len(P_1)} \rfloor$; 
-	$\ell_i \leftarrow \frac{len(P_i)}{n_i^+}$;
-				
-		\If{$n_i^- == n_i^+$ and \isLFeasible($\ell_i$, $n_i^+$, $i$) and $\ell_i < \ell^*$}{
-			\vspace{0.025in}
-			$\ell^* \leftarrow \ell_i$; $i^* \leftarrow i$;
-		}
-}
-\Return{$\ell^*$, $i^*$}
-\caption{\algoMRSimple} \label{algo:opg-MRS}
-\end{small}
+	\For{$i \in \{2,\dots, m\}$ }{\label{algo:opg-mrs:for}
+		$n_i^- = \lceil \frac{n_1^clen(P_i)}{len(P_1)} \rceil$;
+		$n_i^+ = \lfloor \frac{(n_1^c +1)len(P_i)}{len(P_1)} \rfloor$; 
+		$\ell_i \leftarrow \frac{len(P_i)}{n_i^+}$;
+					
+			\If{$n_i^- == n_i^+$ and \isLFeasible($\ell_i$, $n_i^+$, $i$) and $\ell_i < \ell^*$}{
+				\vspace{0.025in}
+				$\ell^* \leftarrow \ell_i$; $i^* \leftarrow i$;
+			}
+	}
+	\Return{$\ell^*$, $i^*$}
+	\caption{\algoMRSimple} \label{algo:opg-MRS}
 \end{algorithm}
 \vspace*{-6mm}

@@ -146,7 +146,7 @@ bisection process should end.
 
 Assume that when the bisection ends, the lower and upper bounds are 
 $\ell_{min}^f$ and $\ell_{max}^f$. Then, for some $\ell_{k-k'}^c$
-(see~\eqref{eq:lkkc}), it holds that
+(see~\eqref{eq:opg-lkkc}), it holds that
 \[
 \ell_{min}^f \le \ell_{k-k'}^c = \frac{len(S_{k-k'})}{n_{k-k'}^c} \le \ell_{max}^f.
 \]
@@ -159,19 +159,19 @@ To reduce the number of possible $n_{k-k'}^c$ to at most $1$, we want
 \frac{len(S_{k-k'})}{\ell_{min}^f} - \frac{len(S_{k-k'})}{\ell_{max}^f} < 1, 
 \]
 which is the same as requiring 
-\begin{align}\label{eq:lmmd}
+\begin{align}\label{eq:opg-lmmd}
 \ell_{max}^f- \ell_{min}^f <
 \frac{\ell_{max}^f\ell_{min}^f}{len(S_{k-k'})}. 
 \end{align}
 Noting that $\ell_{min}^f, \ell_{max}^f \ge  \ell_{min}$ and $len(S_{k-k'}) < 
-len (\partial R)$, Equation~\eqref{eq:lmmd} is ensured by 
-\begin{align}\label{eq:lmmd2}
+len (\partial R)$, Equation~\eqref{eq:opg-lmmd} is ensured by 
+\begin{align}\label{eq:opg-lmmd2}
 \ell_{max}^f- \ell_{min}^f 
 < \frac{\ell_{min}^2}{len(\partial R)} 
 = \frac{\Big[\sum_{1\le k\le q}len(S_k)\Big]^2}{n^2len(\partial R)} 
 \end{align}
 
-Equation~\eqref{eq:lmmd2} gives the stopping criteria used for refining 
+Equation~\eqref{eq:opg-lmmd2} gives the stopping criteria used for refining 
 the bounds for $\ell^*$. After completing the first phase, the faster algorithm
 moves to the second phase of actually pinning down $\ell^*$. In this phase, 
 instead of checking $\ell_{k-k'}^c$ one by one, we collect $\ell_{k-k'}^c$ for
@@ -181,7 +181,7 @@ $\ell_{k-k'}^c$, there are
 at most $q^2$ total candidates. After all candidates are collected, they are 
 sorted and another bisection is performed over these sorted candidates. 
 Feasibility check is done using \isLFeasibleByTilingPartial($\cdot$). The 
-complete algorithm is given in Algorithm~\ref{algo:SRG}. Note that 
+complete algorithm is given in Algorithm~\ref{algo:opg-SRG}. Note that 
 $\ell^{min}$ and $\ell^{max}$, which change as the algorithm runs, are not 
 the same as the fixed $\ell_{min}$ and $\ell_{max}$ from 
 Proposition~\ref{p:opg-single-bounds}. 
@@ -228,7 +228,7 @@ Proposition~\ref{p:opg-single-bounds}.
 			
 			\vspace{0.025in}
 			
-			\For{$n_{k-k'}^c \in \{n_{k-k'}^{min}, \ldots, n_{k-k'}^{max}\}$}{\label{algo:srg:for2}
+			\For{$n_{k-k'}^c \in \{n_{k-k'}^{min}, \ldots, n_{k-k'}^{max}\}$}{\label{algo:opg-srg:for2}
 				$sm$.put($\frac{len(S_{k-k'})}{n_{k-k'}^c}$, $(n_{k-k'}^c, \frac{len(S_{k-k'})}{n_{k-k'}^c}, k, k')$);
 			}
 		}

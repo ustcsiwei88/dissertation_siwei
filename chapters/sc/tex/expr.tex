@@ -6,28 +6,28 @@ of the method as input parameters change.
 We implemented our proposed algorithms in C++. Dinic's algorithm is used to solve the max-flow problem \cite{dinitz1970algorithm} for simplicity. 
 The methods are evaluated at an Intel\textsuperscript{\textregistered} Core\textsuperscript{TM} i5-10600K CPU at 4.1HZ.
 %
-For the three use cases (~\ref{fig:sweep} (b)(c)(d)), we
+For the three use cases (~\ref{fig:sc-sweep} (b)(c)(d)), we
 programmatically create a large number of test cases, with up to 
 $6,000$ randomly generated polygonal obstacles. 
 %
 The number of vertices of each polygon ranges from 3 to 50, making the total vertices up to 
 $100,000+$. 
 %
-~\ref{fig:cases} shows the largest problem instances for the experiments with 
+~\ref{fig:sc-cases} shows the largest problem instances for the experiments with 
 around $100,000$ vertices.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=.95\linewidth]{chapters/sc/fig/cases.png}
     \caption{Examples of programmatically generated test environments with total 
     vertices around $100,000$.}
-    \label{fig:cases}
+    \label{fig:sc-cases}
 \end{figure}
 
 \textbf{Algorithm performance.} In a first set of evaluations, under an exponentially 
 decaying sensing 
 model, $\rho(r) = e^{-c\cdot r}$, we test the performance of our algorithm over 
 the set of instances. Example allocation of robots along the sweep frontiers for 
-the three cases are shown in ~\ref{fig:sweep}(a) and ~\ref{fig:simulations}. 
+the three cases are shown in ~\ref{fig:sc-sweep}(a) and ~\ref{fig:sc-simulations}. 
 We limited the number of robots to be small so that the trajectories are more easily 
 observed. It can be seen that the trajectories can vary significantly along the 
 sweep frontiers for each case. 
@@ -45,10 +45,10 @@ sweep frontiers for each case.
     \caption{Example robot trajectories computed by our method for circular and radial 
     sweep use cases, respectively.
     }
-    \label{fig:simulations}
+    \label{fig:sc-simulations}
 \end{figure}
 
-In ~\ref{fig:simulations_runtime}, the computational performance is thoroughly 
+In ~\ref{fig:sc-simulations_runtime}, the computational performance is thoroughly 
 evaluated. As can be observed, our method scales fairly well, taking less than two seconds
 to handle all cases, even those involving over $100,000$ vertices. 
 %
@@ -66,79 +66,11 @@ This could reduce the actual time complexity of running the max-flow algorithm.
 \begin{figure}[h]
 \vspace{2mm}
     \centering
-    \includegraphics[width=0.9\linewidth]{chapters/sc/fig/runtime.eps}
+    \includegraphics[width=0.5\linewidth]{chapters/sc/fig/runtime.eps}
     \caption{Running time in seconds with respect to environment complexity (number of vertices). }
-    \label{fig:simulations_runtime}
+    \label{fig:sc-simulations_runtime}
 \end{figure}
 
-\begin{comment}
-\textbf{Different sensing models.} Next, we characterize the behavior of some typical 
-robot sensing models, including
-\begin{enumerate}
-    \item An exponential decay model, $\rho(r) = e^{-cr}$, 
-    \item A Gaussian-like model, $\rho(r) = e^{-c^2r^2}$, 
-    \item A deterministic sensing model with finite cut-offs, $\rho(r) = 1$ for $r\le \ell$; otherwise $\rho(r) = 0$.
-\end{enumerate}
-The basic shapes of these sensing models are given in ~\ref{fig:model_illustration}. 
-\begin{figure}[h]
-    \centering
-    % \includegraphics[width=0.8\linewidth]{fig/sensing_model_pre.eps}
-    \includegraphics[width=1.0\linewidth]{fig/sensing_model.eps}
-    \caption{Three different sensing models.}
-    \label{fig:model_illustration}
-\end{figure}
-
-We compare the behavior exhibited by these models over a relatively complex vertical sweep environment shown in ~\ref{fig:20-polygons}. 
-%
-The results are in ~\ref{fig:rho2nrobot}(b)(c)(d). For the probabilistic models (i.e., ~\ref{fig:rho2nrobot}(b)(c)), different model parameters are evaluated and for each 
-parameter setting, we plot the number of robots required to achieve a certain level of 
-probabilistic guarantee. For the deterministic model (~\ref{fig:rho2nrobot}(d)), we 
-plot the required number of robots to achieve full coverage for different values of 
-$\ell$. 
-%
-% We note that ~\ref{fig:rho2nrobot}(b)(c)(d) also imply the behavior of  Alg.~\ref{alg:fixednum} under these sensing models; we can simply flip the 
-% axes of these figures to obtain the desired relationship.
-
-\begin{figure}[h]
-    \centering
-    
-    \begin{subfigure}[t]{0.22\textwidth}
-        \centering
-        \raisebox{0.11in}{\includegraphics[width=0.97\textwidth]{fig/vertical_exp.eps}}
-        \caption{20-polygon environment}
-        \label{fig:20-polygons}
-    \end{subfigure}
-    \begin{subfigure}[t]{0.233\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{fig/n_rho.eps}
-        \caption{Exp. decay model}
-        \label{fig:exp_decay}
-    \end{subfigure}
-    \vspace{3mm}
-    
-    \begin{subfigure}[t]{0.23\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{fig/n_rho_gaussian.eps}
-        \caption{Gaussian model}
-        \label{fig:gaussian}
-    \end{subfigure}
-    \begin{subfigure}[t]{0.23\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{fig/n_rho_deterministic.eps}
-        \caption{Deterministic model}
-        \label{fig:deterministic}
-    \end{subfigure}
-    
-    % \includegraphics[width=.45\textwidth]{fig/n_rho.eps}
-    % \includegraphics[width=.45\textwidth]{fig/n_rho_gaussian.eps}
-    % \includegraphics[width=.45\textwidth]{fig/n_rho_deterministic.eps}
-    \caption{Robot and sensing quality guarantee trade-offs. (a) The test environment 
-    with $20$ randomly generated polygonal obstacles. 
-    %
-    (b) Result for sensing function $\rho(r) = e^{-c\cdot r}$. (c) Result for sensing function  $\rho(r) = e^{-c^2\cdot r^2}$. (d) Result for sensing function $\rho(r) = 1$ if $r\leq \ell$ and $\rho(r) = 0$ otherwise.}
-    \label{fig:rho2nrobot}
-\end{figure}
-\end{comment}
 \textbf{Different environment settings.}
 Lastly, we evaluate the impact of environmental changes, considering factors including the spatial distribution of polygonal obstacles as well as 
 the size distribution of the obstacles. 
@@ -146,7 +78,7 @@ the size distribution of the obstacles.
 All in all, three settings are considered: (1) The polygons are regularly distributed 
 and are of similar size, (2) the polygons are randomly distributed and are of similar size,
 and (3) the polygons are regularly distributed, and their sizes can vary dramatically. 
-The first and the third settings are illustrated in the top row of ~\ref{fig:runtime_env}.
+The first and the third settings are illustrated in the top row of ~\ref{fig:sc-runtime_env}.
 %
 For these settings, we compare the time it takes to compute solutions for many polygonal
 obstacles and also the number of robots required to achieve $80\%$ probabilistic guarantee 
@@ -166,7 +98,7 @@ As we can observe, there is little difference as the settings change.
     \caption{
     [top] Random instance with regularly distributed obstacles and instance with random obstacle scales and positions.
     [bottom] Running time for different randomly generated environments and the number of robots required for different randomly generated environments.}
-    \label{fig:runtime_env}
+    \label{fig:sc-runtime_env}
 \end{figure}
 
 %Based on the evaluation, one somewhat interesting conclusion we can draw is 

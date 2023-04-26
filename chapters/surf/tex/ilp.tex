@@ -1,14 +1,15 @@
-With Problems~\ref{p:1}-\ref{p:3} being computationally intractable, a natural algorithmic alternative is mathematical programming. In \cite{fengyu2020optimally}, an integer linear programming (ILP) model was shown to be effective for a 2D setting. For our 3D problems, visibility constraints must be effectively handled. We pre-compute pairwise visibility at a given sample granularity. The information is then fed to an ILP model. As the discretization granularity gets smaller, we can then realize \emph{globally optimal} $(1\pm \varepsilon)$-approximations (depending whether it is a maximization or a minimization). 
+With Problems~\ref{p:surf-1}-\ref{p:surf-3} being computationally intractable, a natural algorithmic alternative is mathematical programming. In \cite{fengyu2020optimally}, an integer linear programming (ILP) model was shown to be effective for a 2D setting. For our 3D problems, visibility constraints must be effectively handled. We pre-compute pairwise visibility at a given sample granularity. The information is then fed to an ILP model. As the discretization granularity gets smaller, we can then realize \emph{globally optimal} $(1\pm \varepsilon)$-approximations (depending whether it is a maximization or a minimization). 
 
 As a first step to building the ILP model, visibility information must be computed. 
-We work with two discretizations, the surface $S$ to be covered and the space where the sensors may be deployed (as discussed in Section~\ref{sec:preliminary}, this is a 3D space though in practice it is frequently a 2D subset). For each pair of samples, we use a collision checker \cite{cgal:aabb-20b} to determine whether the line segments between the two samples intersects $\mathcal E$. During the process, we also compute for each sample $p\in S$ its normal $\hat{n}_p$.
+We work with two discretizations, the surface $S$ to be covered and the space where the sensors may be deployed (as discussed in Section~\ref{sec:surf-preliminary}, this is a 3D space though in practice it is frequently a 2D subset). For each pair of samples, we use a collision checker \cite{cgal:aabb-20b} to determine whether the line segments between the two samples intersects $\mathcal E$. During the process, we also compute for each sample $p\in S$ its normal $\hat{n}_p$.
 
 %For the actual computation, we first work only with samples of $S$. For each sample $p \in S$, we then sample the $2$-sphere $\mathbb S^2$ around $p$ to get a unit vector $\vec{v}$. For each $(p, \vec{v})$, we compute the point $p' \in \mathcal E$ that blocks the ray starting at $p$ in the direction of $\vec{v}$. This information is then used to compute pairwise visibility information between the surface samples and sensor location samples. Such an approach decouples the visibility computation between the two sample sets. 
 
 %
 With the visibility pre-computation performed, we are ready to construct the fully ILP models. For all three problems, recall that we have $S_N = \{o_1, \ldots, o_N\}$ for discretizing the surface $S$ through grid-based sampling. 
 We use boolean variable $y_i$ to indicate whether sample $o_i$ is covered. 
-Candidate sensor locations are also discretized to obtain a sample set $\{c_1, \ldots, c_M\}$, from which $k$ locations would be selected with $z_i$ indicating whether $c_i$ is selected. The ILP model for For Problem~\ref{p:1} is
+Candidate sensor locations are also discretized to obtain a sample set $\{c_1, \ldots, c_M\}$, from which $k$ locations would be selected with $z_i$ indicating whether $c_i$ is selected. 
+The ILP model for the Problem~\ref{p:surf-1} is
 \begin{gather}
     y_i   \leq \sum_{j\ s.t.\ vis(o_i, c_j) = 1} z_j   \text{\quad for each } o_i\\
     \sum_j z_j \leq k\\
@@ -31,7 +32,7 @@ Candidate sensor locations are also discretized to obtain a sample set $\{c_1, \
 %    \max\ \ y_1 + \dots + y_N
 %\end{gather}
 
-The cumulative quality case (Problem~\ref{p:3}) is similar. Denoting the sensing
+The cumulative quality case (Problem~\ref{p:surf-3}) is similar. Denoting the sensing
 quality between sensor location $c_j$ and surface point $p$ 
 as $\phi(p, c_j) = vis(p, c_j) \cdot (
 \hat{n}_p, \hat{n}_{p c_j} )/||p c_j||^2$, the ILP model may be constructed as
@@ -49,7 +50,7 @@ as $\phi(p, c_j) = vis(p, c_j) \cdot (
 % we further discretize $\phi(o_i, c_j)$ to be an integer within some 
 % certain range, e.g. $0\sim 10$.
 
-For quality maximization (Problem~\ref{p:2}), the objective is to maximize 
+For quality maximization (Problem~\ref{p:surf-2}), the objective is to maximize 
 the minimum distance of a sampled point on the surface to its nearest sensor 
 location. 
 %If we further consider visibility here, then if there exists a point 

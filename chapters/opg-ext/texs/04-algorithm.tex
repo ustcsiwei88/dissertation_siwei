@@ -62,7 +62,7 @@ Algorithm~\ref{algo:opgext-opglrd}, incrementally builds this array $M$. For con
 in the pseudo code, $M[\vec{x}]$ denotes an element of $M$ with $\vec{x}$ being 
 a $t$ dimensional integer vector. 
 
-\begin{algorithm}\label{algo:opgext-opglrd}
+\begin{algorithm}
 	\DontPrintSemicolon
 	% \KwData{$n_1, n_2, \cdots, n_k$ robots, $l_1, l_2, \cdots, l_n$ coverage distance}
 	\KwData{$n_1, \ldots, n_t$, $a_1, \ldots, a_t$,
@@ -87,7 +87,7 @@ a $t$ dimensional integer vector.
 		}
 		\Return{$M[n_1]\ldots[n_t] \ge len(S_{i\sim {i-1}})$};
 	%}
-	\caption{\opglrfeasible($i, \ell$)}
+	\caption{\opglrfeasible($i, \ell$)}\label{algo:opgext-opglrd}
 \end{algorithm}
 
 In Algorithm~\ref{algo:opgext-opglrd}, the procedure \inc($L, \ell$) checks how much of the 
@@ -237,7 +237,7 @@ it is assumed that indices of $M$ are modulo $q$, e.g., $M[2][q+1]
     \Return{$c^*;$}
     %}
     \caption{\opgmcdp}
-    \label{alg:opgmc}
+    \label{alg:opgext-opgmc}
 \end{algorithm}
 
 \subsubsection{A Polynomial Time Algorithm for \opgmc for a Fixed Number of Robot Types}
@@ -255,7 +255,7 @@ pseudo code of \presol() is given in Algorithm~\ref{algo:opgext-presol}.
 Algorithm~\ref{alg:opgext-opgmc} then runs in time $O(q^3+t\cdot\lceil len(\partial R\rceil))$.
 %\jy{Is this running time correct?}
 
-\begin{algorithm}\label{algo:opgext-presol}
+\begin{algorithm}
 	\DontPrintSemicolon
 	\KwData{$\ell_1, \ldots, \ell_t$, $c_1, \ldots, c_t$}
 	\KwResult{A lookup table for retrieving \sol($L$)}
@@ -272,7 +272,7 @@ Algorithm~\ref{alg:opgext-opgmc} then runs in time $O(q^3+t\cdot\lceil len(\part
 		}
 		\Return{$M'$}
 	%}
-	\caption{{\sc PreSolve}}
+	\caption{{\sc PreSolve}}\label{algo:opgext-presol}
 \end{algorithm}
 
 %After the preprocessing, 

@@ -1,4 +1,4 @@
-\section{Simulation Evaluation}
+\subsection{Simulation Evaluation}
 In this section, we perform a numerical evaluation of our proposed method
 with two goals: (1) confirms the scalability and (2) observe the behavior 
 of the method as input parameters change. 
@@ -6,14 +6,14 @@ of the method as input parameters change.
 We implemented our proposed algorithms in C++. Dinic's algorithm is used to solve the max-flow problem \cite{dinitz1970algorithm} for simplicity. 
 The methods are evaluated at an Intel\textsuperscript{\textregistered} Core\textsuperscript{TM} i5-10600K CPU at 4.1HZ.
 %
-For the three use cases (Fig.~\ref{fig:sweep} (b)(c)(d)), we
+For the three use cases (~\ref{fig:sweep} (b)(c)(d)), we
 programmatically create a large number of test cases, with up to 
 $6,000$ randomly generated polygonal obstacles. 
 %
 The number of vertices of each polygon ranges from 3 to 50, making the total vertices up to 
 $100,000+$. 
 %
-Fig.~\ref{fig:cases} shows the largest problem instances for the experiments with 
+~\ref{fig:cases} shows the largest problem instances for the experiments with 
 around $100,000$ vertices.
 \begin{figure}[ht]
     \centering
@@ -27,7 +27,7 @@ around $100,000$ vertices.
 decaying sensing 
 model, $\rho(r) = e^{-c\cdot r}$, we test the performance of our algorithm over 
 the set of instances. Example allocation of robots along the sweep frontiers for 
-the three cases are shown in Fig.~\ref{fig:sweep}(a) and Fig.~\ref{fig:simulations}. 
+the three cases are shown in ~\ref{fig:sweep}(a) and ~\ref{fig:simulations}. 
 We limited the number of robots to be small so that the trajectories are more easily 
 observed. It can be seen that the trajectories can vary significantly along the 
 sweep frontiers for each case. 
@@ -48,11 +48,11 @@ sweep frontiers for each case.
     \label{fig:simulations}
 \end{figure}
 
-In Fig.~\ref{fig:simulations_runtime}, the computational performance is thoroughly 
+In ~\ref{fig:simulations_runtime}, the computational performance is thoroughly 
 evaluated. As can be observed, our method scales fairly well, taking less than two seconds
 to handle all cases, even those involving over $100,000$ vertices. 
 %
-%We show the running time information in Fig.~\ref{fig:simulations_runtime}. 
+%We show the running time information in ~\ref{fig:simulations_runtime}. 
 %The algorithm scale up reasonably to $10^5$ vertices in around $1.5s$ for the three sweep patterns. 
 Interestingly, the experimental running time is almost linear, even using the less efficient Dinic's algorithm. 
 %
@@ -79,7 +79,7 @@ robot sensing models, including
     \item A Gaussian-like model, $\rho(r) = e^{-c^2r^2}$, 
     \item A deterministic sensing model with finite cut-offs, $\rho(r) = 1$ for $r\le \ell$; otherwise $\rho(r) = 0$.
 \end{enumerate}
-The basic shapes of these sensing models are given in Fig.~\ref{fig:model_illustration}. 
+The basic shapes of these sensing models are given in ~\ref{fig:model_illustration}. 
 \begin{figure}[h]
     \centering
     % \includegraphics[width=0.8\linewidth]{fig/sensing_model_pre.eps}
@@ -88,15 +88,15 @@ The basic shapes of these sensing models are given in Fig.~\ref{fig:model_illust
     \label{fig:model_illustration}
 \end{figure}
 
-We compare the behavior exhibited by these models over a relatively complex vertical sweep environment shown in Fig.~\ref{fig:20-polygons}. 
+We compare the behavior exhibited by these models over a relatively complex vertical sweep environment shown in ~\ref{fig:20-polygons}. 
 %
-The results are in Fig.~\ref{fig:rho2nrobot}(b)(c)(d). For the probabilistic models (i.e., Fig.~\ref{fig:rho2nrobot}(b)(c)), different model parameters are evaluated and for each 
+The results are in ~\ref{fig:rho2nrobot}(b)(c)(d). For the probabilistic models (i.e., ~\ref{fig:rho2nrobot}(b)(c)), different model parameters are evaluated and for each 
 parameter setting, we plot the number of robots required to achieve a certain level of 
-probabilistic guarantee. For the deterministic model (Fig.~\ref{fig:rho2nrobot}(d)), we 
+probabilistic guarantee. For the deterministic model (~\ref{fig:rho2nrobot}(d)), we 
 plot the required number of robots to achieve full coverage for different values of 
 $\ell$. 
 %
-% We note that Fig.~\ref{fig:rho2nrobot}(b)(c)(d) also imply the behavior of  Alg.~\ref{alg:fixednum} under these sensing models; we can simply flip the 
+% We note that ~\ref{fig:rho2nrobot}(b)(c)(d) also imply the behavior of  Alg.~\ref{alg:fixednum} under these sensing models; we can simply flip the 
 % axes of these figures to obtain the desired relationship.
 
 \begin{figure}[h]
@@ -146,7 +146,7 @@ the size distribution of the obstacles.
 All in all, three settings are considered: (1) The polygons are regularly distributed 
 and are of similar size, (2) the polygons are randomly distributed and are of similar size,
 and (3) the polygons are regularly distributed, and their sizes can vary dramatically. 
-The first and the third settings are illustrated in the top row of Fig.~\ref{fig:runtime_env}.
+The first and the third settings are illustrated in the top row of ~\ref{fig:runtime_env}.
 %
 For these settings, we compare the time it takes to compute solutions for many polygonal
 obstacles and also the number of robots required to achieve $80\%$ probabilistic guarantee 

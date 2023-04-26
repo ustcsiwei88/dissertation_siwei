@@ -1,5 +1,5 @@
 
-\section{Optimal Robot Allocation}
+\subsection{Optimal Robot Allocation}
 
 % \newcommand{\bdag}{{\textsc DAG}}
 
@@ -26,7 +26,7 @@ Before describing the generalization of boustrophedon decomposition,
 we briefly introduce boustrophedon decomposition (readers are referred to 
 \cite{choset2000coverage} for further details), which in turn is based on 
 trapezoidal decomposition. The difference is that it removes the sweeping 
-events that cross inner vertices. As illustrated in Fig.~\ref{fig:trebou},
+events that cross inner vertices. As illustrated in ~\ref{fig:trebou},
 compared with trapezoidal decomposition, boustrophedon decomposition 
 has fewer cells, which leads to fewer (back-and-forth) boustrophedon motions.
 
@@ -71,7 +71,7 @@ has fewer cells, which leads to fewer (back-and-forth) boustrophedon motions.
 We extend the boustrophedon decomposition from using only vertical sweep lines 
 to allow the use of any \emph{continuous monotone sweep schedule}.
 We are given a sweep schedule $P(t)$ for a workspace $\mathcal W$, 
-which could take any curved form (see Fig.~\ref{fig:Bou}).
+which could take any curved form (see ~\ref{fig:Bou}).
 By following the sweep schedule, it is possible to
 construct a decomposition of $\mathcal W$, based on the events of cell
 splitting and merging. 
@@ -119,7 +119,7 @@ and add a terminal node that links from all nodes without a child.
 %
 Since obstacles in the environment can contain concave vertices, we must 
 consider two special cases involving concave vertices for the construction of DAG, 
-as illustrated in Fig.~\ref{fig:concave_vertices}. 
+as illustrated in ~\ref{fig:concave_vertices}. 
 %
 When a line segment of the sweep schedule ends at a concave vertex, 
 the corresponding node in the DAG is linked to the terminal node $t$.
@@ -176,7 +176,7 @@ others.
 
 The implementation of the generalized boustrophedon decomposition is similar 
 to vertical decomposition, we provide here an implementation 
-Alg.~\ref{alg:genbou} adapted from \cite{lavalle2006planning} under the 
+Alg.~\ref{alg:genbou} adapted from \cite{lavalle2006sweepline} under the 
 \emph{generation position} assumption (i.e., there are no degenerative 
 settings).
 %
@@ -216,7 +216,7 @@ along the way to satisfy these demands.
 Specifically, our problem may be further cast as a \emph{circulation with demand} 
 problem \cite{kleinberg2006algorithm}, with the following augmentation. We replace 
 each node $v$ in $G$ with two vertices $v_1$ and $v_2$ and replace every edge 
-$uv$ in the previous graph with edge $u_2 v_1$, as illustrated in Fig.~\ref{fig:flow}. 
+$uv$ in the previous graph with edge $u_2 v_1$, as illustrated in ~\ref{fig:flow}. 
 The edge between $v_1$ and $v_2$ has flow demand of $demand(v)$. 
 The following minimum circulation with demand problem is then obtained.
 
@@ -289,7 +289,7 @@ When two chains are removed from $T$, two cells are merged into a new cell in th
     \draw[->] (s) -- (v1);
     \draw[->] (v7) -- (t);
     \end{tikzpicture}
-    \caption{The constructed DAG from the example in Fig.~\ref{fig:Bou}}
+    \caption{The constructed DAG from the example in ~\ref{fig:Bou}}
     \label{fig:sc-DAG}
 \end{figure}
 
@@ -407,7 +407,7 @@ $G'\gets$ a new empty graph;\;
     \draw[dashed,->] (v42) --  (t');
     
     \end{tikzpicture}
-    \caption{Transform the DAG in Fig.~\ref{fig:DAG} into a circulation with demand problem. 
+    \caption{Transform the DAG in ~\ref{fig:DAG} into a circulation with demand problem. 
     The value above each edge represents the demand of the edge, which is eliminated when it is zero.
     The source node is $s$, and the target node is $t$. $s'$ and $t'$ are the auxiliary source and target for solving the ``circulation with demand'' problem.
     Also, auxiliary edges are added between $s', t'$ and every other vertex.}

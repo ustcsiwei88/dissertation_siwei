@@ -30,7 +30,7 @@ swarms can be readily computed.
 
 To empirically verify the asymptotic running time upper bounds of 
 \algoMRSimple, we plot the running time over $m$ for a fixed value of 
-$n =10^{12}$. From the result (Fig.~\ref{fig:mpsc:mfixn} it may be 
+$n =10^{12}$. From the result (~\ref{fig:mpsc:mfixn} it may be 
 observed that the asymptotic running time appears to be tight. We point
 out that the $O(\sum_{1\le i \le m} M_i + n)$ part of the overall 
 running time $O(m(\log n + \log m) + \sum_{1\le i \le m} M_i + n)$ turns 
@@ -55,9 +55,9 @@ $\mathbf{while}$ loop in \algoMRSimple) is dominated by the
 $O(m\log m)$ part (from the enhanced $\mathbf{while}$ loop with bisection). 
 
 For \algoSRG, the dependency of the running time over $q^2\log q$ 
-appears to be tight, as shown in Fig.~\ref{fig:spmc:qfixn}. Additional 
+appears to be tight, as shown in ~\ref{fig:spmc:qfixn}. Additional 
 examples of randomly generated test cases for \algoSRG are 
-given in Fig.~\ref{fig:more-spmc-ex}. 
+given in ~\ref{fig:more-spmc-ex}. 
 \begin{figure}[ht!]
     \centering
     \includegraphics[keepaspectratio, scale=0.85]{./figures/spmcn5.eps}
@@ -90,13 +90,13 @@ given in Fig.~\ref{fig:more-spmc-ex}.
 
 
 For \algoMRG, Tabel~\ref{eval:mpmc:2} is a full version of 
-Table~\ref{eval:mpmc}. As for running time, Fig.~\ref{fig:mpmc:m} shows 
+Table~\ref{eval:mpmc}. As for running time, ~\ref{fig:mpmc:m} shows 
 the dependency on the number of regions $m$ appears to be linear with 
 $q$ fixed (recall we set $q_i = q(0.5 + random(0,1))$). This is tight
 in viewing the main running time of \algoMRG which is 
 $O((\sum_{1\le i \le m} q_i^2) \log(n + \sum_{1\le i \le m} q_i))$; if
 $q_i$ is fixed, then the time is linear with respect to $m$. An example 
-computation result for $m = 3$ is illustrated in Fig.~\ref{fig:mpmc-ex}. 
+computation result for $m = 3$ is illustrated in ~\ref{fig:mpmc-ex}. 
 
 \begin{table}[ht!]
     \vspace*{-2mm}
@@ -135,10 +135,10 @@ computation result for $m = 3$ is illustrated in Fig.~\ref{fig:mpmc-ex}.
     \caption{\label{fig:opg-mpmc-ex} An example instance when $m = 3$, $n = 10$.} 
     \vspace*{-4mm}
 \end{figure}
-%\jy{Make Fig.~\ref{fig:mpmc-ex} smaller, side by side.}
+%\jy{Make ~\ref{fig:mpmc-ex} smaller, side by side.}
 
 \subsection{Snapshots of Application Scenario Computations}
-Fig.~\ref{fig:more-edinburgh} shows the deployment plan for $n = 5, 10, 20, 
+~\ref{fig:more-edinburgh} shows the deployment plan for $n = 5, 10, 20, 
 30$ guards. As the number of guards changes from $5$ to $10$, the gap on the
 lower left side is no longer covered due to the availability of more guards.
 Similarly, as the number of guards changes from $20$ to $30$, the very small 
@@ -168,7 +168,7 @@ gap on the top no longer needs to be covered.
 \end{figure}
 
 Finally, additional computational results for the forest fire monitoring
-case is illustrated in Fig.~\ref{fig:more-forest}. Behavior similar to that 
+case is illustrated in ~\ref{fig:more-forest}. Behavior similar to that 
 from the castle case can be observed here, e.g., from $30$ to $40$ 
 guards, the small gap on the right is no longer covered. 
 

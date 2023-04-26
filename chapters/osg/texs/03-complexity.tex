@@ -70,7 +70,7 @@ if $G''$ has a vertex cover of size $k''$.
 \end{figure}
 
 The reduction first makes $G$ $3$-regular by attaching (one or two of) the 
-gadget shown in Fig.~\ref{fig:structure-hook} to $v \in G$ that are not 
+gadget shown in ~\ref{fig:structure-hook} to $v \in G$ that are not 
 degree $3$. This results in a $3$-regular graph $G'$. For each attached 
 gadget, $k$ is bumped up by $3$, i.e., we let $k'$ for $G'$ be $k' = k 
 + 3(3|V(G)| - 2|E(G)|)$. It is straightforward to see that $G$ has a vertex 
@@ -163,7 +163,7 @@ cover size of $k$ if and only if $G'$ has a vertex cover size of $k'$.
 \end{figure}
 
 In the second and last step, we remove bridges in $G'$. As in 
-Fig.~\ref{fig:rmbridge}, for a bridge $PQ$ that divides $G'$ into $G_1'$ 
+~\ref{fig:rmbridge}, for a bridge $PQ$ that divides $G'$ into $G_1'$ 
 (containing $P$) and $G_2'$ (containing $Q$), we split the bridge edge 
 $PQ$ using the illustrated transformation, which yields a new graph $G''$
 that is planar, bridgeless, and $3$-regular, after all bridges are removed
@@ -201,11 +201,11 @@ path $u\cdots w = uv_1\ldots v_{2m}w$, for each $v_iv_{i+1}$, $1 \le i
 \le 2m-1$, we add a line segment of length $\sqrt{3}$ that is 
 perpendicular to $v_iv_{i+1}$ such that $v_iv_{i+1}$ and the line 
 segment divide each other in the middle. A graphical illustration is
-given in Fig.~\ref{fig:path-bar}. 
+given in ~\ref{fig:path-bar}. 
 % We note that the bars do not need to be connected to the backbone $G'$. 
 $G'$ and the bars form the 
 $3$-net, which we denote as $T_G$. An example of transforming $K_4$
-into a {\em 3-net} is given in Fig.~\ref{fig:3-net}.
+into a {\em 3-net} is given in ~\ref{fig:3-net}.
 
 \begin{figure}[ht]
 % \vspace*{-4mm}
@@ -242,8 +242,8 @@ into a {\em 3-net} is given in Fig.~\ref{fig:3-net}.
         \end{overpic}
     \caption{Illustration of a $3$-net obtained from $K_4$, the complete graph on 
 		$4$ vertices.}
-    % \caption{A $3$-net constructed over the backbone in Fig.~\ref{fig:backbone}.
-        % \textcolor{red}{Siwei: update this to be based on $G'$ from Fig.~\ref{fig:backbone}}
+    % \caption{A $3$-net constructed over the backbone in ~\ref{fig:backbone}.
+        % \textcolor{red}{Siwei: update this to be based on $G'$ from ~\ref{fig:backbone}}
         % }
     \label{fig:3-net}
 \end{figure}
@@ -261,7 +261,7 @@ at the centers of the corresponding vertices in $T_G$.
 %
 For each odd length path $u\cdots w$, since either $u$ or $w$ is already 
 selected as the circle center, applying one coverage pattern shown
-in Fig.~\ref{fig:pathcover} with $(len(u\cdots w) - 1)/2$ circles will cover 
+in ~\ref{fig:pathcover} with $(len(u\cdots w) - 1)/2$ circles will cover 
 the rest of $u\cdots w$ and all bars on it. So, the total number of circles
 used is $K$ to cover all of $T_G$. 
 
@@ -290,7 +290,7 @@ The ``if'' part requires more analysis. Consider $T_G$ that can be covered
 by $K$ circles of radius $r \approx \alpha$. For a path $u\cdots w$ on $T_G$ whose 
 length is $2m+1$, there are $2m-1$ vertical bars associated with it. Consider 
 the $4m-2$ endpoints of these vertical bars. We note that (as shown in 
-Fig.~\ref{fig:pathcovert}), it requires a radius of $2\sqrt{3}/3\approx 1.155$ 
+~\ref{fig:pathcovert}), it requires a radius of $2\sqrt{3}/3\approx 1.155$ 
 for a circle to cover $4$ bar endpoints in an asymmetrical manner (three endpoints
 on one side of the path, one on the other). Since 
 we set the radius of coverage circle to be about $\alpha = 1.152$ (actually, 
@@ -309,7 +309,7 @@ left side, assuming the path $u\cdots w$ is horizontal. If there are more
 than two bars to the left, then it is always beneficial to cover the two bars 
 immediately to the left of $S$ using another circle. To see that this is the 
 case, look at the two bars ($DE$ and $FH$) and the two associated unit 
-length edges ($AB$ and $BC$) to the left of $S$ in Fig.~\ref{fig:two-bar}.
+length edges ($AB$ and $BC$) to the left of $S$ in ~\ref{fig:two-bar}.
 It can be computed that the circle $S$ to the right can cover a maximum 
 length of $0.412$ of $AB$ to $A'$. Circles to the left of $S$ then must cover 
 $A'B$. Let the circle covering $A'$ be $S'$. We may assume that 
@@ -365,11 +365,11 @@ and $b_3$, from left to right. We call the end of a path with two bars the
 end of the path with one bar the {\em odd end} (e.g., the side ending with one 
 bar $b_3$). 
 
-We now examine the coverage of $b_2$ (see Fig.~\ref{fig:end-two-bar} where 
+We now examine the coverage of $b_2$ (see ~\ref{fig:end-two-bar} where 
 $b_1$ corresponds to $CD$ and $b_2$ corresponds to $AB$). Again, if the two 
 endpoints $A$ and $B$ of $b_2$ are covered by more than one circle, then one 
 of these two circles can be replaced with one that fully covers $b_1$ and 
-$b_2$ (the solid circle in Fig.~\ref{fig:end-two-bar}), since a circle 
+$b_2$ (the solid circle in ~\ref{fig:end-two-bar}), since a circle 
 covering only one endpoint of $b_2$ (e.g., $B$) will not be able to reach 
 structures outside $u\cdots w$. By now, $m-1$ circles have been used and to 
 cover $u \cdots w$, at least two more circles are needed at the two ends 
@@ -398,13 +398,13 @@ Next, instead of examining $b_3$, we examine the possible configurations at
 junctions where paths meet. There are four possible cases that contains 
 $0$-$3$ odd ends. For the case where only even ends meet, one additional 
 circle is needed to cover the rest of the junction 
-(Fig.~\ref{fig:junction}(a)). When there is one odd end and two even ends 
-(Fig.~\ref{fig:junction}(b)), it requires one more circle to cover the 
+(~\ref{fig:junction}(a)). When there is one odd end and two even ends 
+(~\ref{fig:junction}(b)), it requires one more circle to cover the 
 junction. This constraint is how the radius $\alpha = 1.152$ is obtained 
 (more precisely, with circles with radius 1.153, no additional circles are 
 needed at the junction). When there are two odd ends and one even end 
-(Fig.~\ref{fig:junction}(c)), at least one more circle is needed to cover 
-the the junction. For the last case (Fig.~\ref{fig:junction}(d)), no 
+(~\ref{fig:junction}(c)), at least one more circle is needed to cover 
+the the junction. For the last case (~\ref{fig:junction}(d)), no 
 additional circles are needed. The cases where additional cycles are needed 
 correspond to the junction vertex being selected as a vertex cover. 
 It is straightforward to observe that the constructed vertex cover is a valid 
@@ -449,7 +449,7 @@ factor of $\alpha = 1.152$.
 We proceed to show that \osgt is hard to approximate for a simply polygon 
 by converting a $3$-net into one. Along the backbone $G'$ of a $3$-net 
 $T_G$, we first expand the line segments by $\delta$ to get a 2D region  
-(see Fig.~\ref{fig:door}(a)). We may describe the interior of the resulting 
+(see ~\ref{fig:door}(a)). We may describe the interior of the resulting 
 polygon as 
 \vspace*{-1mm}
 \[P=\{p\in \R^2\ |\ \min_{q\in T_G}(\lVert p-q\rVert_1)\leq \delta/2\}\]
@@ -466,7 +466,7 @@ Let $K = (({L-|E|}){2}+k)$, it holds that
 
 To convert the structure into a simple polygon, we can open ``doors'' of 
 width $\delta$ on the structure to get rid of the holes (see 
-Fig.~\ref{fig:door}(b)). Each opening removes one hole from $P$. This is 
+~\ref{fig:door}(b)). Each opening removes one hole from $P$. This is 
 straightforward to check; we omit the details. 
 \begin{figure}[ht]
 		\centering
@@ -549,7 +549,7 @@ graph $G'$.
 
 The Eulerian tour on $T_G$ may have self-intersections, which 
 will prevent the tour from being a simple polygon. To address this, we may use 
-one of two possible solutions outlined in Fig.~\ref{fig:eliminter} to eliminate
+one of two possible solutions outlined in ~\ref{fig:eliminter} to eliminate
 the self-intersections. 
 \begin{figure}[ht]
     		\vspace*{2mm}
@@ -571,7 +571,7 @@ At this point, we readily observe that Theorem~\ref{t:osgthard} applies.
 Furthermore, an optimal solution always allows each mobile sensor to 
 cover only two continuous perimeter segments. This is clear in the middle 
 of any paths of $T_G$; at junctions, the polygon boundary will be either 
-one of two possibilities shown in Fig.~\ref{fig:2types}, where a sensor
+one of two possibilities shown in ~\ref{fig:2types}, where a sensor
 again covers at most two continuous segments of the simple polygon. 
 \begin{figure}[!ht]
     \centering

@@ -1,6 +1,6 @@
 In computing $\ell^*$ for a single perimeter $P$ with multiple connected 
 components, assume that $P$ is composed of $q$ maximal connected 
-components $S_1, \ldots, S_q$ (e.g., Fig.~\ref{fig:opg-single-perimeter}),
+components $S_1, \ldots, S_q$ (e.g., ~\ref{fig:opg-single-perimeter}),
 leaving $G_1, \ldots, G_q$ as the gaps on $\partial R$. Given an 
 optimal cover $\C^* = \{C_1^*, \ldots, C_n^*\}$, by 
 Proposition~\ref{p:opg-endpoint-alignment}, we may assume that the left
@@ -39,7 +39,7 @@ it holds that $\ell^* = len(C_j^*) = \ldots = len(C_{j'}^*)$.
 \end{theorem}
 
 \noindent\textbf{A baseline algorithm}.
-In the example from Fig.~\ref{fig:opg-example}, $\C^*$ is partitioned into 
+In the example from ~\ref{fig:opg-example}, $\C^*$ is partitioned into 
 two subsets satisfying the conditions stated in 
 Theorem~\ref{t:opg-optimal-partition}. The theorem provides a way for 
 computing $\ell^*$. For fixed $1 \le k, k' \le q$, denote the part of 
@@ -62,7 +62,7 @@ For checking feasibility of a particular $\ell_{k-k'}^c$, i.e., whether
 $\ell_{k-k'}^c$ is long enough for the rest of the robots to cover the 
 rest of the perimeter, we simply {\em tile} $(n - n_{k-k'}^c)$ copies 
 $\ell_{k-k'}^c$ over the rest of the perimeter, starting from $S_{(k' 
-\mod q) + 1}$. As an example, see Fig.~\ref{fig:opg-tiling} where $n = 6$ 
+\mod q) + 1}$. As an example, see ~\ref{fig:opg-tiling} where $n = 6$ 
 robots are to cover the perimeter (in red, with five components $S_1, 
 \ldots, S_5$). Suppose that the algorithm is currently working with 
 $S_{1-2}$ (i.e., $k=1$ and $k' = 2$). If  $n_{1-2}^c = 2$, then 

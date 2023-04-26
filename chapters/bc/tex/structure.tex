@@ -21,7 +21,7 @@ For any $k$ sets of polygonal or point objects $S_1, \dots, S_k$ in the workspac
 Consider a set of line segments $L^*$ with minimum cardinality that separates $S_1,\dots, S_k$. 
 Without loss of generality, we assume all line segments in $L^*$ do not end in the free space, i.e., each line segment in $L^*$ ends
 at either object boundaries or workspace boundaries.
-If some line segment in a minimum barrier is not tangent to any object vertex, denoted it as $\ell=OA$ (shown in Fig.~\ref{fig:proof}), we show that it can be replaced by a line segment that is tangent to some object vertex. 
+If some line segment in a minimum barrier is not tangent to any object vertex, denoted it as $\ell=OA$ (shown in ~\ref{fig:proof}), we show that it can be replaced by a line segment that is tangent to some object vertex. 
 %
 Fix one end of $\ell$, $O$ in this case, and rotate $\ell$ around $O$ in both clockwise and counterclockwise directions until it hits some object vertex and becomes tangential to the object.
 %
@@ -96,7 +96,7 @@ Although we can limit the candidate barriers to line segments tangent to object 
 still be infinite number of candidates. 
 One may consider using line segments that are bitangent to
 object vertices, i.e. line segments crossing two object or obstacle vertices. If there are $n$ object/obstacle vertices, there can be at most $n^2$, i.e., a quadratic number of bitangents. 
-Unfortunately, bitangent lines are insufficient to act as candidate barriers by themselves for polygonal objects. A counterexample in Fig.~\ref{fig:counter} shows that there is an instance where an optimal solution must contain line segments that are not bitangents. 
+Unfortunately, bitangent lines are insufficient to act as candidate barriers by themselves for polygonal objects. A counterexample in ~\ref{fig:counter} shows that there is an instance where an optimal solution must contain line segments that are not bitangents. 
 %
 In this counterexample, we need separate the orange objects from the lime object. A minimum of three line segments are used, and it is not possible that all of them are bitangent, i.e.
 
@@ -127,7 +127,7 @@ for an optimal solution.
 Now we turn an optimal solution, $L^*$, with only tangent line segments, into
 a solution with only bitangent line segments while still maintaining the same number of barriers. 
 
-For a tangent line segment $\ell=AB\in L^*$ with tangent point $O$ (shown in Fig.~\ref{fig:proof_bi}), and if $O$ is a point object, assume it is beneath $\ell$,
+For a tangent line segment $\ell=AB\in L^*$ with tangent point $O$ (shown in ~\ref{fig:proof_bi}), and if $O$ is a point object, assume it is beneath $\ell$,
 rotate $\ell$ clockwise around $O$ until it hits a point object or an obstacle vertex.
 Denote the resulting line segment as $\ell'$, and replace $\ell$ with $\ell'$.
 Since the objects are point objects, so $BB'$ and $AA'$ must belong to obstacles or workspace boundary, 
@@ -236,7 +236,7 @@ For any $k$ sets of polygonal objects $S_1, \dots, S_k$ in the workspace $\mathc
 Starting from an optimal solution $L^*$ with only tangent line segments,
 we will replace each tangent line segment with two bitangent line segments.
 
-Rotate each non-bitangent line segment $\ell\in L^*$ around its tangent point $O$ in clockwise or counterclockwise directions until the line segment become bitangent, as illustrated in Fig.~\ref{fig:proof_bi_2opt}. 
+Rotate each non-bitangent line segment $\ell\in L^*$ around its tangent point $O$ in clockwise or counterclockwise directions until the line segment become bitangent, as illustrated in ~\ref{fig:proof_bi_2opt}. 
 Since any path connecting two objects in different classes and is cut by barrier $\ell$ will still be cut by $\ell'_1$ and $\ell'_2$.
 The replacement can still guarantee the separation among the object groups.
 After replacing all barriers, we can obtain a 2-OPT solution with the number of line segments twice the minimum.

@@ -8,7 +8,7 @@ using bitangent line segments and the other is based on sampling.
 In the barrier forming problem, if the candidate barriers are available as a finite set, we can tackle the problem with integer programming (IP). 
 To solve it, we first perform a decomposition of the workspace using the candidate barriers, which partitions the workspace into cells whose edges are part of some candidate barriers. 
 Denote  $N$ as the number of candidate barrier line segments, and $M$ as the number of 
-cells dissected using the candidate barriers. Fig.~\ref{fig:ilp_example} shows an example of dissecting the workspace into six cells with three candidate barriers.
+cells dissected using the candidate barriers. ~\ref{fig:ilp_example} shows an example of dissecting the workspace into six cells with three candidate barriers.
 Then, we can start to construct an IP model to solve the problem of minimizing the number of selected barriers. 
 First, we use $\lceil\log k\rceil$ binary variables for each cell, 
 resulting in $M\cdot\lceil \log k \rceil$ such variables $c_{11}, \dots, c_{M\lceil\log k\rceil}$. 
@@ -45,7 +45,7 @@ Between each pair of adjacent cells $i$ and $ j$ (let the candidate line segment
     &\text{  for each adjacent cell $i$, $j$, and $1\leq \tau \leq \lceil \log k \rceil$},
 \end{split}
 \end{equation}
-which means if two adjacent cells belong to different classes, then the line segment candidate between them must be selected. An example of the constraint setup is illustrated in Fig.~\ref{fig:ilp_example}.
+which means if two adjacent cells belong to different classes, then the line segment candidate between them must be selected. An example of the constraint setup is illustrated in ~\ref{fig:ilp_example}.
 Naturally, we have fixed $c_{i1},\dots,c_{i\lceil \log k\rceil}$ if ceil $i$ contains an object to be separated, and the value of $\overline{c_{i1}c_{i2}\dots c_{i\lceil \log k\rceil}}$ is set to be the same as its class index: $0\sim k-1$.
 The objective is set to minimize the total number of line candidates selected, i.e., $\min \sum_{i=1}^{M} l_i$.
 
@@ -56,7 +56,7 @@ and at least 2-OPT
 solution for separating polygonal objects. 
 Since the number of bitangent line segments is at 
 most quadratic to the number of object or obstacle vertices, 
-we can enumerate them, and apply IP method in Section~\ref{sec:algo:ilp} to find a solution. Fig.~\ref{fig:barrier_candidates} illustrates the candidate barriers constructed for point objects and polygonal objects.
+we can enumerate them, and apply IP method in Section~\ref{sec:algo:ilp} to find a solution. ~\ref{fig:barrier_candidates} illustrates the candidate barriers constructed for point objects and polygonal objects.
 It is worth noting that for enumerating bitangent barriers for point objects, the side of the point to the barrier also matters. For example, a pair of point objects will create $4$ bitangent barrier candidates as there are 4 different possible cases depending on the how the corresponding objects are placed with respect to the line. 
 
 \begin{figure}[ht]

@@ -9,7 +9,7 @@ Some additional performance results can be found in the Appendix.
 %\subsubsection{\algoMRSimple} 
 For the case of $m$ perimeters each containing a single segment, for 
 each $1 \le i \le m$, we set $len(\partial R_i) = 1$ and let $len(P_i)$ 
-be uniformly distributed in $(0, 1]$. Fig.~\ref{fig:mpsc-example} shows 
+be uniformly distributed in $(0, 1]$. ~\ref{fig:mpsc-example} shows 
 the result for an example with $m = 10$ and $n = 30$. For various values 
 of $m, n$, the running time of \algoMRSimple is summarized in 
 Table~\ref{eval:mpsc}, which scales very well with $m$ and $n$ (note that 
@@ -60,7 +60,7 @@ the $n \le m$ case does not make much sense here).
 %for all $1 \leq i \leq m$, and then select a closed connected component $P_i$ 
 %for each $R_i$. Here, $len(P_i)$ is uniformly randomly sampled from $(0, 1]$. 
 %An example problem instance along with its optimal cover is shown in 
-%Fig.~\ref{fig:mpsc-example}. The computation time of \algoMRSimple~under 
+%~\ref{fig:mpsc-example}. The computation time of \algoMRSimple~under 
 %different $m$ and $n$ is presented in Table.~\ref{eval:mpsc}. 
 %\sh{Plots here. The constant factor in the $O(m(\log n + \log m) + \sum_{i} M_i)$ time 
 %complexity is around $5 \times 10^{-8}$ seconds. }
@@ -69,7 +69,7 @@ For the case of a single perimeter with multiple components, a random
 polygon is generated on which $2q$ points are randomly sampled that 
 yield $q$ segments (that form the perimeter) and $q$ gaps. An example 
 instance and the optimal solution with $q=3$ and $n = 10$ is illustrated 
-in Fig.~\ref{fig:opg-spmc-example}. The computation time for various $q$ and 
+in ~\ref{fig:opg-spmc-example}. The computation time for various $q$ and 
 $n$ combinations is given in Table~\ref{eval:opg-spmc}.
 \begin{figure}[ht!]
     \vspace*{-3mm}
@@ -105,7 +105,7 @@ $n$ combinations is given in Table~\ref{eval:opg-spmc}.
 %we first create an arbitrary polygon $R$. Then, we uniformly randomly sample $2q$ points 
 %on $\partial R$ to divide it into $q$ segments and $q$ gaps. 
 %An example problem instance along with its optimal cover is shown in 
-%Fig.~\ref{fig:spmc-example}. The computation time of 
+%~\ref{fig:spmc-example}. The computation time of 
 %\algoSRG~under different $q$ and $n$ is presented in Table~\ref{eval:spmc}.
 
 For multiple perimeters containing multiple components, $m$ polygons 

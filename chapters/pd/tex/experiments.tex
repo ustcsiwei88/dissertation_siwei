@@ -36,7 +36,7 @@ To test and compare the general performance of these methods, we set the defendi
     \label{fig:quality}
 \end{figure}
 
-For 2 to 7 defenders, in Fig.~\ref{fig:time_cost}, we show the computation time of running the algorithms. 
+For 2 to 7 defenders, in ~\ref{fig:time_cost}, we show the computation time of running the algorithms. 
 Each data point is an average of 20 runs. 
 We remind the readers that both DP and ILP guarantee to produce an optimal solution (if they can finish).
 For the two-defender scenario, which is the main focus of \cite{adler2022role}, DP is the most efficient.
@@ -45,7 +45,7 @@ However, DP only fully scales for $k=2, 3$ defenders, and start to peter out for
 As can be observed, ILP demonstrates much better scalability in comparison to DP, but fails to find a solution for $k > 5$ defenders. 
 
 As expected, exhaustive defender pairing (\ours) has the least time cost for $k \geq 3$.
-Fig.~\ref{fig:quality} shows the corresponding solution qualities of these methods. 
+~\ref{fig:quality} shows the corresponding solution qualities of these methods. 
 We observe that, while \ours does not guarantee solution optimality, it generated solutions that are virtually the same as the exact methods (DP and ILP). 
 %
 Through these empirical evaluations, \ours demonstrates superior scalability with negligible solution optimality loss. 
@@ -54,12 +54,12 @@ Through these empirical evaluations, \ours demonstrates superior scalability wit
 
 
 \subsection{Scaling up the Number of Defenders}
-The number of defenders appears in the index term of the time complexity of the DP algorithm, which limits it from scaling up the number of defenders. Hence, we compare the performance of ILP and the local search algorithm when pushing the number of defenders up to dozens. With the main goal being the evaluation of optimality, we limit the attack events to $200$ so that the ILP method can return the optimal solution in $60$ seconds. At the same time, to make the problem more challenging, $\lambda$ is increased to $2\cdot k$ from $k$ so that not all attacks can be intercepted. Fig.~\ref{fig:def_time_cost} and Fig. ~\ref{fig:def_quality} show the corresponding computation time and interception rate, each data point is the average of 20 runs.
+The number of defenders appears in the index term of the time complexity of the DP algorithm, which limits it from scaling up the number of defenders. Hence, we compare the performance of ILP and the local search algorithm when pushing the number of defenders up to dozens. With the main goal being the evaluation of optimality, we limit the attack events to $200$ so that the ILP method can return the optimal solution in $60$ seconds. At the same time, to make the problem more challenging, $\lambda$ is increased to $2\cdot k$ from $k$ so that not all attacks can be intercepted. ~\ref{fig:def_time_cost} and  ~\ref{fig:def_quality} show the corresponding computation time and interception rate, each data point is the average of 20 runs.
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\linewidth]{chapters/pd/fig/def_timecost-v.png}
-    \caption{Computation time in seconds for ILP and EDP algorithms for $5$ to $30$ defenders and up to $200$ attack events (Limit the number of events because as shown in Fig.~\ref{fig:time_cost}, more events will effectively cripple ILP). \ours consistently demonstrates 1-2 magnitudes faster computation time compared with ILP.}
+    \caption{Computation time in seconds for ILP and EDP algorithms for $5$ to $30$ defenders and up to $200$ attack events (Limit the number of events because as shown in ~\ref{fig:time_cost}, more events will effectively cripple ILP). \ours consistently demonstrates 1-2 magnitudes faster computation time compared with ILP.}
     \label{fig:def_time_cost}
 \end{figure}
 
@@ -75,7 +75,7 @@ As can be observed, EDP, due to its quadratic dependence on the number of defend
 \subsection{Impact of Defender Heterogeneity}
 To explore the impact of the diversity of defender speeds on interception rate, we focus on a $5$-defender setting and to make the difference more visible, $\lambda$ is set to be $5\cdot k = 25$ so that the interception rate no more than 80\%. 
 Here, the defender speed diversity is tested by setting the $v_{min}$ as 1, and $v_{max}$ from 1 (uniform speed) to 10, and then normalizing the defender speed to make them sum up to $15$ (i.e., with an average of $3.0$). 
-Each data point is based on 100 runs. The result is summarized in Fig.~\ref{fig:heterogeneity}, from which we can observe that uniform speed $v_{max} = 1$ has the least interception rate, while the interception rate gets into its maximum after $v_{max}:v_{min} = 3$ or $4$. This suggests that heterogeneity can significantly enhance the interception rate, warrant the effort going into the current study (and previous study of heterogeneous defender setups). At the same time, as heterogeneity continues to increase, the effect becomes negligible. This also follows intuition: when the capability of the defenders varies too much, they can no longer effectively collaboratively intercept attacks. 
+Each data point is based on 100 runs. The result is summarized in ~\ref{fig:heterogeneity}, from which we can observe that uniform speed $v_{max} = 1$ has the least interception rate, while the interception rate gets into its maximum after $v_{max}:v_{min} = 3$ or $4$. This suggests that heterogeneity can significantly enhance the interception rate, warrant the effort going into the current study (and previous study of heterogeneous defender setups). At the same time, as heterogeneity continues to increase, the effect becomes negligible. This also follows intuition: when the capability of the defenders varies too much, they can no longer effectively collaboratively intercept attacks. 
 
 \begin{figure}[h!]
     \centering
@@ -91,7 +91,7 @@ there will be fewer attacks intercepted,
 and more defenders will be required to reach the same interception rate. 
 In this regard, we test the interception rate computed using \ours for $1$ to $20$ defenders and different $\lambda$ from $1.0$ to $60.0$. 
 The number of attacks is set to be $400$, and each data point represents an average of 20 runs.
-Fig.~\ref{fig:lambda} shows the resulting capture rate with respect to the attack rate $\lambda$ as a heat map for a different number of defenders $k$, which, unsurprisingly, suggests a gradual change as one might expect. Nevertheless, such a graph can serve as a quick reference for selecting an appropriate number defenders given an expected attack rate.
+~\ref{fig:lambda} shows the resulting capture rate with respect to the attack rate $\lambda$ as a heat map for a different number of defenders $k$, which, unsurprisingly, suggests a gradual change as one might expect. Nevertheless, such a graph can serve as a quick reference for selecting an appropriate number defenders given an expected attack rate.
 
 \begin{figure}[h!]
     \vspace{-2mm}
@@ -104,8 +104,8 @@ Fig.~\ref{fig:lambda} shows the resulting capture rate with respect to the attac
 \end{figure}
 
 \subsection{Impact of Boundary Topology}
-\ours applies to \prob with arbitrary boundary topology; we evaluated \ours on $I=[0, 1]$ (unit interval), $S^1$ (circle with a total circumference shrinked to $1$), $I^2$ (unit square), and $S^2$ (sphere with surface area of $1$) (see Fig.~\ref{fig:topology}) with $k = 5$, $v_{max} = 5$ and $\lambda$ from 1 to 200. 
-The results are shown in Fig.~\ref{fig:geo}, where each data point is the average of 20 runs. 
+\ours applies to \prob with arbitrary boundary topology; we evaluated \ours on $I=[0, 1]$ (unit interval), $S^1$ (circle with a total circumference shrinked to $1$), $I^2$ (unit square), and $S^2$ (sphere with surface area of $1$) (see ~\ref{fig:topology}) with $k = 5$, $v_{max} = 5$ and $\lambda$ from 1 to 200. 
+The results are shown in ~\ref{fig:geo}, where each data point is the average of 20 runs. 
 We observe that $I$ and $S^1$ have similar difficulty to defend, with $I$ being a bit more challenging due to having boundaries. The same is observed for $I^2$ and $S^2$.
 \begin{figure}[h!]
 \vspace{2mm}
@@ -126,7 +126,7 @@ We observe that $I$ and $S^1$ have similar difficulty to defend, with $I$ being 
 
 \subsection{Infinite Attack Stream with Finite Look-Ahead Horizon}
 Alg.~\ref{alg:horizon} describes an online \ours algorithm for handling the finite horizon version of the problem where the defenders only have the information about attacks in the next $T$ time frame.
-Here, we present some simulation studies using the 5-defender and 400 attacks setup on an $S^1$ boundary with $v_{max} = 5$. Fig.~\ref{fig:horizon} gives the interception rate with respect to varying defender horizons. Each data point is an average of 20 runs. The interception rate converges to around $1$ with a fairly short horizon, indicating that a long look-ahead horizon may not be necessary for effectively intercepting attacks.
+Here, we present some simulation studies using the 5-defender and 400 attacks setup on an $S^1$ boundary with $v_{max} = 5$. ~\ref{fig:horizon} gives the interception rate with respect to varying defender horizons. Each data point is an average of 20 runs. The interception rate converges to around $1$ with a fairly short horizon, indicating that a long look-ahead horizon may not be necessary for effectively intercepting attacks.
 \begin{figure}
     \vspace{-1mm}
     \centering
@@ -137,7 +137,7 @@ Here, we present some simulation studies using the 5-defender and 400 attacks se
     \vspace{-3mm}
 \end{figure}
 
-Lastly, in Fig.~\ref{fig:solution_examples}, we provide the interception trajectories of a typical run for ILP,  \ours, and online \ours. 
+Lastly, in ~\ref{fig:solution_examples}, we provide the interception trajectories of a typical run for ILP,  \ours, and online \ours. 
 %We see that, somewhat interestingly, defender switching does not happen very frequently. 
 % I think the term "switching" is a bit misleading
 \begin{figure}[h!]

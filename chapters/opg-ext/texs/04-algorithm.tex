@@ -10,9 +10,9 @@ a polynomial time approximation scheme (PTAS). We then further show the
 possibility of solving \opgmc in polynomial time when $t$ is a fixed constant. 
 We mention that our development in this section focuses on the single 
 perimeter case, i.e., $m = 1$, as the generalization to arbitrary $m$ is 
-straightforward using techniques described in \cite{FenHanGaoYu19RSS}. With this in mind, 
+straightforward using techniques described in \cite{fenghangaoyu2019efficient}. With this in mind, 
 we also provide the running times for the general setting with arbitrary $m$ 
-but refer the readers to \cite{FenHanGaoYu19RSS} on how these running times can be derived. 
+but refer the readers to \cite{fenghangaoyu2019efficient} on how these running times can be derived. 
 
 For presenting the analysis and results, for the a perimeter $P$ that we work 
 with, assume that it has $q$ perimeter segments $S_1, \ldots, S_q$ that need 
@@ -93,7 +93,7 @@ a $t$ dimensional integer vector.
 In Algorithm~\ref{algo:opgext-opglrd}, the procedure \inc($L, \ell$) checks how much of the 
 perimeter $P$ can be covered when an additional coverage length $\ell$ is added, 
 assuming that a distance of $L$ (starting from some $S_i$) is already covered. An 
-illustration of how \inc($L, \ell$) works is given in Fig.~\ref{fig:opgext-inc}.
+illustration of how \inc($L, \ell$) works is given in ~\ref{fig:opgext-inc}.
  
 
 \begin{figure}[ht]
@@ -147,18 +147,18 @@ and $n_2'$ of type $2$ robots, and so on, then
 
 \eqref{eq:opgext-exact} must hold for some $S_{i\sim i'}$ because if not, the solution 
 is not tight and can be further improved. Therefore, the bisection process for 
-locating $\ell^*$ does not need to go on further after reaching a certain granularity\cite{FenHanGaoYu19RSS}.
+locating $\ell^*$ does not need to go on further after reaching a certain granularity\cite{fenghangaoyu2019efficient}.
 %$1/\sum_{1 \le \tau \le t} a_{\tau}\cdot n_{\tau}$. 
 With this established, using 
-similar techniques from \cite{FenHanGaoYu19RSS} (we omit the technical detail as it is quite 
+similar techniques from \cite{fenghangaoyu2019efficient} (we omit the technical detail as it is quite 
 complex but without additional new ideas beyond beside what is already covered 
-in \cite{FenHanGaoYu19RSS}), we could prove that the full algorithm needs 
+in \cite{fenghangaoyu2019efficient}), we could prove that the full algorithm needs 
 no more than $O(q\log(\sum_{\tau}n_{\tau}+q)$ calls to \opglrfeasible($i, \ell$).
 %$O(t\Pi_{i=1}^{t}(n_i+1)+q\sum_{i=1}^{t} \Pi_{j\neq i} (n_j +1))$
 This directly implies that \opglr also admits a pseudo-polynomial algorithm for fixed $t$.
 % \sw{The complexity here is the decision version of single perimeters}
 \subsubsection{Multiple Perimeters}
-Also using techniques developed in \cite{FenHanGaoYu19RSS}, the single perimeter 
+Also using techniques developed in \cite{fenghangaoyu2019efficient}, the single perimeter 
 result can be readily generalized to multiple perimeters. We omit the mechanical
 details of the derivation and point out that the computational complexity in this case becomes
 $\tilde{O}( (m-1)\cdot((\Pi_{\tau=1}^t n_\tau) / \max_\tau n_\tau)^2 + 
@@ -241,9 +241,9 @@ it is assumed that indices of $M$ are modulo $q$, e.g., $M[2][q+1]
 \end{algorithm}
 
 \subsubsection{A Polynomial Time Algorithm for \opgmc for a Fixed Number of Robot Types}
-We mention briefly that, by a result of Lenstra \cite{len83}, the optimization problem 
+We mention briefly that, by a result of Lenstra \cite{lenstra1983integer}, the optimization problem 
 ~\eqref{eq:opgext-ip} is in P (i.e., polynomial time) when $t$ is a constant. The running time of 
-the algorithm \cite{len83} is however exponential in $t$. 
+the algorithm \cite{lenstra1983integer} is however exponential in $t$. 
 
 \subsubsection{A Pseudo-polynomial Time Algorithm for Arbitrary $t$}
 As demonstrated in the hardness proof, similarities exist between \opg and the \knapsack 
@@ -307,10 +307,10 @@ have the following corollary.
 \end{corollary}
 
 \subsubsection{FPTAS for Arbitrary $t$}
-When the number of robot types is not fixed, Lenstra's algorithm\cite{len83} or 
+When the number of robot types is not fixed, Lenstra's algorithm\cite{lenstra1983integer} or 
 its variants no longer run in polynomial time. We briefly mention that, 
 %via a linear time transformation, 
-by slight modifications of a FPTAS for \ttukp problem from \cite{ukpfptas}, a FPTAS 
+by slight modifications of a FPTAS for \ttukp problem from \cite{ibarra1975fast}, a FPTAS 
 for \opgmc can be obtained that runs in time $O(q^3 + q^2 \cdot \frac{t}{\epsilon^3})$, 
 where $(1+\epsilon)$ is the approximation ratio for both \opgmc and ~\eqref{eq:opgext-ip}. 
 

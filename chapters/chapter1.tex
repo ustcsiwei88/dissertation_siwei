@@ -8,14 +8,14 @@ with a focus on the line-based and range-based sensors studied in this dissertat
 Then, we conduct a literature study of the related work on sensor placement and 
 coverage related problems. 
 Lastly, some background knowledge of the theories and tools used in this paper will be given. 
-\section{Some Examples of Sensing Systems} 
+\section{Motivations} 
 Sensor systems are ubiquitous. To list a few, systems of radar antennas 
 or other sensor sources are frequently used as base stations for signal transmission, 
 or intruder detection system (IDS) for monitoring hazards. 
 Early intruder defense system can date back to ancient times, where 
 watchtowers of the Great Wall of China are used as signal points. 
 It can be seen as sensors from the broad sense 
-since ancient soldiers lit woods to create smoke to inform others when invaders appear. 
+since ancient soldiers lit woods to create smoke and inform others when invaders appear. 
 % Surveilence or tracking cameras surveillance and tracking system, 
 \begin{figure}[ht]
     \centering 
@@ -33,12 +33,12 @@ since ancient soldiers lit woods to create smoke to inform others when invaders 
     \label{fig:intro-IDS}
 \end{figure} 
 
-On top of autonomous vehicles, sensor systems are indispensible for obstacle avoidance and interactions between vehicles, 
-e.g., Tesla car (~\ref{fig:intro-tesla}) used 12 ultrasonic sensors 
+On top of autonomous vehicles, sensor systems are indispensible for obstacle avoidance and interactions between vehicles.
+For example, Tesla (~\ref{fig:intro-tesla}) uses 12 ultrasonic sensors 
 near the front and rear bumper 
 and later changed into a vision system with only cameras 
 \footnote{\url{https://www.tesla.com/en_eu/support/transitioning-tesla-vision}}. 
-TuSimple, an autonomous truck company, employs a combination of cameras, radars and lidars 
+And TuSimple, an autonomous truck company, employs a combination of cameras, radars and lidars 
 for their perception system \footnote{\\\url{https://www.tusimple.com/blogs/tusimple-1000-meter-perception-system}}. 
 
 \begin{figure}[ht] 
@@ -90,32 +90,46 @@ capturing motions, tracking poses and so on.
 \end{figure}
 
 \section{Background}
-In this section, we provide some background knowledge and terms used in this thesis,
-they will be used without explaination in the later chapters. 
+In this section, we provide sufficient background knowledge and terms used in this dissertation,
+they will be used without explaination in the following chapters. 
 
-\subsection{NP-completeness and NP-hardness}
+\subsection{NP and NP-hardness}
 % In the area of optimization, which this thesis is focusing on, NP-hardness has the 
-The definition of NP-completeness is taken from \cite{vazirani2001approximation}
-\begin{definition}[NP-completeness]
+% The definitions are taken from \cite{vazirani2001approximation}
+\begin{definition}[NP]
     A language $L\in NP$ if there is a polynomial $p$ and a polynomial time bounded Turing machine M, 
     called the {\textit verifier}, such that for each string $x\in \{0, 1\}^*$: 
-\begin{itemize}
-    \item if $x\in L$, then there is a string $y$ (the certificate) of polynomially bounded length, i.e., $|y| \leq p(|x|)$,
-    such that $M(x, y)$ accepts, and 
-    \item if $x\notin L$, then for any string $y$, such that $|y|\leq p(|x|)$, $M(x,y)$ rejects.
-\end{itemize}
+    \begin{itemize}
+        \item if $x\in L$, then there is a string $y$ (the certificate) of polynomially bounded length, i.e., $|y| \leq p(|x|)$,
+        such that $M(x, y)$ accepts, and 
+        \item if $x\notin L$, then for any string $y$, such that $|y|\leq p(|x|)$, $M(x,y)$ rejects.
+    \end{itemize}
 \end{definition}
 
-In the area of combinatorial optimization, and ${\bold{NP}}-optimization$ 
+A colloquial way in \cite{vazirani2001approximation} to describe an NP is the class of problems that have ``short and quickly verifiable''
+Yes certificates.
+% NP-complete problems refers to the class of problems such that every problem in NP can be reduced to it.
+And NP-hard problem is the class of problems such that every problem in NP can reduce to it.
+Typically, when we call an optimization problem NP-hard, it means the decision version of it is NP-hard.
 \subsection{Integer programming}
-Due to the fact that many combinatorial problems are intractable, mathematical programming tools are often 
-used for solving the problem for its generality and efficiency, e.g., its usage in Multi-robot Path Planning Problem (MRPP) 
-\cite{HanYu19IROS, GuoHanYu21ICRA}, sensor coverage, and. 
-Commercial tools includes Gurobi \cite{optimization2019gurobi} and IBM CPLEX \cite{cplex2009v12}, while open-sourced version
-includes SCIP \cite{achterberg2009scip}, CBC \cite{forrest2005cbc}, GLPK \cite{makhorin2008glpk}, and so on. 
+Since most natural optimization problems are NP-hard, mathematical programming tools are often 
+used for solving the problem for its generality and efficiency. Essentially, they take in
+some mathematical models including a set of variables $x_1, \dots, x_n$ and a set of constraints,
+\begin{align*}
+    a_{11} x_{11} + \dots + & a_{1n} x_{1n} \geq b_1\\
+    \dots & \\
+    a_{m1} x_{m1} + \dots + & a_{mn} x_{mn} \geq b_m.
+\end{align*}
+% e.g., its usage in Multi-robot Path Planning Problem (MRPP) \cite{HanYu19IROS, GuoHanYu21ICRA}, sensor coverage.
+Commercial integer programming tools include Gurobi \cite{optimization2019gurobi} and IBM CPLEX \cite{cplex2009v12}, while open-source 
+libraries include SCIP \cite{achterberg2009scip}, CBC \cite{forrest2005cbc}, GLPK \cite{makhorin2008glpk}, and so on. 
 
 \section{Literature review} 
-\subsection{Mobile sensing robot coverage control}
-\subsection{Multi-robot coordination}
+
 \subsection{Coverage-related problems in computational geometry}
+
+\subsection{Mobile sensing robot coverage control}
+
+\subsection{Multi-robot coordination}
+
 \subsection{Sensor network}

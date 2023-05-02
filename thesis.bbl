@@ -44,70 +44,6 @@
       \field{title}{Approximation algorithms}
       \field{volume}{1}
     \endentry
-    \entry{HanYu19IROS}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=34d123e8a785d22a9f4f5d923fe13b32}{%
-           family={Han},
-           familyi={H\bibinitperiod},
-           given={Shuai\bibnamedelima D.},
-           giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
-        {{hash=2c5d237b2098acc8dbd645c9e8fb0aa3}{%
-           family={Yu},
-           familyi={Y\bibinitperiod},
-           given={Jingjin},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{35d79aa83fe53e4e35a624325c886858}
-      \strng{fullhash}{35d79aa83fe53e4e35a624325c886858}
-      \strng{bibnamehash}{35d79aa83fe53e4e35a624325c886858}
-      \strng{authorbibnamehash}{35d79aa83fe53e4e35a624325c886858}
-      \strng{authornamehash}{35d79aa83fe53e4e35a624325c886858}
-      \strng{authorfullhash}{35d79aa83fe53e4e35a624325c886858}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}
-      \field{title}{Integer Programming as a General Solution Methodology for Path-Based Optimization in Robotics: Principles, Best Practices, and Applications}
-      \field{year}{2019}
-      \field{pages}{1890\bibrangedash 1897}
-      \range{pages}{8}
-      \verb{doi}
-      \verb 10.1109/IROS40897.2019.8968479
-      \endverb
-    \endentry
-    \entry{GuoHanYu21ICRA}{inproceedings}{}
-      \name{author}{3}{}{%
-        {{hash=bbad0246a5f9e19d2a2b6c9143fa7532}{%
-           family={Guo},
-           familyi={G\bibinitperiod},
-           given={T.},
-           giveni={T\bibinitperiod}}}%
-        {{hash=cf8c4a4fc6089c01e782ca65e51d30e7}{%
-           family={Han},
-           familyi={H\bibinitperiod},
-           given={S.\bibnamedelimi D.},
-           giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
-        {{hash=89b432fa4bb24ef9e7312fd806fb771b}{%
-           family={Yu},
-           familyi={Y\bibinitperiod},
-           given={J.},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{90d55ccb012e7c76695fa2d0f9f6a9fd}
-      \strng{fullhash}{90d55ccb012e7c76695fa2d0f9f6a9fd}
-      \strng{bibnamehash}{90d55ccb012e7c76695fa2d0f9f6a9fd}
-      \strng{authorbibnamehash}{90d55ccb012e7c76695fa2d0f9f6a9fd}
-      \strng{authornamehash}{90d55ccb012e7c76695fa2d0f9f6a9fd}
-      \strng{authorfullhash}{90d55ccb012e7c76695fa2d0f9f6a9fd}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{IEEE International Conference on Robotics and Automation}
-      \field{title}{Spatial and Temporal Splitting Heuristics for Multi-Robot Motion Planning}
-      \field{year}{2021}
-    \endentry
     \entry{optimization2019gurobi}{article}{}
       \name{author}{1}{}{%
         {{hash=3de1ee6d16f3042aee943419c0201119}{%
@@ -122,8 +58,8 @@
       \strng{authorbibnamehash}{3de1ee6d16f3042aee943419c0201119}
       \strng{authornamehash}{3de1ee6d16f3042aee943419c0201119}
       \strng{authorfullhash}{3de1ee6d16f3042aee943419c0201119}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Gurobi: http://www.gurobi.com}
@@ -144,8 +80,8 @@
       \strng{authorbibnamehash}{c3706a619d9ef3d65f4bd0d6b530e90d}
       \strng{authornamehash}{c3706a619d9ef3d65f4bd0d6b530e90d}
       \strng{authorfullhash}{c3706a619d9ef3d65f4bd0d6b530e90d}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{International Business Machines Corporation}
@@ -173,8 +109,8 @@
       \strng{authorbibnamehash}{8db7dd0e00ede95e40ddec0798235baa}
       \strng{authornamehash}{8db7dd0e00ede95e40ddec0798235baa}
       \strng{authorfullhash}{8db7dd0e00ede95e40ddec0798235baa}
-      \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Mathematical Programming Computation}
@@ -206,8 +142,8 @@
       \strng{authorbibnamehash}{d61c97d6495f22980e99c2111a14d310}
       \strng{authornamehash}{d61c97d6495f22980e99c2111a14d310}
       \strng{authorfullhash}{d61c97d6495f22980e99c2111a14d310}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Emerging theory, methods, and applications}
@@ -230,8 +166,8 @@
       \strng{authorbibnamehash}{7192836fdd36f9dd14a49f8d5c300a33}
       \strng{authornamehash}{7192836fdd36f9dd14a49f8d5c300a33}
       \strng{authorfullhash}{7192836fdd36f9dd14a49f8d5c300a33}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{http://www. gnu. org/s/glpk/glpk. html}
@@ -264,8 +200,8 @@
       \strng{authorbibnamehash}{3e3439ddc2d2e4b1cfbc6cbf0312008b}
       \strng{authornamehash}{3e3439ddc2d2e4b1cfbc6cbf0312008b}
       \strng{authorfullhash}{3e3439ddc2d2e4b1cfbc6cbf0312008b}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on robotics and automation}
@@ -298,8 +234,8 @@
       \strng{authorbibnamehash}{8b7335601f0bff9afa1f43263e4a5008}
       \strng{authornamehash}{8b7335601f0bff9afa1f43263e4a5008}
       \strng{authorfullhash}{8b7335601f0bff9afa1f43263e4a5008}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The International journal of robotics research}
@@ -333,8 +269,8 @@
       \strng{authornamehash}{0f1ea4f9bd64938bd7b34308a3100bb0}
       \strng{authorfullhash}{0f1ea4f9bd64938bd7b34308a3100bb0}
       \field{extraname}{1}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{number}{2}
@@ -369,8 +305,8 @@
       \strng{authorbibnamehash}{9b6711788e818cc028efb610bc2a948e}
       \strng{authornamehash}{9b6711788e818cc028efb610bc2a948e}
       \strng{authorfullhash}{9b6711788e818cc028efb610bc2a948e}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Distributed control of robotic networks: a mathematical approach to motion coordination algorithms}
@@ -409,8 +345,8 @@
       \strng{authorbibnamehash}{2068b9c88ae66ad1bc9027af31fc7274}
       \strng{authornamehash}{2068b9c88ae66ad1bc9027af31fc7274}
       \strng{authorfullhash}{2068b9c88ae66ad1bc9027af31fc7274}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Robotics and Automation}
@@ -448,8 +384,8 @@
       \strng{authorbibnamehash}{ad2104d0fc7dad9e8c03e7d0f7418fdd}
       \strng{authornamehash}{ad2104d0fc7dad9e8c03e7d0f7418fdd}
       \strng{authorfullhash}{ad2104d0fc7dad9e8c03e7d0f7418fdd}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on automatic control}
@@ -482,8 +418,8 @@
       \strng{authorbibnamehash}{86acd4aa2063b740f17c0401a87c670f}
       \strng{authornamehash}{86acd4aa2063b740f17c0401a87c670f}
       \strng{authorfullhash}{86acd4aa2063b740f17c0401a87c670f}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on automatic control}
@@ -517,8 +453,8 @@
       \strng{authornamehash}{0f1ea4f9bd64938bd7b34308a3100bb0}
       \strng{authorfullhash}{0f1ea4f9bd64938bd7b34308a3100bb0}
       \field{extraname}{2}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on automatic control}
@@ -551,8 +487,8 @@
       \strng{authorbibnamehash}{75762171ef02ff646cd90914575452e9}
       \strng{authornamehash}{75762171ef02ff646cd90914575452e9}
       \strng{authorfullhash}{75762171ef02ff646cd90914575452e9}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2008 IEEE International Conference on Robotics and Automation}
@@ -583,8 +519,8 @@
       \strng{authorbibnamehash}{f629449773f01ffa71555c2e167ed504}
       \strng{authornamehash}{f629449773f01ffa71555c2e167ed504}
       \strng{authorfullhash}{f629449773f01ffa71555c2e167ed504}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Graph Theoretic Methods in Multiagent Networks}
@@ -615,8 +551,8 @@
       \strng{authorbibnamehash}{a5c2c0c47cde3aa0d00438e84ff8d4cd}
       \strng{authornamehash}{a5c2c0c47cde3aa0d00438e84ff8d4cd}
       \strng{authorfullhash}{a5c2c0c47cde3aa0d00438e84ff8d4cd}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE TRANSACTIONS ON AUTOMATIC CONTROL}
@@ -1130,8 +1066,8 @@
       \strng{authorbibnamehash}{5eb02008be98d11099e1f3aec13788d2}
       \strng{authornamehash}{5eb02008be98d11099e1f3aec13788d2}
       \strng{authorfullhash}{5eb02008be98d11099e1f3aec13788d2}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Communications of the ACM}
@@ -1563,8 +1499,8 @@
       \strng{authorbibnamehash}{300ad4cacb3e062fc6f0a672400f66c7}
       \strng{authornamehash}{300ad4cacb3e062fc6f0a672400f66c7}
       \strng{authorfullhash}{300ad4cacb3e062fc6f0a672400f66c7}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Algorithmica}
@@ -1672,8 +1608,8 @@
       \strng{authorbibnamehash}{8f805225d8e433c29a18a566d1f6acc6}
       \strng{authornamehash}{8f805225d8e433c29a18a566d1f6acc6}
       \strng{authorfullhash}{8f805225d8e433c29a18a566d1f6acc6}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Near-optimal bin packing algorithms}
@@ -1874,8 +1810,8 @@
       \strng{authorbibnamehash}{3cfc137a2f8a14b7eea4235859fb9160}
       \strng{authornamehash}{3cfc137a2f8a14b7eea4235859fb9160}
       \strng{authorfullhash}{3cfc137a2f8a14b7eea4235859fb9160}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of the ACM (JACM)}
@@ -2182,8 +2118,8 @@
       \strng{authorbibnamehash}{b200d2f2fa6c3aab9e6cabbc6e4dacf5}
       \strng{authornamehash}{b200d2f2fa6c3aab9e6cabbc6e4dacf5}
       \strng{authorfullhash}{b200d2f2fa6c3aab9e6cabbc6e4dacf5}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Symposium on Theory of Computing}
@@ -2214,8 +2150,8 @@
       \strng{authorbibnamehash}{e0049b09f11bd338d83a78f6b5f43a64}
       \strng{authornamehash}{e0049b09f11bd338d83a78f6b5f43a64}
       \strng{authorfullhash}{e0049b09f11bd338d83a78f6b5f43a64}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Mathematics of Operations Research}
@@ -2243,8 +2179,8 @@
       \strng{authorbibnamehash}{ba884e7630b1c6a423897f96a9e8b019}
       \strng{authornamehash}{ba884e7630b1c6a423897f96a9e8b019}
       \strng{authorfullhash}{ba884e7630b1c6a423897f96a9e8b019}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Theoretical computer science}
@@ -2268,8 +2204,8 @@
       \strng{authorbibnamehash}{be82b7822f7234b494a6103d8a9c8d3f}
       \strng{authornamehash}{be82b7822f7234b494a6103d8a9c8d3f}
       \strng{authorfullhash}{be82b7822f7234b494a6103d8a9c8d3f}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Communications of the Operations Research Society of Japan}
@@ -2302,8 +2238,8 @@
       \strng{authorbibnamehash}{b9b7f01b599ca8934ed1c13fc33036f6}
       \strng{authornamehash}{b9b7f01b599ca8934ed1c13fc33036f6}
       \strng{authorfullhash}{b9b7f01b599ca8934ed1c13fc33036f6}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{16th Annual Symposium on Foundations of Computer Science (FOCS 1975)}
@@ -2461,8 +2397,8 @@
       \strng{authorbibnamehash}{7e7a262e881af79aff11cd5076388ae8}
       \strng{authornamehash}{7e7a262e881af79aff11cd5076388ae8}
       \strng{authorfullhash}{7e7a262e881af79aff11cd5076388ae8}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{New Results and New Trends in Computer Science}
@@ -2510,8 +2446,8 @@
       \strng{authorbibnamehash}{82ac37a1d83721af8756c2fdd2758aa4}
       \strng{authornamehash}{82ac37a1d83721af8756c2fdd2758aa4}
       \strng{authorfullhash}{82ac37a1d83721af8756c2fdd2758aa4}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{chapter}{4.7}

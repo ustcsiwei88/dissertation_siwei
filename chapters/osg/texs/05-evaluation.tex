@@ -30,7 +30,7 @@ We first evaluate the computational performance of the special \opgt
 algorithm where each sensor may cover a single continuous perimeter
 segment; denote this algorithm as \opgtc.
 %
-Table~\ref{tab:osg-opgcont} lists the running time in seconds for 
+\ref{tab:osg-opgcont} lists the running time in seconds for 
 various $N$ (number of discretized samples) and $k$ (number of guards). 
 Various values of $N$ suggest the choices of $\varepsilon$ according to 
 the setup of $N$ in Section~\ref{sec:osg-algo}, in this case 
@@ -75,8 +75,8 @@ average standard deviation is about $0.06$, which is pretty small.
 
 
 Since the $(2 + \varepsilon)$-optimal algorithm is extremely efficient, 
-we do not report its running time. For the ILP methods, Table~\ref{tab:osg-opgilp}
-and Table~\ref{tab:osg-orgilp} provide the running times for solving \opgt
+we do not report its running time. For the ILP methods, \ref{tab:osg-opgilp}
+and \ref{tab:osg-orgilp} provide the running times for solving \opgt
 \begin{table}[htbp]
     % \resizebox{1}{1}
     \centering
@@ -142,7 +142,7 @@ the $(2+\varepsilon)$-optimal algorithm be $r_2$, we compute the optimality
 gain as the reduce of coverage radius over $r_2$ in percentage, 
 that is $(r_2 - r_1)/r_2 \cdot 100$. These are then averaged over $10$ cases.
 Selected representative results (only three out of a total of 18 rows) are 
-given in Table~\ref{tab:osg-comp}. 
+given in \ref{tab:osg-comp}. 
 In the table, m denotes the method where $\mathbf{1} = $ \opgtc, $\mathbf{2} =$ \opgtilp, 
 and $\mathbf{3} = $\orgtilp. Number of samples for \opgtc is set to $2000$. Grid
 size for \opgtilp is $200\times 200$. Grid size for \orgtilp is set 

@@ -49,7 +49,7 @@ average standard deviation is about $0.06$, which is pretty small.
     % \resizebox{1}{1}
     \centering
     \begin{small}
-        \begin{tabularx}{0.49\textwidth}{|X|c|c|c|c|c|c|} 
+        \begin{tabular}{|c|c|c|c|c|c|c|} 
         \hline
         \diagbox{\hspace{1.4mm}$N$\hspace{0.3mm}}{$k$\hspace{0.7mm}} & $5$ & $10$ & $20$ & $30$ & $50$ & $100$ \\
         \hline
@@ -63,7 +63,7 @@ average standard deviation is about $0.06$, which is pretty small.
         \hline
         \hspace{4mm}2000&1.597 &      0.743 &       0.345 &       0.225 &       0.123 &       0.062 \\
         \hline        
-        \end{tabularx}
+        \end{tabular}
     \end{small}
     \vspace{0.1in}
     \caption{
@@ -81,7 +81,7 @@ and Table~\ref{tab:osg-orgilp} provide the running times for solving \opgt
     % \resizebox{1}{1}
     \centering
     \small{
-        \begin{tabularx}{0.49\textwidth}{|X|c|c|c|c|c|c|} 
+        \begin{tabular}{|c|c|c|c|c|c|c|} 
         \hline
         \diagbox{$GS$}{$k$} & $10$ & $15$ & $20$ & $30$ & $50$ & $100$ \\
         \hline
@@ -94,7 +94,7 @@ and Table~\ref{tab:osg-orgilp} provide the running times for solving \opgt
         \hspace{1mm}$300\times 300$ &7.782         &4.201         &2.613         &1.513         &0.814  &0.435 \\
         \hline
         \hspace{1mm}$400\times 400$ &21.23        &11.63        &7.275         &3.827         &2.231         &1.318 \\        \hline
-    \end{tabularx}
+    \end{tabular}
     }
     \vspace{0.1in}
     \caption{
@@ -116,7 +116,7 @@ The normalized average standard deviation is about $0.125$ for \opgtilp
     % \resizebox{1}{1}
     \centering
     \small{
-        \begin{tabularx}{0.49\textwidth}{|X|c|c|c|c|c|c|c|} 
+        \begin{tabular}{|c|c|c|c|c|c|c|c|} 
         \hline
         \diagbox{$GS$}{$k$} &$10$ & $15$ & $20$ & $30$ & $50$ & $100$ \\
         \hline
@@ -125,7 +125,7 @@ The normalized average standard deviation is about $0.125$ for \opgtilp
         \hspace{2mm}$40\times 40$&5.048 &3.598 &3.055 &2.252 &6.114 &1.156 \\\hline
         \hspace{2mm}$50\times 50$ &7.003 &5.617 &4.984 &5.836 &10.91 &0.925\\\hline
         \hspace{2mm}$80\times 80$ &87.14  &84.18   &82.09   &423.5 & $>$2e3 & $>$2e3 \\\hline
-        \end{tabularx}
+        \end{tabular}
     }
     \vspace{0.1in}
     \caption{
@@ -155,7 +155,7 @@ no more than around $50$).
     % \resizebox{1}{1}
     \centering
     \small{
-        \begin{tabularx}{0.485\textwidth}{|c|c|c|c|c|c|c|} 
+        \begin{tabular}{|c|c|c|c|c|c|c|} 
         \hline
         \diagbox{\,m}{$k$} & $5$ & $10$ & $20$ & $30$ & $50$ & $100$ \\
         \hline
@@ -165,7 +165,7 @@ no more than around $50$).
         $\mathbf{2}$ &\,36.29  &\,34.82  &\,36.22  &\,36.98  &\,37.69  &38.29  \\\hline
         %\hspace{1.8mm}3 & 10&33.8 &28.2 &25.3 &23.0 &19.0 &14.5 \\\hline
         $\mathbf{3}$ &\,35.69 &\,32.58 &\,30.06 &\,25.22 &\,21.99 &15.46\\\hline
-        \end{tabularx}
+        \end{tabular}
     }
     \vspace{0.1in}
     \caption{ \opgtc, \opgtilp,
@@ -177,7 +177,7 @@ and \orgtilp over the $(2 + \varepsilon)$-optimal method.}
 Next, we demonstrate the solutions computed by our algorithms on two 
 potential application scenarios. For the first one, we apply algorithms
 for \opgt on the outer boundary of the Warwick Castle in England (data
-retrieved from openstreetmap.org\cite{haklay2008openstreetmap}). ~\ref{fig:osg-wc} shows the 
+retrieved from openstreetmap.org \cite{haklay2008openstreetmap}). ~\ref{fig:osg-wc} shows the 
 solution for $15$ guards computed by the $(2 + \varepsilon)$-optimal 
 algorithm, \opgtc, and \opgtilp, respectively. Both \opgtc and \opgtilp 
 do about $40\%$ better when compared with the $(2 + \varepsilon)$-optimal 

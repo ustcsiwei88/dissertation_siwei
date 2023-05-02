@@ -176,7 +176,7 @@ others.
 
 The implementation of the generalized boustrophedon decomposition is similar 
 to vertical decomposition, we provide here an implementation 
-Alg.~\ref{alg:genbou} adapted from \cite{lavalle2006sweepline} under the 
+~\ref{alg:genbou} adapted from \cite{lavalle2006sweepline} under the 
 \emph{generation position} assumption (i.e., there are no degenerative 
 settings).
 %
@@ -186,7 +186,7 @@ two types of events during the sweeping process: splitting a cell into two
 cells and merging two cells into one cell.
 %
 Since the time cost mainly comes from maintaining the binary search tree of 
-chains, with an efficient implementation, Alg.~\ref{alg:genbou} requires 
+chains, with an efficient implementation, ~\ref{alg:genbou} requires 
 $O(n \log n)$ time, where $n$ is the complexity of the environment. 
 
 
@@ -425,15 +425,15 @@ demands.
 Readers are referred to \cite{kleinberg2006algorithm} for %detailed algorithm   description and proof of correctness 
 the details of the classical ``circulation with demand'' problem solution with max-flow. 
 
-Alg.~\ref{alg:mindag} outlines the operations
+~\ref{alg:mindag} outlines the operations
 used in this section. We note that the 
 graph data structure needs to have the functionality of adding vertex and adding 
 edge with edge demand, and $G'.flow[v_1][v_2]$ denotes the flow from $v_1$ to $v_2$ on $G'$.
 % By solving the maxflow problem, we 
 
 \subsection{The Complete Allocation Algorithm}
-The overall algorithm for robot allocation is described as in Alg.~\ref{alg:sc-overall}.
-To analyze the running time of Alg.~\ref{alg:sc-overall} for a polygonal environment, 
+The overall algorithm for robot allocation is described as in ~\ref{alg:sc-overall}.
+To analyze the running time of ~\ref{alg:sc-overall} for a polygonal environment, 
 we denote the environment complexity (number of vertices) as $n$. 
 As mentioned in the previous section, the generalized boustrophedon decomposition takes $O(n\log n)$ time. 
 As the generation of a node in the DAG comes from some chain insertion or deletion events, and an event would require one vertex to happen, 
@@ -457,20 +457,20 @@ $\rho_0$: required sensing probability guarantee.
 \SetKwComment{comment}{\%}{}
 
 \vspace{1mm}
-Construct $\zeta$ based the sensing model and $\rho_0$\;
+Construct $\zeta$ based the sensing model and $\rho_0$;
 \vspace{1mm}
 
 \begin{small}
 \comment{Primitive function $\zeta$ is to compute the minimum number of robots required for a continuous line segment}
 \end{small}
 \vspace{1mm}
-$dag\leftarrow \genbou(P, {\mathcal W})$;\;
+$dag\leftarrow \genbou(P, {\mathcal W})$;
 
 \vspace{1mm}
-$dag\gets \mindag(dag, \zeta)$;\;
+$dag\gets \mindag(dag, \zeta)$;
 
 \vspace{1mm}
-$plan\gets dag$;\;
+$plan\gets dag$;
 
 \vspace{1mm}
 \begin{small}
@@ -478,7 +478,7 @@ $plan\gets dag$;\;
 \end{small}
 
 \vspace{1mm}
-\Return{$dag.s.guards\_num$, plan};\;
+\Return{$dag.s.guards\_num$, plan};
 % Step 2. Construct corresponding DAG for the robot sweep schedule, as well as 
 % the minimum number of robots required: $\zeta(\ell_m)$ for each cell\;
 
@@ -495,7 +495,7 @@ In the case of having a fixed number of robots,
 and the objective is to 
 maximize the minimum coverage probability of a point in $\mathcal W$.
 We can apply binary search on the minimum coverage probability we can guarantee, 
-where Alg.~\ref{alg:sc-overall} can be used to decide whether some coverage probability can be guaranteed by 
+where ~\ref{alg:sc-overall} can be used to decide whether some coverage probability can be guaranteed by 
 the fixed number of robots.
 % The algorithm is detailed out in Alg.~\ref{alg:fixednum}
 %\r{I think a remark is enough to say it}

@@ -24,7 +24,7 @@ The results on computational time and interception rate are given in Figs.~\ref{
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=\linewidth]{chapters/bd/fig/timecost-v.png}
+    \includegraphics[width=.5\linewidth]{chapters/bd/fig/timecost-v.png}
     \caption{Computation time in seconds ($y$-axis) for dynamic programming (DP), integer linear programming (ILP) and \ours for 2 to 7 defenders and up to 400 attack events ($x$-axis). DP quickly becomes intractable as the number of defenders goes beyond $3$; ILP is about 2-3 magnitudes slower than \ours.}
     \label{fig:bd-time_cost}
 \end{figure}
@@ -33,7 +33,7 @@ The results on computational time and interception rate are given in Figs.~\ref{
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=\linewidth]{chapters/bd/fig/quality-v.png}
+    \includegraphics[width=.5\linewidth]{chapters/bd/fig/quality-v.png}
     \caption{Solution quality (interception rate) for dynamic programming (DP), integer linear programming (ILP) and \ours  for 2 to 7 defenders. For all settings, \ours achieves optimality nearly identical to the optimal DP and ILP (when DP and ILP can complete the computation). ILP starts to fail as the number of defenders reaches $5$ and the number of events exceeds $300$.}
     \label{fig:bd-quality}
 \end{figure}
@@ -143,7 +143,7 @@ We observe that $I$ and $S^1$ have similar difficulty to defend, with $I$ being 
 \end{figure}
 
 \subsection{Infinite Attack Stream with Finite Look-Ahead Horizon}
-Alg.~\ref{alg:bd-horizon} describes an online \ours algorithm for handling the finite horizon version of the problem where the defenders only have the information about attacks in the next $T$ time frame.
+~\ref{alg:bd-horizon} describes an online \ours algorithm for handling the finite horizon version of the problem where the defenders only have the information about attacks in the next $T$ time frame.
 Here, we present some simulation studies using the 5-defender and 400 attacks setup on an $S^1$ boundary with $v_{max} = 5$. 
 ~\ref{fig:bd-horizon} gives the interception rate with respect to varying defender horizons. Each data point is an average of 20 runs. 
 The interception rate converges to around $1$ with a fairly short horizon, 
@@ -151,7 +151,7 @@ indicating that a long look-ahead horizon may not be necessary for effectively i
 \begin{figure}
     \vspace{-1mm}
     \centering
-    \includegraphics[width=0.98\linewidth]{chapters/bd/fig/horizon.pdf}
+    \includegraphics[width=0.6\linewidth]{chapters/bd/fig/horizon.pdf}
     \vspace{-2mm}
     \caption{Interception rate with respect to different horizons (logarithmic scale). It can be observed that longer horizon allows better planning.}
     \label{fig:bd-horizon}

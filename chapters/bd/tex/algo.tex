@@ -22,8 +22,8 @@ T[a_1]\dots[a_{ma}]\dots[a_k] &= \\
 \end{split}
 \end{equation}
 
-Pseudo-code in Alg.~\ref{alg:bd-dp} provides a sketch of a possible implementation of the dynamic programming algorithm.
-Effectively implemented, the time complexity of running Alg.~\ref{alg:bd-dp} is $O( (n+1)^{k+1})$, which is polynomial when $k$, the number of defenders, is fixed.
+Pseudo-code in ~\ref{alg:bd-dp} provides a sketch of a possible implementation of the dynamic programming algorithm.
+Effectively implemented, the time complexity of running ~\ref{alg:bd-dp} is $O( (n+1)^{k+1})$, which is polynomial when $k$, the number of defenders, is fixed.
 \vspace{-2mm}
 
 \begin{algorithm}
@@ -114,15 +114,15 @@ The flow formulation of the problem is an NP-hard problem. The proof is similar 
 
 \subsection{Exhaustive Defenders Pairing Heuristic Search Method}
 \label{sec:bd-dp_local}
-We now develop a heuristic search method using the dynamic programming algorithm discussed in Alg.~\ref{alg:bd-dp} 
+We now develop a heuristic search method using the dynamic programming algorithm discussed in ~\ref{alg:bd-dp} 
 applied on two defenders.
 The DP algorithm that computes the optimal solution for two defenders is used as a local improvement primitive 
 for the local search heuristic algorithm. 
 
 We call the resulting algorithm \emph{exhaustive defender pairing} (\ours).  
 In each iteration, \ours pick two defenders, and the attack events the two defenders have intercepted and the attack events that have not been intercepted by any defender. 
-Then, \ours uses the DP algorithm in Alg.~\ref{alg:bd-dp} to increase the number of attack events intercepted by the two defenders selected. 
-The complete algorithm is sketched in Alg.~\ref{alg:bd-dp_local}.
+Then, \ours uses the DP algorithm in ~\ref{alg:bd-dp} to increase the number of attack events intercepted by the two defenders selected. 
+The complete algorithm is sketched in ~\ref{alg:bd-dp_local}.
 
 \begin{algorithm}[h]
 \DontPrintSemicolon
@@ -176,8 +176,8 @@ $result\gets 0$\;
 \end{algorithm}
 
 We can try different defender pairing orders and choose the best one. 
-In our \ours implementation, we choose to run line 3 of Alg.~\ref{alg:bd-dp_local} in 3 different iteration ordering of $u, v$.
-Alg.~\ref{alg:bd-dp_local}'s running time is $O(k^2 n^3)$ as we try $O(k^2)$ pairs of defenders, and each run of the DP algorithm takes $O(n^3)$.
+In our \ours implementation, we choose to run line 3 of ~\ref{alg:bd-dp_local} in 3 different iteration ordering of $u, v$.
+~\ref{alg:bd-dp_local}'s running time is $O(k^2 n^3)$ as we try $O(k^2)$ pairs of defenders, and each run of the DP algorithm takes $O(n^3)$.
 % ($u$ increasing from $1$ to $k$, decreasing from $k$ to $1$, increasing from $k/2$ to $k$ after which go back to $1$ and increase to $k/2-1$). 
 
 \subsection{Handling Infinite Attack Streams with a Finite Look-Ahead Horizon }
@@ -186,7 +186,7 @@ For Problem~\ref{prob:bd-2} where the attacks $\big \langle loc_i, t_i\big \rang
 As the future attack sequence cannot be foreseen, defenders need to \emph{react} to information (e.g., the attack events in the next $T$ time interval) obtained so far. 
 
 Towards addressing the problem, a greedy \emph{replanning} approach can be applied. Whenever an attack event is observed, the defender team replans the capture sequence given the new attacks added to the attack queue. 
-This gives rise to an online algorithm sketched in Alg.~\ref{alg:bd-horizon}.
+This gives rise to an online algorithm sketched in ~\ref{alg:bd-horizon}.
 
 \begin{algorithm}[h]
 \DontPrintSemicolon
@@ -199,7 +199,7 @@ $E'\gets $ an empty queue\;
 \Comment{$E'$ stores attack events seen so far}
 \vspace{1mm}
 \While{new attack events added to $E'$ }{
-    Apply Alg.~\ref{alg:bd-dp_local} to compute a plan for the defenders and attack events $E'$\;
+    Apply ~\ref{alg:bd-dp_local} to compute a plan for the defenders and attack events $E'$\;
     Execute the plan, pop out from $E'$ attack events passed, and update $loc^1,\dots,loc^k$ to the defenders' current locations until new attacks are foreseen\;
 }
 % \KwResult{Number of attacks intercepted}

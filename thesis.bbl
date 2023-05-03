@@ -209,6 +209,86 @@
       \field{title}{GLPK (GNU linear programming kit)}
       \field{year}{2008}
     \endentry
+    \entry{adler2022role}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=d98fd97fe2e6f1f97956ec357b03a51c}{%
+           family={Adler},
+           familyi={A\bibinitperiod},
+           given={Aviv},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a4e878426da65ec6da0cb2a47bd63420}{%
+           family={Mickelin},
+           familyi={M\bibinitperiod},
+           given={Oscar},
+           giveni={O\bibinitperiod}}}%
+        {{hash=7a879ebd48bc7b053bc1732ee0cc8d67}{%
+           family={Ramachandran},
+           familyi={R\bibinitperiod},
+           given={Ragesh\bibnamedelima K},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=6d430fe2b65c3d9fedd6f2d351604092}{%
+           family={Sukhatme},
+           familyi={S\bibinitperiod},
+           given={Gaurav\bibnamedelima S},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=ca50b61c6d4e6ff567664ac59d4d3837}{%
+           family={Karaman},
+           familyi={K\bibinitperiod},
+           given={Sertac},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{7cd10a29863f4c2d11283c60169af022}
+      \strng{fullhash}{7cd10a29863f4c2d11283c60169af022}
+      \strng{bibnamehash}{7cd10a29863f4c2d11283c60169af022}
+      \strng{authorbibnamehash}{7cd10a29863f4c2d11283c60169af022}
+      \strng{authornamehash}{7cd10a29863f4c2d11283c60169af022}
+      \strng{authorfullhash}{7cd10a29863f4c2d11283c60169af022}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Algorithmic Foundations of Robotics XV: Proceedings of the Fifteenth Workshop on the Algorithmic Foundations of Robotics}
+      \field{title}{The role of heterogeneity in autonomous perimeter defense problems}
+      \field{year}{2022}
+      \field{pages}{115\bibrangedash 131}
+      \range{pages}{17}
+    \endentry
+    \entry{shishika2020review}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=688d8700a1c453d8f28c3a8367e0d636}{%
+           family={Shishika},
+           familyi={S\bibinitperiod},
+           given={Daigo},
+           giveni={D\bibinitperiod}}}%
+        {{hash=3c2a6a0658f1ad90e7d4a83eef9c3841}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Vijay},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{958b15f2ccbb3b79fd37c91062aa6238}
+      \strng{fullhash}{958b15f2ccbb3b79fd37c91062aa6238}
+      \strng{bibnamehash}{958b15f2ccbb3b79fd37c91062aa6238}
+      \strng{authorbibnamehash}{958b15f2ccbb3b79fd37c91062aa6238}
+      \strng{authornamehash}{958b15f2ccbb3b79fd37c91062aa6238}
+      \strng{authorfullhash}{958b15f2ccbb3b79fd37c91062aa6238}
+      \field{extraname}{1}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Conference on Decision and Game Theory for Security}
+      \field{title}{A review of multi agent perimeter defense games}
+      \field{year}{2020}
+      \field{pages}{472\bibrangedash 485}
+      \range{pages}{14}
+    \endentry
     \entry{arai2002advances}{article}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -235,8 +315,8 @@
       \strng{authorbibnamehash}{3e3439ddc2d2e4b1cfbc6cbf0312008b}
       \strng{authornamehash}{3e3439ddc2d2e4b1cfbc6cbf0312008b}
       \strng{authorfullhash}{3e3439ddc2d2e4b1cfbc6cbf0312008b}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on robotics and automation}
@@ -269,8 +349,8 @@
       \strng{authorbibnamehash}{8b7335601f0bff9afa1f43263e4a5008}
       \strng{authornamehash}{8b7335601f0bff9afa1f43263e4a5008}
       \strng{authorfullhash}{8b7335601f0bff9afa1f43263e4a5008}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The International journal of robotics research}
@@ -304,8 +384,8 @@
       \strng{authornamehash}{0f1ea4f9bd64938bd7b34308a3100bb0}
       \strng{authorfullhash}{0f1ea4f9bd64938bd7b34308a3100bb0}
       \field{extraname}{1}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{number}{2}
@@ -340,8 +420,8 @@
       \strng{authorbibnamehash}{9b6711788e818cc028efb610bc2a948e}
       \strng{authornamehash}{9b6711788e818cc028efb610bc2a948e}
       \strng{authorfullhash}{9b6711788e818cc028efb610bc2a948e}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Distributed control of robotic networks: a mathematical approach to motion coordination algorithms}
@@ -380,8 +460,8 @@
       \strng{authorbibnamehash}{2068b9c88ae66ad1bc9027af31fc7274}
       \strng{authornamehash}{2068b9c88ae66ad1bc9027af31fc7274}
       \strng{authorfullhash}{2068b9c88ae66ad1bc9027af31fc7274}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Robotics and Automation}
@@ -419,8 +499,8 @@
       \strng{authorbibnamehash}{ad2104d0fc7dad9e8c03e7d0f7418fdd}
       \strng{authornamehash}{ad2104d0fc7dad9e8c03e7d0f7418fdd}
       \strng{authorfullhash}{ad2104d0fc7dad9e8c03e7d0f7418fdd}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on automatic control}
@@ -453,8 +533,8 @@
       \strng{authorbibnamehash}{86acd4aa2063b740f17c0401a87c670f}
       \strng{authornamehash}{86acd4aa2063b740f17c0401a87c670f}
       \strng{authorfullhash}{86acd4aa2063b740f17c0401a87c670f}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on automatic control}
@@ -488,8 +568,8 @@
       \strng{authornamehash}{0f1ea4f9bd64938bd7b34308a3100bb0}
       \strng{authorfullhash}{0f1ea4f9bd64938bd7b34308a3100bb0}
       \field{extraname}{2}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on automatic control}
@@ -522,8 +602,8 @@
       \strng{authorbibnamehash}{75762171ef02ff646cd90914575452e9}
       \strng{authornamehash}{75762171ef02ff646cd90914575452e9}
       \strng{authorfullhash}{75762171ef02ff646cd90914575452e9}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2008 IEEE International Conference on Robotics and Automation}
@@ -554,8 +634,8 @@
       \strng{authorbibnamehash}{f629449773f01ffa71555c2e167ed504}
       \strng{authornamehash}{f629449773f01ffa71555c2e167ed504}
       \strng{authorfullhash}{f629449773f01ffa71555c2e167ed504}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Graph Theoretic Methods in Multiagent Networks}
@@ -586,8 +666,8 @@
       \strng{authorbibnamehash}{a5c2c0c47cde3aa0d00438e84ff8d4cd}
       \strng{authornamehash}{a5c2c0c47cde3aa0d00438e84ff8d4cd}
       \strng{authorfullhash}{a5c2c0c47cde3aa0d00438e84ff8d4cd}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE TRANSACTIONS ON AUTOMATIC CONTROL}
@@ -1017,8 +1097,8 @@
       \strng{authorbibnamehash}{6d66ca6c331c3713f32442cd175c0c66}
       \strng{authornamehash}{6d66ca6c331c3713f32442cd175c0c66}
       \strng{authorfullhash}{6d66ca6c331c3713f32442cd175c0c66}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Art gallery theorems and algorithms}
@@ -1042,8 +1122,8 @@
       \strng{authorbibnamehash}{4892c17efdb61c14af3566eeafd559ff}
       \strng{authornamehash}{4892c17efdb61c14af3566eeafd559ff}
       \strng{authorfullhash}{4892c17efdb61c14af3566eeafd559ff}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Proceedings of the IEEE}
@@ -1068,8 +1148,8 @@
       \strng{authorbibnamehash}{3fc4fb7684111cb9dcd6eb11d4024766}
       \strng{authornamehash}{3fc4fb7684111cb9dcd6eb11d4024766}
       \strng{authorfullhash}{3fc4fb7684111cb9dcd6eb11d4024766}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Amer. Math. Monthly}
@@ -1504,8 +1584,8 @@
       \strng{authorbibnamehash}{ea32ebdb2cada91aeede81ac1654b85a}
       \strng{authornamehash}{ea32ebdb2cada91aeede81ac1654b85a}
       \strng{authorfullhash}{ea32ebdb2cada91aeede81ac1654b85a}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Robotics: Science and Systems}
@@ -2099,8 +2179,8 @@
       \strng{authorbibnamehash}{45ceec6acaf3be8eaff0968ce4567c1d}
       \strng{authornamehash}{45ceec6acaf3be8eaff0968ce4567c1d}
       \strng{authorfullhash}{45ceec6acaf3be8eaff0968ce4567c1d}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Theory of the Location of Industries}
@@ -2123,8 +2203,8 @@
       \strng{authorbibnamehash}{c9609db02e16e7ff812eddca25a683d6}
       \strng{authornamehash}{c9609db02e16e7ff812eddca25a683d6}
       \strng{authorfullhash}{c9609db02e16e7ff812eddca25a683d6}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{number}{173}
@@ -2364,8 +2444,8 @@
       \strng{authorbibnamehash}{06cdf390cfed262aef2d4e186f2f830a}
       \strng{authornamehash}{06cdf390cfed262aef2d4e186f2f830a}
       \strng{authorfullhash}{06cdf390cfed262aef2d4e186f2f830a}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Acta Math.}
@@ -2401,8 +2481,8 @@
       \strng{authorbibnamehash}{4512d981a2fac684e867257fcb2c5419}
       \strng{authornamehash}{4512d981a2fac684e867257fcb2c5419}
       \strng{authorfullhash}{4512d981a2fac684e867257fcb2c5419}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Canadian Journal of Mathematics}
@@ -4653,6 +4733,7 @@
       \strng{authorbibnamehash}{958b15f2ccbb3b79fd37c91062aa6238}
       \strng{authornamehash}{958b15f2ccbb3b79fd37c91062aa6238}
       \strng{authorfullhash}{958b15f2ccbb3b79fd37c91062aa6238}
+      \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
@@ -4895,48 +4976,6 @@
       \field{journaltitle}{arXiv preprint arXiv:1909.11881}
       \field{title}{Matching-based capture strategies for 3D heterogeneous multiplayer reach-avoid differential games}
       \field{year}{2019}
-    \endentry
-    \entry{adler2022role}{article}{}
-      \name{author}{5}{}{%
-        {{hash=d98fd97fe2e6f1f97956ec357b03a51c}{%
-           family={Adler},
-           familyi={A\bibinitperiod},
-           given={Aviv},
-           giveni={A\bibinitperiod}}}%
-        {{hash=a4e878426da65ec6da0cb2a47bd63420}{%
-           family={Mickelin},
-           familyi={M\bibinitperiod},
-           given={Oscar},
-           giveni={O\bibinitperiod}}}%
-        {{hash=7a879ebd48bc7b053bc1732ee0cc8d67}{%
-           family={Ramachandran},
-           familyi={R\bibinitperiod},
-           given={Ragesh\bibnamedelima K},
-           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
-        {{hash=6d430fe2b65c3d9fedd6f2d351604092}{%
-           family={Sukhatme},
-           familyi={S\bibinitperiod},
-           given={Gaurav\bibnamedelima S},
-           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=ca50b61c6d4e6ff567664ac59d4d3837}{%
-           family={Karaman},
-           familyi={K\bibinitperiod},
-           given={Sertac},
-           giveni={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{7cd10a29863f4c2d11283c60169af022}
-      \strng{fullhash}{7cd10a29863f4c2d11283c60169af022}
-      \strng{bibnamehash}{7cd10a29863f4c2d11283c60169af022}
-      \strng{authorbibnamehash}{7cd10a29863f4c2d11283c60169af022}
-      \strng{authornamehash}{7cd10a29863f4c2d11283c60169af022}
-      \strng{authorfullhash}{7cd10a29863f4c2d11283c60169af022}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{arXiv preprint arXiv:2202.10433}
-      \field{title}{The Role of Heterogeneity in Autonomous Perimeter Defense Problems}
-      \field{year}{2022}
     \endentry
     \entry{cormen2022introduction}{inbook}{}
       \name{author}{4}{}{%

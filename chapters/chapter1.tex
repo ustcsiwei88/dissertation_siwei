@@ -1,15 +1,18 @@
 
-\chapter{Introduction and Background} 
+\chapter{Introduction} 
 \thispagestyle{myheadings} 
 In this chapter, we first discuss some regular types of sensing systems 
 used for guarding, tracking or surveilence, 
-with a focus on the line-based and range-based sensors studied in this dissertation. 
+with a focus on the line-based and range-based sensors. 
+These will serve as the motivation of this dissertation study
 % and we then introduce the two types of simplified sensing model studied in this thesis, 
 Then, we conduct a literature study of the related work on sensor placement and 
 coverage related problems. 
 Lastly, some background knowledge of the theories and tools used in this paper will be given. 
+
 \section{Motivations} 
-Sensor systems are ubiquitous. To list a few, systems of radar antennas 
+Sensor systems are ubiquitous in the modern world. 
+To list a few, systems of radar antennas 
 or other sensor sources are frequently used as base stations for signal transmission, 
 or intruder detection system (IDS) for monitoring hazards. 
 Early intruder defense system can date back to ancient times, where 
@@ -33,8 +36,33 @@ since ancient soldiers lit woods to create smoke and inform others when invaders
     \label{fig:intro-IDS}
 \end{figure} 
 
+In surveilence or tracking systems (\ref{fig:intro-laser}), 
+sensors like laser beams or cameras are deployed for purposes like thief detection, 
+motion capture, pose tracking and so on. 
+\begin{figure}[ht] 
+    \centering 
+    
+    % \begin{subfigure}[b]{0.55\textwidth} 
+    %     \includegraphics[width=\textwidth]{figures/truck_cam.jpeg} 
+    %     \caption{Autonomous truck camera system} 
+    %     \label{fig:intro_truckcam} 
+    % \end{subfigure} 
+    \begin{subfigure}[b]{0.41\textwidth} 
+        \includegraphics[width=\textwidth]{figures/optitrack.jpg} 
+        \caption{Optical tracking system} 
+        \label{fig:intro-optitrack} 
+    \end{subfigure} 
+    \hfill
+    \begin{subfigure} [b]{0.46\textwidth} 
+        \includegraphics[width=\textwidth]{figures/laser.jpg} 
+        \caption{Laser system} 
+        \label{fig:intro-laser} 
+    \end{subfigure} 
+\end{figure}
+
+Sensor deployment are not limited to sensors static to the ground.
 On top of autonomous vehicles, sensor systems are indispensible for obstacle avoidance and interactions between vehicles.
-For example, Tesla (~\ref{fig:intro-tesla}) uses 12 ultrasonic sensors 
+Tesla (~\ref{fig:intro-tesla}) uses 12 ultrasonic sensors 
 near the front and rear bumper 
 and later changed into a vision system with only cameras 
 \footnote{\url{https://www.tesla.com/en_eu/support/transitioning-tesla-vision}}. 
@@ -65,32 +93,18 @@ for their perception system \footnote{\\\url{https://www.tusimple.com/blogs/tusi
     \label{fig:intro-autonomous-vehicles}
 \end{figure} 
 
-For surveilence or tracking systems, 
-sensors like laser beams or cameras are deployed for applications like detecting thiefs, 
-capturing motions, tracking poses and so on. 
-\begin{figure}[ht] 
-    \centering 
-    
-    % \begin{subfigure}[b]{0.55\textwidth} 
-    %     \includegraphics[width=\textwidth]{figures/truck_cam.jpeg} 
-    %     \caption{Autonomous truck camera system} 
-    %     \label{fig:intro_truckcam} 
-    % \end{subfigure} 
-    \begin{subfigure}[b]{0.41\textwidth} 
-        \includegraphics[width=\textwidth]{figures/optitrack.jpg} 
-        \caption{Optical tracking system} 
-        \label{fig:intro-optitrack} 
-    \end{subfigure} 
-    \hfill
-    \begin{subfigure} [b]{0.46\textwidth} 
-        \includegraphics[width=\textwidth]{figures/laser.jpg} 
-        \caption{Laser system} 
-        \label{fig:intro-laser} 
-    \end{subfigure} 
-\end{figure}
-
+The placement of sensors are extremely crucial for many reasons.
+First, a typical high-frequency tracking camera can cost up to serveral thousands US dollars in 2023, 
+let alone sensors with specific industrial or millitary purposes. If a certain sensor layout solution
+can reduce the number of sensors used in, e.g., in a security environment, autonomous vehicle, or in a patrolling robot,
+the cost for deployment of such sensor systems can be greatly reduced.
+Second, real sensors come with many characteristics as mentioned in \cite{sebastian2005prob},
+range sensors can have noise, unexpected objects blocking the view, sensing failures, random measurements and so on.
+Hence, the objective that a sensor system being more balanced in terms of work load is reasonable.
+Lastly, a good sensor deployment in systems like surveilence camera system means less human labor from the security personel,
+and less ernergy consumpsion.
 \section{Background}
-In this section, we provide sufficient background knowledge and terms used in this dissertation,
+In this section, we provide sufficient background knowledge and terms used in this dissertation, 
 they will be used without explaination in the following chapters. 
 
 \subsection{NP and NP-hardness}
@@ -116,20 +130,90 @@ Since most natural optimization problems are NP-hard, mathematical programming t
 used for solving the problem for its generality and efficiency. Essentially, they take in
 some mathematical models including a set of variables $x_1, \dots, x_n$ and a set of constraints,
 \begin{align*}
-    a_{11} x_{11} + \dots + & a_{1n} x_{1n} \geq b_1\\
+    a_{11} x_{11} + \dots + & a_{1n} x_{1n} \geq b_1,\\
     \dots & \\
-    a_{m1} x_{m1} + \dots + & a_{mn} x_{mn} \geq b_m.
+    a_{m1} x_{m1} + \dots + & a_{mn} x_{mn} \geq b_m,
 \end{align*}
+and objective 
+\[
+    \min a_{11} x_{11} + \dots + a_{1n} x_{1n} \geq b_1.
+\]
 % e.g., its usage in Multi-robot Path Planning Problem (MRPP) \cite{HanYu19IROS, GuoHanYu21ICRA}, sensor coverage.
 Commercial integer programming tools include Gurobi \cite{optimization2019gurobi} and IBM CPLEX \cite{cplex2009v12}, while open-source 
 libraries include SCIP \cite{achterberg2009scip}, CBC \cite{forrest2005cbc}, GLPK \cite{makhorin2008glpk}, and so on. 
+Modern tools, even in the open sourced branch, are pretty mature and developed, and hard to optimize within the framework itself.
+\section{Problems Studied in the Dissertation}
+In this section, we provide an overview of the problems studied in the later chapters, 
+where each chapter can be considered as an independent entity. 
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width = 0.4\textwidth]{chapters/opg/figures/castle_15-eps-converted-to.pdf}
+    \includegraphics[width = 0.4\textwidth]{chapters/opg-ext/figures/opgmc-castle-thin-eps-converted-to.pdf}
+    \label{fig:intro-opg}
+\end{figure}
+
+The first set of problems studied relate to perimeter guarding with 1D sensors, where the sensing range 
+is assumed to be a continous line on top of the perimeter of some regions. 
+Two problems will be introduced, perimeter guarding with homogeneous sensors and with heterogeneous sensors. 
+The homogeneous case can be solved using only classical algorithms. 
+While the heterogeneous case is NP-hard, but can still be solved with dynamic programming under a reasonable
+amount of time. 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width = 0.4\textwidth]{chapters/osg/figures/wuhan_ilp.png}
+    \includegraphics[width = 0.4\textwidth]{chapters/osg/figures/wuhan_region_ilp.png}
+    \label{fig:intro-osg}
+\end{figure}
+Then, we continues with perimeter guarding but uses circles to represent the 
+coverage range of sensors. The study extends to guarding 2D regions beyond the perimeters. 
+Our study turns out that even for covering the boundary of a simple polygon, 
+the problem of find the minimum sensing radius is NP-hard to approximate within a factor of 1.152. 
+However, effective approximation algorithms are developed to solve this problem. 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width = 0.5\textwidth]{chapters/bf/fig/intro_pic.png}
+    \label{fig:intro-lines}
+\end{figure}
+After the two chapters about covering perimeters or regions, which is essentially separating 
+some crtical polygonal regions from the outside. 
+The fourth chapter digs deeper into this problem by studying the separation of more than two polygonal sets. 
+To simplify the problem, a line-of-sight sensing model will be adopted. 
+The problem is NP-hard even for the problem of separating two sets of regions with the minimum number of lines. 
+Still, a near-optimal solution using integer programming is provided. 
+
+\begin{figure}[ht]
+    \centering
+    \vspace{-.8in}
+    \includegraphics[width=.8\textwidth]{figures/dynamic-intro.png}
+    \vspace{-.8in}
+    % {
+    %     \includegraphics[width = 0.35\textwidth]{chapters/sc/fig/instance_2.png}
+    % }
+    % \includegraphics[width = 0.35\textwidth]{chapters/bd/fig/inf_horizon_example-v.png}
+    \label{fig:intro-bd-sc}
+\end{figure}
+The fifth chapter duels with the dynamical setting, two different but related problems are studied. 
+The first problem is the boundary defense problem in the context of heterogeneous defenders, 
+which is an extension of the perimeter defense probelm. 
+The second problem is the coordinated sweeping problem where a group of robots coordinate to sweep a region with obstacles. 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width = 0.45\textwidth]{chapters/surf/fig/bus.png}
+    \hfill
+    \includegraphics[width = 0.4\textwidth]{chapters/surf/fig/bus_result_3.png}
+    \label{fig:intro-surf}
+\end{figure}
+The sixth chapter dicusses a real-world application on the placement of UV (ultra violet) lights 
+to cover the surface of some regions for the sanitization purpose. 
+
+\begin{comment}
 \section{Literature review} 
-
-\subsection{Coverage-related problems in computational geometry}
-
-\subsection{Mobile sensing robot coverage control}
-
-\subsection{Multi-robot coordination}
-
-\subsection{Sensor network}
+\subsection{Coverage-related problems in computational geometry} 
+\subsection{Mobile sensing robot coverage control} 
+\subsection{Multi-robot coordination} 
+\subsection{Sensor network} 
+\end{comment}

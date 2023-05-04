@@ -130,7 +130,7 @@ Typically, when we call an optimization problem NP-hard, it means the decision v
 \subsection{Integer programming}
 Since most natural optimization problems are NP-hard, mathematical programming tools are often 
 used for solving the problem for its generality and efficiency. Essentially, they take in
-some mathematical models including a set of variables $x_1, \dots, x_n$ and a set of constraints,
+some mathematical models including a set of integral variables $x_1, \dots, x_n$ and a set of constraints,
 \begin{align*}
     a_{11} x_{11} + \dots + & a_{1n} x_{1n} \geq b_1,\\
     \dots & \\
@@ -140,18 +140,24 @@ and objective
 \[
     \min a_{11} x_{11} + \dots + a_{1n} x_{1n} \geq b_1.
 \]
+When the variables $x_1, \dots, x_n$ contains continous variable, the model becomes mixed integer programming problem (MILP).
+
 % e.g., its usage in Multi-robot Path Planning Problem (MRPP) \cite{HanYu19IROS, GuoHanYu21ICRA}, sensor coverage. 
-Commercial integer programming tools include Gurobi \cite{optimization2019gurobi} and IBM CPLEX \cite{cplex2009v12}, while open-source 
+Commercial (mixed) integer programming tools include Gurobi \cite{optimization2019gurobi} and IBM CPLEX \cite{cplex2009v12}, while open-source 
 libraries include SCIP \cite{achterberg2009scip}, CBC \cite{forrest2005cbc}, GLPK \cite{makhorin2008glpk}, and so on. 
-Modern tools, even in the open sourced branch, are pretty mature and developed, and hard to optimize within the framework itself. 
-\section{Problems Studied in the Dissertation}
-In this section, we provide an overview of the problems studied in the later chapters, 
-where each chapter can be considered as an independent entity. 
+Modern tools, even in the open source branch, are pretty mature and developed, and hard to optimize within the framework itself. 
+While work like \cite{deits2014footstep} in bipedal robot footstep planning and \cite{guo2021spatial} in multi-robot path planning 
+seek performance improvement by constructing different instance formulations.
 
 \subsection{Approximation algorithm}
 For an optimization algorithm $\Pi$, OPT($\Pi$), or sometimes OPT, 
 denotes the optimal solution of the problem instance. An $(1+\alpha)$-OPT or a $(1+\alpha)$-optimal solution refer
-to a solution with abjective value of $(1+\alpha)$OPT for a minimization problem. 
+to a solution with abjective value of $(1+\alpha)$OPT for a minimization objective. For maximization objective,
+the corresponding term is $(1-\alpha)OPT$.
+
+\section{Problems Studied in the Dissertation}
+In this section, we provide an overview of the problems studied in the later chapters, 
+where each chapter are independent and self-contained. 
 
 \begin{figure}[h]
     \centering
@@ -199,7 +205,7 @@ amount of time.
     \end{subfigure}
     \qquad
     \qquad
-    \caption{Optimal set guarding with 20 sensors to cover the perimeter and interior of some region}
+    \caption{Optimal set guarding with 20 sensors to cover the perimeter and interior of a city}
     \label{fig:intro-osg}
 \end{figure}
 Then, we continues with perimeter guarding but uses 2D circles to represent the 
@@ -261,10 +267,16 @@ can be executed and every point in the workspace is sensed with a certain requir
     \includegraphics[width = 0.45\textwidth]{chapters/surf/fig/bus.png}
     \hfill
     \includegraphics[width = 0.4\textwidth]{chapters/surf/fig/bus_result_3.png}
+    \caption{UV sanitization lights placement to cover the interior of a bus}
     \label{fig:intro-surf}
 \end{figure}
+
 The sixth chapter dicusses a real-world application on the placement of UV (ultra violet) lights 
-to cover the surface of some regions for the sanitization purpose. 
+to cover the surface of for the sanitization purpose. The problem can be seen as an extension
+of the art-gallery problem \cite{o1987art}, an thus computationally intractable.
+Still, a combined integer programming and classical local search approach can be used to
+solve the probem effectively. The method is evaluated on three real scenarios: 
+the interior of a bus, a subway or an ICU room. 
 
 \begin{comment}
 \section{Literature review} 

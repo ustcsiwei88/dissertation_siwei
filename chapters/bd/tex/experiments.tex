@@ -25,7 +25,7 @@ The results on computational time and interception rate are given in Figs.~\ref{
 \begin{figure}[h!]
     \centering
     \includegraphics[width=.5\linewidth]{chapters/bd/fig/timecost-v.png}
-    \caption{Computation time in seconds ($y$-axis) for dynamic programming (DP), integer linear programming (ILP) and \ours for 2 to 7 defenders and up to 400 attack events ($x$-axis). DP quickly becomes intractable as the number of defenders goes beyond $3$; ILP is about 2-3 magnitudes slower than \ours.}
+    \caption[Computation time for DP, ILP and \our]{Computation time in seconds ($y$-axis) for dynamic programming (DP), integer linear programming (ILP) and \ours for 2 to 7 defenders and up to 400 attack events ($x$-axis). DP quickly becomes intractable as the number of defenders goes beyond $3$; ILP is about 2-3 magnitudes slower than \ours.}
     \label{fig:bd-time_cost}
 \end{figure}
 
@@ -34,7 +34,7 @@ The results on computational time and interception rate are given in Figs.~\ref{
 \begin{figure}[h!]
     \centering
     \includegraphics[width=.5\linewidth]{chapters/bd/fig/quality-v.png}
-    \caption{Solution quality (interception rate) for dynamic programming (DP), integer linear programming (ILP) and \ours  for 2 to 7 defenders. For all settings, \ours achieves optimality nearly identical to the optimal DP and ILP (when DP and ILP can complete the computation). ILP starts to fail as the number of defenders reaches $5$ and the number of events exceeds $300$.}
+    \caption[Solution quality for DP, ILP and \our]{Solution quality (interception rate) for dynamic programming (DP), integer linear programming (ILP) and \ours  for 2 to 7 defenders. For all settings, \ours achieves optimality nearly identical to the optimal DP and ILP (when DP and ILP can complete the computation). ILP starts to fail as the number of defenders reaches $5$ and the number of events exceeds $300$.}
     \label{fig:bd-quality}
 \end{figure}
 
@@ -64,7 +64,7 @@ and interception rate, each data point is the average of 20 runs.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=.5\linewidth]{chapters/bd/fig/def_timecost-v.png}
-    \caption{Computation time in seconds for ILP and EDP algorithms for $5$ to $30$ defenders and up to $200$ 
+    \caption[Computation time in seconds for ILP and EDP algorithms]{Computation time in seconds for ILP and EDP algorithms for $5$ to $30$ defenders and up to $200$ 
     attack events (Limit the number of events because as shown in ~\ref{fig:bd-time_cost}, 
     more events will effectively cripple ILP). \ours consistently demonstrates 1-2 magnitudes faster computation time compared with ILP.}
     \label{fig:bd-def_time_cost}
@@ -73,7 +73,7 @@ and interception rate, each data point is the average of 20 runs.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=.5\linewidth]{chapters/bd/fig/def_quality-v.png}
-    \caption{Solution quality (interception rate) for the ILP and EDP for 5 to 30 defenders. 
+    \caption[Solution quality (interception rate) for the ILP and EDP]{Solution quality (interception rate) for the ILP and EDP for 5 to 30 defenders. 
     It is straightforward to observe that \ours achieves defending quality nearly identical to the optimal ILP solution (while ILP is still scalable).}
     \label{fig:bd-def_quality}
 \end{figure}
@@ -97,7 +97,7 @@ they can no longer effectively collaboratively intercept attacks.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\linewidth]{chapters/bd/fig/heterogeneity.pdf}
-    \caption{Solution quality (interception rate) for a different level of defender speeds diversity. It can be observed that the major difference happens as $v_{max}:v_{min}$ increases from $1$ to up to $4$. After that, the increase of interception rate no longer shows improvements.}
+    \caption[Solution quality (interception rate) for a different level of defender speeds diversity]{Solution quality (interception rate) for a different level of defender speeds diversity. It can be observed that the major difference happens as $v_{max}:v_{min}$ increases from $1$ to up to $4$. After that, the increase of interception rate no longer shows improvements.}
     \label{fig:bd-heterogeneity}
     \vspace{-2mm}
 \end{figure}
@@ -115,7 +115,8 @@ The number of attacks is set to be $400$, and each data point represents an aver
     \centering
     \includegraphics[width=0.5\linewidth]{chapters/bd/fig/lambda.pdf}
     \vspace{-2mm}
-    \caption{Interception rate with different $\lambda$ (x-axis) and $k$ (y-axis, number of defenders). As one might expect, as attacks happens more frequently, holding other factors unchanged, the interception rate decreases. Similarly, holding other factors unchanged, increasing the number of defenders leads to increased interception rates.}
+    \caption[Interception rate with different $\lambda$ (x-axis) and number of defenders]
+    {Interception rate with different $\lambda$ (x-axis) and $k$ (y-axis, number of defenders). As one might expect, as attacks happens more frequently, holding other factors unchanged, the interception rate decreases. Similarly, holding other factors unchanged, increasing the number of defenders leads to increased interception rates.}
     \label{fig:bd-lambda}
     \vspace{-2mm}
 \end{figure}
@@ -128,7 +129,8 @@ We observe that $I$ and $S^1$ have similar difficulty to defend, with $I$ being 
 \vspace{2mm}
     \centering
     \includegraphics[width=.5\linewidth]{chapters/bd/fig/topology.png}
-    \caption{\prob with boundary topologies $I$ (line segment), $S^1$ (circle), $I^2$ (unit square) and $S^2$ (sphere). The red arrows illustrate attack directions. The pictures are captured from animations of actual simulations, available at \url{https://youtu.be/x0mQD\_7RhKI}.}
+    \caption[\prob with boundary topologies $I$ (line segment), $S^1$ (circle), $I^2$ (unit square) and $S^2$ (sphere)]
+    {\prob with boundary topologies $I$ (line segment), $S^1$ (circle), $I^2$ (unit square) and $S^2$ (sphere). The red arrows illustrate attack directions. The pictures are captured from animations of actual simulations, available at \url{https://youtu.be/x0mQD\_7RhKI}.}
     \label{fig:bd-topology}
     \vspace{-4mm}
 \end{figure}
@@ -136,7 +138,7 @@ We observe that $I$ and $S^1$ have similar difficulty to defend, with $I$ being 
 \begin{figure}[h!]
 \vspace{1mm}
     \centering
-    \includegraphics[width=.5\linewidth]{chapters/bd/fig/geo.png}
+    \includegraphics[width=.8\linewidth]{chapters/bd/fig/geo.png}
     \caption{Interception rate for $I$, $S^1 (\text{with length 1})$, $I^2$, $S^2 (\text{with surface area 1})$
      with different $\lambda$ from $1$ to $200$. Degradation as the number of attacks increases is as expected.}
     \label{fig:bd-geo}
@@ -153,7 +155,7 @@ indicating that a long look-ahead horizon may not be necessary for effectively i
     \centering
     \includegraphics[width=0.6\linewidth]{chapters/bd/fig/horizon.pdf}
     \vspace{-2mm}
-    \caption{Interception rate with respect to different horizons (logarithmic scale). It can be observed that longer horizon allows better planning.}
+    \caption[Interception rate with respect to different horizons]{Interception rate with respect to different horizons (logarithmic scale). It can be observed that longer horizon allows better planning.}
     \label{fig:bd-horizon}
     \vspace{-3mm}
 \end{figure}
@@ -167,7 +169,8 @@ Lastly, in ~\ref{fig:bd-solution_examples}, we provide the interception trajecto
     \includegraphics[width=.5\linewidth]{chapters/bd/fig/ilp_example-v.png}
     \includegraphics[width=.5\linewidth]{chapters/bd/fig/ls_example-v.png}
     \includegraphics[width=.5\linewidth]{chapters/bd/fig/inf_horizon_example-v.png}
-    \caption{The results computed by ILP, \ours, and online \ours with a horizon of 60, for a sequence of 140 attacks ($x$-axis is the location, $y$-axis is the time of attacks). 
+    \caption[The results computed by ILP, \ours, and online \ours]
+    {The results computed by ILP, \ours, and online \ours with a horizon of 60, for a sequence of 140 attacks ($x$-axis is the location, $y$-axis is the time of attacks). 
     The number of captured attack events is 71, 70, and 67, respectively.}
     \label{fig:bd-solution_examples}
     \vspace{-4mm}

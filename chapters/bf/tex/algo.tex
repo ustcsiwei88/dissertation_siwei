@@ -32,7 +32,8 @@ resulting in $N$ such variables: $\ell_1, \dots, \ell_N$.
     \put(80, 30) {$c_6$}
     \end{overpic}
     % \includegraphics
-    \caption{In this example, we aim to separate two groups of objects with the given candidate barriers. The workspace is decomposed into 6 cells by the 3 candidate barriers. As an example of constraint setup, the pair of adjacent cells $c_1$ and $c_4$ create a constraint of
+    \caption[Example of separating two groups of objects with the given candidate barriers]
+    {In this example, we aim to separate two groups of objects with the given candidate barriers. The workspace is decomposed into 6 cells by the 3 candidate barriers. As an example of constraint setup, the pair of adjacent cells $c_1$ and $c_4$ create a constraint of
     $\ell_1\geq c_1 \oplus c_4$, which is equivalent to $\ell_1\geq c_1 - c_4 \wedge \ell_1\geq c_4 -c_1$. (Since there is only $k=2$ classes of objects and $\log k =1$ here, the second index of $c_{i*}$ is eliminated.)} 
     \label{fig:bf-ilp_example}
 \end{figure}
@@ -67,7 +68,7 @@ For example, a pair of point objects will create $4$ bitangent barrier candidate
     \includegraphics[trim=80 20 80 20,clip, width = .24\textwidth]{chapters/bf/fig/candidate_1.png}
     \hspace{-.1in}
     \includegraphics[trim=80 20 80 20,clip, width = .24\textwidth]{chapters/bf/fig/candidate_2.png}
-    \caption{Illustration of bitangent barrier candidates. The left picture shows the bitangent
+    \caption[Illustration of bitangent barrier candidates]{Illustration of bitangent barrier candidates. The left picture shows the bitangent
     candidates for $2$ point sets, each with $2$ points. In this case, a pair of points will create $4$ candidates. 
     We note that we made the points non-zero-dimensional for visibility purposes. 
     The right picture shows the bitangent candidates for $12$ polygonal objects in four sets.}

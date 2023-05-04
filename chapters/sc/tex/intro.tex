@@ -62,7 +62,7 @@ a fixed number of robots to maximize the minimum sensing probability of locating
     \end{subfigure}
      
     \vspace{2mm}
-    \caption{(a) An illustration of robots' locations along a left-to-right 
+    \caption[Illustration of sweep schedules]{(a) An illustration of robots' locations along a left-to-right 
     vertical sweep schedule. Four robots are allocated to execute the vertical sweep, 
     and their trajectories are illustrated in different colors. 
     %
@@ -108,27 +108,27 @@ on three realistic use cases: \emph{vertical sweep}, \emph{circular sweep}, and
 
 
 \noindent
-\textbf{Related Work.}
-The study in this paper draws inspiration from the study of several 
-lines of related problems. 
-The Graph-Clear problem, formulated in \cite{kolling2007graph}, tasks a group of robots to search and clear an environment with the operations of blocking and clearing.
-A follow-up work on Line-Clear \cite{kolling2017coordinated} uses line guards
-with more focus on computational geometry in that
-the objective is to minimize the maximum sweep line distance. Both of these problems are
-NP-hard, establishing the difficulties of finding a sweep schedule for a planar environment.
-The more general pursuit-evasion problem dates back to the research on \emph{search number}
-on a discrete graph \cite{megiddo1988complexity}, 
-followed by studies on pursuit and evasion continuous environment with 
-visibility-based model \cite{guibas1999visibility, suzuki1992searching, lavalle2000algorithm, stiffler2017persistent}. 
-The problem becomes the well-known art-gallery problem \cite{o1987art} when a static deployment of robots is sought after.
+% \textbf{Related Work.}
+% The study in this paper draws inspiration from the study of several 
+% lines of related problems. 
+% The Graph-Clear problem, formulated in \cite{kolling2007graph}, tasks a group of robots to search and clear an environment with the operations of blocking and clearing.
+% A follow-up work on Line-Clear \cite{kolling2017coordinated} uses line guards
+% with more focus on computational geometry in that
+% the objective is to minimize the maximum sweep line distance. Both of these problems are
+% NP-hard, establishing the difficulties of finding a sweep schedule for a planar environment.
+% The more general pursuit-evasion problem dates back to the research on \emph{search number}
+% on a discrete graph \cite{megiddo1988complexity}, 
+% followed by studies on pursuit and evasion continuous environment with 
+% visibility-based model \cite{guibas1999visibility, suzuki1992searching, lavalle2000algorithm, stiffler2017persistent}. 
+% The problem becomes the well-known art-gallery problem \cite{o1987art} when a static deployment of robots is sought after.
 %
-When working with known patrolling search frontiers, e.g., vertical sweep lines, 
-this problem is analogous to the perimeter defense problem by placing guards on a static perimeter
-to defend intruders \cite{shishika2020cooperative, macharet2020adaptive, chen2021optimal}.
-Previously, we have also studied a version of static range guard placement problems for securing perimeters and regions \cite{fengyu2020optimally}.
-In contrast to the pursuit-evasion algorithms that deal with searching dynamic and unpredictable targets that could escape, 
-coverage planning/control-related algorithms become more suitable for searching or covering predictable or stationary targets,
-e.g., room sweeping, pesticide and fertilizer spraying, persistent monitoring, and so on \cite{cortes2004coverage, oksanen2009coverage, haksar2020spatial, wei2018coverage, deng2019constrained, lan2013planning, cassandras2012optimal, yu2015persistent, palacios2017optimal}. 
+% When working with known patrolling search frontiers, e.g., vertical sweep lines, 
+% this problem is analogous to the perimeter defense problem by placing guards on a static perimeter
+% to defend intruders \cite{shishika2020cooperative, macharet2020adaptive, chen2021optimal}.
+% Previously, we have also studied a version of static range guard placement problems for securing perimeters and regions \cite{fengyu2020optimally}.
+% In contrast to the pursuit-evasion algorithms that deal with searching dynamic and unpredictable targets that could escape, 
+% coverage planning/control-related algorithms become more suitable for searching or covering predictable or stationary targets,
+% e.g., room sweeping, pesticide and fertilizer spraying, persistent monitoring, and so on \cite{cortes2004coverage, oksanen2009coverage, haksar2020spatial, wei2018coverage, deng2019constrained, lan2013planning, cassandras2012optimal, yu2015persistent, palacios2017optimal}. 
 
 \begin{comment}
 \noindent

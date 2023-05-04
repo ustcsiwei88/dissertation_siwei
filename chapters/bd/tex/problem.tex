@@ -3,7 +3,7 @@ The defenders live on a lower dimensional subspace of $\mathcal E$ (i.e., some b
 There are also $n$ attack events $\big\langle loc_i, t_i\big\rangle_{i=1}^{n}$, where each attack event is a pair $\big\langle loc, t\big\rangle$ in which $loc$ is the
 location of the attack and $t$ is the time it happens. 
 The $i^{{th}}$ attack is intercepted by a defender only if the defender is located at $loc_i$ at time $t_i$.
-For initialization, we denote the initial locations of the $k$ defenders at $t=0$ as $loc^{1},\dots, loc^{k}$. 
+For initialization, we denote the initial locations of the $k$ defenders at $t=0$ as $loc_{1},\dots, loc_{k}$. 
 
 Following the definition in \cite{adler2022role}, we define the horizon of the defenders as follows,
 \begin{definition}[Horizon]
@@ -13,13 +13,13 @@ The (look ahead) \textit{horizon} $T$ of the defenders is defined as the amount 
 Now, we provide formulations of the two versions of the \prob problem studied in this paper. In the infinite horizon setting, $T = \infty$, all attack events are given in a single batch.
 
 \begin{problem}[Infinite-horizon \prob]\label{prob:bd-1}
-Given $k$ defenders with speed $v_1, \dots, v_k$ and initial locations $loc^1, \ldots, loc^k$, and $n$ attack events $\big\langle loc_i, t_i\big\rangle_{i=1}^{n}$, intercept as many attacks as possible. 
+Given $k$ defenders with speed $v_1, \dots, v_k$ and initial locations $loc_1, \ldots, loc_k$, and $n$ attack events $\big\langle loc_i, t_i\big\rangle_{i=1}^{n}$, intercept as many attacks as possible. 
 \end{problem}
 
 In a finite-horizon setting, the attack events are not all revealed at $t=0$ but are given as a stream of attacks $\big\langle loc_i, t_i\big\rangle_{i=1}^{\infty}$. The defenders can only know the attack events within a horizon or time window of $T < \infty$ in the future.
 
 \begin{problem}[Finite-horizon \prob]\label{prob:bd-2}
-There are $k$ defenders with speed $v_1, \dots, v_k$ and initial locations $loc^1, \ldots, loc^k$, and a stream of attack events.
+There are $k$ defenders with speed $v_1, \dots, v_k$ and initial locations $loc_1, \ldots, loc_k$, and a stream of attack events.
 %
 At each time instance $t$, the defenders only know attack events happening no later than time $T$ in the future (i.e. $t_i \le t+T$).
 %
@@ -46,7 +46,7 @@ Similarly, $prev(a, d)$ contains $0$ if defender $d$ can reach the location of a
 %\draw[black, thick, ->] (0,0) -- (4.5,0) node[anchor=south]{location};
 \draw[black, thick, ->] (5,0) -- (5, 2.7) node[anchor=west]{$t$};
 
-\filldraw[black] (1, 0) circle (2pt) node[anchor=east](iloc1){$loc^1$};
+\filldraw[black] (1, 0) circle (2pt) node[anchor=east](iloc1){$loc_1$};
 
 \filldraw[black] (2,0.5) circle (2pt) node[anchor=north](a1){$a_1$};
 \filldraw[black] (2,1.5) circle (2pt) node[anchor=south](a2){$a_2$};
@@ -64,9 +64,10 @@ Similarly, $prev(a, d)$ contains $0$ if defender $d$ can reach the location of a
 \draw[green, thin, ->] (a3.west) -- (a4.south);
 
 \end{tikzpicture}
-    \caption{Illustration of an example of reachability between different attack events for defender $1$.  
+    \caption[An example of reachability between different attack events for defender $1$]
+    {Illustration of an example of reachability between different attack events for defender $1$.  
     For example, $next(1, 1) = \{2,4,5\}$, $next(0,1)=\{2,5\}$, $prev(2, 1) =\{0, 1\}$, $prev(1,1)=\varnothing$.
-    $loc^1$ cannot reach $a_1$ since $v_1$ is not sufficiently large. For the same reason, defender $1$ cannot reach $a_3$ from $a_1$.
+    $loc_1$ cannot reach $a_1$ since $v_1$ is not sufficiently large. For the same reason, defender $1$ cannot reach $a_3$ from $a_1$.
     }
     \label{fig:bd-next_prev}
 \end{figure}

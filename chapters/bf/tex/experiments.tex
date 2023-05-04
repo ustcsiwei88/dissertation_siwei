@@ -29,7 +29,7 @@ When a problem setup contains obstacles, the number of obstacles in the environm
     \put(-3, 0) {(d)}
     
     \end{overpic}
-    \caption{Illustration of the four types of instances used in our  experimental evaluation. (a) Barrier forming for point sets. (b) Barrier forming to separate point sets from polygonal obstacles. (c) Barrier forming to separate uniform square-shaped objects among uniform square-shaped obstacles. (d) Barrier forming to separate random polygonal objects among random polygonal obstacles.}
+    \caption[Illustration of the four types of instances used in our  experimental evaluation]{Illustration of the four types of instances used in our  experimental evaluation. (a) Barrier forming for point sets. (b) Barrier forming to separate point sets from polygonal obstacles. (c) Barrier forming to separate uniform square-shaped objects among uniform square-shaped obstacles. (d) Barrier forming to separate random polygonal objects among random polygonal obstacles.}
     \label{fig:bf-exp}
 \end{figure*}
 
@@ -44,11 +44,11 @@ Each entry in the ~\ref{tab:bf-expr_1} is the result of average computation time
     \begin{tabular}{|c|c|c|c|c|c|c|}\hline
         %  \diagbox{\#Set}{\#Objects}
         \#Sets &  1 & 2 & 3 & 4& 5& 6\\\hline
- 2& 0.005 & 0.011 & 0.083 & 0.419 & 2.010 & 15.887 \\\hline
- 3& 0.013 & 0.316 & 12.773 & 962.883 & - & - \\\hline
- 4& 0.051 & 14.641 &  -& - &  -&- \\\hline
-\end{tabular}
-    \caption{Running time in seconds for Expr. 1 where all objects and obstacles are points (~\ref{fig:bf-exp}(a)). ``-'' denotes the result cannot be computed in 1h on average (the same is true for other tables). 
+    2& 0.005 & 0.011 & 0.083 & 0.419 & 2.010 & 15.887 \\\hline
+    3& 0.013 & 0.316 & 12.773 & 962.883 & - & - \\\hline
+    4& 0.051 & 14.641 &  -& - &  -&- \\\hline
+    \end{tabular}
+    \caption[Running time in seconds for Expr. 1]{Running time in seconds for Expr. 1 where all objects and obstacles are points (~\ref{fig:bf-exp}(a)). ``-'' denotes the result cannot be computed in 1h on average (the same is true for other tables). 
     The column index means the number of objects in each set, and the row index means the number of object sets.
     The number of obstacles is set to be the same as the number of objects for each set. These also apply to the following tables.
     }
@@ -74,7 +74,7 @@ Each entry in the ~\ref{tab:bf-expr_1} is the result of average computation time
  3& 0.044 & 3.287 & 71.346 & 320.955 & - & -\\\hline
  4& 0.249 & 13.801 & - & - & - & -\\\hline
     \end{tabular}
-    \caption{Running time in seconds for Expr. 2 where objects to be separated are points and obstacles are randomly generated polygons (~\ref{fig:bf-exp}(b)). 
+    \caption[Running time in seconds for Expr. 2]{Running time in seconds for Expr. 2 where objects to be separated are points and obstacles are randomly generated polygons (~\ref{fig:bf-exp}(b)). 
     }
     \label{tab:bf-expr_2}
     \vspace{-2mm}
@@ -92,7 +92,7 @@ The third set of experiments uses randomly placed squares as obstacles and objec
  3 & 0.065 & 10.608 & 337.050 & - & - & -\\\hline
  4 & 0.235 & 124.963 & - & - & - & -\\\hline
     \end{tabular}
-    \caption{Running time in seconds for Expr. 3 with square-shaped objects and obstacles (~\ref{fig:bf-exp}(c)). ``-'' denotes the result cannot be computed in 1h on average. 
+    \caption[Running time in seconds for Expr. 3]{Running time in seconds for Expr. 3 with square-shaped objects and obstacles (~\ref{fig:bf-exp}(c)). ``-'' denotes the result cannot be computed in 1h on average. 
     % The number of obstacles is set to be the same as the number of objects for each set.
     }
     \label{tab:bf-expr_3}
@@ -118,7 +118,7 @@ This explains the reduced time cost in a more complex environment from the spars
 3& 0.031 & 0.234 & 0.994 & 1.271 & 1.980 & 1.187 \\\hline
 4& 0.103 & 0.518 & 3.000 & 6.050 & 9.692 & 17.996 \\\hline 
     \end{tabular}
-    \caption{Running time in seconds for Expr. 4 where both the objects to be separated and the obstacles are randomly generated polygons 
+    \caption[Running time in seconds for Expr. 4]{Running time in seconds for Expr. 4 where both the objects to be separated and the obstacles are randomly generated polygons 
     (~\ref{fig:bf-exp}(d)).
     % The number of obstacles is set to be the same as the number of objects for each set.
     }

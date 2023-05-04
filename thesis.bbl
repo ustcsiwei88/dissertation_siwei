@@ -358,795 +358,6 @@
       \field{pages}{472\bibrangedash 485}
       \range{pages}{14}
     \endentry
-    \entry{arai2002advances}{article}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{3}{}{%
-        {{hash=e5a027e0a38c33e6a607aaacb3574084}{%
-           family={Arai},
-           familyi={A\bibinitperiod},
-           given={Tamio},
-           giveni={T\bibinitperiod}}}%
-        {{hash=0a8c40f4352fc334c0f3401980dd5443}{%
-           family={Pagello},
-           familyi={P\bibinitperiod},
-           given={Enrico},
-           giveni={E\bibinitperiod}}}%
-        {{hash=d6ea49829f0595a1431dcb4e2e165054}{%
-           family={Parker},
-           familyi={P\bibinitperiod},
-           given={Lynne\bibnamedelima E},
-           giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-      }
-      \strng{namehash}{3e3439ddc2d2e4b1cfbc6cbf0312008b}
-      \strng{fullhash}{3e3439ddc2d2e4b1cfbc6cbf0312008b}
-      \strng{bibnamehash}{3e3439ddc2d2e4b1cfbc6cbf0312008b}
-      \strng{authorbibnamehash}{3e3439ddc2d2e4b1cfbc6cbf0312008b}
-      \strng{authornamehash}{3e3439ddc2d2e4b1cfbc6cbf0312008b}
-      \strng{authorfullhash}{3e3439ddc2d2e4b1cfbc6cbf0312008b}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Transactions on robotics and automation}
-      \field{number}{5}
-      \field{title}{Advances in multi-robot systems}
-      \field{volume}{18}
-      \field{year}{2002}
-      \field{pages}{655\bibrangedash 661}
-      \range{pages}{7}
-    \endentry
-    \entry{gerkey2004formal}{article}{}
-      \name{author}{2}{}{%
-        {{hash=ce4044c5ca8602021821c372ac5c17fd}{%
-           family={Gerkey},
-           familyi={G\bibinitperiod},
-           given={Brian\bibnamedelima P},
-           giveni={B\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-        {{hash=c1579c7c6384d5a74c8a5b269301dd70}{%
-           family={Matari{ć}},
-           familyi={M\bibinitperiod},
-           given={Maja\bibnamedelima J},
-           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {SAGE Publications}%
-      }
-      \strng{namehash}{8b7335601f0bff9afa1f43263e4a5008}
-      \strng{fullhash}{8b7335601f0bff9afa1f43263e4a5008}
-      \strng{bibnamehash}{8b7335601f0bff9afa1f43263e4a5008}
-      \strng{authorbibnamehash}{8b7335601f0bff9afa1f43263e4a5008}
-      \strng{authornamehash}{8b7335601f0bff9afa1f43263e4a5008}
-      \strng{authorfullhash}{8b7335601f0bff9afa1f43263e4a5008}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{The International journal of robotics research}
-      \field{number}{9}
-      \field{title}{A formal analysis and taxonomy of task allocation in multi-robot systems}
-      \field{volume}{23}
-      \field{year}{2004}
-      \field{pages}{939\bibrangedash 954}
-      \range{pages}{16}
-    \endentry
-    \entry{ren2008distributed}{book}{}
-      \name{author}{2}{}{%
-        {{hash=79312c25841a4f2341e462020d563806}{%
-           family={Ren},
-           familyi={R\bibinitperiod},
-           given={Wei},
-           giveni={W\bibinitperiod}}}%
-        {{hash=31202dc567c14cdad27077b94672f7ea}{%
-           family={Beard},
-           familyi={B\bibinitperiod},
-           given={Randal\bibnamedelima W},
-           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{0f1ea4f9bd64938bd7b34308a3100bb0}
-      \strng{fullhash}{0f1ea4f9bd64938bd7b34308a3100bb0}
-      \strng{bibnamehash}{0f1ea4f9bd64938bd7b34308a3100bb0}
-      \strng{authorbibnamehash}{0f1ea4f9bd64938bd7b34308a3100bb0}
-      \strng{authornamehash}{0f1ea4f9bd64938bd7b34308a3100bb0}
-      \strng{authorfullhash}{0f1ea4f9bd64938bd7b34308a3100bb0}
-      \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{number}{2}
-      \field{title}{Distributed consensus in multi-vehicle cooperative control}
-      \field{volume}{27}
-      \field{year}{2008}
-    \endentry
-    \entry{bullo2009distributed}{book}{}
-      \name{author}{3}{}{%
-        {{hash=93d4eb482d777afb4d0d88f5475057a2}{%
-           family={Bullo},
-           familyi={B\bibinitperiod},
-           given={Francesco},
-           giveni={F\bibinitperiod}}}%
-        {{hash=62610e97a5d70a6c883ddccad75d414b}{%
-           family={Cort{é}s},
-           familyi={C\bibinitperiod},
-           given={Jorge},
-           giveni={J\bibinitperiod}}}%
-        {{hash=39d5b5de57316ccc35f368900d7bb72d}{%
-           family={Martinez},
-           familyi={M\bibinitperiod},
-           given={Sonia},
-           giveni={S\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Princeton University Press}%
-      }
-      \strng{namehash}{9b6711788e818cc028efb610bc2a948e}
-      \strng{fullhash}{9b6711788e818cc028efb610bc2a948e}
-      \strng{bibnamehash}{9b6711788e818cc028efb610bc2a948e}
-      \strng{authorbibnamehash}{9b6711788e818cc028efb610bc2a948e}
-      \strng{authornamehash}{9b6711788e818cc028efb610bc2a948e}
-      \strng{authorfullhash}{9b6711788e818cc028efb610bc2a948e}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Distributed control of robotic networks: a mathematical approach to motion coordination algorithms}
-      \field{volume}{27}
-      \field{year}{2009}
-    \endentry
-    \entry{ando1999distributed}{article}{}
-      \name{author}{4}{}{%
-        {{hash=fdfefaffcb257e8d5bc69e89e6afd32c}{%
-           family={Ando},
-           familyi={A\bibinitperiod},
-           given={Hideki},
-           giveni={H\bibinitperiod}}}%
-        {{hash=e9494b6839b6f4d5993d60a7d4953157}{%
-           family={Oasa},
-           familyi={O\bibinitperiod},
-           given={Yoshinobu},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=db1fe4b54a609940542613127f8ff4dd}{%
-           family={Suzuki},
-           familyi={S\bibinitperiod},
-           given={Ichiro},
-           giveni={I\bibinitperiod}}}%
-        {{hash=ae78816994c8651edbabe0c506db8ba3}{%
-           family={Yamashita},
-           familyi={Y\bibinitperiod},
-           given={Masafumi},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{2068b9c88ae66ad1bc9027af31fc7274}
-      \strng{fullhash}{2068b9c88ae66ad1bc9027af31fc7274}
-      \strng{bibnamehash}{2068b9c88ae66ad1bc9027af31fc7274}
-      \strng{authorbibnamehash}{2068b9c88ae66ad1bc9027af31fc7274}
-      \strng{authornamehash}{2068b9c88ae66ad1bc9027af31fc7274}
-      \strng{authorfullhash}{2068b9c88ae66ad1bc9027af31fc7274}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Transactions on Robotics and Automation}
-      \field{number}{5}
-      \field{title}{Distributed memoryless point convergence algorithm for mobile robots with limited visibility}
-      \field{volume}{15}
-      \field{year}{1999}
-      \field{pages}{818\bibrangedash 828}
-      \range{pages}{11}
-    \endentry
-    \entry{jadbabaie2003coordination}{article}{}
-      \name{author}{3}{}{%
-        {{hash=9814576d57251b512116243e61b38a6e}{%
-           family={Jadbabaie},
-           familyi={J\bibinitperiod},
-           given={Ali},
-           giveni={A\bibinitperiod}}}%
-        {{hash=4da9df32f0549fd84e52ca592356f954}{%
-           family={Lin},
-           familyi={L\bibinitperiod},
-           given={Jie},
-           giveni={J\bibinitperiod}}}%
-        {{hash=4d576ab66b31a59bd0cced1a936bb67d}{%
-           family={Morse},
-           familyi={M\bibinitperiod},
-           given={A\bibnamedelima Stephen},
-           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{ad2104d0fc7dad9e8c03e7d0f7418fdd}
-      \strng{fullhash}{ad2104d0fc7dad9e8c03e7d0f7418fdd}
-      \strng{bibnamehash}{ad2104d0fc7dad9e8c03e7d0f7418fdd}
-      \strng{authorbibnamehash}{ad2104d0fc7dad9e8c03e7d0f7418fdd}
-      \strng{authornamehash}{ad2104d0fc7dad9e8c03e7d0f7418fdd}
-      \strng{authorfullhash}{ad2104d0fc7dad9e8c03e7d0f7418fdd}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Transactions on automatic control}
-      \field{number}{6}
-      \field{title}{Coordination of groups of mobile autonomous agents using nearest neighbor rules}
-      \field{volume}{48}
-      \field{year}{2003}
-      \field{pages}{988\bibrangedash 1001}
-      \range{pages}{14}
-    \endentry
-    \entry{olfati2004consensus}{article}{}
-      \name{author}{2}{}{%
-        {{hash=f7b28f3352eaacebbbc56b73db55a6ea}{%
-           family={Olfati-Saber},
-           familyi={O\bibinithyphendelim S\bibinitperiod},
-           given={Reza},
-           giveni={R\bibinitperiod}}}%
-        {{hash=22ec7dc3434ec7866e28d570204999f8}{%
-           family={Murray},
-           familyi={M\bibinitperiod},
-           given={Richard\bibnamedelima M},
-           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{86acd4aa2063b740f17c0401a87c670f}
-      \strng{fullhash}{86acd4aa2063b740f17c0401a87c670f}
-      \strng{bibnamehash}{86acd4aa2063b740f17c0401a87c670f}
-      \strng{authorbibnamehash}{86acd4aa2063b740f17c0401a87c670f}
-      \strng{authornamehash}{86acd4aa2063b740f17c0401a87c670f}
-      \strng{authorfullhash}{86acd4aa2063b740f17c0401a87c670f}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Transactions on automatic control}
-      \field{number}{9}
-      \field{title}{Consensus problems in networks of agents with switching topology and time-delays}
-      \field{volume}{49}
-      \field{year}{2004}
-      \field{pages}{1520\bibrangedash 1533}
-      \range{pages}{14}
-    \endentry
-    \entry{ren2005consensus}{article}{}
-      \name{author}{2}{}{%
-        {{hash=79312c25841a4f2341e462020d563806}{%
-           family={Ren},
-           familyi={R\bibinitperiod},
-           given={Wei},
-           giveni={W\bibinitperiod}}}%
-        {{hash=31202dc567c14cdad27077b94672f7ea}{%
-           family={Beard},
-           familyi={B\bibinitperiod},
-           given={Randal\bibnamedelima W},
-           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{0f1ea4f9bd64938bd7b34308a3100bb0}
-      \strng{fullhash}{0f1ea4f9bd64938bd7b34308a3100bb0}
-      \strng{bibnamehash}{0f1ea4f9bd64938bd7b34308a3100bb0}
-      \strng{authorbibnamehash}{0f1ea4f9bd64938bd7b34308a3100bb0}
-      \strng{authornamehash}{0f1ea4f9bd64938bd7b34308a3100bb0}
-      \strng{authorfullhash}{0f1ea4f9bd64938bd7b34308a3100bb0}
-      \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Transactions on automatic control}
-      \field{number}{5}
-      \field{title}{Consensus seeking in multiagent systems under dynamically changing interaction topologies}
-      \field{volume}{50}
-      \field{year}{2005}
-      \field{pages}{655\bibrangedash 661}
-      \range{pages}{7}
-    \endentry
-    \entry{cheng2008almost}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=c3845395037befcdb569dc974daf082c}{%
-           family={Cheng},
-           familyi={C\bibinitperiod},
-           given={Peng},
-           giveni={P\bibinitperiod}}}%
-        {{hash=3c2a6a0658f1ad90e7d4a83eef9c3841}{%
-           family={Kumar},
-           familyi={K\bibinitperiod},
-           given={Vijay},
-           giveni={V\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{75762171ef02ff646cd90914575452e9}
-      \strng{fullhash}{75762171ef02ff646cd90914575452e9}
-      \strng{bibnamehash}{75762171ef02ff646cd90914575452e9}
-      \strng{authorbibnamehash}{75762171ef02ff646cd90914575452e9}
-      \strng{authornamehash}{75762171ef02ff646cd90914575452e9}
-      \strng{authorfullhash}{75762171ef02ff646cd90914575452e9}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2008 IEEE International Conference on Robotics and Automation}
-      \field{title}{An almost communication-less approach to task allocation for multiple unmanned aerial vehicles}
-      \field{year}{2008}
-      \field{pages}{1384\bibrangedash 1389}
-      \range{pages}{6}
-    \endentry
-    \entry{mesbahi2010graph}{incollection}{}
-      \name{author}{2}{}{%
-        {{hash=c70238d543ea00d01399056ddf7de9e7}{%
-           family={Mesbahi},
-           familyi={M\bibinitperiod},
-           given={Mehran},
-           giveni={M\bibinitperiod}}}%
-        {{hash=2b5ca0ee4d617ad97cc150c468ef1d26}{%
-           family={Egerstedt},
-           familyi={E\bibinitperiod},
-           given={Magnus},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Princeton University Press}%
-      }
-      \strng{namehash}{f629449773f01ffa71555c2e167ed504}
-      \strng{fullhash}{f629449773f01ffa71555c2e167ed504}
-      \strng{bibnamehash}{f629449773f01ffa71555c2e167ed504}
-      \strng{authorbibnamehash}{f629449773f01ffa71555c2e167ed504}
-      \strng{authornamehash}{f629449773f01ffa71555c2e167ed504}
-      \strng{authorfullhash}{f629449773f01ffa71555c2e167ed504}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Graph Theoretic Methods in Multiagent Networks}
-      \field{title}{Graph theoretic methods in multiagent networks}
-      \field{year}{2010}
-    \endentry
-    \entry{yu2012rendezvous}{article}{}
-      \name{author}{3}{}{%
-        {{hash=2c5d237b2098acc8dbd645c9e8fb0aa3}{%
-           family={Yu},
-           familyi={Y\bibinitperiod},
-           given={Jingjin},
-           giveni={J\bibinitperiod}}}%
-        {{hash=10b09a560dbab6229987301f9a193d77}{%
-           family={LaValle},
-           familyi={L\bibinitperiod},
-           given={Steven\bibnamedelima M},
-           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=c31eb151d9042c2fb3e8423c824ac9b7}{%
-           family={Liberzon},
-           familyi={L\bibinitperiod},
-           given={Daniel},
-           giveni={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{a5c2c0c47cde3aa0d00438e84ff8d4cd}
-      \strng{fullhash}{a5c2c0c47cde3aa0d00438e84ff8d4cd}
-      \strng{bibnamehash}{a5c2c0c47cde3aa0d00438e84ff8d4cd}
-      \strng{authorbibnamehash}{a5c2c0c47cde3aa0d00438e84ff8d4cd}
-      \strng{authornamehash}{a5c2c0c47cde3aa0d00438e84ff8d4cd}
-      \strng{authorfullhash}{a5c2c0c47cde3aa0d00438e84ff8d4cd}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE TRANSACTIONS ON AUTOMATIC CONTROL}
-      \field{number}{2}
-      \field{title}{Rendezvous Without Coordinates}
-      \field{volume}{57}
-      \field{year}{2012}
-      \field{pages}{421}
-      \range{pages}{1}
-    \endentry
-    \entry{smith2009monotonic}{article}{}
-      \name{author}{2}{}{%
-        {{hash=7e7fe8fc6c6a590d4e229432b9f03d99}{%
-           family={Smith},
-           familyi={S\bibinitperiod},
-           given={Stephen\bibnamedelima L},
-           giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-        {{hash=93d4eb482d777afb4d0d88f5475057a2}{%
-           family={Bullo},
-           familyi={B\bibinitperiod},
-           given={Francesco},
-           giveni={F\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{89e94c0ec24cf9c432787f4a67c3d3c1}
-      \strng{fullhash}{89e94c0ec24cf9c432787f4a67c3d3c1}
-      \strng{bibnamehash}{89e94c0ec24cf9c432787f4a67c3d3c1}
-      \strng{authorbibnamehash}{89e94c0ec24cf9c432787f4a67c3d3c1}
-      \strng{authornamehash}{89e94c0ec24cf9c432787f4a67c3d3c1}
-      \strng{authorfullhash}{89e94c0ec24cf9c432787f4a67c3d3c1}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Transactions on Automatic Control}
-      \field{number}{9}
-      \field{title}{Monotonic target assignment for robotic networks}
-      \field{volume}{54}
-      \field{year}{2009}
-      \field{pages}{2042\bibrangedash 2057}
-      \range{pages}{16}
-    \endentry
-    \entry{ayanian2010decentralized}{article}{}
-      \name{author}{2}{}{%
-        {{hash=1c307d9b859cf07f7eb1337ae5ac9f78}{%
-           family={Ayanian},
-           familyi={A\bibinitperiod},
-           given={Nora},
-           giveni={N\bibinitperiod}}}%
-        {{hash=3c2a6a0658f1ad90e7d4a83eef9c3841}{%
-           family={Kumar},
-           familyi={K\bibinitperiod},
-           given={Vijay},
-           giveni={V\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{903406e7ace94976c001be219c9bc4ac}
-      \strng{fullhash}{903406e7ace94976c001be219c9bc4ac}
-      \strng{bibnamehash}{903406e7ace94976c001be219c9bc4ac}
-      \strng{authorbibnamehash}{903406e7ace94976c001be219c9bc4ac}
-      \strng{authornamehash}{903406e7ace94976c001be219c9bc4ac}
-      \strng{authorfullhash}{903406e7ace94976c001be219c9bc4ac}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Transactions on Robotics}
-      \field{number}{5}
-      \field{title}{Decentralized feedback controllers for multiagent teams in environments with obstacles}
-      \field{volume}{26}
-      \field{year}{2010}
-      \field{pages}{878\bibrangedash 887}
-      \range{pages}{10}
-    \endentry
-    \entry{liu2011multi}{article}{}
-      \name{author}{2}{}{%
-        {{hash=a3c37ff2e81c891ccae874c33357a379}{%
-           family={Liu},
-           familyi={L\bibinitperiod},
-           given={Lantao},
-           giveni={L\bibinitperiod}}}%
-        {{hash=653fd36a0d094965d4436132668ae304}{%
-           family={Shell},
-           familyi={S\bibinitperiod},
-           given={Dylan\bibnamedelima A},
-           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-      }
-      \strng{namehash}{7e9ec6052ced98163b252a2666d12ca9}
-      \strng{fullhash}{7e9ec6052ced98163b252a2666d12ca9}
-      \strng{bibnamehash}{7e9ec6052ced98163b252a2666d12ca9}
-      \strng{authorbibnamehash}{7e9ec6052ced98163b252a2666d12ca9}
-      \strng{authornamehash}{7e9ec6052ced98163b252a2666d12ca9}
-      \strng{authorfullhash}{7e9ec6052ced98163b252a2666d12ca9}
-      \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Robotics: Science and Systems VII; MIT Press: Cambridge, MA, USA}
-      \field{title}{Multi-level partitioning and distribution of the assignment problem for large-scale multi-robot task allocation}
-      \field{year}{2011}
-      \field{pages}{26\bibrangedash 33}
-      \range{pages}{8}
-    \endentry
-    \entry{liu2013optimal}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=a3c37ff2e81c891ccae874c33357a379}{%
-           family={Liu},
-           familyi={L\bibinitperiod},
-           given={Lantao},
-           giveni={L\bibinitperiod}}}%
-        {{hash=653fd36a0d094965d4436132668ae304}{%
-           family={Shell},
-           familyi={S\bibinitperiod},
-           given={Dylan\bibnamedelima A},
-           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-      }
-      \strng{namehash}{7e9ec6052ced98163b252a2666d12ca9}
-      \strng{fullhash}{7e9ec6052ced98163b252a2666d12ca9}
-      \strng{bibnamehash}{7e9ec6052ced98163b252a2666d12ca9}
-      \strng{authorbibnamehash}{7e9ec6052ced98163b252a2666d12ca9}
-      \strng{authornamehash}{7e9ec6052ced98163b252a2666d12ca9}
-      \strng{authorfullhash}{7e9ec6052ced98163b252a2666d12ca9}
-      \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Robotics: Science and Systems}
-      \field{number}{1}
-      \field{title}{Optimal Market-based Multi-Robot Task Allocation via Strategic Pricing.}
-      \field{volume}{9}
-      \field{year}{2013}
-      \field{pages}{33\bibrangedash 40}
-      \range{pages}{8}
-    \endentry
-    \entry{turpin2014goal}{article}{}
-      \name{author}{4}{}{%
-        {{hash=28f7a940436b7a3c9ef7bd44e7aa14ca}{%
-           family={Turpin},
-           familyi={T\bibinitperiod},
-           given={Matthew},
-           giveni={M\bibinitperiod}}}%
-        {{hash=1954b69679356b829af2f3a603509f7a}{%
-           family={Mohta},
-           familyi={M\bibinitperiod},
-           given={Kartik},
-           giveni={K\bibinitperiod}}}%
-        {{hash=03155ee1c7069e408180a8dcaa8fbca9}{%
-           family={Michael},
-           familyi={M\bibinitperiod},
-           given={Nathan},
-           giveni={N\bibinitperiod}}}%
-        {{hash=3c2a6a0658f1ad90e7d4a83eef9c3841}{%
-           family={Kumar},
-           familyi={K\bibinitperiod},
-           given={Vijay},
-           giveni={V\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{cae4b4f94765c801b9895490cc4a3fb3}
-      \strng{fullhash}{cae4b4f94765c801b9895490cc4a3fb3}
-      \strng{bibnamehash}{cae4b4f94765c801b9895490cc4a3fb3}
-      \strng{authorbibnamehash}{cae4b4f94765c801b9895490cc4a3fb3}
-      \strng{authornamehash}{cae4b4f94765c801b9895490cc4a3fb3}
-      \strng{authorfullhash}{cae4b4f94765c801b9895490cc4a3fb3}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Autonomous Robots}
-      \field{number}{4}
-      \field{title}{Goal assignment and trajectory planning for large teams of interchangeable robots}
-      \field{volume}{37}
-      \field{year}{2014}
-      \field{pages}{401\bibrangedash 415}
-      \range{pages}{15}
-    \endentry
-    \entry{turpin2014capt}{article}{}
-      \name{author}{3}{}{%
-        {{hash=28f7a940436b7a3c9ef7bd44e7aa14ca}{%
-           family={Turpin},
-           familyi={T\bibinitperiod},
-           given={Matthew},
-           giveni={M\bibinitperiod}}}%
-        {{hash=03155ee1c7069e408180a8dcaa8fbca9}{%
-           family={Michael},
-           familyi={M\bibinitperiod},
-           given={Nathan},
-           giveni={N\bibinitperiod}}}%
-        {{hash=3c2a6a0658f1ad90e7d4a83eef9c3841}{%
-           family={Kumar},
-           familyi={K\bibinitperiod},
-           given={Vijay},
-           giveni={V\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {SAGE Publications Sage UK: London, England}%
-      }
-      \strng{namehash}{962c8620644b07f755b732a557d27072}
-      \strng{fullhash}{962c8620644b07f755b732a557d27072}
-      \strng{bibnamehash}{962c8620644b07f755b732a557d27072}
-      \strng{authorbibnamehash}{962c8620644b07f755b732a557d27072}
-      \strng{authornamehash}{962c8620644b07f755b732a557d27072}
-      \strng{authorfullhash}{962c8620644b07f755b732a557d27072}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{The International Journal of Robotics Research}
-      \field{number}{1}
-      \field{title}{Capt: Concurrent assignment and planning of trajectories for multiple robots}
-      \field{volume}{33}
-      \field{year}{2014}
-      \field{pages}{98\bibrangedash 112}
-      \range{pages}{15}
-    \endentry
-    \entry{alonso2015multi}{inproceedings}{}
-      \name{author}{3}{}{%
-        {{hash=248bd79f5e503f11eb095282260ee29f}{%
-           family={Alonso-Mora},
-           familyi={A\bibinithyphendelim M\bibinitperiod},
-           given={Javier},
-           giveni={J\bibinitperiod}}}%
-        {{hash=33ad8243429ffe2db95e49104698e930}{%
-           family={Baker},
-           familyi={B\bibinitperiod},
-           given={Stuart},
-           giveni={S\bibinitperiod}}}%
-        {{hash=f74192f92945701041a41bfa429ee111}{%
-           family={Rus},
-           familyi={R\bibinitperiod},
-           given={Daniela},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{4b103627ea15802249281a423e1b67b7}
-      \strng{fullhash}{4b103627ea15802249281a423e1b67b7}
-      \strng{bibnamehash}{4b103627ea15802249281a423e1b67b7}
-      \strng{authorbibnamehash}{4b103627ea15802249281a423e1b67b7}
-      \strng{authornamehash}{4b103627ea15802249281a423e1b67b7}
-      \strng{authorfullhash}{4b103627ea15802249281a423e1b67b7}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2015 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}
-      \field{title}{Multi-robot navigation in formation via sequential convex programming}
-      \field{year}{2015}
-      \field{pages}{4634\bibrangedash 4641}
-      \range{pages}{8}
-    \endentry
-    \entry{SolYu15}{inproceedings}{}
-      \name{author}{4}{}{%
-        {{hash=57cb0709a3258cddbbbed22f90ae60fb}{%
-           family={Solovey},
-           familyi={S\bibinitperiod},
-           given={Kiril},
-           giveni={K\bibinitperiod}}}%
-        {{hash=2c5d237b2098acc8dbd645c9e8fb0aa3}{%
-           family={Yu},
-           familyi={Y\bibinitperiod},
-           given={Jingjin},
-           giveni={J\bibinitperiod}}}%
-        {{hash=86184ae7e15ae05a19b2c34f251bd052}{%
-           family={Zamir},
-           familyi={Z\bibinitperiod},
-           given={Or},
-           giveni={O\bibinitperiod}}}%
-        {{hash=fd73c7aee7759f4b337e8af7a25fb315}{%
-           family={Halperin},
-           familyi={H\bibinitperiod},
-           given={Dan},
-           giveni={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{7422da1198c37eb6c1d7d08f8cb76062}
-      \strng{fullhash}{7422da1198c37eb6c1d7d08f8cb76062}
-      \strng{bibnamehash}{7422da1198c37eb6c1d7d08f8cb76062}
-      \strng{authorbibnamehash}{7422da1198c37eb6c1d7d08f8cb76062}
-      \strng{authornamehash}{7422da1198c37eb6c1d7d08f8cb76062}
-      \strng{authorfullhash}{7422da1198c37eb6c1d7d08f8cb76062}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Robotics: Science and Systems}
-      \field{title}{Motion Planning for Unlabeled Discs with Optimality Guarantees}
-      \field{year}{2015}
-    \endentry
-    \entry{soltero2014decentralized}{article}{}
-      \name{author}{3}{}{%
-        {{hash=8574b18a3842b8af085da0717355408f}{%
-           family={Soltero},
-           familyi={S\bibinitperiod},
-           given={Daniel\bibnamedelima E},
-           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{hash=c54985d67e300fac8041d549c20bb2f0}{%
-           family={Schwager},
-           familyi={S\bibinitperiod},
-           given={Mac},
-           giveni={M\bibinitperiod}}}%
-        {{hash=f74192f92945701041a41bfa429ee111}{%
-           family={Rus},
-           familyi={R\bibinitperiod},
-           given={Daniela},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {SAGE Publications Sage UK: London, England}%
-      }
-      \strng{namehash}{d04958444523492143efd92081eb6b39}
-      \strng{fullhash}{d04958444523492143efd92081eb6b39}
-      \strng{bibnamehash}{d04958444523492143efd92081eb6b39}
-      \strng{authorbibnamehash}{d04958444523492143efd92081eb6b39}
-      \strng{authornamehash}{d04958444523492143efd92081eb6b39}
-      \strng{authorfullhash}{d04958444523492143efd92081eb6b39}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{The International Journal of Robotics Research}
-      \field{number}{3}
-      \field{title}{Decentralized path planning for coverage tasks using gradient descent adaptive control}
-      \field{volume}{33}
-      \field{year}{2014}
-      \field{pages}{401\bibrangedash 425}
-      \range{pages}{25}
-    \endentry
-    \entry{howard2002mobile}{incollection}{}
-      \name{author}{3}{}{%
-        {{hash=315c4166fc1f7cb66324a7f0d82827cd}{%
-           family={Howard},
-           familyi={H\bibinitperiod},
-           given={Andrew},
-           giveni={A\bibinitperiod}}}%
-        {{hash=c1579c7c6384d5a74c8a5b269301dd70}{%
-           family={Matari{ć}},
-           familyi={M\bibinitperiod},
-           given={Maja\bibnamedelima J},
-           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=6d430fe2b65c3d9fedd6f2d351604092}{%
-           family={Sukhatme},
-           familyi={S\bibinitperiod},
-           given={Gaurav\bibnamedelima S},
-           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{bf75f72aa3692445ee1d6f541ccc8ecc}
-      \strng{fullhash}{bf75f72aa3692445ee1d6f541ccc8ecc}
-      \strng{bibnamehash}{bf75f72aa3692445ee1d6f541ccc8ecc}
-      \strng{authorbibnamehash}{bf75f72aa3692445ee1d6f541ccc8ecc}
-      \strng{authornamehash}{bf75f72aa3692445ee1d6f541ccc8ecc}
-      \strng{authorfullhash}{bf75f72aa3692445ee1d6f541ccc8ecc}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Distributed Autonomous Robotic Systems 5}
-      \field{title}{Mobile sensor network deployment using potential fields: A distributed, scalable solution to the area coverage problem}
-      \field{year}{2002}
-      \field{pages}{299\bibrangedash 308}
-      \range{pages}{10}
-    \endentry
-    \entry{schwager2009optimal}{inproceedings}{}
-      \name{author}{3}{}{%
-        {{hash=c54985d67e300fac8041d549c20bb2f0}{%
-           family={Schwager},
-           familyi={S\bibinitperiod},
-           given={Mac},
-           giveni={M\bibinitperiod}}}%
-        {{hash=1db4ef45fdc587bfde167c4124821137}{%
-           family={Julian},
-           familyi={J\bibinitperiod},
-           given={Brian\bibnamedelima J},
-           giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=f74192f92945701041a41bfa429ee111}{%
-           family={Rus},
-           familyi={R\bibinitperiod},
-           given={Daniela},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{53928509d1664e37ec72beb8dc5f006b}
-      \strng{fullhash}{53928509d1664e37ec72beb8dc5f006b}
-      \strng{bibnamehash}{53928509d1664e37ec72beb8dc5f006b}
-      \strng{authorbibnamehash}{53928509d1664e37ec72beb8dc5f006b}
-      \strng{authornamehash}{53928509d1664e37ec72beb8dc5f006b}
-      \strng{authorfullhash}{53928509d1664e37ec72beb8dc5f006b}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2009 IEEE international conference on robotics and automation}
-      \field{title}{Optimal coverage for multiple hovering robots with downward facing cameras}
-      \field{year}{2009}
-      \field{pages}{3515\bibrangedash 3522}
-      \range{pages}{8}
-    \endentry
     \entry{o1987art}{book}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -1166,8 +377,8 @@
       \strng{authorbibnamehash}{6d66ca6c331c3713f32442cd175c0c66}
       \strng{authornamehash}{6d66ca6c331c3713f32442cd175c0c66}
       \strng{authorfullhash}{6d66ca6c331c3713f32442cd175c0c66}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Art gallery theorems and algorithms}
@@ -1191,8 +402,8 @@
       \strng{authorbibnamehash}{4892c17efdb61c14af3566eeafd559ff}
       \strng{authornamehash}{4892c17efdb61c14af3566eeafd559ff}
       \strng{authorfullhash}{4892c17efdb61c14af3566eeafd559ff}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Proceedings of the IEEE}
@@ -1217,8 +428,8 @@
       \strng{authorbibnamehash}{3fc4fb7684111cb9dcd6eb11d4024766}
       \strng{authornamehash}{3fc4fb7684111cb9dcd6eb11d4024766}
       \strng{authorfullhash}{3fc4fb7684111cb9dcd6eb11d4024766}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Amer. Math. Monthly}
@@ -1250,8 +461,8 @@
       \strng{authorbibnamehash}{5eb02008be98d11099e1f3aec13788d2}
       \strng{authornamehash}{5eb02008be98d11099e1f3aec13788d2}
       \strng{authorfullhash}{5eb02008be98d11099e1f3aec13788d2}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Communications of the ACM}
@@ -1284,8 +495,8 @@
       \strng{authorbibnamehash}{e4eecff059823f87997db77d4e079d76}
       \strng{authornamehash}{e4eecff059823f87997db77d4e079d76}
       \strng{authorfullhash}{e4eecff059823f87997db77d4e079d76}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Information Theory}
@@ -1313,8 +524,8 @@
       \strng{authorbibnamehash}{ad8eaa115d7c7fdeb72e4133f49c4686}
       \strng{authornamehash}{ad8eaa115d7c7fdeb72e4133f49c4686}
       \strng{authorfullhash}{ad8eaa115d7c7fdeb72e4133f49c4686}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{Ü}ber die dichteste Zusammenstellung von kongruenten Kreisen in einer Ebene.}
@@ -1337,8 +548,8 @@
       \strng{authorbibnamehash}{281c8286d933f18867f37f756549b3e5}
       \strng{authornamehash}{281c8286d933f18867f37f756549b3e5}
       \strng{authorfullhash}{281c8286d933f18867f37f756549b3e5}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Annals of Mathematics}
@@ -1366,8 +577,8 @@
       \strng{authorbibnamehash}{86dc8dd5c83fd2ef0b176cf501bfd4cc}
       \strng{authornamehash}{86dc8dd5c83fd2ef0b176cf501bfd4cc}
       \strng{authorfullhash}{86dc8dd5c83fd2ef0b176cf501bfd4cc}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Facility Location: A Survey of Applications and Methods}
@@ -1405,8 +616,8 @@
       \strng{authorbibnamehash}{b37537ca0d98c85edcfa03d5d3978793}
       \strng{authornamehash}{b37537ca0d98c85edcfa03d5d3978793}
       \strng{authorfullhash}{b37537ca0d98c85edcfa03d5d3978793}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on robotics and Automation}
@@ -1449,8 +660,8 @@
       \strng{authorbibnamehash}{e46fdba848aacb25ab6fbd0fa5293453}
       \strng{authornamehash}{e46fdba848aacb25ab6fbd0fa5293453}
       \strng{authorfullhash}{e46fdba848aacb25ab6fbd0fa5293453}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2009 IEEE International Conference on Robotics and Automation}
@@ -1476,8 +687,8 @@
       \strng{authorbibnamehash}{39d5b5de57316ccc35f368900d7bb72d}
       \strng{authornamehash}{39d5b5de57316ccc35f368900d7bb72d}
       \strng{authorfullhash}{39d5b5de57316ccc35f368900d7bb72d}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Control Systems Technology}
@@ -1520,8 +731,8 @@
       \strng{authorbibnamehash}{8708502cf0f11098c8d1a2ed8ba9b7b1}
       \strng{authornamehash}{8708502cf0f11098c8d1a2ed8ba9b7b1}
       \strng{authorfullhash}{8708502cf0f11098c8d1a2ed8ba9b7b1}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The International Journal of Robotics Research}
@@ -1588,12 +799,1754 @@
       \strng{authorbibnamehash}{125014e1c17208f3eece60433fcc3e53}
       \strng{authornamehash}{125014e1c17208f3eece60433fcc3e53}
       \strng{authorfullhash}{125014e1c17208f3eece60433fcc3e53}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Handbook of discrete and computational geometry}
       \field{year}{2017}
+    \endentry
+    \entry{schwager2009decentralized}{article}{}
+      \name{author}{3}{}{%
+        {{hash=c54985d67e300fac8041d549c20bb2f0}{%
+           family={Schwager},
+           familyi={S\bibinitperiod},
+           given={Mac},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f74192f92945701041a41bfa429ee111}{%
+           family={Rus},
+           familyi={R\bibinitperiod},
+           given={Daniela},
+           giveni={D\bibinitperiod}}}%
+        {{hash=54b9721d8a3f8acbe240876d7920cee2}{%
+           family={Slotine},
+           familyi={S\bibinitperiod},
+           given={Jean-Jacques},
+           giveni={J\bibinithyphendelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Sage Publications Sage UK: London, England}%
+      }
+      \strng{namehash}{caca6628d02604704e876b4a1172f28c}
+      \strng{fullhash}{caca6628d02604704e876b4a1172f28c}
+      \strng{bibnamehash}{caca6628d02604704e876b4a1172f28c}
+      \strng{authorbibnamehash}{caca6628d02604704e876b4a1172f28c}
+      \strng{authornamehash}{caca6628d02604704e876b4a1172f28c}
+      \strng{authorfullhash}{caca6628d02604704e876b4a1172f28c}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The International Journal of Robotics Research}
+      \field{number}{3}
+      \field{title}{Decentralized, adaptive coverage control for networked robots}
+      \field{volume}{28}
+      \field{year}{2009}
+      \field{pages}{357\bibrangedash 375}
+      \range{pages}{19}
+    \endentry
+    \entry{weber1929theory}{book}{}
+      \name{author}{1}{}{%
+        {{hash=45ceec6acaf3be8eaff0968ce4567c1d}{%
+           family={Weber},
+           familyi={W\bibinitperiod},
+           given={Alfred},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {University of Chicago Press}%
+      }
+      \strng{namehash}{45ceec6acaf3be8eaff0968ce4567c1d}
+      \strng{fullhash}{45ceec6acaf3be8eaff0968ce4567c1d}
+      \strng{bibnamehash}{45ceec6acaf3be8eaff0968ce4567c1d}
+      \strng{authorbibnamehash}{45ceec6acaf3be8eaff0968ce4567c1d}
+      \strng{authornamehash}{45ceec6acaf3be8eaff0968ce4567c1d}
+      \strng{authorfullhash}{45ceec6acaf3be8eaff0968ce4567c1d}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Theory of the Location of Industries}
+      \field{year}{1929}
+    \endentry
+    \entry{har2011geometric}{book}{}
+      \name{author}{1}{}{%
+        {{hash=c9609db02e16e7ff812eddca25a683d6}{%
+           family={Har-Peled},
+           familyi={H\bibinithyphendelim P\bibinitperiod},
+           given={Sariel},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Soc.}%
+      }
+      \strng{namehash}{c9609db02e16e7ff812eddca25a683d6}
+      \strng{fullhash}{c9609db02e16e7ff812eddca25a683d6}
+      \strng{bibnamehash}{c9609db02e16e7ff812eddca25a683d6}
+      \strng{authorbibnamehash}{c9609db02e16e7ff812eddca25a683d6}
+      \strng{authornamehash}{c9609db02e16e7ff812eddca25a683d6}
+      \strng{authorfullhash}{c9609db02e16e7ff812eddca25a683d6}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{173}
+      \field{title}{Geometric Approximation Algorithms}
+      \field{year}{2011}
+    \endentry
+    \entry{feder1988optimal}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=6ca45a075214e3f9e1fc09e857374e6f}{%
+           family={Feder},
+           familyi={F\bibinitperiod},
+           given={Tom{á}s},
+           giveni={T\bibinitperiod}}}%
+        {{hash=10dd6de105bd00921b03dfb76dc1ec95}{%
+           family={Greene},
+           familyi={G\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{b200d2f2fa6c3aab9e6cabbc6e4dacf5}
+      \strng{fullhash}{b200d2f2fa6c3aab9e6cabbc6e4dacf5}
+      \strng{bibnamehash}{b200d2f2fa6c3aab9e6cabbc6e4dacf5}
+      \strng{authorbibnamehash}{b200d2f2fa6c3aab9e6cabbc6e4dacf5}
+      \strng{authornamehash}{b200d2f2fa6c3aab9e6cabbc6e4dacf5}
+      \strng{authorfullhash}{b200d2f2fa6c3aab9e6cabbc6e4dacf5}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Symposium on Theory of Computing}
+      \field{title}{Optimal algorithms for approximate clustering}
+      \field{year}{1988}
+      \field{pages}{434\bibrangedash 444}
+      \range{pages}{11}
+    \endentry
+    \entry{hochbaum1985best}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f0b50663fb3eb0dc58cffb69a26c5593}{%
+           family={Hochbaum},
+           familyi={H\bibinitperiod},
+           given={Dorit\bibnamedelima S},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=6465ae9462ff5d959973dae65c9faaa2}{%
+           family={Shmoys},
+           familyi={S\bibinitperiod},
+           given={David\bibnamedelima B},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {INFORMS}%
+      }
+      \strng{namehash}{e0049b09f11bd338d83a78f6b5f43a64}
+      \strng{fullhash}{e0049b09f11bd338d83a78f6b5f43a64}
+      \strng{bibnamehash}{e0049b09f11bd338d83a78f6b5f43a64}
+      \strng{authorbibnamehash}{e0049b09f11bd338d83a78f6b5f43a64}
+      \strng{authornamehash}{e0049b09f11bd338d83a78f6b5f43a64}
+      \strng{authorfullhash}{e0049b09f11bd338d83a78f6b5f43a64}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mathematics of Operations Research}
+      \field{number}{2}
+      \field{title}{A best possible heuristic for the k-center problem}
+      \field{volume}{10}
+      \field{year}{1985}
+      \field{pages}{180\bibrangedash 184}
+      \range{pages}{5}
+    \endentry
+    \entry{gonzalez1985clustering}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ba884e7630b1c6a423897f96a9e8b019}{%
+           family={Gonzalez},
+           familyi={G\bibinitperiod},
+           given={Teofilo\bibnamedelima F},
+           giveni={T\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{ba884e7630b1c6a423897f96a9e8b019}
+      \strng{fullhash}{ba884e7630b1c6a423897f96a9e8b019}
+      \strng{bibnamehash}{ba884e7630b1c6a423897f96a9e8b019}
+      \strng{authorbibnamehash}{ba884e7630b1c6a423897f96a9e8b019}
+      \strng{authornamehash}{ba884e7630b1c6a423897f96a9e8b019}
+      \strng{authorfullhash}{ba884e7630b1c6a423897f96a9e8b019}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Theoretical computer science}
+      \field{title}{Clustering to minimize the maximum intercluster distance}
+      \field{volume}{38}
+      \field{year}{1985}
+      \field{pages}{293\bibrangedash 306}
+      \range{pages}{14}
+    \endentry
+    \entry{daskin2000new}{article}{}
+      \name{author}{1}{}{%
+        {{hash=be82b7822f7234b494a6103d8a9c8d3f}{%
+           family={Daskin},
+           familyi={D\bibinitperiod},
+           given={Mark\bibnamedelima S},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{be82b7822f7234b494a6103d8a9c8d3f}
+      \strng{fullhash}{be82b7822f7234b494a6103d8a9c8d3f}
+      \strng{bibnamehash}{be82b7822f7234b494a6103d8a9c8d3f}
+      \strng{authorbibnamehash}{be82b7822f7234b494a6103d8a9c8d3f}
+      \strng{authornamehash}{be82b7822f7234b494a6103d8a9c8d3f}
+      \strng{authorfullhash}{be82b7822f7234b494a6103d8a9c8d3f}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Communications of the Operations Research Society of Japan}
+      \field{number}{9}
+      \field{title}{A new approach to solving the vertex p-center problem to optimality: Algorithm and computational results}
+      \field{volume}{45}
+      \field{year}{2000}
+      \field{pages}{428\bibrangedash 436}
+      \range{pages}{9}
+    \endentry
+    \entry{shamos1975closest}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=7bb8b4ea44c2353884f2984bd5057d0f}{%
+           family={Shamos},
+           familyi={S\bibinitperiod},
+           given={Michael\bibnamedelima Ian},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=7b83780d4dffabc6fb0da34c6c8c9758}{%
+           family={Hoey},
+           familyi={H\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{b9b7f01b599ca8934ed1c13fc33036f6}
+      \strng{fullhash}{b9b7f01b599ca8934ed1c13fc33036f6}
+      \strng{bibnamehash}{b9b7f01b599ca8934ed1c13fc33036f6}
+      \strng{authorbibnamehash}{b9b7f01b599ca8934ed1c13fc33036f6}
+      \strng{authornamehash}{b9b7f01b599ca8934ed1c13fc33036f6}
+      \strng{authorfullhash}{b9b7f01b599ca8934ed1c13fc33036f6}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{16th Annual Symposium on Foundations of Computer Science (FOCS 1975)}
+      \field{title}{Closest-point problems}
+      \field{year}{1975}
+      \field{pages}{151\bibrangedash 162}
+      \range{pages}{12}
+    \endentry
+    \entry{martinez2007motion}{article}{}
+      \name{author}{3}{}{%
+        {{hash=9d9099f76526a9cc4407208d34341a69}{%
+           family={Mart{ı́}nez},
+           familyi={M\bibinitperiod},
+           given={Sonia},
+           giveni={S\bibinitperiod}}}%
+        {{hash=62610e97a5d70a6c883ddccad75d414b}{%
+           family={Cort{é}s},
+           familyi={C\bibinitperiod},
+           given={Jorge},
+           giveni={J\bibinitperiod}}}%
+        {{hash=93d4eb482d777afb4d0d88f5475057a2}{%
+           family={Bullo},
+           familyi={B\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{148d0c028409876b72514f27ced73c8f}
+      \strng{fullhash}{148d0c028409876b72514f27ced73c8f}
+      \strng{bibnamehash}{148d0c028409876b72514f27ced73c8f}
+      \strng{authorbibnamehash}{148d0c028409876b72514f27ced73c8f}
+      \strng{authornamehash}{148d0c028409876b72514f27ced73c8f}
+      \strng{authorfullhash}{148d0c028409876b72514f27ced73c8f}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Control Systems Magazine}
+      \field{number}{4}
+      \field{title}{Motion coordination with distributed information}
+      \field{volume}{27}
+      \field{year}{2007}
+      \field{pages}{75\bibrangedash 88}
+      \range{pages}{14}
+    \endentry
+    \entry{schwager2009optimal}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=c54985d67e300fac8041d549c20bb2f0}{%
+           family={Schwager},
+           familyi={S\bibinitperiod},
+           given={Mac},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1db4ef45fdc587bfde167c4124821137}{%
+           family={Julian},
+           familyi={J\bibinitperiod},
+           given={Brian\bibnamedelima J},
+           giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=f74192f92945701041a41bfa429ee111}{%
+           family={Rus},
+           familyi={R\bibinitperiod},
+           given={Daniela},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{53928509d1664e37ec72beb8dc5f006b}
+      \strng{fullhash}{53928509d1664e37ec72beb8dc5f006b}
+      \strng{bibnamehash}{53928509d1664e37ec72beb8dc5f006b}
+      \strng{authorbibnamehash}{53928509d1664e37ec72beb8dc5f006b}
+      \strng{authornamehash}{53928509d1664e37ec72beb8dc5f006b}
+      \strng{authorfullhash}{53928509d1664e37ec72beb8dc5f006b}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2009 IEEE international conference on robotics and automation}
+      \field{title}{Optimal coverage for multiple hovering robots with downward facing cameras}
+      \field{year}{2009}
+      \field{pages}{3515\bibrangedash 3522}
+      \range{pages}{8}
+    \endentry
+    \entry{arai2002advances}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{hash=e5a027e0a38c33e6a607aaacb3574084}{%
+           family={Arai},
+           familyi={A\bibinitperiod},
+           given={Tamio},
+           giveni={T\bibinitperiod}}}%
+        {{hash=0a8c40f4352fc334c0f3401980dd5443}{%
+           family={Pagello},
+           familyi={P\bibinitperiod},
+           given={Enrico},
+           giveni={E\bibinitperiod}}}%
+        {{hash=d6ea49829f0595a1431dcb4e2e165054}{%
+           family={Parker},
+           familyi={P\bibinitperiod},
+           given={Lynne\bibnamedelima E},
+           giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{3e3439ddc2d2e4b1cfbc6cbf0312008b}
+      \strng{fullhash}{3e3439ddc2d2e4b1cfbc6cbf0312008b}
+      \strng{bibnamehash}{3e3439ddc2d2e4b1cfbc6cbf0312008b}
+      \strng{authorbibnamehash}{3e3439ddc2d2e4b1cfbc6cbf0312008b}
+      \strng{authornamehash}{3e3439ddc2d2e4b1cfbc6cbf0312008b}
+      \strng{authorfullhash}{3e3439ddc2d2e4b1cfbc6cbf0312008b}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on robotics and automation}
+      \field{number}{5}
+      \field{title}{Advances in multi-robot systems}
+      \field{volume}{18}
+      \field{year}{2002}
+      \field{pages}{655\bibrangedash 661}
+      \range{pages}{7}
+    \endentry
+    \entry{gerkey2004formal}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ce4044c5ca8602021821c372ac5c17fd}{%
+           family={Gerkey},
+           familyi={G\bibinitperiod},
+           given={Brian\bibnamedelima P},
+           giveni={B\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=c1579c7c6384d5a74c8a5b269301dd70}{%
+           family={Matari{ć}},
+           familyi={M\bibinitperiod},
+           given={Maja\bibnamedelima J},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SAGE Publications}%
+      }
+      \strng{namehash}{8b7335601f0bff9afa1f43263e4a5008}
+      \strng{fullhash}{8b7335601f0bff9afa1f43263e4a5008}
+      \strng{bibnamehash}{8b7335601f0bff9afa1f43263e4a5008}
+      \strng{authorbibnamehash}{8b7335601f0bff9afa1f43263e4a5008}
+      \strng{authornamehash}{8b7335601f0bff9afa1f43263e4a5008}
+      \strng{authorfullhash}{8b7335601f0bff9afa1f43263e4a5008}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The International journal of robotics research}
+      \field{number}{9}
+      \field{title}{A formal analysis and taxonomy of task allocation in multi-robot systems}
+      \field{volume}{23}
+      \field{year}{2004}
+      \field{pages}{939\bibrangedash 954}
+      \range{pages}{16}
+    \endentry
+    \entry{ren2008distributed}{book}{}
+      \name{author}{2}{}{%
+        {{hash=79312c25841a4f2341e462020d563806}{%
+           family={Ren},
+           familyi={R\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=31202dc567c14cdad27077b94672f7ea}{%
+           family={Beard},
+           familyi={B\bibinitperiod},
+           given={Randal\bibnamedelima W},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{0f1ea4f9bd64938bd7b34308a3100bb0}
+      \strng{fullhash}{0f1ea4f9bd64938bd7b34308a3100bb0}
+      \strng{bibnamehash}{0f1ea4f9bd64938bd7b34308a3100bb0}
+      \strng{authorbibnamehash}{0f1ea4f9bd64938bd7b34308a3100bb0}
+      \strng{authornamehash}{0f1ea4f9bd64938bd7b34308a3100bb0}
+      \strng{authorfullhash}{0f1ea4f9bd64938bd7b34308a3100bb0}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{2}
+      \field{title}{Distributed consensus in multi-vehicle cooperative control}
+      \field{volume}{27}
+      \field{year}{2008}
+    \endentry
+    \entry{bullo2009distributed}{book}{}
+      \name{author}{3}{}{%
+        {{hash=93d4eb482d777afb4d0d88f5475057a2}{%
+           family={Bullo},
+           familyi={B\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=62610e97a5d70a6c883ddccad75d414b}{%
+           family={Cort{é}s},
+           familyi={C\bibinitperiod},
+           given={Jorge},
+           giveni={J\bibinitperiod}}}%
+        {{hash=39d5b5de57316ccc35f368900d7bb72d}{%
+           family={Martinez},
+           familyi={M\bibinitperiod},
+           given={Sonia},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{9b6711788e818cc028efb610bc2a948e}
+      \strng{fullhash}{9b6711788e818cc028efb610bc2a948e}
+      \strng{bibnamehash}{9b6711788e818cc028efb610bc2a948e}
+      \strng{authorbibnamehash}{9b6711788e818cc028efb610bc2a948e}
+      \strng{authornamehash}{9b6711788e818cc028efb610bc2a948e}
+      \strng{authorfullhash}{9b6711788e818cc028efb610bc2a948e}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Distributed control of robotic networks: a mathematical approach to motion coordination algorithms}
+      \field{volume}{27}
+      \field{year}{2009}
+    \endentry
+    \entry{ando1999distributed}{article}{}
+      \name{author}{4}{}{%
+        {{hash=fdfefaffcb257e8d5bc69e89e6afd32c}{%
+           family={Ando},
+           familyi={A\bibinitperiod},
+           given={Hideki},
+           giveni={H\bibinitperiod}}}%
+        {{hash=e9494b6839b6f4d5993d60a7d4953157}{%
+           family={Oasa},
+           familyi={O\bibinitperiod},
+           given={Yoshinobu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=db1fe4b54a609940542613127f8ff4dd}{%
+           family={Suzuki},
+           familyi={S\bibinitperiod},
+           given={Ichiro},
+           giveni={I\bibinitperiod}}}%
+        {{hash=ae78816994c8651edbabe0c506db8ba3}{%
+           family={Yamashita},
+           familyi={Y\bibinitperiod},
+           given={Masafumi},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{2068b9c88ae66ad1bc9027af31fc7274}
+      \strng{fullhash}{2068b9c88ae66ad1bc9027af31fc7274}
+      \strng{bibnamehash}{2068b9c88ae66ad1bc9027af31fc7274}
+      \strng{authorbibnamehash}{2068b9c88ae66ad1bc9027af31fc7274}
+      \strng{authornamehash}{2068b9c88ae66ad1bc9027af31fc7274}
+      \strng{authorfullhash}{2068b9c88ae66ad1bc9027af31fc7274}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Robotics and Automation}
+      \field{number}{5}
+      \field{title}{Distributed memoryless point convergence algorithm for mobile robots with limited visibility}
+      \field{volume}{15}
+      \field{year}{1999}
+      \field{pages}{818\bibrangedash 828}
+      \range{pages}{11}
+    \endentry
+    \entry{jadbabaie2003coordination}{article}{}
+      \name{author}{3}{}{%
+        {{hash=9814576d57251b512116243e61b38a6e}{%
+           family={Jadbabaie},
+           familyi={J\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4da9df32f0549fd84e52ca592356f954}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Jie},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4d576ab66b31a59bd0cced1a936bb67d}{%
+           family={Morse},
+           familyi={M\bibinitperiod},
+           given={A\bibnamedelima Stephen},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{ad2104d0fc7dad9e8c03e7d0f7418fdd}
+      \strng{fullhash}{ad2104d0fc7dad9e8c03e7d0f7418fdd}
+      \strng{bibnamehash}{ad2104d0fc7dad9e8c03e7d0f7418fdd}
+      \strng{authorbibnamehash}{ad2104d0fc7dad9e8c03e7d0f7418fdd}
+      \strng{authornamehash}{ad2104d0fc7dad9e8c03e7d0f7418fdd}
+      \strng{authorfullhash}{ad2104d0fc7dad9e8c03e7d0f7418fdd}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on automatic control}
+      \field{number}{6}
+      \field{title}{Coordination of groups of mobile autonomous agents using nearest neighbor rules}
+      \field{volume}{48}
+      \field{year}{2003}
+      \field{pages}{988\bibrangedash 1001}
+      \range{pages}{14}
+    \endentry
+    \entry{olfati2004consensus}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f7b28f3352eaacebbbc56b73db55a6ea}{%
+           family={Olfati-Saber},
+           familyi={O\bibinithyphendelim S\bibinitperiod},
+           given={Reza},
+           giveni={R\bibinitperiod}}}%
+        {{hash=22ec7dc3434ec7866e28d570204999f8}{%
+           family={Murray},
+           familyi={M\bibinitperiod},
+           given={Richard\bibnamedelima M},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{86acd4aa2063b740f17c0401a87c670f}
+      \strng{fullhash}{86acd4aa2063b740f17c0401a87c670f}
+      \strng{bibnamehash}{86acd4aa2063b740f17c0401a87c670f}
+      \strng{authorbibnamehash}{86acd4aa2063b740f17c0401a87c670f}
+      \strng{authornamehash}{86acd4aa2063b740f17c0401a87c670f}
+      \strng{authorfullhash}{86acd4aa2063b740f17c0401a87c670f}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on automatic control}
+      \field{number}{9}
+      \field{title}{Consensus problems in networks of agents with switching topology and time-delays}
+      \field{volume}{49}
+      \field{year}{2004}
+      \field{pages}{1520\bibrangedash 1533}
+      \range{pages}{14}
+    \endentry
+    \entry{ren2005consensus}{article}{}
+      \name{author}{2}{}{%
+        {{hash=79312c25841a4f2341e462020d563806}{%
+           family={Ren},
+           familyi={R\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=31202dc567c14cdad27077b94672f7ea}{%
+           family={Beard},
+           familyi={B\bibinitperiod},
+           given={Randal\bibnamedelima W},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{0f1ea4f9bd64938bd7b34308a3100bb0}
+      \strng{fullhash}{0f1ea4f9bd64938bd7b34308a3100bb0}
+      \strng{bibnamehash}{0f1ea4f9bd64938bd7b34308a3100bb0}
+      \strng{authorbibnamehash}{0f1ea4f9bd64938bd7b34308a3100bb0}
+      \strng{authornamehash}{0f1ea4f9bd64938bd7b34308a3100bb0}
+      \strng{authorfullhash}{0f1ea4f9bd64938bd7b34308a3100bb0}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on automatic control}
+      \field{number}{5}
+      \field{title}{Consensus seeking in multiagent systems under dynamically changing interaction topologies}
+      \field{volume}{50}
+      \field{year}{2005}
+      \field{pages}{655\bibrangedash 661}
+      \range{pages}{7}
+    \endentry
+    \entry{cheng2008almost}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=c3845395037befcdb569dc974daf082c}{%
+           family={Cheng},
+           familyi={C\bibinitperiod},
+           given={Peng},
+           giveni={P\bibinitperiod}}}%
+        {{hash=3c2a6a0658f1ad90e7d4a83eef9c3841}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Vijay},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{75762171ef02ff646cd90914575452e9}
+      \strng{fullhash}{75762171ef02ff646cd90914575452e9}
+      \strng{bibnamehash}{75762171ef02ff646cd90914575452e9}
+      \strng{authorbibnamehash}{75762171ef02ff646cd90914575452e9}
+      \strng{authornamehash}{75762171ef02ff646cd90914575452e9}
+      \strng{authorfullhash}{75762171ef02ff646cd90914575452e9}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2008 IEEE International Conference on Robotics and Automation}
+      \field{title}{An almost communication-less approach to task allocation for multiple unmanned aerial vehicles}
+      \field{year}{2008}
+      \field{pages}{1384\bibrangedash 1389}
+      \range{pages}{6}
+    \endentry
+    \entry{mesbahi2010graph}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=c70238d543ea00d01399056ddf7de9e7}{%
+           family={Mesbahi},
+           familyi={M\bibinitperiod},
+           given={Mehran},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2b5ca0ee4d617ad97cc150c468ef1d26}{%
+           family={Egerstedt},
+           familyi={E\bibinitperiod},
+           given={Magnus},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{f629449773f01ffa71555c2e167ed504}
+      \strng{fullhash}{f629449773f01ffa71555c2e167ed504}
+      \strng{bibnamehash}{f629449773f01ffa71555c2e167ed504}
+      \strng{authorbibnamehash}{f629449773f01ffa71555c2e167ed504}
+      \strng{authornamehash}{f629449773f01ffa71555c2e167ed504}
+      \strng{authorfullhash}{f629449773f01ffa71555c2e167ed504}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Graph Theoretic Methods in Multiagent Networks}
+      \field{title}{Graph theoretic methods in multiagent networks}
+      \field{year}{2010}
+    \endentry
+    \entry{yu2012rendezvous}{article}{}
+      \name{author}{3}{}{%
+        {{hash=2c5d237b2098acc8dbd645c9e8fb0aa3}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Jingjin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=10b09a560dbab6229987301f9a193d77}{%
+           family={LaValle},
+           familyi={L\bibinitperiod},
+           given={Steven\bibnamedelima M},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=c31eb151d9042c2fb3e8423c824ac9b7}{%
+           family={Liberzon},
+           familyi={L\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{a5c2c0c47cde3aa0d00438e84ff8d4cd}
+      \strng{fullhash}{a5c2c0c47cde3aa0d00438e84ff8d4cd}
+      \strng{bibnamehash}{a5c2c0c47cde3aa0d00438e84ff8d4cd}
+      \strng{authorbibnamehash}{a5c2c0c47cde3aa0d00438e84ff8d4cd}
+      \strng{authornamehash}{a5c2c0c47cde3aa0d00438e84ff8d4cd}
+      \strng{authorfullhash}{a5c2c0c47cde3aa0d00438e84ff8d4cd}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE TRANSACTIONS ON AUTOMATIC CONTROL}
+      \field{number}{2}
+      \field{title}{Rendezvous Without Coordinates}
+      \field{volume}{57}
+      \field{year}{2012}
+      \field{pages}{421}
+      \range{pages}{1}
+    \endentry
+    \entry{smith2009monotonic}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7e7fe8fc6c6a590d4e229432b9f03d99}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Stephen\bibnamedelima L},
+           giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=93d4eb482d777afb4d0d88f5475057a2}{%
+           family={Bullo},
+           familyi={B\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{89e94c0ec24cf9c432787f4a67c3d3c1}
+      \strng{fullhash}{89e94c0ec24cf9c432787f4a67c3d3c1}
+      \strng{bibnamehash}{89e94c0ec24cf9c432787f4a67c3d3c1}
+      \strng{authorbibnamehash}{89e94c0ec24cf9c432787f4a67c3d3c1}
+      \strng{authornamehash}{89e94c0ec24cf9c432787f4a67c3d3c1}
+      \strng{authorfullhash}{89e94c0ec24cf9c432787f4a67c3d3c1}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Automatic Control}
+      \field{number}{9}
+      \field{title}{Monotonic target assignment for robotic networks}
+      \field{volume}{54}
+      \field{year}{2009}
+      \field{pages}{2042\bibrangedash 2057}
+      \range{pages}{16}
+    \endentry
+    \entry{ayanian2010decentralized}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1c307d9b859cf07f7eb1337ae5ac9f78}{%
+           family={Ayanian},
+           familyi={A\bibinitperiod},
+           given={Nora},
+           giveni={N\bibinitperiod}}}%
+        {{hash=3c2a6a0658f1ad90e7d4a83eef9c3841}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Vijay},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{903406e7ace94976c001be219c9bc4ac}
+      \strng{fullhash}{903406e7ace94976c001be219c9bc4ac}
+      \strng{bibnamehash}{903406e7ace94976c001be219c9bc4ac}
+      \strng{authorbibnamehash}{903406e7ace94976c001be219c9bc4ac}
+      \strng{authornamehash}{903406e7ace94976c001be219c9bc4ac}
+      \strng{authorfullhash}{903406e7ace94976c001be219c9bc4ac}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Robotics}
+      \field{number}{5}
+      \field{title}{Decentralized feedback controllers for multiagent teams in environments with obstacles}
+      \field{volume}{26}
+      \field{year}{2010}
+      \field{pages}{878\bibrangedash 887}
+      \range{pages}{10}
+    \endentry
+    \entry{liu2011multi}{article}{}
+      \name{author}{2}{}{%
+        {{hash=a3c37ff2e81c891ccae874c33357a379}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Lantao},
+           giveni={L\bibinitperiod}}}%
+        {{hash=653fd36a0d094965d4436132668ae304}{%
+           family={Shell},
+           familyi={S\bibinitperiod},
+           given={Dylan\bibnamedelima A},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{7e9ec6052ced98163b252a2666d12ca9}
+      \strng{fullhash}{7e9ec6052ced98163b252a2666d12ca9}
+      \strng{bibnamehash}{7e9ec6052ced98163b252a2666d12ca9}
+      \strng{authorbibnamehash}{7e9ec6052ced98163b252a2666d12ca9}
+      \strng{authornamehash}{7e9ec6052ced98163b252a2666d12ca9}
+      \strng{authorfullhash}{7e9ec6052ced98163b252a2666d12ca9}
+      \field{extraname}{1}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Robotics: Science and Systems VII; MIT Press: Cambridge, MA, USA}
+      \field{title}{Multi-level partitioning and distribution of the assignment problem for large-scale multi-robot task allocation}
+      \field{year}{2011}
+      \field{pages}{26\bibrangedash 33}
+      \range{pages}{8}
+    \endentry
+    \entry{liu2013optimal}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=a3c37ff2e81c891ccae874c33357a379}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Lantao},
+           giveni={L\bibinitperiod}}}%
+        {{hash=653fd36a0d094965d4436132668ae304}{%
+           family={Shell},
+           familyi={S\bibinitperiod},
+           given={Dylan\bibnamedelima A},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{7e9ec6052ced98163b252a2666d12ca9}
+      \strng{fullhash}{7e9ec6052ced98163b252a2666d12ca9}
+      \strng{bibnamehash}{7e9ec6052ced98163b252a2666d12ca9}
+      \strng{authorbibnamehash}{7e9ec6052ced98163b252a2666d12ca9}
+      \strng{authornamehash}{7e9ec6052ced98163b252a2666d12ca9}
+      \strng{authorfullhash}{7e9ec6052ced98163b252a2666d12ca9}
+      \field{extraname}{2}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Robotics: Science and Systems}
+      \field{number}{1}
+      \field{title}{Optimal Market-based Multi-Robot Task Allocation via Strategic Pricing.}
+      \field{volume}{9}
+      \field{year}{2013}
+      \field{pages}{33\bibrangedash 40}
+      \range{pages}{8}
+    \endentry
+    \entry{turpin2014goal}{article}{}
+      \name{author}{4}{}{%
+        {{hash=28f7a940436b7a3c9ef7bd44e7aa14ca}{%
+           family={Turpin},
+           familyi={T\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1954b69679356b829af2f3a603509f7a}{%
+           family={Mohta},
+           familyi={M\bibinitperiod},
+           given={Kartik},
+           giveni={K\bibinitperiod}}}%
+        {{hash=03155ee1c7069e408180a8dcaa8fbca9}{%
+           family={Michael},
+           familyi={M\bibinitperiod},
+           given={Nathan},
+           giveni={N\bibinitperiod}}}%
+        {{hash=3c2a6a0658f1ad90e7d4a83eef9c3841}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Vijay},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{cae4b4f94765c801b9895490cc4a3fb3}
+      \strng{fullhash}{cae4b4f94765c801b9895490cc4a3fb3}
+      \strng{bibnamehash}{cae4b4f94765c801b9895490cc4a3fb3}
+      \strng{authorbibnamehash}{cae4b4f94765c801b9895490cc4a3fb3}
+      \strng{authornamehash}{cae4b4f94765c801b9895490cc4a3fb3}
+      \strng{authorfullhash}{cae4b4f94765c801b9895490cc4a3fb3}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Autonomous Robots}
+      \field{number}{4}
+      \field{title}{Goal assignment and trajectory planning for large teams of interchangeable robots}
+      \field{volume}{37}
+      \field{year}{2014}
+      \field{pages}{401\bibrangedash 415}
+      \range{pages}{15}
+    \endentry
+    \entry{turpin2014capt}{article}{}
+      \name{author}{3}{}{%
+        {{hash=28f7a940436b7a3c9ef7bd44e7aa14ca}{%
+           family={Turpin},
+           familyi={T\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+        {{hash=03155ee1c7069e408180a8dcaa8fbca9}{%
+           family={Michael},
+           familyi={M\bibinitperiod},
+           given={Nathan},
+           giveni={N\bibinitperiod}}}%
+        {{hash=3c2a6a0658f1ad90e7d4a83eef9c3841}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Vijay},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SAGE Publications Sage UK: London, England}%
+      }
+      \strng{namehash}{962c8620644b07f755b732a557d27072}
+      \strng{fullhash}{962c8620644b07f755b732a557d27072}
+      \strng{bibnamehash}{962c8620644b07f755b732a557d27072}
+      \strng{authorbibnamehash}{962c8620644b07f755b732a557d27072}
+      \strng{authornamehash}{962c8620644b07f755b732a557d27072}
+      \strng{authorfullhash}{962c8620644b07f755b732a557d27072}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The International Journal of Robotics Research}
+      \field{number}{1}
+      \field{title}{Capt: Concurrent assignment and planning of trajectories for multiple robots}
+      \field{volume}{33}
+      \field{year}{2014}
+      \field{pages}{98\bibrangedash 112}
+      \range{pages}{15}
+    \endentry
+    \entry{alonso2015multi}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=248bd79f5e503f11eb095282260ee29f}{%
+           family={Alonso-Mora},
+           familyi={A\bibinithyphendelim M\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod}}}%
+        {{hash=33ad8243429ffe2db95e49104698e930}{%
+           family={Baker},
+           familyi={B\bibinitperiod},
+           given={Stuart},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f74192f92945701041a41bfa429ee111}{%
+           family={Rus},
+           familyi={R\bibinitperiod},
+           given={Daniela},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{4b103627ea15802249281a423e1b67b7}
+      \strng{fullhash}{4b103627ea15802249281a423e1b67b7}
+      \strng{bibnamehash}{4b103627ea15802249281a423e1b67b7}
+      \strng{authorbibnamehash}{4b103627ea15802249281a423e1b67b7}
+      \strng{authornamehash}{4b103627ea15802249281a423e1b67b7}
+      \strng{authorfullhash}{4b103627ea15802249281a423e1b67b7}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2015 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}
+      \field{title}{Multi-robot navigation in formation via sequential convex programming}
+      \field{year}{2015}
+      \field{pages}{4634\bibrangedash 4641}
+      \range{pages}{8}
+    \endentry
+    \entry{SolYu15}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=57cb0709a3258cddbbbed22f90ae60fb}{%
+           family={Solovey},
+           familyi={S\bibinitperiod},
+           given={Kiril},
+           giveni={K\bibinitperiod}}}%
+        {{hash=2c5d237b2098acc8dbd645c9e8fb0aa3}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Jingjin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=86184ae7e15ae05a19b2c34f251bd052}{%
+           family={Zamir},
+           familyi={Z\bibinitperiod},
+           given={Or},
+           giveni={O\bibinitperiod}}}%
+        {{hash=fd73c7aee7759f4b337e8af7a25fb315}{%
+           family={Halperin},
+           familyi={H\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{7422da1198c37eb6c1d7d08f8cb76062}
+      \strng{fullhash}{7422da1198c37eb6c1d7d08f8cb76062}
+      \strng{bibnamehash}{7422da1198c37eb6c1d7d08f8cb76062}
+      \strng{authorbibnamehash}{7422da1198c37eb6c1d7d08f8cb76062}
+      \strng{authornamehash}{7422da1198c37eb6c1d7d08f8cb76062}
+      \strng{authorfullhash}{7422da1198c37eb6c1d7d08f8cb76062}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Robotics: Science and Systems}
+      \field{title}{Motion Planning for Unlabeled Discs with Optimality Guarantees}
+      \field{year}{2015}
+    \endentry
+    \entry{kolling2007graph}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=fb11f43bbfd736cd22bc8ee6bd7700c3}{%
+           family={Kolling},
+           familyi={K\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bf795f3c68c380592be2e65cc194cda1}{%
+           family={Carpin},
+           familyi={C\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{293a1623b6ee759053e218bbf8cb5517}
+      \strng{fullhash}{293a1623b6ee759053e218bbf8cb5517}
+      \strng{bibnamehash}{293a1623b6ee759053e218bbf8cb5517}
+      \strng{authorbibnamehash}{293a1623b6ee759053e218bbf8cb5517}
+      \strng{authornamehash}{293a1623b6ee759053e218bbf8cb5517}
+      \strng{authorfullhash}{293a1623b6ee759053e218bbf8cb5517}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2007 IEEE/RSJ International Conference on Intelligent Robots and Systems}
+      \field{title}{The graph-clear problem: definition, theoretical properties and its connections to multirobot aided surveillance}
+      \field{year}{2007}
+      \field{pages}{1003\bibrangedash 1008}
+      \range{pages}{6}
+    \endentry
+    \entry{kolling2017coordinated}{article}{}
+      \name{author}{3}{}{%
+        {{hash=fb11f43bbfd736cd22bc8ee6bd7700c3}{%
+           family={Kolling},
+           familyi={K\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=dc7d2e2ec5259088772b0b64fdb0fbe4}{%
+           family={Kleiner},
+           familyi={K\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bf795f3c68c380592be2e65cc194cda1}{%
+           family={Carpin},
+           familyi={C\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{5a064695b681d1768771122e11e6843a}
+      \strng{fullhash}{5a064695b681d1768771122e11e6843a}
+      \strng{bibnamehash}{5a064695b681d1768771122e11e6843a}
+      \strng{authorbibnamehash}{5a064695b681d1768771122e11e6843a}
+      \strng{authornamehash}{5a064695b681d1768771122e11e6843a}
+      \strng{authorfullhash}{5a064695b681d1768771122e11e6843a}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Robotics}
+      \field{number}{2}
+      \field{title}{Coordinated search with multiple robots arranged in line formations}
+      \field{volume}{34}
+      \field{year}{2017}
+      \field{pages}{459\bibrangedash 473}
+      \range{pages}{15}
+    \endentry
+    \entry{megiddo1988complexity}{article}{}
+      \name{author}{5}{}{%
+        {{hash=588af919fb53ff01cbd7f3dffb720866}{%
+           family={Megiddo},
+           familyi={M\bibinitperiod},
+           given={Nimrod},
+           giveni={N\bibinitperiod}}}%
+        {{hash=e92cfae69b4769fbdb981fb07e7c3d40}{%
+           family={Hakimi},
+           familyi={H\bibinitperiod},
+           given={S\bibnamedelima Louis},
+           giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=3d981c215c9c575d31bcca98c6d6c69d}{%
+           family={Garey},
+           familyi={G\bibinitperiod},
+           given={Michael\bibnamedelima R},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=8f805225d8e433c29a18a566d1f6acc6}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={David\bibnamedelima S},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=b3b407bb63367a850366076095ee1970}{%
+           family={Papadimitriou},
+           familyi={P\bibinitperiod},
+           given={Christos\bibnamedelima H},
+           giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM New York, NY, USA}%
+      }
+      \strng{namehash}{2c966d9a432c0e541fca1cd978652b30}
+      \strng{fullhash}{2c966d9a432c0e541fca1cd978652b30}
+      \strng{bibnamehash}{2c966d9a432c0e541fca1cd978652b30}
+      \strng{authorbibnamehash}{2c966d9a432c0e541fca1cd978652b30}
+      \strng{authornamehash}{2c966d9a432c0e541fca1cd978652b30}
+      \strng{authorfullhash}{2c966d9a432c0e541fca1cd978652b30}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the ACM (JACM)}
+      \field{number}{1}
+      \field{title}{The complexity of searching a graph}
+      \field{volume}{35}
+      \field{year}{1988}
+      \field{pages}{18\bibrangedash 44}
+      \range{pages}{27}
+    \endentry
+    \entry{guibas1999visibility}{article}{}
+      \name{author}{5}{}{%
+        {{hash=03578abbf51650fbfaf563c532898f30}{%
+           family={Guibas},
+           familyi={G\bibinitperiod},
+           given={Leonidas\bibnamedelima J},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=f1b7494703264d3e562759a836f6d716}{%
+           family={Latombe},
+           familyi={L\bibinitperiod},
+           given={Jean-Claude},
+           giveni={J\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=10b09a560dbab6229987301f9a193d77}{%
+           family={LaValle},
+           familyi={L\bibinitperiod},
+           given={Steven\bibnamedelima M},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=ef1d85ea2a6e7e05135564c50d9781c4}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=2f555526320a1c4028ad0f6328953999}{%
+           family={Motwani},
+           familyi={M\bibinitperiod},
+           given={Rajeev},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {World Scientific}%
+      }
+      \strng{namehash}{ecbf6e23ae8d0d529cf2a717e16ef42a}
+      \strng{fullhash}{ecbf6e23ae8d0d529cf2a717e16ef42a}
+      \strng{bibnamehash}{ecbf6e23ae8d0d529cf2a717e16ef42a}
+      \strng{authorbibnamehash}{ecbf6e23ae8d0d529cf2a717e16ef42a}
+      \strng{authornamehash}{ecbf6e23ae8d0d529cf2a717e16ef42a}
+      \strng{authorfullhash}{ecbf6e23ae8d0d529cf2a717e16ef42a}
+      \field{extraname}{1}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Computational Geometry \& Applications}
+      \field{number}{04n05}
+      \field{title}{A visibility-based pursuit-evasion problem}
+      \field{volume}{9}
+      \field{year}{1999}
+      \field{pages}{471\bibrangedash 493}
+      \range{pages}{23}
+    \endentry
+    \entry{suzuki1992searching}{article}{}
+      \name{author}{2}{}{%
+        {{hash=db1fe4b54a609940542613127f8ff4dd}{%
+           family={Suzuki},
+           familyi={S\bibinitperiod},
+           given={Ichiro},
+           giveni={I\bibinitperiod}}}%
+        {{hash=ae78816994c8651edbabe0c506db8ba3}{%
+           family={Yamashita},
+           familyi={Y\bibinitperiod},
+           given={Masafumi},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SIAM}%
+      }
+      \strng{namehash}{8f438beae702baeb3d30c2f5d4fff582}
+      \strng{fullhash}{8f438beae702baeb3d30c2f5d4fff582}
+      \strng{bibnamehash}{8f438beae702baeb3d30c2f5d4fff582}
+      \strng{authorbibnamehash}{8f438beae702baeb3d30c2f5d4fff582}
+      \strng{authornamehash}{8f438beae702baeb3d30c2f5d4fff582}
+      \strng{authorfullhash}{8f438beae702baeb3d30c2f5d4fff582}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SIAM Journal on computing}
+      \field{number}{5}
+      \field{title}{Searching for a mobile intruder in a polygonal region}
+      \field{volume}{21}
+      \field{year}{1992}
+      \field{pages}{863\bibrangedash 888}
+      \range{pages}{26}
+    \endentry
+    \entry{lavalle2000algorithm}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=10b09a560dbab6229987301f9a193d77}{%
+           family={LaValle},
+           familyi={L\bibinitperiod},
+           given={Steven\bibnamedelima M},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=17e31899e7dfefc8e5c6304dd3426ef5}{%
+           family={Simov},
+           familyi={S\bibinitperiod},
+           given={Borislav\bibnamedelima H},
+           giveni={B\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=3f4c54359933e2c1b95dc72ce5bee942}{%
+           family={Slutzki},
+           familyi={S\bibinitperiod},
+           given={Giora},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{9a859ebbeeee4d4b16bd34e10c14a61d}
+      \strng{fullhash}{9a859ebbeeee4d4b16bd34e10c14a61d}
+      \strng{bibnamehash}{9a859ebbeeee4d4b16bd34e10c14a61d}
+      \strng{authorbibnamehash}{9a859ebbeeee4d4b16bd34e10c14a61d}
+      \strng{authornamehash}{9a859ebbeeee4d4b16bd34e10c14a61d}
+      \strng{authorfullhash}{9a859ebbeeee4d4b16bd34e10c14a61d}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the sixteenth annual symposium on Computational geometry}
+      \field{title}{An algorithm for searching a polygonal region with a flashlight}
+      \field{year}{2000}
+      \field{pages}{260\bibrangedash 269}
+      \range{pages}{10}
+    \endentry
+    \entry{stiffler2017persistent}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=35b4e527dc241a43539cbedeefdb7ac3}{%
+           family={Stiffler},
+           familyi={S\bibinitperiod},
+           given={Nicholas\bibnamedelima M},
+           giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=fb11f43bbfd736cd22bc8ee6bd7700c3}{%
+           family={Kolling},
+           familyi={K\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=62719bed7b95c2b576bf6b784ca15935}{%
+           family={O'Kane},
+           familyi={O\bibinitperiod},
+           given={Jason\bibnamedelima M},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{b5967969fac496946cc8adad14e82997}
+      \strng{fullhash}{b5967969fac496946cc8adad14e82997}
+      \strng{bibnamehash}{b5967969fac496946cc8adad14e82997}
+      \strng{authorbibnamehash}{b5967969fac496946cc8adad14e82997}
+      \strng{authornamehash}{b5967969fac496946cc8adad14e82997}
+      \strng{authorfullhash}{b5967969fac496946cc8adad14e82997}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2017 IEEE International Conference on Robotics and Automation (ICRA)}
+      \field{title}{Persistent pursuit-evasion: The case of the preoccupied pursuer}
+      \field{year}{2017}
+      \field{pages}{5027\bibrangedash 5034}
+      \range{pages}{8}
+    \endentry
+    \entry{shishika2020cooperative}{article}{}
+      \name{author}{3}{}{%
+        {{hash=688d8700a1c453d8f28c3a8367e0d636}{%
+           family={Shishika},
+           familyi={S\bibinitperiod},
+           given={Daigo},
+           giveni={D\bibinitperiod}}}%
+        {{hash=924aa2b33af8857c4702707778a3ec4a}{%
+           family={Paulos},
+           familyi={P\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3c2a6a0658f1ad90e7d4a83eef9c3841}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Vijay},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{19ec31204056192286f6e7f769532e40}
+      \strng{fullhash}{19ec31204056192286f6e7f769532e40}
+      \strng{bibnamehash}{19ec31204056192286f6e7f769532e40}
+      \strng{authorbibnamehash}{19ec31204056192286f6e7f769532e40}
+      \strng{authornamehash}{19ec31204056192286f6e7f769532e40}
+      \strng{authorfullhash}{19ec31204056192286f6e7f769532e40}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Robotics and Automation Letters}
+      \field{number}{2}
+      \field{title}{Cooperative team strategies for multi-player perimeter-defense games}
+      \field{volume}{5}
+      \field{year}{2020}
+      \field{pages}{2738\bibrangedash 2745}
+      \range{pages}{8}
+    \endentry
+    \entry{macharet2020adaptive}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=129516f30b3d47326cf3c5319a17296a}{%
+           family={Macharet},
+           familyi={M\bibinitperiod},
+           given={Douglas\bibnamedelima G},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=b07e80e088e96bc6bf2bb52610738da2}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Austin\bibnamedelima K},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=688d8700a1c453d8f28c3a8367e0d636}{%
+           family={Shishika},
+           familyi={S\bibinitperiod},
+           given={Daigo},
+           giveni={D\bibinitperiod}}}%
+        {{hash=13515e3859af5918925e99eddb9a9079}{%
+           family={Pappas},
+           familyi={P\bibinitperiod},
+           given={George\bibnamedelima J},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=3c2a6a0658f1ad90e7d4a83eef9c3841}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Vijay},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{3b4c31302f97fd6fd8eac1bc129eec6a}
+      \strng{fullhash}{3b4c31302f97fd6fd8eac1bc129eec6a}
+      \strng{bibnamehash}{3b4c31302f97fd6fd8eac1bc129eec6a}
+      \strng{authorbibnamehash}{3b4c31302f97fd6fd8eac1bc129eec6a}
+      \strng{authornamehash}{3b4c31302f97fd6fd8eac1bc129eec6a}
+      \strng{authorfullhash}{3b4c31302f97fd6fd8eac1bc129eec6a}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}
+      \field{title}{Adaptive partitioning for coordinated multi-agent perimeter defense}
+      \field{year}{2020}
+      \field{pages}{7971\bibrangedash 7977}
+      \range{pages}{7}
+    \endentry
+    \entry{chen2021optimal}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=b07e80e088e96bc6bf2bb52610738da2}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Austin\bibnamedelima K},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=129516f30b3d47326cf3c5319a17296a}{%
+           family={Macharet},
+           familyi={M\bibinitperiod},
+           given={Douglas\bibnamedelima G},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=688d8700a1c453d8f28c3a8367e0d636}{%
+           family={Shishika},
+           familyi={S\bibinitperiod},
+           given={Daigo},
+           giveni={D\bibinitperiod}}}%
+        {{hash=13515e3859af5918925e99eddb9a9079}{%
+           family={Pappas},
+           familyi={P\bibinitperiod},
+           given={George\bibnamedelima J},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=3c2a6a0658f1ad90e7d4a83eef9c3841}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Vijay},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{83b46646a24c8649b37a77b19347e94b}
+      \strng{fullhash}{83b46646a24c8649b37a77b19347e94b}
+      \strng{bibnamehash}{83b46646a24c8649b37a77b19347e94b}
+      \strng{authorbibnamehash}{83b46646a24c8649b37a77b19347e94b}
+      \strng{authornamehash}{83b46646a24c8649b37a77b19347e94b}
+      \strng{authorfullhash}{83b46646a24c8649b37a77b19347e94b}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Symposium Distributed Autonomous Robotic Systems}
+      \field{title}{Optimal Multi-robot Perimeter Defense Using Flow Networks}
+      \field{year}{2021}
+      \field{pages}{282\bibrangedash 293}
+      \range{pages}{12}
+    \endentry
+    \entry{fengyu2020optimally}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=86daf0cc36518b3e76aaa4773b014304}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={S.\bibnamedelimi W.},
+           giveni={S\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=89b432fa4bb24ef9e7312fd806fb771b}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{98d3b3511f2cc08d56a284c9d5b7f64c}
+      \strng{fullhash}{98d3b3511f2cc08d56a284c9d5b7f64c}
+      \strng{bibnamehash}{98d3b3511f2cc08d56a284c9d5b7f64c}
+      \strng{authorbibnamehash}{98d3b3511f2cc08d56a284c9d5b7f64c}
+      \strng{authornamehash}{98d3b3511f2cc08d56a284c9d5b7f64c}
+      \strng{authorfullhash}{98d3b3511f2cc08d56a284c9d5b7f64c}
+      \field{extraname}{1}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Robotics: Science and Systems}
+      \field{title}{Optimally Guarding Perimeters and Regions with Mobile Range Sensors}
+      \field{year}{2020}
+    \endentry
+    \entry{oksanen2009coverage}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b2ec1920fdc9c158f0fae8d924657330}{%
+           family={Oksanen},
+           familyi={O\bibinitperiod},
+           given={Timo},
+           giveni={T\bibinitperiod}}}%
+        {{hash=ce4c1138a19907650846419b15c2a030}{%
+           family={Visala},
+           familyi={V\bibinitperiod},
+           given={Arto},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{3a4db583a95cdbdaa23a91861e631ad5}
+      \strng{fullhash}{3a4db583a95cdbdaa23a91861e631ad5}
+      \strng{bibnamehash}{3a4db583a95cdbdaa23a91861e631ad5}
+      \strng{authorbibnamehash}{3a4db583a95cdbdaa23a91861e631ad5}
+      \strng{authornamehash}{3a4db583a95cdbdaa23a91861e631ad5}
+      \strng{authorfullhash}{3a4db583a95cdbdaa23a91861e631ad5}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of field robotics}
+      \field{number}{8}
+      \field{title}{Coverage path planning algorithms for agricultural field machines}
+      \field{volume}{26}
+      \field{year}{2009}
+      \field{pages}{651\bibrangedash 668}
+      \range{pages}{18}
+    \endentry
+    \entry{haksar2020spatial}{article}{}
+      \name{author}{3}{}{%
+        {{hash=c63583a0c683a82f09c4aac289e6533b}{%
+           family={Haksar},
+           familyi={H\bibinitperiod},
+           given={Ravi\bibnamedelima N},
+           giveni={R\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=1a5e5ed2f679e54c51fbdc7f13839d77}{%
+           family={Trimpe},
+           familyi={T\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c54985d67e300fac8041d549c20bb2f0}{%
+           family={Schwager},
+           familyi={S\bibinitperiod},
+           given={Mac},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{3c58544dab563932ec48d0a98b5adfa9}
+      \strng{fullhash}{3c58544dab563932ec48d0a98b5adfa9}
+      \strng{bibnamehash}{3c58544dab563932ec48d0a98b5adfa9}
+      \strng{authorbibnamehash}{3c58544dab563932ec48d0a98b5adfa9}
+      \strng{authornamehash}{3c58544dab563932ec48d0a98b5adfa9}
+      \strng{authorfullhash}{3c58544dab563932ec48d0a98b5adfa9}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Robotics and Automation Letters}
+      \field{number}{2}
+      \field{title}{Spatial scheduling of informative meetings for multi-agent persistent coverage}
+      \field{volume}{5}
+      \field{year}{2020}
+      \field{pages}{3027\bibrangedash 3034}
+      \range{pages}{8}
+    \endentry
+    \entry{wei2018coverage}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=85377c3490a027d81d2b3a6803f3a3c0}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Minghan},
+           giveni={M\bibinitperiod}}}%
+        {{hash=87b8d080b88aecea246d4901006d26ea}{%
+           family={Isler},
+           familyi={I\bibinitperiod},
+           given={Volkan},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{7e5c5ca0ef05e3926a8f7cfc62ff2d7c}
+      \strng{fullhash}{7e5c5ca0ef05e3926a8f7cfc62ff2d7c}
+      \strng{bibnamehash}{7e5c5ca0ef05e3926a8f7cfc62ff2d7c}
+      \strng{authorbibnamehash}{7e5c5ca0ef05e3926a8f7cfc62ff2d7c}
+      \strng{authornamehash}{7e5c5ca0ef05e3926a8f7cfc62ff2d7c}
+      \strng{authorfullhash}{7e5c5ca0ef05e3926a8f7cfc62ff2d7c}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 IEEE International Conference on Robotics and Automation (ICRA)}
+      \field{title}{Coverage path planning under the energy constraint}
+      \field{year}{2018}
+      \field{pages}{368\bibrangedash 373}
+      \range{pages}{6}
+    \endentry
+    \entry{deng2019constrained}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{hash=76c56e573cc5bbf88ae80db0f5f577e3}{%
+           family={Deng},
+           familyi={D\bibinitperiod},
+           given={Di},
+           giveni={D\bibinitperiod}}}%
+        {{hash=64f28f7a553414b0c86eb7ca5f2ae492}{%
+           family={Jing},
+           familyi={J\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=b084739a369562c03267782f7bcc04fc}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={Yuhe},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=8c90f7c387c2e41b927a23c4af09377e}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Ziyin},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=b9886553dc59cbe2db540b43972c9599}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Jiahong},
+           giveni={J\bibinitperiod}}}%
+        {{hash=44b049925d8a735bdf8ed5f8cc28b160}{%
+           family={Shimada},
+           familyi={S\bibinitperiod},
+           given={Kenji},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{242ab75346cea966d38e88c9d02a02ec}
+      \strng{fullhash}{242ab75346cea966d38e88c9d02a02ec}
+      \strng{bibnamehash}{242ab75346cea966d38e88c9d02a02ec}
+      \strng{authorbibnamehash}{242ab75346cea966d38e88c9d02a02ec}
+      \strng{authornamehash}{242ab75346cea966d38e88c9d02a02ec}
+      \strng{authorfullhash}{242ab75346cea966d38e88c9d02a02ec}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}
+      \field{title}{Constrained heterogeneous vehicle path planning for large-area coverage}
+      \field{year}{2019}
+      \field{pages}{4113\bibrangedash 4120}
+      \range{pages}{8}
+    \endentry
+    \entry{lan2013planning}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=2867c6a41be1c253e48988fea3502132}{%
+           family={Lan},
+           familyi={L\bibinitperiod},
+           given={Xiaodong},
+           giveni={X\bibinitperiod}}}%
+        {{hash=c54985d67e300fac8041d549c20bb2f0}{%
+           family={Schwager},
+           familyi={S\bibinitperiod},
+           given={Mac},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{0077163340da0e9529be0e7dea14b073}
+      \strng{fullhash}{0077163340da0e9529be0e7dea14b073}
+      \strng{bibnamehash}{0077163340da0e9529be0e7dea14b073}
+      \strng{authorbibnamehash}{0077163340da0e9529be0e7dea14b073}
+      \strng{authornamehash}{0077163340da0e9529be0e7dea14b073}
+      \strng{authorfullhash}{0077163340da0e9529be0e7dea14b073}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2013 IEEE International Conference on Robotics and Automation}
+      \field{title}{Planning periodic persistent monitoring trajectories for sensing robots in gaussian random fields}
+      \field{year}{2013}
+      \field{pages}{2415\bibrangedash 2420}
+      \range{pages}{6}
+    \endentry
+    \entry{cassandras2012optimal}{article}{}
+      \name{author}{3}{}{%
+        {{hash=7dd349abebd258362b8f14a38e12272c}{%
+           family={Cassandras},
+           familyi={C\bibinitperiod},
+           given={Christos\bibnamedelima G},
+           giveni={C\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=0ae58a3cead52251aec36127ecec0c7c}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Xuchao},
+           giveni={X\bibinitperiod}}}%
+        {{hash=a391fa34955f217bf03b3799eabf4bca}{%
+           family={Ding},
+           familyi={D\bibinitperiod},
+           given={Xuchu},
+           giveni={X\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{af5f1df21d75c3abce3047edb7358aae}
+      \strng{fullhash}{af5f1df21d75c3abce3047edb7358aae}
+      \strng{bibnamehash}{af5f1df21d75c3abce3047edb7358aae}
+      \strng{authorbibnamehash}{af5f1df21d75c3abce3047edb7358aae}
+      \strng{authornamehash}{af5f1df21d75c3abce3047edb7358aae}
+      \strng{authorfullhash}{af5f1df21d75c3abce3047edb7358aae}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Automatic Control}
+      \field{number}{4}
+      \field{title}{An optimal control approach to the multi-agent persistent monitoring problem}
+      \field{volume}{58}
+      \field{year}{2012}
+      \field{pages}{947\bibrangedash 961}
+      \range{pages}{15}
+    \endentry
+    \entry{yu2015persistent}{article}{}
+      \name{author}{3}{}{%
+        {{hash=2c5d237b2098acc8dbd645c9e8fb0aa3}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Jingjin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ca50b61c6d4e6ff567664ac59d4d3837}{%
+           family={Karaman},
+           familyi={K\bibinitperiod},
+           given={Sertac},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f74192f92945701041a41bfa429ee111}{%
+           family={Rus},
+           familyi={R\bibinitperiod},
+           given={Daniela},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{6044c6c20debb8066522b72ecb5af0c8}
+      \strng{fullhash}{6044c6c20debb8066522b72ecb5af0c8}
+      \strng{bibnamehash}{6044c6c20debb8066522b72ecb5af0c8}
+      \strng{authorbibnamehash}{6044c6c20debb8066522b72ecb5af0c8}
+      \strng{authornamehash}{6044c6c20debb8066522b72ecb5af0c8}
+      \strng{authorfullhash}{6044c6c20debb8066522b72ecb5af0c8}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Robotics}
+      \field{number}{3}
+      \field{title}{Persistent monitoring of events with stochastic arrivals at multiple stations}
+      \field{volume}{31}
+      \field{year}{2015}
+      \field{pages}{521\bibrangedash 535}
+      \range{pages}{15}
+    \endentry
+    \entry{palacios2017optimal}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=02695936ab82ecedf2bee5ffb3b2689b}{%
+           family={Palacios-Gas{ó}s},
+           familyi={P\bibinithyphendelim G\bibinitperiod},
+           given={Jos{é}\bibnamedelima Manuel},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=50e449033744851c8964fa1bde7538f3}{%
+           family={Talebpour},
+           familyi={T\bibinitperiod},
+           given={Zeynab},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=ef7a6f3a559f31218666dfe4f43fa89e}{%
+           family={Montijano},
+           familyi={M\bibinitperiod},
+           given={Eduardo},
+           giveni={E\bibinitperiod}}}%
+        {{hash=0ac6dee9de7af7b17b7cc0d1cde57e8b}{%
+           family={Sag{ü}{é}s},
+           familyi={S\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod}}}%
+        {{hash=88b4c72ba9cf411dfef08a4c9acea1d5}{%
+           family={Martinoli},
+           familyi={M\bibinitperiod},
+           given={Alcherio},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{d0dd173fd4922aded3b24ae36a4ef2cd}
+      \strng{fullhash}{d0dd173fd4922aded3b24ae36a4ef2cd}
+      \strng{bibnamehash}{d0dd173fd4922aded3b24ae36a4ef2cd}
+      \strng{authorbibnamehash}{d0dd173fd4922aded3b24ae36a4ef2cd}
+      \strng{authornamehash}{d0dd173fd4922aded3b24ae36a4ef2cd}
+      \strng{authorfullhash}{d0dd173fd4922aded3b24ae36a4ef2cd}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2017 IEEE International Conference on Robotics and Automation (ICRA)}
+      \field{title}{Optimal path planning and coverage control for multi-robot persistent coverage in environments with obstacles}
+      \field{year}{2017}
+      \field{pages}{1321\bibrangedash 1327}
+      \range{pages}{7}
     \endentry
     \entry{burkard1999linear}{book}{}
       \name{author}{2}{}{%
@@ -1617,8 +2570,8 @@
       \strng{authorbibnamehash}{ae85530ae46c0da52c92fde2203edb01}
       \strng{authornamehash}{ae85530ae46c0da52c92fde2203edb01}
       \strng{authorfullhash}{ae85530ae46c0da52c92fde2203edb01}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Linear assignment problems and extensions}
@@ -1653,8 +2606,8 @@
       \strng{authorbibnamehash}{ea32ebdb2cada91aeede81ac1654b85a}
       \strng{authornamehash}{ea32ebdb2cada91aeede81ac1654b85a}
       \strng{authorfullhash}{ea32ebdb2cada91aeede81ac1654b85a}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Robotics: Science and Systems}
@@ -1683,8 +2636,8 @@
       \strng{authorbibnamehash}{300ad4cacb3e062fc6f0a672400f66c7}
       \strng{authornamehash}{300ad4cacb3e062fc6f0a672400f66c7}
       \strng{authorfullhash}{300ad4cacb3e062fc6f0a672400f66c7}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Algorithmica}
@@ -1721,8 +2674,8 @@
       \strng{authorbibnamehash}{cad127de892c6693d9b349fe0410ffe5}
       \strng{authornamehash}{cad127de892c6693d9b349fe0410ffe5}
       \strng{authorfullhash}{cad127de892c6693d9b349fe0410ffe5}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2008 IEEE international conference on robotics and automation}
@@ -1763,8 +2716,8 @@
       \strng{authorbibnamehash}{a8d2277ea30723c049677d1e42f64f4a}
       \strng{authornamehash}{a8d2277ea30723c049677d1e42f64f4a}
       \strng{authorfullhash}{a8d2277ea30723c049677d1e42f64f4a}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The International Journal of Robotics Research}
@@ -1792,8 +2745,8 @@
       \strng{authorbibnamehash}{8f805225d8e433c29a18a566d1f6acc6}
       \strng{authornamehash}{8f805225d8e433c29a18a566d1f6acc6}
       \strng{authorfullhash}{8f805225d8e433c29a18a566d1f6acc6}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Near-optimal bin packing algorithms}
@@ -1817,8 +2770,8 @@
       \strng{authorbibnamehash}{5290385c419686f6312edeb3578dc9cf}
       \strng{authornamehash}{5290385c419686f6312edeb3578dc9cf}
       \strng{authorfullhash}{5290385c419686f6312edeb3578dc9cf}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Reducibility among combinatorial problems}
@@ -1841,8 +2794,8 @@
       \strng{authorbibnamehash}{47b0683fe96934f8e3cb15b99f3be404}
       \strng{authornamehash}{47b0683fe96934f8e3cb15b99f3be404}
       \strng{authorfullhash}{47b0683fe96934f8e3cb15b99f3be404}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Two NP-complete problems in nonnegative integer programming}
@@ -1865,8 +2818,8 @@
       \strng{authorbibnamehash}{212fe65a17e797b6dbce0c3731498b2c}
       \strng{authornamehash}{212fe65a17e797b6dbce0c3731498b2c}
       \strng{authorfullhash}{212fe65a17e797b6dbce0c3731498b2c}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Operations research}
@@ -1900,8 +2853,8 @@
       \strng{authornamehash}{d186cd4f1f5ca75183b09d5af68f9e7c}
       \strng{authorfullhash}{d186cd4f1f5ca75183b09d5af68f9e7c}
       \field{extraname}{1}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{SIAM journal on Computing}
@@ -1935,8 +2888,8 @@
       \strng{authornamehash}{d186cd4f1f5ca75183b09d5af68f9e7c}
       \strng{authorfullhash}{d186cd4f1f5ca75183b09d5af68f9e7c}
       \field{extraname}{2}
-      \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Computers and intractability}
@@ -1960,8 +2913,8 @@
       \strng{authorbibnamehash}{9f9de50797bb1d5421891d491ae649b8}
       \strng{authornamehash}{9f9de50797bb1d5421891d491ae649b8}
       \strng{authorfullhash}{9f9de50797bb1d5421891d491ae649b8}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Mathematics of operations research}
@@ -1994,8 +2947,8 @@
       \strng{authorbibnamehash}{3cfc137a2f8a14b7eea4235859fb9160}
       \strng{authornamehash}{3cfc137a2f8a14b7eea4235859fb9160}
       \strng{authorfullhash}{3cfc137a2f8a14b7eea4235859fb9160}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of the ACM (JACM)}
@@ -2028,8 +2981,8 @@
       \strng{authorbibnamehash}{82d71d9b6e91409232d35dc156bbdf31}
       \strng{authornamehash}{82d71d9b6e91409232d35dc156bbdf31}
       \strng{authorfullhash}{82d71d9b6e91409232d35dc156bbdf31}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Distributed Autonomous Robotic Systems 5}
@@ -2070,8 +3023,8 @@
       \strng{authorbibnamehash}{f9543a39659306a9edfab53382e236cd}
       \strng{authornamehash}{f9543a39659306a9edfab53382e236cd}
       \strng{authorfullhash}{f9543a39659306a9edfab53382e236cd}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{IEEE International Conference on Robotics and Automation}
@@ -2107,8 +3060,8 @@
       \strng{authorbibnamehash}{566b0277921dc8dec7f0ff70a13e8a9d}
       \strng{authornamehash}{566b0277921dc8dec7f0ff70a13e8a9d}
       \strng{authorfullhash}{566b0277921dc8dec7f0ff70a13e8a9d}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2012 IEEE/RSJ International Conference on Intelligent Robots and Systems}
@@ -2116,321 +3069,6 @@
       \field{year}{2012}
       \field{pages}{4865\bibrangedash 4872}
       \range{pages}{8}
-    \endentry
-    \entry{martinez2007motion}{article}{}
-      \name{author}{3}{}{%
-        {{hash=9d9099f76526a9cc4407208d34341a69}{%
-           family={Mart{ı́}nez},
-           familyi={M\bibinitperiod},
-           given={Sonia},
-           giveni={S\bibinitperiod}}}%
-        {{hash=62610e97a5d70a6c883ddccad75d414b}{%
-           family={Cort{é}s},
-           familyi={C\bibinitperiod},
-           given={Jorge},
-           giveni={J\bibinitperiod}}}%
-        {{hash=93d4eb482d777afb4d0d88f5475057a2}{%
-           family={Bullo},
-           familyi={B\bibinitperiod},
-           given={Francesco},
-           giveni={F\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{148d0c028409876b72514f27ced73c8f}
-      \strng{fullhash}{148d0c028409876b72514f27ced73c8f}
-      \strng{bibnamehash}{148d0c028409876b72514f27ced73c8f}
-      \strng{authorbibnamehash}{148d0c028409876b72514f27ced73c8f}
-      \strng{authornamehash}{148d0c028409876b72514f27ced73c8f}
-      \strng{authorfullhash}{148d0c028409876b72514f27ced73c8f}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Control Systems Magazine}
-      \field{number}{4}
-      \field{title}{Motion coordination with distributed information}
-      \field{volume}{27}
-      \field{year}{2007}
-      \field{pages}{75\bibrangedash 88}
-      \range{pages}{14}
-    \endentry
-    \entry{schwager2009decentralized}{article}{}
-      \name{author}{3}{}{%
-        {{hash=c54985d67e300fac8041d549c20bb2f0}{%
-           family={Schwager},
-           familyi={S\bibinitperiod},
-           given={Mac},
-           giveni={M\bibinitperiod}}}%
-        {{hash=f74192f92945701041a41bfa429ee111}{%
-           family={Rus},
-           familyi={R\bibinitperiod},
-           given={Daniela},
-           giveni={D\bibinitperiod}}}%
-        {{hash=54b9721d8a3f8acbe240876d7920cee2}{%
-           family={Slotine},
-           familyi={S\bibinitperiod},
-           given={Jean-Jacques},
-           giveni={J\bibinithyphendelim J\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Sage Publications Sage UK: London, England}%
-      }
-      \strng{namehash}{caca6628d02604704e876b4a1172f28c}
-      \strng{fullhash}{caca6628d02604704e876b4a1172f28c}
-      \strng{bibnamehash}{caca6628d02604704e876b4a1172f28c}
-      \strng{authorbibnamehash}{caca6628d02604704e876b4a1172f28c}
-      \strng{authornamehash}{caca6628d02604704e876b4a1172f28c}
-      \strng{authorfullhash}{caca6628d02604704e876b4a1172f28c}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{The International Journal of Robotics Research}
-      \field{number}{3}
-      \field{title}{Decentralized, adaptive coverage control for networked robots}
-      \field{volume}{28}
-      \field{year}{2009}
-      \field{pages}{357\bibrangedash 375}
-      \range{pages}{19}
-    \endentry
-    \entry{fengyu2020RAL}{article}{}
-      \name{author}{2}{}{%
-        {{hash=8cc6d3c7e906be23f7c7d9ba432a5302}{%
-           family={Feng},
-           familyi={F\bibinitperiod},
-           given={Si\bibnamedelima Wei},
-           giveni={S\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
-        {{hash=2c5d237b2098acc8dbd645c9e8fb0aa3}{%
-           family={Yu},
-           familyi={Y\bibinitperiod},
-           given={Jingjin},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{6dd68cfa678e506a589d0fc12f38db6c}
-      \strng{fullhash}{6dd68cfa678e506a589d0fc12f38db6c}
-      \strng{bibnamehash}{6dd68cfa678e506a589d0fc12f38db6c}
-      \strng{authorbibnamehash}{6dd68cfa678e506a589d0fc12f38db6c}
-      \strng{authornamehash}{6dd68cfa678e506a589d0fc12f38db6c}
-      \strng{authorfullhash}{6dd68cfa678e506a589d0fc12f38db6c}
-      \field{extraname}{1}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Robotics and Automation Letters}
-      \field{note}{Note: presented at ICRA 2020}
-      \field{number}{2}
-      \field{title}{Optimal Perimeter Guarding With Heterogeneous Robot Teams: Complexity Analysis and Effective Algorithms}
-      \field{volume}{5}
-      \field{year}{2020}
-      \field{pages}{430\bibrangedash 437}
-      \range{pages}{8}
-      \verb{doi}
-      \verb 10.1109/LRA.2019.2961302
-      \endverb
-    \endentry
-    \entry{weber1929theory}{book}{}
-      \name{author}{1}{}{%
-        {{hash=45ceec6acaf3be8eaff0968ce4567c1d}{%
-           family={Weber},
-           familyi={W\bibinitperiod},
-           given={Alfred},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {University of Chicago Press}%
-      }
-      \strng{namehash}{45ceec6acaf3be8eaff0968ce4567c1d}
-      \strng{fullhash}{45ceec6acaf3be8eaff0968ce4567c1d}
-      \strng{bibnamehash}{45ceec6acaf3be8eaff0968ce4567c1d}
-      \strng{authorbibnamehash}{45ceec6acaf3be8eaff0968ce4567c1d}
-      \strng{authornamehash}{45ceec6acaf3be8eaff0968ce4567c1d}
-      \strng{authorfullhash}{45ceec6acaf3be8eaff0968ce4567c1d}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Theory of the Location of Industries}
-      \field{year}{1929}
-    \endentry
-    \entry{har2011geometric}{book}{}
-      \name{author}{1}{}{%
-        {{hash=c9609db02e16e7ff812eddca25a683d6}{%
-           family={Har-Peled},
-           familyi={H\bibinithyphendelim P\bibinitperiod},
-           given={Sariel},
-           giveni={S\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {American Mathematical Soc.}%
-      }
-      \strng{namehash}{c9609db02e16e7ff812eddca25a683d6}
-      \strng{fullhash}{c9609db02e16e7ff812eddca25a683d6}
-      \strng{bibnamehash}{c9609db02e16e7ff812eddca25a683d6}
-      \strng{authorbibnamehash}{c9609db02e16e7ff812eddca25a683d6}
-      \strng{authornamehash}{c9609db02e16e7ff812eddca25a683d6}
-      \strng{authorfullhash}{c9609db02e16e7ff812eddca25a683d6}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{number}{173}
-      \field{title}{Geometric Approximation Algorithms}
-      \field{year}{2011}
-    \endentry
-    \entry{feder1988optimal}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=6ca45a075214e3f9e1fc09e857374e6f}{%
-           family={Feder},
-           familyi={F\bibinitperiod},
-           given={Tom{á}s},
-           giveni={T\bibinitperiod}}}%
-        {{hash=10dd6de105bd00921b03dfb76dc1ec95}{%
-           family={Greene},
-           familyi={G\bibinitperiod},
-           given={Daniel},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {ACM}%
-      }
-      \strng{namehash}{b200d2f2fa6c3aab9e6cabbc6e4dacf5}
-      \strng{fullhash}{b200d2f2fa6c3aab9e6cabbc6e4dacf5}
-      \strng{bibnamehash}{b200d2f2fa6c3aab9e6cabbc6e4dacf5}
-      \strng{authorbibnamehash}{b200d2f2fa6c3aab9e6cabbc6e4dacf5}
-      \strng{authornamehash}{b200d2f2fa6c3aab9e6cabbc6e4dacf5}
-      \strng{authorfullhash}{b200d2f2fa6c3aab9e6cabbc6e4dacf5}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Symposium on Theory of Computing}
-      \field{title}{Optimal algorithms for approximate clustering}
-      \field{year}{1988}
-      \field{pages}{434\bibrangedash 444}
-      \range{pages}{11}
-    \endentry
-    \entry{hochbaum1985best}{article}{}
-      \name{author}{2}{}{%
-        {{hash=f0b50663fb3eb0dc58cffb69a26c5593}{%
-           family={Hochbaum},
-           familyi={H\bibinitperiod},
-           given={Dorit\bibnamedelima S},
-           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=6465ae9462ff5d959973dae65c9faaa2}{%
-           family={Shmoys},
-           familyi={S\bibinitperiod},
-           given={David\bibnamedelima B},
-           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {INFORMS}%
-      }
-      \strng{namehash}{e0049b09f11bd338d83a78f6b5f43a64}
-      \strng{fullhash}{e0049b09f11bd338d83a78f6b5f43a64}
-      \strng{bibnamehash}{e0049b09f11bd338d83a78f6b5f43a64}
-      \strng{authorbibnamehash}{e0049b09f11bd338d83a78f6b5f43a64}
-      \strng{authornamehash}{e0049b09f11bd338d83a78f6b5f43a64}
-      \strng{authorfullhash}{e0049b09f11bd338d83a78f6b5f43a64}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Mathematics of Operations Research}
-      \field{number}{2}
-      \field{title}{A best possible heuristic for the k-center problem}
-      \field{volume}{10}
-      \field{year}{1985}
-      \field{pages}{180\bibrangedash 184}
-      \range{pages}{5}
-    \endentry
-    \entry{gonzalez1985clustering}{article}{}
-      \name{author}{1}{}{%
-        {{hash=ba884e7630b1c6a423897f96a9e8b019}{%
-           family={Gonzalez},
-           familyi={G\bibinitperiod},
-           given={Teofilo\bibnamedelima F},
-           giveni={T\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Elsevier}%
-      }
-      \strng{namehash}{ba884e7630b1c6a423897f96a9e8b019}
-      \strng{fullhash}{ba884e7630b1c6a423897f96a9e8b019}
-      \strng{bibnamehash}{ba884e7630b1c6a423897f96a9e8b019}
-      \strng{authorbibnamehash}{ba884e7630b1c6a423897f96a9e8b019}
-      \strng{authornamehash}{ba884e7630b1c6a423897f96a9e8b019}
-      \strng{authorfullhash}{ba884e7630b1c6a423897f96a9e8b019}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Theoretical computer science}
-      \field{title}{Clustering to minimize the maximum intercluster distance}
-      \field{volume}{38}
-      \field{year}{1985}
-      \field{pages}{293\bibrangedash 306}
-      \range{pages}{14}
-    \endentry
-    \entry{daskin2000new}{article}{}
-      \name{author}{1}{}{%
-        {{hash=be82b7822f7234b494a6103d8a9c8d3f}{%
-           family={Daskin},
-           familyi={D\bibinitperiod},
-           given={Mark\bibnamedelima S},
-           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-      }
-      \strng{namehash}{be82b7822f7234b494a6103d8a9c8d3f}
-      \strng{fullhash}{be82b7822f7234b494a6103d8a9c8d3f}
-      \strng{bibnamehash}{be82b7822f7234b494a6103d8a9c8d3f}
-      \strng{authorbibnamehash}{be82b7822f7234b494a6103d8a9c8d3f}
-      \strng{authornamehash}{be82b7822f7234b494a6103d8a9c8d3f}
-      \strng{authorfullhash}{be82b7822f7234b494a6103d8a9c8d3f}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Communications of the Operations Research Society of Japan}
-      \field{number}{9}
-      \field{title}{A new approach to solving the vertex p-center problem to optimality: Algorithm and computational results}
-      \field{volume}{45}
-      \field{year}{2000}
-      \field{pages}{428\bibrangedash 436}
-      \range{pages}{9}
-    \endentry
-    \entry{shamos1975closest}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=7bb8b4ea44c2353884f2984bd5057d0f}{%
-           family={Shamos},
-           familyi={S\bibinitperiod},
-           given={Michael\bibnamedelima Ian},
-           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
-        {{hash=7b83780d4dffabc6fb0da34c6c8c9758}{%
-           family={Hoey},
-           familyi={H\bibinitperiod},
-           given={Dan},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{b9b7f01b599ca8934ed1c13fc33036f6}
-      \strng{fullhash}{b9b7f01b599ca8934ed1c13fc33036f6}
-      \strng{bibnamehash}{b9b7f01b599ca8934ed1c13fc33036f6}
-      \strng{authorbibnamehash}{b9b7f01b599ca8934ed1c13fc33036f6}
-      \strng{authornamehash}{b9b7f01b599ca8934ed1c13fc33036f6}
-      \strng{authorfullhash}{b9b7f01b599ca8934ed1c13fc33036f6}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{16th Annual Symposium on Foundations of Computer Science (FOCS 1975)}
-      \field{title}{Closest-point problems}
-      \field{year}{1975}
-      \field{pages}{151\bibrangedash 162}
-      \range{pages}{12}
     \endentry
     \entry{garey1977rectilinear}{article}{}
       \name{author}{2}{}{%
@@ -2455,8 +3093,8 @@
       \strng{authornamehash}{d186cd4f1f5ca75183b09d5af68f9e7c}
       \strng{authorfullhash}{d186cd4f1f5ca75183b09d5af68f9e7c}
       \field{extraname}{3}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{SIAM Journal on Applied Mathematics}
@@ -2639,6 +3277,42 @@
       \field{title}{Computational Geometry: Algorithms and Applications}
       \field{year}{2008}
     \endentry
+    \entry{fengyu2020RAL}{article}{}
+      \name{author}{2}{}{%
+        {{hash=8cc6d3c7e906be23f7c7d9ba432a5302}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Si\bibnamedelima Wei},
+           giveni={S\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=2c5d237b2098acc8dbd645c9e8fb0aa3}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Jingjin},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{6dd68cfa678e506a589d0fc12f38db6c}
+      \strng{fullhash}{6dd68cfa678e506a589d0fc12f38db6c}
+      \strng{bibnamehash}{6dd68cfa678e506a589d0fc12f38db6c}
+      \strng{authorbibnamehash}{6dd68cfa678e506a589d0fc12f38db6c}
+      \strng{authornamehash}{6dd68cfa678e506a589d0fc12f38db6c}
+      \strng{authorfullhash}{6dd68cfa678e506a589d0fc12f38db6c}
+      \field{extraname}{2}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Robotics and Automation Letters}
+      \field{note}{Note: presented at ICRA 2020}
+      \field{number}{2}
+      \field{title}{Optimal Perimeter Guarding With Heterogeneous Robot Teams: Complexity Analysis and Effective Algorithms}
+      \field{volume}{5}
+      \field{year}{2020}
+      \field{pages}{430\bibrangedash 437}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/LRA.2019.2961302
+      \endverb
+    \endentry
     \entry{megiddo1983linear}{article}{}
       \name{author}{1}{}{%
         {{hash=588af919fb53ff01cbd7f3dffb720866}{%
@@ -2686,8 +3360,8 @@
       \strng{authornamehash}{4391dea254c3bbcaff1fefed241caed0}
       \strng{authorfullhash}{4391dea254c3bbcaff1fefed241caed0}
       \field{extraname}{2}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{chapter}{5}
@@ -3026,7 +3700,7 @@
       \strng{authorbibnamehash}{ecbf6e23ae8d0d529cf2a717e16ef42a}
       \strng{authornamehash}{ecbf6e23ae8d0d529cf2a717e16ef42a}
       \strng{authorfullhash}{ecbf6e23ae8d0d529cf2a717e16ef42a}
-      \field{extraname}{1}
+      \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
@@ -3250,120 +3924,6 @@
       \field{booktitle}{IEEE International Conference on Robotics and Automation}
       \field{title}{Robust-by-Design Plans for Multi-Robot Pursuit-Evasion}
       \field{year}{2022}
-    \endentry
-    \entry{shishika2020cooperative}{article}{}
-      \name{author}{3}{}{%
-        {{hash=688d8700a1c453d8f28c3a8367e0d636}{%
-           family={Shishika},
-           familyi={S\bibinitperiod},
-           given={Daigo},
-           giveni={D\bibinitperiod}}}%
-        {{hash=924aa2b33af8857c4702707778a3ec4a}{%
-           family={Paulos},
-           familyi={P\bibinitperiod},
-           given={James},
-           giveni={J\bibinitperiod}}}%
-        {{hash=3c2a6a0658f1ad90e7d4a83eef9c3841}{%
-           family={Kumar},
-           familyi={K\bibinitperiod},
-           given={Vijay},
-           giveni={V\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{19ec31204056192286f6e7f769532e40}
-      \strng{fullhash}{19ec31204056192286f6e7f769532e40}
-      \strng{bibnamehash}{19ec31204056192286f6e7f769532e40}
-      \strng{authorbibnamehash}{19ec31204056192286f6e7f769532e40}
-      \strng{authornamehash}{19ec31204056192286f6e7f769532e40}
-      \strng{authorfullhash}{19ec31204056192286f6e7f769532e40}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Robotics and Automation Letters}
-      \field{number}{2}
-      \field{title}{Cooperative team strategies for multi-player perimeter-defense games}
-      \field{volume}{5}
-      \field{year}{2020}
-      \field{pages}{2738\bibrangedash 2745}
-      \range{pages}{8}
-    \endentry
-    \entry{macharet2020adaptive}{inproceedings}{}
-      \name{author}{5}{}{%
-        {{hash=129516f30b3d47326cf3c5319a17296a}{%
-           family={Macharet},
-           familyi={M\bibinitperiod},
-           given={Douglas\bibnamedelima G},
-           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-        {{hash=b07e80e088e96bc6bf2bb52610738da2}{%
-           family={Chen},
-           familyi={C\bibinitperiod},
-           given={Austin\bibnamedelima K},
-           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
-        {{hash=688d8700a1c453d8f28c3a8367e0d636}{%
-           family={Shishika},
-           familyi={S\bibinitperiod},
-           given={Daigo},
-           giveni={D\bibinitperiod}}}%
-        {{hash=13515e3859af5918925e99eddb9a9079}{%
-           family={Pappas},
-           familyi={P\bibinitperiod},
-           given={George\bibnamedelima J},
-           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=3c2a6a0658f1ad90e7d4a83eef9c3841}{%
-           family={Kumar},
-           familyi={K\bibinitperiod},
-           given={Vijay},
-           giveni={V\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{3b4c31302f97fd6fd8eac1bc129eec6a}
-      \strng{fullhash}{3b4c31302f97fd6fd8eac1bc129eec6a}
-      \strng{bibnamehash}{3b4c31302f97fd6fd8eac1bc129eec6a}
-      \strng{authorbibnamehash}{3b4c31302f97fd6fd8eac1bc129eec6a}
-      \strng{authornamehash}{3b4c31302f97fd6fd8eac1bc129eec6a}
-      \strng{authorfullhash}{3b4c31302f97fd6fd8eac1bc129eec6a}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}
-      \field{title}{Adaptive partitioning for coordinated multi-agent perimeter defense}
-      \field{year}{2020}
-      \field{pages}{7971\bibrangedash 7977}
-      \range{pages}{7}
-    \endentry
-    \entry{fengyu2020optimally}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=86daf0cc36518b3e76aaa4773b014304}{%
-           family={Feng},
-           familyi={F\bibinitperiod},
-           given={S.\bibnamedelimi W.},
-           giveni={S\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
-        {{hash=89b432fa4bb24ef9e7312fd806fb771b}{%
-           family={Yu},
-           familyi={Y\bibinitperiod},
-           given={J.},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{98d3b3511f2cc08d56a284c9d5b7f64c}
-      \strng{fullhash}{98d3b3511f2cc08d56a284c9d5b7f64c}
-      \strng{bibnamehash}{98d3b3511f2cc08d56a284c9d5b7f64c}
-      \strng{authorbibnamehash}{98d3b3511f2cc08d56a284c9d5b7f64c}
-      \strng{authornamehash}{98d3b3511f2cc08d56a284c9d5b7f64c}
-      \strng{authorfullhash}{98d3b3511f2cc08d56a284c9d5b7f64c}
-      \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Robotics: Science and Systems}
-      \field{title}{Optimally Guarding Perimeters and Regions with Mobile Range Sensors}
-      \field{year}{2020}
     \endentry
     \entry{abrahamsen2020geometric}{article}{}
       \name{author}{4}{}{%
@@ -3701,281 +4261,6 @@
       \field{pages}{403\bibrangedash 419}
       \range{pages}{17}
     \endentry
-    \entry{guibas1999visibility}{article}{}
-      \name{author}{5}{}{%
-        {{hash=03578abbf51650fbfaf563c532898f30}{%
-           family={Guibas},
-           familyi={G\bibinitperiod},
-           given={Leonidas\bibnamedelima J},
-           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=f1b7494703264d3e562759a836f6d716}{%
-           family={Latombe},
-           familyi={L\bibinitperiod},
-           given={Jean-Claude},
-           giveni={J\bibinithyphendelim C\bibinitperiod}}}%
-        {{hash=10b09a560dbab6229987301f9a193d77}{%
-           family={LaValle},
-           familyi={L\bibinitperiod},
-           given={Steven\bibnamedelima M},
-           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=ef1d85ea2a6e7e05135564c50d9781c4}{%
-           family={Lin},
-           familyi={L\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-        {{hash=2f555526320a1c4028ad0f6328953999}{%
-           family={Motwani},
-           familyi={M\bibinitperiod},
-           given={Rajeev},
-           giveni={R\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {World Scientific}%
-      }
-      \strng{namehash}{ecbf6e23ae8d0d529cf2a717e16ef42a}
-      \strng{fullhash}{ecbf6e23ae8d0d529cf2a717e16ef42a}
-      \strng{bibnamehash}{ecbf6e23ae8d0d529cf2a717e16ef42a}
-      \strng{authorbibnamehash}{ecbf6e23ae8d0d529cf2a717e16ef42a}
-      \strng{authornamehash}{ecbf6e23ae8d0d529cf2a717e16ef42a}
-      \strng{authorfullhash}{ecbf6e23ae8d0d529cf2a717e16ef42a}
-      \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{International Journal of Computational Geometry \& Applications}
-      \field{number}{04n05}
-      \field{title}{A visibility-based pursuit-evasion problem}
-      \field{volume}{9}
-      \field{year}{1999}
-      \field{pages}{471\bibrangedash 493}
-      \range{pages}{23}
-    \endentry
-    \entry{suzuki1992searching}{article}{}
-      \name{author}{2}{}{%
-        {{hash=db1fe4b54a609940542613127f8ff4dd}{%
-           family={Suzuki},
-           familyi={S\bibinitperiod},
-           given={Ichiro},
-           giveni={I\bibinitperiod}}}%
-        {{hash=ae78816994c8651edbabe0c506db8ba3}{%
-           family={Yamashita},
-           familyi={Y\bibinitperiod},
-           given={Masafumi},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {SIAM}%
-      }
-      \strng{namehash}{8f438beae702baeb3d30c2f5d4fff582}
-      \strng{fullhash}{8f438beae702baeb3d30c2f5d4fff582}
-      \strng{bibnamehash}{8f438beae702baeb3d30c2f5d4fff582}
-      \strng{authorbibnamehash}{8f438beae702baeb3d30c2f5d4fff582}
-      \strng{authornamehash}{8f438beae702baeb3d30c2f5d4fff582}
-      \strng{authorfullhash}{8f438beae702baeb3d30c2f5d4fff582}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{SIAM Journal on computing}
-      \field{number}{5}
-      \field{title}{Searching for a mobile intruder in a polygonal region}
-      \field{volume}{21}
-      \field{year}{1992}
-      \field{pages}{863\bibrangedash 888}
-      \range{pages}{26}
-    \endentry
-    \entry{lavalle2000algorithm}{inproceedings}{}
-      \name{author}{3}{}{%
-        {{hash=10b09a560dbab6229987301f9a193d77}{%
-           family={LaValle},
-           familyi={L\bibinitperiod},
-           given={Steven\bibnamedelima M},
-           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=17e31899e7dfefc8e5c6304dd3426ef5}{%
-           family={Simov},
-           familyi={S\bibinitperiod},
-           given={Borislav\bibnamedelima H},
-           giveni={B\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-        {{hash=3f4c54359933e2c1b95dc72ce5bee942}{%
-           family={Slutzki},
-           familyi={S\bibinitperiod},
-           given={Giora},
-           giveni={G\bibinitperiod}}}%
-      }
-      \strng{namehash}{9a859ebbeeee4d4b16bd34e10c14a61d}
-      \strng{fullhash}{9a859ebbeeee4d4b16bd34e10c14a61d}
-      \strng{bibnamehash}{9a859ebbeeee4d4b16bd34e10c14a61d}
-      \strng{authorbibnamehash}{9a859ebbeeee4d4b16bd34e10c14a61d}
-      \strng{authornamehash}{9a859ebbeeee4d4b16bd34e10c14a61d}
-      \strng{authorfullhash}{9a859ebbeeee4d4b16bd34e10c14a61d}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the sixteenth annual symposium on Computational geometry}
-      \field{title}{An algorithm for searching a polygonal region with a flashlight}
-      \field{year}{2000}
-      \field{pages}{260\bibrangedash 269}
-      \range{pages}{10}
-    \endentry
-    \entry{stiffler2017persistent}{inproceedings}{}
-      \name{author}{3}{}{%
-        {{hash=35b4e527dc241a43539cbedeefdb7ac3}{%
-           family={Stiffler},
-           familyi={S\bibinitperiod},
-           given={Nicholas\bibnamedelima M},
-           giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=fb11f43bbfd736cd22bc8ee6bd7700c3}{%
-           family={Kolling},
-           familyi={K\bibinitperiod},
-           given={Andreas},
-           giveni={A\bibinitperiod}}}%
-        {{hash=62719bed7b95c2b576bf6b784ca15935}{%
-           family={O'Kane},
-           familyi={O\bibinitperiod},
-           given={Jason\bibnamedelima M},
-           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{b5967969fac496946cc8adad14e82997}
-      \strng{fullhash}{b5967969fac496946cc8adad14e82997}
-      \strng{bibnamehash}{b5967969fac496946cc8adad14e82997}
-      \strng{authorbibnamehash}{b5967969fac496946cc8adad14e82997}
-      \strng{authornamehash}{b5967969fac496946cc8adad14e82997}
-      \strng{authorfullhash}{b5967969fac496946cc8adad14e82997}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2017 IEEE International Conference on Robotics and Automation (ICRA)}
-      \field{title}{Persistent pursuit-evasion: The case of the preoccupied pursuer}
-      \field{year}{2017}
-      \field{pages}{5027\bibrangedash 5034}
-      \range{pages}{8}
-    \endentry
-    \entry{kolling2007graph}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=fb11f43bbfd736cd22bc8ee6bd7700c3}{%
-           family={Kolling},
-           familyi={K\bibinitperiod},
-           given={Andreas},
-           giveni={A\bibinitperiod}}}%
-        {{hash=bf795f3c68c380592be2e65cc194cda1}{%
-           family={Carpin},
-           familyi={C\bibinitperiod},
-           given={Stefano},
-           giveni={S\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{293a1623b6ee759053e218bbf8cb5517}
-      \strng{fullhash}{293a1623b6ee759053e218bbf8cb5517}
-      \strng{bibnamehash}{293a1623b6ee759053e218bbf8cb5517}
-      \strng{authorbibnamehash}{293a1623b6ee759053e218bbf8cb5517}
-      \strng{authornamehash}{293a1623b6ee759053e218bbf8cb5517}
-      \strng{authorfullhash}{293a1623b6ee759053e218bbf8cb5517}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2007 IEEE/RSJ International Conference on Intelligent Robots and Systems}
-      \field{title}{The graph-clear problem: definition, theoretical properties and its connections to multirobot aided surveillance}
-      \field{year}{2007}
-      \field{pages}{1003\bibrangedash 1008}
-      \range{pages}{6}
-    \endentry
-    \entry{kolling2017coordinated}{article}{}
-      \name{author}{3}{}{%
-        {{hash=fb11f43bbfd736cd22bc8ee6bd7700c3}{%
-           family={Kolling},
-           familyi={K\bibinitperiod},
-           given={Andreas},
-           giveni={A\bibinitperiod}}}%
-        {{hash=dc7d2e2ec5259088772b0b64fdb0fbe4}{%
-           family={Kleiner},
-           familyi={K\bibinitperiod},
-           given={Alexander},
-           giveni={A\bibinitperiod}}}%
-        {{hash=bf795f3c68c380592be2e65cc194cda1}{%
-           family={Carpin},
-           familyi={C\bibinitperiod},
-           given={Stefano},
-           giveni={S\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{5a064695b681d1768771122e11e6843a}
-      \strng{fullhash}{5a064695b681d1768771122e11e6843a}
-      \strng{bibnamehash}{5a064695b681d1768771122e11e6843a}
-      \strng{authorbibnamehash}{5a064695b681d1768771122e11e6843a}
-      \strng{authornamehash}{5a064695b681d1768771122e11e6843a}
-      \strng{authorfullhash}{5a064695b681d1768771122e11e6843a}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Transactions on Robotics}
-      \field{number}{2}
-      \field{title}{Coordinated search with multiple robots arranged in line formations}
-      \field{volume}{34}
-      \field{year}{2017}
-      \field{pages}{459\bibrangedash 473}
-      \range{pages}{15}
-    \endentry
-    \entry{megiddo1988complexity}{article}{}
-      \name{author}{5}{}{%
-        {{hash=588af919fb53ff01cbd7f3dffb720866}{%
-           family={Megiddo},
-           familyi={M\bibinitperiod},
-           given={Nimrod},
-           giveni={N\bibinitperiod}}}%
-        {{hash=e92cfae69b4769fbdb981fb07e7c3d40}{%
-           family={Hakimi},
-           familyi={H\bibinitperiod},
-           given={S\bibnamedelima Louis},
-           giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-        {{hash=3d981c215c9c575d31bcca98c6d6c69d}{%
-           family={Garey},
-           familyi={G\bibinitperiod},
-           given={Michael\bibnamedelima R},
-           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-        {{hash=8f805225d8e433c29a18a566d1f6acc6}{%
-           family={Johnson},
-           familyi={J\bibinitperiod},
-           given={David\bibnamedelima S},
-           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=b3b407bb63367a850366076095ee1970}{%
-           family={Papadimitriou},
-           familyi={P\bibinitperiod},
-           given={Christos\bibnamedelima H},
-           giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {ACM New York, NY, USA}%
-      }
-      \strng{namehash}{2c966d9a432c0e541fca1cd978652b30}
-      \strng{fullhash}{2c966d9a432c0e541fca1cd978652b30}
-      \strng{bibnamehash}{2c966d9a432c0e541fca1cd978652b30}
-      \strng{authorbibnamehash}{2c966d9a432c0e541fca1cd978652b30}
-      \strng{authornamehash}{2c966d9a432c0e541fca1cd978652b30}
-      \strng{authorfullhash}{2c966d9a432c0e541fca1cd978652b30}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of the ACM (JACM)}
-      \field{number}{1}
-      \field{title}{The complexity of searching a graph}
-      \field{volume}{35}
-      \field{year}{1988}
-      \field{pages}{18\bibrangedash 44}
-      \range{pages}{27}
-    \endentry
     \entry{choset2000coverage}{article}{}
       \name{author}{1}{}{%
         {{hash=72811108dcbc25428de5c7e317f511ed}{%
@@ -4003,367 +4288,6 @@
       \field{volume}{9}
       \field{year}{2000}
       \field{pages}{247\bibrangedash 253}
-      \range{pages}{7}
-    \endentry
-    \entry{chen2021optimal}{inproceedings}{}
-      \name{author}{5}{}{%
-        {{hash=b07e80e088e96bc6bf2bb52610738da2}{%
-           family={Chen},
-           familyi={C\bibinitperiod},
-           given={Austin\bibnamedelima K},
-           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
-        {{hash=129516f30b3d47326cf3c5319a17296a}{%
-           family={Macharet},
-           familyi={M\bibinitperiod},
-           given={Douglas\bibnamedelima G},
-           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-        {{hash=688d8700a1c453d8f28c3a8367e0d636}{%
-           family={Shishika},
-           familyi={S\bibinitperiod},
-           given={Daigo},
-           giveni={D\bibinitperiod}}}%
-        {{hash=13515e3859af5918925e99eddb9a9079}{%
-           family={Pappas},
-           familyi={P\bibinitperiod},
-           given={George\bibnamedelima J},
-           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=3c2a6a0658f1ad90e7d4a83eef9c3841}{%
-           family={Kumar},
-           familyi={K\bibinitperiod},
-           given={Vijay},
-           giveni={V\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{83b46646a24c8649b37a77b19347e94b}
-      \strng{fullhash}{83b46646a24c8649b37a77b19347e94b}
-      \strng{bibnamehash}{83b46646a24c8649b37a77b19347e94b}
-      \strng{authorbibnamehash}{83b46646a24c8649b37a77b19347e94b}
-      \strng{authornamehash}{83b46646a24c8649b37a77b19347e94b}
-      \strng{authorfullhash}{83b46646a24c8649b37a77b19347e94b}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{International Symposium Distributed Autonomous Robotic Systems}
-      \field{title}{Optimal Multi-robot Perimeter Defense Using Flow Networks}
-      \field{year}{2021}
-      \field{pages}{282\bibrangedash 293}
-      \range{pages}{12}
-    \endentry
-    \entry{oksanen2009coverage}{article}{}
-      \name{author}{2}{}{%
-        {{hash=b2ec1920fdc9c158f0fae8d924657330}{%
-           family={Oksanen},
-           familyi={O\bibinitperiod},
-           given={Timo},
-           giveni={T\bibinitperiod}}}%
-        {{hash=ce4c1138a19907650846419b15c2a030}{%
-           family={Visala},
-           familyi={V\bibinitperiod},
-           given={Arto},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Wiley Online Library}%
-      }
-      \strng{namehash}{3a4db583a95cdbdaa23a91861e631ad5}
-      \strng{fullhash}{3a4db583a95cdbdaa23a91861e631ad5}
-      \strng{bibnamehash}{3a4db583a95cdbdaa23a91861e631ad5}
-      \strng{authorbibnamehash}{3a4db583a95cdbdaa23a91861e631ad5}
-      \strng{authornamehash}{3a4db583a95cdbdaa23a91861e631ad5}
-      \strng{authorfullhash}{3a4db583a95cdbdaa23a91861e631ad5}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of field robotics}
-      \field{number}{8}
-      \field{title}{Coverage path planning algorithms for agricultural field machines}
-      \field{volume}{26}
-      \field{year}{2009}
-      \field{pages}{651\bibrangedash 668}
-      \range{pages}{18}
-    \endentry
-    \entry{haksar2020spatial}{article}{}
-      \name{author}{3}{}{%
-        {{hash=c63583a0c683a82f09c4aac289e6533b}{%
-           family={Haksar},
-           familyi={H\bibinitperiod},
-           given={Ravi\bibnamedelima N},
-           giveni={R\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
-        {{hash=1a5e5ed2f679e54c51fbdc7f13839d77}{%
-           family={Trimpe},
-           familyi={T\bibinitperiod},
-           given={Sebastian},
-           giveni={S\bibinitperiod}}}%
-        {{hash=c54985d67e300fac8041d549c20bb2f0}{%
-           family={Schwager},
-           familyi={S\bibinitperiod},
-           given={Mac},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{3c58544dab563932ec48d0a98b5adfa9}
-      \strng{fullhash}{3c58544dab563932ec48d0a98b5adfa9}
-      \strng{bibnamehash}{3c58544dab563932ec48d0a98b5adfa9}
-      \strng{authorbibnamehash}{3c58544dab563932ec48d0a98b5adfa9}
-      \strng{authornamehash}{3c58544dab563932ec48d0a98b5adfa9}
-      \strng{authorfullhash}{3c58544dab563932ec48d0a98b5adfa9}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Robotics and Automation Letters}
-      \field{number}{2}
-      \field{title}{Spatial scheduling of informative meetings for multi-agent persistent coverage}
-      \field{volume}{5}
-      \field{year}{2020}
-      \field{pages}{3027\bibrangedash 3034}
-      \range{pages}{8}
-    \endentry
-    \entry{wei2018coverage}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=85377c3490a027d81d2b3a6803f3a3c0}{%
-           family={Wei},
-           familyi={W\bibinitperiod},
-           given={Minghan},
-           giveni={M\bibinitperiod}}}%
-        {{hash=87b8d080b88aecea246d4901006d26ea}{%
-           family={Isler},
-           familyi={I\bibinitperiod},
-           given={Volkan},
-           giveni={V\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{7e5c5ca0ef05e3926a8f7cfc62ff2d7c}
-      \strng{fullhash}{7e5c5ca0ef05e3926a8f7cfc62ff2d7c}
-      \strng{bibnamehash}{7e5c5ca0ef05e3926a8f7cfc62ff2d7c}
-      \strng{authorbibnamehash}{7e5c5ca0ef05e3926a8f7cfc62ff2d7c}
-      \strng{authornamehash}{7e5c5ca0ef05e3926a8f7cfc62ff2d7c}
-      \strng{authorfullhash}{7e5c5ca0ef05e3926a8f7cfc62ff2d7c}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2018 IEEE International Conference on Robotics and Automation (ICRA)}
-      \field{title}{Coverage path planning under the energy constraint}
-      \field{year}{2018}
-      \field{pages}{368\bibrangedash 373}
-      \range{pages}{6}
-    \endentry
-    \entry{deng2019constrained}{inproceedings}{}
-      \name{author}{6}{}{%
-        {{hash=76c56e573cc5bbf88ae80db0f5f577e3}{%
-           family={Deng},
-           familyi={D\bibinitperiod},
-           given={Di},
-           giveni={D\bibinitperiod}}}%
-        {{hash=64f28f7a553414b0c86eb7ca5f2ae492}{%
-           family={Jing},
-           familyi={J\bibinitperiod},
-           given={Wei},
-           giveni={W\bibinitperiod}}}%
-        {{hash=b084739a369562c03267782f7bcc04fc}{%
-           family={Fu},
-           familyi={F\bibinitperiod},
-           given={Yuhe},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=8c90f7c387c2e41b927a23c4af09377e}{%
-           family={Huang},
-           familyi={H\bibinitperiod},
-           given={Ziyin},
-           giveni={Z\bibinitperiod}}}%
-        {{hash=b9886553dc59cbe2db540b43972c9599}{%
-           family={Liu},
-           familyi={L\bibinitperiod},
-           given={Jiahong},
-           giveni={J\bibinitperiod}}}%
-        {{hash=44b049925d8a735bdf8ed5f8cc28b160}{%
-           family={Shimada},
-           familyi={S\bibinitperiod},
-           given={Kenji},
-           giveni={K\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{242ab75346cea966d38e88c9d02a02ec}
-      \strng{fullhash}{242ab75346cea966d38e88c9d02a02ec}
-      \strng{bibnamehash}{242ab75346cea966d38e88c9d02a02ec}
-      \strng{authorbibnamehash}{242ab75346cea966d38e88c9d02a02ec}
-      \strng{authornamehash}{242ab75346cea966d38e88c9d02a02ec}
-      \strng{authorfullhash}{242ab75346cea966d38e88c9d02a02ec}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}
-      \field{title}{Constrained heterogeneous vehicle path planning for large-area coverage}
-      \field{year}{2019}
-      \field{pages}{4113\bibrangedash 4120}
-      \range{pages}{8}
-    \endentry
-    \entry{lan2013planning}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=2867c6a41be1c253e48988fea3502132}{%
-           family={Lan},
-           familyi={L\bibinitperiod},
-           given={Xiaodong},
-           giveni={X\bibinitperiod}}}%
-        {{hash=c54985d67e300fac8041d549c20bb2f0}{%
-           family={Schwager},
-           familyi={S\bibinitperiod},
-           given={Mac},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{0077163340da0e9529be0e7dea14b073}
-      \strng{fullhash}{0077163340da0e9529be0e7dea14b073}
-      \strng{bibnamehash}{0077163340da0e9529be0e7dea14b073}
-      \strng{authorbibnamehash}{0077163340da0e9529be0e7dea14b073}
-      \strng{authornamehash}{0077163340da0e9529be0e7dea14b073}
-      \strng{authorfullhash}{0077163340da0e9529be0e7dea14b073}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2013 IEEE International Conference on Robotics and Automation}
-      \field{title}{Planning periodic persistent monitoring trajectories for sensing robots in gaussian random fields}
-      \field{year}{2013}
-      \field{pages}{2415\bibrangedash 2420}
-      \range{pages}{6}
-    \endentry
-    \entry{cassandras2012optimal}{article}{}
-      \name{author}{3}{}{%
-        {{hash=7dd349abebd258362b8f14a38e12272c}{%
-           family={Cassandras},
-           familyi={C\bibinitperiod},
-           given={Christos\bibnamedelima G},
-           giveni={C\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-        {{hash=0ae58a3cead52251aec36127ecec0c7c}{%
-           family={Lin},
-           familyi={L\bibinitperiod},
-           given={Xuchao},
-           giveni={X\bibinitperiod}}}%
-        {{hash=a391fa34955f217bf03b3799eabf4bca}{%
-           family={Ding},
-           familyi={D\bibinitperiod},
-           given={Xuchu},
-           giveni={X\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{af5f1df21d75c3abce3047edb7358aae}
-      \strng{fullhash}{af5f1df21d75c3abce3047edb7358aae}
-      \strng{bibnamehash}{af5f1df21d75c3abce3047edb7358aae}
-      \strng{authorbibnamehash}{af5f1df21d75c3abce3047edb7358aae}
-      \strng{authornamehash}{af5f1df21d75c3abce3047edb7358aae}
-      \strng{authorfullhash}{af5f1df21d75c3abce3047edb7358aae}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Transactions on Automatic Control}
-      \field{number}{4}
-      \field{title}{An optimal control approach to the multi-agent persistent monitoring problem}
-      \field{volume}{58}
-      \field{year}{2012}
-      \field{pages}{947\bibrangedash 961}
-      \range{pages}{15}
-    \endentry
-    \entry{yu2015persistent}{article}{}
-      \name{author}{3}{}{%
-        {{hash=2c5d237b2098acc8dbd645c9e8fb0aa3}{%
-           family={Yu},
-           familyi={Y\bibinitperiod},
-           given={Jingjin},
-           giveni={J\bibinitperiod}}}%
-        {{hash=ca50b61c6d4e6ff567664ac59d4d3837}{%
-           family={Karaman},
-           familyi={K\bibinitperiod},
-           given={Sertac},
-           giveni={S\bibinitperiod}}}%
-        {{hash=f74192f92945701041a41bfa429ee111}{%
-           family={Rus},
-           familyi={R\bibinitperiod},
-           given={Daniela},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{6044c6c20debb8066522b72ecb5af0c8}
-      \strng{fullhash}{6044c6c20debb8066522b72ecb5af0c8}
-      \strng{bibnamehash}{6044c6c20debb8066522b72ecb5af0c8}
-      \strng{authorbibnamehash}{6044c6c20debb8066522b72ecb5af0c8}
-      \strng{authornamehash}{6044c6c20debb8066522b72ecb5af0c8}
-      \strng{authorfullhash}{6044c6c20debb8066522b72ecb5af0c8}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Transactions on Robotics}
-      \field{number}{3}
-      \field{title}{Persistent monitoring of events with stochastic arrivals at multiple stations}
-      \field{volume}{31}
-      \field{year}{2015}
-      \field{pages}{521\bibrangedash 535}
-      \range{pages}{15}
-    \endentry
-    \entry{palacios2017optimal}{inproceedings}{}
-      \name{author}{5}{}{%
-        {{hash=02695936ab82ecedf2bee5ffb3b2689b}{%
-           family={Palacios-Gas{ó}s},
-           familyi={P\bibinithyphendelim G\bibinitperiod},
-           given={Jos{é}\bibnamedelima Manuel},
-           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=50e449033744851c8964fa1bde7538f3}{%
-           family={Talebpour},
-           familyi={T\bibinitperiod},
-           given={Zeynab},
-           giveni={Z\bibinitperiod}}}%
-        {{hash=ef7a6f3a559f31218666dfe4f43fa89e}{%
-           family={Montijano},
-           familyi={M\bibinitperiod},
-           given={Eduardo},
-           giveni={E\bibinitperiod}}}%
-        {{hash=0ac6dee9de7af7b17b7cc0d1cde57e8b}{%
-           family={Sag{ü}{é}s},
-           familyi={S\bibinitperiod},
-           given={Carlos},
-           giveni={C\bibinitperiod}}}%
-        {{hash=88b4c72ba9cf411dfef08a4c9acea1d5}{%
-           family={Martinoli},
-           familyi={M\bibinitperiod},
-           given={Alcherio},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{d0dd173fd4922aded3b24ae36a4ef2cd}
-      \strng{fullhash}{d0dd173fd4922aded3b24ae36a4ef2cd}
-      \strng{bibnamehash}{d0dd173fd4922aded3b24ae36a4ef2cd}
-      \strng{authorbibnamehash}{d0dd173fd4922aded3b24ae36a4ef2cd}
-      \strng{authornamehash}{d0dd173fd4922aded3b24ae36a4ef2cd}
-      \strng{authorfullhash}{d0dd173fd4922aded3b24ae36a4ef2cd}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2017 IEEE International Conference on Robotics and Automation (ICRA)}
-      \field{title}{Optimal path planning and coverage control for multi-robot persistent coverage in environments with obstacles}
-      \field{year}{2017}
-      \field{pages}{1321\bibrangedash 1327}
       \range{pages}{7}
     \endentry
     \entry{huang2001optimal}{inproceedings}{}
@@ -5146,6 +5070,43 @@
       \field{year}{2017}
       \field{pages}{875\bibrangedash 896}
       \range{pages}{22}
+    \endentry
+    \entry{howard2002mobile}{incollection}{}
+      \name{author}{3}{}{%
+        {{hash=315c4166fc1f7cb66324a7f0d82827cd}{%
+           family={Howard},
+           familyi={H\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c1579c7c6384d5a74c8a5b269301dd70}{%
+           family={Matari{ć}},
+           familyi={M\bibinitperiod},
+           given={Maja\bibnamedelima J},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=6d430fe2b65c3d9fedd6f2d351604092}{%
+           family={Sukhatme},
+           familyi={S\bibinitperiod},
+           given={Gaurav\bibnamedelima S},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{bf75f72aa3692445ee1d6f541ccc8ecc}
+      \strng{fullhash}{bf75f72aa3692445ee1d6f541ccc8ecc}
+      \strng{bibnamehash}{bf75f72aa3692445ee1d6f541ccc8ecc}
+      \strng{authorbibnamehash}{bf75f72aa3692445ee1d6f541ccc8ecc}
+      \strng{authornamehash}{bf75f72aa3692445ee1d6f541ccc8ecc}
+      \strng{authorfullhash}{bf75f72aa3692445ee1d6f541ccc8ecc}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Distributed Autonomous Robotic Systems 5}
+      \field{title}{Mobile sensor network deployment using potential fields: A distributed, scalable solution to the area coverage problem}
+      \field{year}{2002}
+      \field{pages}{299\bibrangedash 308}
+      \range{pages}{10}
     \endentry
     \entry{krause2008near}{article}{}
       \name{author}{3}{}{%

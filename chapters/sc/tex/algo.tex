@@ -63,7 +63,8 @@ has fewer cells, which leads to fewer (back-and-forth) boustrophedon motions.
     \node[text=black] at (5.5, 0.0) {cell};
 
     \end{tikzpicture}
-    \caption{[left] A trapezoidal decomposition, creating a total of $9$ cells. [right]
+    \caption[Illustration of trapezoidal and Boustrophedon decomposition]
+    {[left] A trapezoidal decomposition, creating a total of $9$ cells. [right]
     Boustrophedon decomposition of the same environment, creating only $4$ cells.}
     \label{fig:sc-trebou}
 \end{figure}
@@ -88,7 +89,7 @@ splitting and merging.
     \put(50, 40){$v_6$}
     \put(80, 30){$v_7$}
     \end{overpic}
-    \caption{Suppose we have a sweep schedule that sweeps the environment from left 
+    \caption[Illustration of the generalized boustrophedon decomposition]{Suppose we have a sweep schedule that sweeps the environment from left 
     to right, with curved sweep fronts. 
     The curves, as they cross critical vertices of objects, are shown as the 
     dashed lines.
@@ -164,7 +165,8 @@ others.
     
     \draw[very thick, ->] (0.1, 2.0) -- (0.5,2.0);
     \end{tikzpicture}
-    \caption{An example that contains two concave scenarios. As a result of the DAG construction, some robots will
+    \caption[An example that contains two concave scenarios]
+    {An example that contains two concave scenarios. As a result of the DAG construction, some robots will
     start their work at $v_j$ (by having $s$ as its parent) and some robots will end their work at $v_i$ (by having $t$ as its child).}
     \label{fig:sc-concave_vertices}
 \end{figure}
@@ -407,7 +409,8 @@ $G'\gets$ a new empty graph;\;
     \draw[dashed,->] (v42) --  (t');
     
     \end{tikzpicture}
-    \caption{Transform the DAG in ~\ref{fig:sc-DAG} into a circulation with demand problem. 
+    \caption[Transform the DAG in ~\ref{fig:sc-DAG} into a circulation with demand problem]
+    {Transform the DAG in ~\ref{fig:sc-DAG} into a circulation with demand problem. 
     The value above each edge represents the demand of the edge, which is eliminated when it is zero.
     The source node is $s$, and the target node is $t$. $s'$ and $t'$ are the auxiliary source and target for solving the ``circulation with demand'' problem.
     Also, auxiliary edges are added between $s', t'$ and every other vertex.}

@@ -113,11 +113,14 @@ locations for the $n$ robots. The total complexity is then $O(m(\log n +
 %(2) Tighten up by using lIf instead of If.}
 %\jy{We can do some of these if needed. I used this style for some 
 %particular reason that I can tell you :).}
-\vspace*{-3mm}
-\begin{algorithm}
+% \vspace*{-3mm}
+
+\begin{algorithm}[H]
 	\SetKwInOut{Input}{Input}
 	\SetKwInOut{Output}{Output}
 	\SetKwComment{Comment}{\%}{}
+	\setstretch{0.8}
+\begin{small}
 	\Input{$P_1, \ldots, P_m$: each $P_i$ a continuous polygonal line; 
 		assume that $P_1$ is a longest perimeter \\
 		$n$: the number of robots}
@@ -164,6 +167,7 @@ locations for the $n$ robots. The total complexity is then $O(m(\log n +
 			}
 	}
 	\Return{$\ell^*$, $i^*$}
+\end{small}
 	\caption{\algoMRSimple} \label{algo:opg-MRS}
 \end{algorithm}
-\vspace*{-6mm}
+% \vspace*{-6mm}

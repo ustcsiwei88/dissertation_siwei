@@ -25,7 +25,8 @@ strength over the targeted 2D region.
 		\vspace*{2mm}
     \includegraphics[width=\columnwidth]{chapters/osg/figures/example-0-eps-converted-to.pdf}
 		\vspace*{1mm}
-    \caption{An illustration of the \osgt setup and sample solutions.
+    \caption[An illustration of the \osgt setup and sample solutions]
+		{An illustration of the \osgt setup and sample solutions.
 		[center] The background shows the footprint of a building, e.g., an 
 		apartment  complex. Scenarios may arise that a dangerous criminal 
 		might be hiding in the building and we would like to closely monitor 
@@ -77,59 +78,59 @@ coverage problem, we also supply a hardness proof of vertex cover
 on planar bridgeless\footnote{That is, the deletion of any edge does not disconnect 
 the graph.} $3$-regular graphs, which may be of independent interest. 
 
-\textbf{Related work}. Our work on optimal perimeter and region guarding 
-draws inspiration from a long line of multi-robot coverage planning and 
-control research, e.g., \cite{cortes2004coverage,martinez2007motion,
-schwager2009optimal,pavone2009equitable,schwager2009decentralized,
-pierson2017adapting}. 
-%
-In an influential body of work on coverage control \cite{cortes2004coverage,
-martinez2007motion}, a gradient based iterative method is shown to drive 
-one or multiple mobile sensors to a locally optimal configuration with 
-convergence guarantees. 
-%
-Whereas \cite{cortes2004coverage,martinez2007motion} assume that the 
-distribution of sensory information is available {\em a priori}, it is 
-shown that such information can be effectively learned 
-\cite{schwager2009decentralized}. 
-%
-Subsequently, the control method is further extended to allow the 
-coverage of non-convex and disjoint 2D domains \cite{schwager2009optimal} 
-and to work for mobile robots with varying sensing or actuation capabilities
-\cite{pierson2017adapting}. 
-%
-In contrast to these control-based approaches, which produce iterative 
-locally optimal solutions, \osgt emphasizes the direct computation of 
-globally optimal deployment solutions and supports arbitrarily shaped
-bounded (1D) perimeters and (2D) regions.
+% \textbf{Related work}. Our work on optimal perimeter and region guarding 
+% draws inspiration from a long line of multi-robot coverage planning and 
+% control research, e.g., \cite{cortes2004coverage,martinez2007motion,
+% schwager2009optimal,pavone2009equitable,schwager2009decentralized,
+% pierson2017adapting}. 
+% %
+% In an influential body of work on coverage control \cite{cortes2004coverage,
+% martinez2007motion}, a gradient based iterative method is shown to drive 
+% one or multiple mobile sensors to a locally optimal configuration with 
+% convergence guarantees. 
+% %
+% Whereas \cite{cortes2004coverage,martinez2007motion} assume that the 
+% distribution of sensory information is available {\em a priori}, it is 
+% shown that such information can be effectively learned 
+% \cite{schwager2009decentralized}. 
+% %
+% Subsequently, the control method is further extended to allow the 
+% coverage of non-convex and disjoint 2D domains \cite{schwager2009optimal} 
+% and to work for mobile robots with varying sensing or actuation capabilities
+% \cite{pierson2017adapting}. 
+% %
+% In contrast to these control-based approaches, which produce iterative 
+% locally optimal solutions, \osgt emphasizes the direct computation of 
+% globally optimal deployment solutions and supports arbitrarily shaped
+% bounded (1D) perimeters and (2D) regions.
 
-Recently, the problems of globally optimally covering perimeters using 
-one-dimensional sensors have been studied in much detail 
-\cite{fenghangaoyu2019efficient,fengyu2020RAL}. It is shown that when the sensors 
-are homogeneous, the optimal deployment of sensors can be computed 
-very efficiently, even for highly complex perimeters \cite{fenghangaoyu2019efficient}.
-On the other hand, the problem becomes immediately intractable, sometimes
-strongly NP-hard, when sensors are heterogeneous \cite{fengyu2020RAL}. 
-Our research is distinct from \cite{fenghangaoyu2019efficient,fengyu2020RAL} in that 
-we employ a (two-dimensional) range sensing model and work on the coverage 
-of both perimeters and regions, which has much broader applicability. 
+% Recently, the problems of globally optimally covering perimeters using 
+% one-dimensional sensors have been studied in much detail 
+% \cite{fenghangaoyu2019efficient,fengyu2020RAL}. It is shown that when the sensors 
+% are homogeneous, the optimal deployment of sensors can be computed 
+% very efficiently, even for highly complex perimeters \cite{fenghangaoyu2019efficient}.
+% On the other hand, the problem becomes immediately intractable, sometimes
+% strongly NP-hard, when sensors are heterogeneous \cite{fengyu2020RAL}. 
+% Our research is distinct from \cite{fenghangaoyu2019efficient,fengyu2020RAL} in that 
+% we employ a (two-dimensional) range sensing model and work on the coverage 
+% of both perimeters and regions, which has much broader applicability. 
 
-As pointed out in \cite{cortes2004coverage,schwager2009decentralized}, 
-distributed sensor coverage, as well as \osgt, has roots in the study 
-of the facility location optimization problem 
-\cite{weber1929theory,drezner1995facility}, which examines the selection 
-of facility (e.g., warehouses) locations that minimize the cost of delivery 
-of supplies to spatially distributed customers. In theoretical computer 
-science and operations research, these are known as the $k$-center, 
-$k$-means, and $k$-median clustering problems \cite{har2011geometric}, 
-the differences among which are induced by the cost structure. Our 
-investigation of \osgt benefits from the vast literature on 
-the study of $k$-center clustering and related problems, e.g., 
-\cite{feder1988optimal,hochbaum1985best,gonzalez1985clustering,daskin2000new,shamos1975closest}.
-%
-These clustering problems are in turn related to packing 
-\cite{hales2005proof}, tiling \cite{thue1910dichteste}, and the 
-well-studied art gallery problems \cite{o1987art,shermer1992recent}.
+% As pointed out in \cite{cortes2004coverage,schwager2009decentralized}, 
+% distributed sensor coverage, as well as \osgt, has roots in the study 
+% of the facility location optimization problem 
+% \cite{weber1929theory,drezner1995facility}, which examines the selection 
+% of facility (e.g., warehouses) locations that minimize the cost of delivery 
+% of supplies to spatially distributed customers. In theoretical computer 
+% science and operations research, these are known as the $k$-center, 
+% $k$-means, and $k$-median clustering problems \cite{har2011geometric}, 
+% the differences among which are induced by the cost structure. Our 
+% investigation of \osgt benefits from the vast literature on 
+% the study of $k$-center clustering and related problems, e.g., 
+% \cite{feder1988optimal,hochbaum1985best,gonzalez1985clustering,daskin2000new,shamos1975closest}.
+% %
+% These clustering problems are in turn related to packing 
+% \cite{hales2005proof}, tiling \cite{thue1910dichteste}, and the 
+% well-studied art gallery problems \cite{o1987art,shermer1992recent}.
 
 \textbf{Organization}. The rest of the paper is organized as follows. 
 In Section~\ref{sec:osg-problem}, we introduce the \osgt formulation. 

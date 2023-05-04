@@ -61,7 +61,7 @@ if $G''$ has a vertex cover of size $k''$.
   			 %\node at (-2, 0) {\small{$A$}}; 
     \end{tikzpicture}
 		\vspace*{2mm}
-    \caption{A gadget that can be attached to a degree one or two vertices
+    \caption[Gadget construction]{A gadget that can be attached to a degree one or two vertices
 		(at the point $A$) in a max degree $3$ graph to make all vertices have
 		degree $3$. With each addition of the gadget, we increase the vertex 
 		cover by a size of $3$, regardless of whether $A$ is part of a vertex 
@@ -157,7 +157,7 @@ cover size of $k$ if and only if $G'$ has a vertex cover size of $k'$.
         
     \end{tikzpicture}
     \vspace{.5mm}
-    \caption{Transformation that removes bridge $PQ$ and does not introduce new bridges.
+    \caption[Bridge removal in the reduction]{Transformation that removes bridge $PQ$ and does not introduce new bridges.
     The minimum vertex cover number is increased by $6$ after each transformation.}
     \label{fig:osg-rmbridge}
 \end{figure}
@@ -214,7 +214,8 @@ into a {\em 3-net} is given in ~\ref{fig:osg-3-net}.
     \includegraphics[scale=0.3]{chapters/osg/figures/edgepath-eps-converted-to.pdf}
 		\vspace*{3mm}
 % \vspace*{-4mm}
-    \caption{Structure within the odd length path and attached 
+    \caption[Structure within the odd length path and attached perpendicular ``bars'']
+    {Structure within the odd length path and attached 
 		perpendicular ``bars'' with length $\sqrt{3}$. Regarding the 
 		representation of such non-integral coordinates in the problem 
     input, 
@@ -240,7 +241,8 @@ into a {\em 3-net} is given in ~\ref{fig:osg-3-net}.
     }
       \begin{overpic}[scale=0.4]{chapters/osg/figures/k4_after-eps-converted-to.pdf}
         \end{overpic}
-    \caption{Illustration of a $3$-net obtained from $K_4$, the complete graph on 
+    \caption[Illustration of a $3$-net obtained from $K_4$]
+    {Illustration of a $3$-net obtained from $K_4$, the complete graph on 
 		$4$ vertices.}
     % \caption{A $3$-net constructed over the backbone in ~\ref{fig:backbone}.
         % \textcolor{red}{Siwei: update this to be based on $G'$ from ~\ref{fig:backbone}}
@@ -281,7 +283,7 @@ used is $K$ to cover all of $T_G$.
     \centering
     \includegraphics[scale=0.33]{chapters/osg/figures/edgepath3-eps-converted-to.pdf}
   \vspace*{1mm}
-    \caption{Asymmetrical coverage of $4$ endpoints requiring a circle of 
+    \caption[Asymmetrical coverage of $4$ endpoints]{Asymmetrical coverage of $4$ endpoints requiring a circle of 
     radius at least $2\sqrt{3}/3\approx 1.155$.}
     \label{fig:osg-pathcovert}
   \end{figure}
@@ -333,7 +335,8 @@ must also cover $A'$).
      \put(14,26){$S'$}
      \end{overpic}
   \vspace*{3mm}
-    \caption{When there are enough bars left, it is always better to cover
+    \caption[Illustration of covering vertical bars in an optimal way] 
+    {When there are enough bars left, it is always better to cover
 		two bars at a time with a circle. Two extremal cases of $S'$ covering
 		$A'$ and $D$ but not $E$ are shown (as dashed circles), which amounts 
 		to rotating the circle $S'$ around $D$.}
@@ -386,7 +389,8 @@ cover $u \cdots w$, at least two more circles are needed at the two ends
      \put(68,10){\rotatebox{-12}{{\small $r=2.304$}}}
 		 \end{overpic}
   \vspace*{1mm}
-    \caption{When there are two bars at the end of a path, it is preferred
+    \caption[Covering the ends of bars]
+    {When there are two bars at the end of a path, it is preferred
 		to cover them with a single circle (in red). The dotted circle shows that 
 		a circle of radius $2*\alpha$ covering $B$ will not be able to reach 
 		structures outside $u\cdots w$.}
@@ -421,7 +425,8 @@ one. The cover has size of $K-(L-|E(G)|)/2$.
   \put(88, 0){(d)}
 \end{overpic}
 \vspace*{2mm}
-  \caption{The four possible patterns at the junction using circles of radius 
+  \caption[The four possible patterns at the junction using circles of radius less than $\alpha = 1.152$]
+  {The four possible patterns at the junction using circles of radius 
 	less than $\alpha = 1.152$. When we increase the radius to $r = 1.152259$, 
 	circles shown in (b) and (c) can successfully cover the junction and the odd 
 	ends.}
@@ -481,7 +486,7 @@ straightforward to check; we omit the details.
     \end{overpic}
 	  \end{small}
 		\vspace*{1mm}
-    \caption{(a) A $3$-net $T_G$ maybe readily converted into a simple polygon 
+    \caption[Illustration of $3$-net]{(a) A $3$-net $T_G$ maybe readily converted into a simple polygon 
 		$P$ with holes by expanding along its backbone. (b) Creating a ``door'' 
 		of width $\delta$ will remove one hole from $P$.}
     \label{fig:osg-door}
@@ -541,7 +546,7 @@ graph $G'$.
         \put(49,-10){(b)}
     \end{overpic}
 		\vspace*{6mm}
-    \caption{(a) Part of the augmented Eulerian path for non-doubled 
+    \caption[Doubling procedure]{(a) Part of the augmented Eulerian path for non-doubled 
 		paths. (b) Part of the augmented Eulerian path for doubled paths.}
     \label{fig:osg-path_exp}
 		\vspace*{-1mm}
@@ -560,7 +565,8 @@ the self-intersections.
         \put(84,-6){(c)}
     \end{overpic}
 		\vspace*{3mm}
-        \caption{In order to eliminate possible self-intersections in 
+        \caption[Illustration of self-intersection elimination]
+        {In order to eliminate possible self-intersections in 
 				(a), we may transform it into one of the solutions given in 
 				(b) and (c) to make the Eulerian tour remain connected (one 
 				of the two solutions will satisfy this).}
@@ -577,7 +583,7 @@ again covers at most two continuous segments of the simple polygon.
     \centering
     \includegraphics[scale=.29]{chapters/osg/figures/t1-eps-converted-to.pdf}
     \includegraphics[scale=.29]{chapters/osg/figures/t2-eps-converted-to.pdf}
-    \caption{The figure shows two possible types of boundaries near a 
+    \caption[Two possible types of boundaries]{The figure shows two possible types of boundaries near a 
 		vertex with degree of $4$. A robot near the vertex will only be able 
 		to cover two disjoint but individually continuous boundary segments 
 		with sensing radius less than $\alpha$ if the solution is to be optimal.}

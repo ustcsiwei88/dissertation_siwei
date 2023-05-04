@@ -77,12 +77,13 @@ lowers the time complexity to $O(N^2/k)$.
 \SetKw{True}{true}
 \SetKw{False}{false}
 
-\begin{algorithm} 
-  % \begin{small}
+\begin{algorithm}[H]
+  \begin{small}
   \DontPrintSemicolon
   \SetKwComment{Comment}{\%}{}
   \SetKwInOut{Input}{Input}
   \SetKwInOut{Output}{Output}
+  \setstretch{0.8}
   \KwData{$S_O=\{o_1, \dots, o_N\}$, sample points in circular order\\
   \qquad\quad$k$, the number of robots\\
   \qquad\quad $r$, the candidate sensing radius}
@@ -119,7 +120,7 @@ lowers the time complexity to $O(N^2/k)$.
   }
   }
   \Return{\False}
-  % \end{small}
+  \end{small}
   \caption{\textsc{Opg\_2D\_Cont\_Feasible}}\label{algo:osg-cont}
 \end{algorithm}
 
@@ -240,7 +241,7 @@ with radius $r$ illustrated in ~\ref{fig:osg-ilpexample}.
         \put(69,24){\color{blue}$o_{67}$}
     \end{overpic}
 		\vspace*{1mm}
-    \caption{This perimeter guarding example illustrates constraint 
+    \caption[Illustration of discretization]{This perimeter guarding example illustrates constraint 
 		($2$) for $o_{67}$ with $r=7$. The black dots are the sampled $S_O = 
 		\{o_1, \dots, o_{100}\}$. In order to cover $o_{67}$, at least one 
 		among the red color grid cell centers need to be selected as robot location.}

@@ -98,7 +98,8 @@ of $S_5$ is now left uncovered.
 		\end{overpic}
 	\end{center}
 	\vspace*{-4.5mm}
-	\caption{\label{fig:opg-tiling}  An illustration of the feasibility check of 
+	\caption[An illustration of the feasibility check of $\ell_{1-2}^c$]
+	{\label{fig:opg-tiling}  An illustration of the feasibility check of 
 		$\ell_{1-2}^c$. The single rectangular region and the perimeter (five red 
 		segments $S_1$--$S_5$) are shown at the bottom. The orange and green line 
 		segments show two potential	covers.}
@@ -185,10 +186,12 @@ complete algorithm is given in Algorithm~\ref{algo:opg-SRG}. Note that
 $\ell^{min}$ and $\ell^{max}$, which change as the algorithm runs, are not 
 the same as the fixed $\ell_{min}$ and $\ell_{max}$ from 
 Proposition~\ref{p:opg-single-bounds}. 
-\newpage
-\vspace*{-7mm}
-\begin{algorithm}
+% \newpage
+% \vspace*{-7mm}
+
+\begin{algorithm}[H]
 	\begin{small}
+		\setstretch{0.8}
 		\SetKwInOut{Input}{Input}
 		\SetKwInOut{Output}{Output}
 		\SetKwComment{Comment}{\%}{}
@@ -256,7 +259,7 @@ Proposition~\ref{p:opg-single-bounds}.
 		\caption{\algoSRG} \label{algo:opg-SRG}
 	\end{small}
 \end{algorithm}
-\vspace*{-3mm}
+% \vspace*{-3mm}
 
 In terms of running time, the first $\mathbf{while}$ loop starts with 
 $\ell^{max} - \ell^{min} = \frac{len(\partial R) -  len(G_{max})}{n} -

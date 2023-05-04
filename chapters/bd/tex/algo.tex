@@ -26,12 +26,13 @@ Pseudo-code in ~\ref{alg:bd-dp} provides a sketch of a possible implementation o
 Effectively implemented, the time complexity of running ~\ref{alg:bd-dp} is $O( (n+1)^{k+1})$, which is polynomial when $k$, the number of defenders, is fixed.
 \vspace{-2mm}
 
-\begin{algorithm}
+\begin{algorithm}[H]
 %\begin{small}
 \DontPrintSemicolon
+\setstretch{0.8}
 \KwData{
 $E=\big \langle loc_i, t_i\big\rangle_{i=1}^{n}$: $n$ attack events\;
-$loc^1,\dots,loc^k$: initial locations of the $k$ defenders\;
+$loc_1,\dots,loc_k$: initial locations of the $k$ defenders\;
 $v_1,\dots,v_k$: speeds of the $k$ defenders\;
 }
 \KwResult{Maximum number of attacks intercepted}
@@ -69,7 +70,7 @@ $T[0]\gets 0$\;
 \label{alg:bd-dp}
 %\end{small}
 \end{algorithm}
-\vspace{-2mm}
+% \vspace{-2mm}
 %\vspace{-15mm}
 
 The algorithm presented here is a slight modification of the DP algorithm in \cite{adler2022role} with two subtle differences. First, we enforce that an attack event can only be handled by one defender.
@@ -124,8 +125,10 @@ In each iteration, \ours pick two defenders, and the attack events the two defen
 Then, \ours uses the DP algorithm in ~\ref{alg:bd-dp} to increase the number of attack events intercepted by the two defenders selected. 
 The complete algorithm is sketched in ~\ref{alg:bd-dp_local}.
 
-\begin{algorithm}[h]
+\begin{algorithm}[H]
+\setstretch{0.8}
 \DontPrintSemicolon
+\begin{small}
 \KwData{
 $E=\big \langle loc_i, t_i\big\rangle_{i=1}^{n}$: $n$ attack events\;
 $loc^1,\dots,loc^k$: initial locations of the $k$ defenders\;
@@ -171,6 +174,7 @@ $result\gets 0$\;
 }
 \vspace{1mm}
 \Return{$result$}
+\end{small}
 \caption{Exhaustive Defender Pairing}
 \label{alg:bd-dp_local}
 \end{algorithm}
@@ -188,19 +192,20 @@ As the future attack sequence cannot be foreseen, defenders need to \emph{react}
 Towards addressing the problem, a greedy \emph{replanning} approach can be applied. Whenever an attack event is observed, the defender team replans the capture sequence given the new attacks added to the attack queue. 
 This gives rise to an online algorithm sketched in ~\ref{alg:bd-horizon}.
 
-\begin{algorithm}[h]
+\begin{algorithm}[H]
 \DontPrintSemicolon
+\setstretch{0.8}
 \KwData{
-$E=\big \langle loc_i, t_i\big\rangle_{i=1}^{\infty}$: a stream of attack events\;
-$loc^1,\dots,loc^k$: initial locations of the $k$ defenders\;
-$v_1,\dots,v_k$: speeds of the $k$ defenders\;
+    $E=\big \langle loc_i, t_i\big\rangle_{i=1}^{\infty}$: a stream of attack events\;
+    $loc_1,\dots,loc_k$: initial locations of the $k$ defenders\;
+    $v_1,\dots,v_k$: speeds of the $k$ defenders\;
 }
 $E'\gets $ an empty queue\;
 \Comment{$E'$ stores attack events seen so far}
 \vspace{1mm}
 \While{new attack events added to $E'$ }{
     Apply ~\ref{alg:bd-dp_local} to compute a plan for the defenders and attack events $E'$\;
-    Execute the plan, pop out from $E'$ attack events passed, and update $loc^1,\dots,loc^k$ to the defenders' current locations until new attacks are foreseen\;
+    Execute the plan, pop out from $E'$ attack events passed, and update $loc_1,\dots,loc_k$ to the defenders' current locations until new attacks are foreseen\;
 }
 % \KwResult{Number of attacks intercepted}
 

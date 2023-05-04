@@ -112,7 +112,7 @@ they will be used without explaination in the following chapters.
 \subsection{NP and NP-hardness}
 % In the area of optimization, which this thesis is focusing on, NP-hardness has the 
 % The definitions are taken from \cite{vazirani2001approximation}
-\begin{definition}[NP]
+\begin{definition}[Nondeterministic Polynomial (NP)]
     A language $L\in NP$ if there is a polynomial $p$ and a polynomial time bounded Turing machine M, 
     called the {\textit verifier}, such that for each string $x\in \{0, 1\}^*$: 
     \begin{itemize}
@@ -140,7 +140,7 @@ and objective
 \[
     \min a_{11} x_{11} + \dots + a_{1n} x_{1n} \geq b_1.
 \]
-When the variables $x_1, \dots, x_n$ contains continous variable, the model becomes mixed integer programming problem (MILP).
+When the variables $x_1, \dots, x_n$ contains continous variables, the model becomes mixed integer programming problem (MILP).
 
 % e.g., its usage in Multi-robot Path Planning Problem (MRPP) \cite{HanYu19IROS, GuoHanYu21ICRA}, sensor coverage. 
 Commercial (mixed) integer programming tools include Gurobi \cite{optimization2019gurobi} and IBM CPLEX \cite{cplex2009v12}, while open-source 
@@ -150,11 +150,21 @@ While work like \cite{deits2014footstep} in bipedal robot footstep planning and 
 seek performance improvement by constructing different instance formulations.
 
 \subsection{Approximation algorithm}
-For an optimization algorithm $\Pi$, OPT($\Pi$), or sometimes OPT, 
+For an optimization problem $\Pi$, OPT($\Pi$), or sometimes OPT, 
 denotes the optimal solution of the problem instance. An $(1+\alpha)$-OPT or a $(1+\alpha)$-optimal solution refer
 to a solution with abjective value of $(1+\alpha)$OPT for a minimization objective. For maximization objective,
 the corresponding term is $(1-\alpha)OPT$.
 
+Now we provide the definition of PTAS and FPTAS.
+\begin{definition}[Polynomial Time Approximation Scheme (PTAS)]
+    Given any $\varepsilon>0$, if an algorithm $\mathcal A$ runs in polynomial time to the input length. 
+    Then if $\mathcal A$ can provide a $(1+\varepsilon)$-OPT solution, the algorithm is call PTAS.
+\end{definition}
+
+\begin{definition}[Fully Polynomial Time Approximation Scheme (FPTAS)]
+    Given any $\varepsilon>0$, if an algorithm $\mathcal A$ runs in polynomial time to the input length and $1/\varepsilon$. 
+    Then $\mathcal A$ can provide an $(1+\varepsilon)$-OPT solution, the algorithm is call FPTAS.
+\end{definition}
 \section{Problems Studied in the Dissertation}
 In this section, we provide an overview of the problems studied in the later chapters, 
 where each chapter are independent and self-contained. 
@@ -221,7 +231,7 @@ However, on the side of computational method, a fully polynomial time approximat
 \begin{figure}[h]
     \centering
     \includegraphics[width = 0.5\textwidth]{chapters/bf/fig/intro_pic.png}
-    \caption{Separating three sets of building blocks (orange, purple and green) with the existence of two grey obstacles.}
+    \caption[Separating three sets of building blocks with the existence of two obstacles]{Separating three sets of building blocks (orange, purple and green) with the existence of two grey obstacles.}
     \label{fig:intro-lines}
 \end{figure}
 
@@ -246,7 +256,7 @@ Still, integer programming can provide a near-optimal solution for around 20 obj
     %     \includegraphics[width = 0.35\textwidth]{chapters/sc/fig/instance_2.png}
     % }
     % \includegraphics[width = 0.35\textwidth]{chapters/bd/fig/inf_horizon_example-v.png}
-    \caption{[left] the coordinated sweeping problem, [right] the perimeter defense problem.}
+    \caption[Illustration of sweeping and boundary defense]{[left] the coordinated sweeping problem, [right] the perimeter defense problem.}
     \label{fig:intro-bd-sc}
 \end{figure}
 
@@ -278,10 +288,152 @@ Still, a combined integer programming and classical local search approach can be
 solve the probem effectively. The method is evaluated on three real scenarios: 
 the interior of a bus, a subway or an ICU room. 
 
-\begin{comment}
+
 \section{Literature review} 
-\subsection{Coverage-related problems in computational geometry} 
-\subsection{Mobile sensing robot coverage control} 
+
+% On the other hand, 
+
+\subsection{Coverage-related problems in computational geometry}
+
+As multi-robot coverage problems, this thesis is intimately connected to Art 
+Gallery problems \cite{o1987art,shermer1992recent}, with origins traceable 
+to half a century ago \cite{klee1969every}. Art Gallery problems assume 
+a visibility-based \cite{lozano1979algorithm} sensing model; in a typical 
+setup \cite{o1987art}, the {\em interior} of a polygon must be visible to at 
+least one of the guards, which may be placed on the boundaries, corners, 
+or the interior of the polygon. Finding the optimal number of guards are 
+often NP-hard \cite{lee1986computational}. Alternatively, disc-based sensing 
+model may be used, which leads to the classical {\em packing} problem 
+\cite{thue1910dichteste,hales2005proof}, where no overlap is allowed between 
+the sensors' coverage area, the {\em coverage} problem 
+\cite{drezner1995facility,cortes2004coverage,pavone2009equitable,martinez2010distributed,pierson2017adapting}, 
+where all 
+workspace must be covered with overlaps allowed, or the {\em tiling} problem 
+\cite{kershner1968paving}, where the goal is to have the union of sensing
+ranges span the entire workspace without overlap. For a more complete 
+account on Art Gallery, packing, and covering, see Chapters 2, 3, and 33 of
+\cite{toth2017handbook}. Despite the existence of a large body of literature 
+performing extensive studies on these intriguing computational geometry 
+problems, these types of research mostly address domains that are 2D and 
+higher
+
+
+
+% Recently, the problems of globally optimally covering perimeters using 
+% one-dimensional sensors have been studied in much detail 
+% \cite{fenghangaoyu2019efficient,fengyu2020RAL}. It is shown that when the sensors 
+% are homogeneous, the optimal deployment of sensors can be computed 
+% very efficiently, even for highly complex perimeters \cite{fenghangaoyu2019efficient}.
+% On the other hand, the problem becomes immediately intractable, sometimes
+% strongly NP-hard, when sensors are heterogeneous \cite{fengyu2020RAL}. 
+% Our research is distinct from \cite{fenghangaoyu2019efficient,fengyu2020RAL} in that 
+% we employ a (two-dimensional) range sensing model and work on the coverage 
+% of both perimeters and regions, which has much broader applicability. 
+
+As pointed out in \cite{cortes2004coverage,schwager2009decentralized}, 
+distributed sensor coverage, has roots in the study 
+of the facility location optimization problem 
+\cite{weber1929theory,drezner1995facility}, which examines the selection 
+of facility (e.g., warehouses) locations that minimize the cost of delivery 
+of supplies to spatially distributed customers. In theoretical computer 
+science and operations research, these are known as the $k$-center, 
+$k$-means, and $k$-median clustering problems \cite{har2011geometric}, 
+the differences among which are induced by the cost structure. Our 
+investigations benefit from the vast literature on 
+the study of $k$-center clustering and related problems, e.g., 
+\cite{feder1988optimal,hochbaum1985best,gonzalez1985clustering,daskin2000new,shamos1975closest}.
+%
+These clustering problems are in turn related to packing 
+\cite{hales2005proof}, tiling \cite{thue1910dichteste}, and the 
+well-studied art gallery problems \cite{o1987art,shermer1992recent}.
+
+% \subsection{Mobile sensing robot coverage control} 
 \subsection{Multi-robot coordination} 
-\subsection{Sensor network} 
-\end{comment}
+Our work draws inspiration from a long line of multi-robot coverage planning and 
+control research, e.g., \cite{cortes2004coverage,martinez2007motion,
+schwager2009optimal,pavone2009equitable,schwager2009decentralized,
+pierson2017adapting}. 
+%
+In an influential body of work on coverage control \cite{cortes2004coverage,
+martinez2007motion}, a gradient based iterative method is shown to drive 
+one or multiple mobile sensors to a locally optimal configuration with 
+convergence guarantees. 
+%
+Whereas \cite{cortes2004coverage,martinez2007motion} assume that the 
+distribution of sensory information is available {\em a priori}, it is 
+shown that such information can be effectively learned 
+\cite{schwager2009decentralized}. 
+%
+Subsequently, the control method is further extended to allow the 
+coverage of non-convex and disjoint 2D domains \cite{schwager2009optimal} 
+and to work for mobile robots with varying sensing or actuation capabilities
+\cite{pierson2017adapting}. 
+%
+In contrast to these control-based approaches, which produce iterative 
+locally optimal solutions, our work emphasizes the direct computation of 
+globally optimal deployment solutions and supports arbitrarily shaped
+bounded (1D) perimeters and (2D) regions.
+
+With an emphasis on robotic swarm deployment, within multi-robot 
+systems research \cite{arai2002advances,gerkey2004formal,ren2008distributed,bullo2009distributed}, 
+our study is closely related to {\em formation control}, e.g., 
+\cite{ando1999distributed,jadbabaie2003coordination,olfati2004consensus,ren2005consensus,cheng2008almost,mesbahi2010graph,yu2012rendezvous},
+where the goal is to achieve certain {\em distributions} through 
+continuous (often, local sensing based) interactions among the 
+agents or robots. Depending on the particular setting, the 
+distribution in question may be spatial, e.g., rendezvous
+\cite{ando1999distributed,yu2012rendezvous}, or maybe an agreement 
+in agent velocity is sought \cite{jadbabaie2003coordination,ren2005consensus}. 
+In these studies, the resulting formation often have some 
+degree-of-freedoms left unspecified. For example, rendezvous 
+results \cite{ando1999distributed,yu2012rendezvous} often come 
+with exponential convergence guarantee, but the location of
+rendezvous is generally unknown {\em a priori}. 
+
+In multi-robot task and motion planning problems (e.g.,
+\cite{smith2009monotonic,ayanian2010decentralized,liu2011multi,liu2013optimal,turpin2014goal,turpin2014capt,alonso2015multi,SolYu15}), 
+especially ones with a {\em task allocation} element 
+\cite{smith2009monotonic,liu2011multi,liu2013optimal,turpin2014goal,turpin2014capt,SolYu15},
+the (permutation-invariant) target configuration is often mostly 
+known. The goal here is finding a one-to-one mapping between individual 
+robots and the target locations (e.g., deciding a {\em matching}) and 
+then plan (possibly collision-free) trajectories for the robots to reach 
+their respective assigned targets \cite{turpin2014goal,turpin2014capt,SolYu15}.  
+
+\subsection{Search and rescue}
+The study of the dynamic coverage in this dissertation draws inspiration from the study of several 
+lines of related problems. 
+The Graph-Clear problem, formulated in \cite{kolling2007graph}, tasks a group of robots to search and clear an environment with the operations of blocking and clearing.
+A follow-up work on Line-Clear \cite{kolling2017coordinated} uses line guards
+with more focus on computational geometry in that
+the objective is to minimize the maximum sweep line distance. Both of these problems are
+NP-hard, establishing the difficulties of finding a sweep schedule for a planar environment.
+The more general pursuit-evasion problem dates back to the research on \emph{search number}
+on a discrete graph \cite{megiddo1988complexity}, 
+followed by studies on pursuit and evasion continuous environment with 
+visibility-based model \cite{guibas1999visibility, suzuki1992searching, lavalle2000algorithm, stiffler2017persistent}. 
+
+When working with known patrolling search frontiers, e.g., vertical sweep lines, 
+this sweepline coverage problem is analogous to the perimeter defense problem by placing guards on a static perimeter
+to defend intruders \cite{shishika2020cooperative, macharet2020adaptive, chen2021optimal}.
+Previously, we have also studied a version of static range guard placement problems for securing perimeters and regions \cite{fengyu2020optimally}.
+In contrast to the pursuit-evasion algorithms that deal with searching dynamic and unpredictable targets that could escape, 
+coverage planning/control-related algorithms become more suitable for searching or covering predictable or stationary targets,
+e.g., room sweeping, pesticide and fertilizer spraying, persistent monitoring, and so on 
+\cite{cortes2004coverage, oksanen2009coverage, haksar2020spatial, wei2018coverage, deng2019constrained, 
+lan2013planning, cassandras2012optimal, yu2015persistent, palacios2017optimal}. 
+
+% The problem becomes the well-known art-gallery problem \cite{o1987art} when a static deployment of robots is sought after.
+% In contrast to formation control and multi-robot motion planning research, 
+% our study of \opg seeks to determine an exact, optimal distribution 
+% pattern of robots (in this case, over a fairly arbitrary, bounded 1D 
+% topological domain). Thus, solutions to \opg may serve as the target 
+% distributions for multi-robot task and motion planning, which is a main 
+% motivation behind our work. The generated distribution pattern is 
+% also potentially useful in multi-robot persistent monitoring 
+% \cite{soltero2014decentralized} and coverage \cite{howard2002mobile,schwager2009optimal} 
+% applications, where robots are asked to carry out sensing tasks in some 
+% optimal manner. 
+% \subsection{Sensor network} 
+
+% \section{Application}

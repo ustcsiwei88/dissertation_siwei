@@ -2,7 +2,7 @@
 \chapter{Introduction} 
 \thispagestyle{myheadings} 
 In this chapter, we first discuss some regular types of sensing systems 
-used for guarding, tracking or surveilence, 
+used for guarding, tracking or surveillance, 
 with a focus on the line-based and range-based sensors. 
 These will serve as the motivation of this dissertation study
 % and we then introduce the two types of simplified sensing model studied in this thesis, 
@@ -36,7 +36,7 @@ since ancient soldiers lit woods to create smoke and inform others when invaders
     \label{fig:intro-IDS}
 \end{figure} 
 
-In surveilence or tracking systems (\ref{fig:intro-laser}), 
+In surveillance or tracking systems (\ref{fig:intro-laser}), 
 sensors like laser beams or cameras are deployed for purposes like thief detection, 
 motion capture, pose tracking and so on. 
 \begin{figure}[ht] 
@@ -58,6 +58,8 @@ motion capture, pose tracking and so on.
         \caption{Laser system} 
         \label{fig:intro-laser} 
     \end{subfigure} 
+    \caption{Indoor tracking and surveillance systems}
+    \label{fig:intro-indoor}
 \end{figure}
 
 The deployment of sensors is not limited only to deploying sensors static to the ground.
@@ -103,7 +105,7 @@ Second, real sensors come with many characteristics as mentioned in \cite{sebast
 range sensors can have noise, unexpected objects blocking the view, sensing failures, random measurements and so on.
 Hence, the objective that a sensor system being more balanced in terms of work load is a reasonable assumption
 when quality assurance and fault tolerance are the main concerns for the system. 
-Lastly, a good sensor deployment in systems like surveilence camera system means less human labor from the security personel,
+Lastly, a good sensor deployment in systems like surveillance camera system means less human labor from the security personel,
 and less ernergy consumpsion.
 \section{Background}
 In this section, we provide sufficient background knowledge and terms used in this dissertation, 
@@ -138,9 +140,9 @@ some mathematical models including a set of integral variables $x_1, \dots, x_n$
 \end{align*}
 and objective 
 \[
-    \min a_{11} x_{11} + \dots + a_{1n} x_{1n} \geq b_1.
+    \min a_{11} x_{11} + \dots + a_{1n} x_{1n}.
 \]
-When the variables $x_1, \dots, x_n$ contains continous variables, the model becomes mixed integer programming problem (MILP).
+When the variables $x_1, \dots, x_n$ contains continous variables (continuum), the model becomes mixed integer programming problem (MILP).
 
 % e.g., its usage in Multi-robot Path Planning Problem (MRPP) \cite{HanYu19IROS, GuoHanYu21ICRA}, sensor coverage. 
 Commercial (mixed) integer programming tools include Gurobi \cite{optimization2019gurobi} and IBM CPLEX \cite{cplex2009v12}, while open-source 
@@ -153,7 +155,7 @@ seek performance improvement by constructing different instance formulations.
 For an optimization problem $\Pi$, OPT($\Pi$), or sometimes OPT, 
 denotes the optimal solution of the problem instance. An $(1+\alpha)$-OPT or a $(1+\alpha)$-optimal solution refer
 to a solution with abjective value of $(1+\alpha)$OPT for a minimization objective. For maximization objective,
-the corresponding term is $(1-\alpha)OPT$.
+the corresponding term is $(1-\alpha)$OPT.
 
 Now we provide the definition of PTAS and FPTAS.
 \begin{definition}[Polynomial Time Approximation Scheme (PTAS)]
@@ -163,11 +165,11 @@ Now we provide the definition of PTAS and FPTAS.
 
 \begin{definition}[Fully Polynomial Time Approximation Scheme (FPTAS)]
     Given any $\varepsilon>0$, if an algorithm $\mathcal A$ runs in polynomial time to the input length and $1/\varepsilon$. 
-    Then $\mathcal A$ can provide an $(1+\varepsilon)$-OPT solution, the algorithm is call FPTAS.
+    Then if $\mathcal A$ gives a $(1+\varepsilon)$-OPT solution, the algorithm is call FPTAS.
 \end{definition}
 \section{Problems Studied in the Dissertation}
 In this section, we provide an overview of the problems studied in the later chapters, 
-where each chapter are independent and self-contained. 
+where each chapter is independent and self-contained. 
 
 \begin{figure}[h]
     \centering

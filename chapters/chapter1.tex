@@ -3,11 +3,11 @@
 \thispagestyle{myheadings} 
 In this chapter, we first discuss some regular types of sensing systems 
 used for guarding, tracking or surveillance, 
-with a focus on the line-based and range-based sensors. 
-These will serve as the motivation of this dissertation study
+with a focus on line and range sensors. 
+These will serve as the motivation for this dissertation study
 % and we then introduce the two types of simplified sensing model studied in this thesis, 
 Then, we conduct a literature study of the related work on sensor placement and 
-coverage related problems. 
+coverage-related problems. 
 Lastly, some background knowledge of the theories and tools used in this paper will be given. 
 
 \section{Motivations} 
@@ -18,7 +18,7 @@ or intruder detection system (IDS) for monitoring hazards.
 Early intruder defense system can date back to ancient times, where 
 watchtowers of the Great Wall of China are used as signal points. 
 It can be seen as sensors from the broad sense 
-since ancient soldiers lit woods to create smoke and inform others when invaders appear. 
+since ancient soldiers lit wood to create smoke and inform others when invaders appear. 
 % Surveilence or tracking cameras surveillance and tracking system, 
 \begin{figure}[ht]
     \centering 
@@ -64,7 +64,7 @@ motion capture, pose tracking and so on.
 
 The deployment of sensors is not limited only to deploying sensors static to the ground.
 A notable example is the advent of self-driving cars.
-On top of those autonomous vehicles, sensor systems are indispensible for obstacle avoidance and interactions between vehicles.
+On top of those autonomous vehicles, sensor systems are indispensable for obstacle avoidance and interactions between vehicles.
 Tesla (~\ref{fig:intro-tesla}) uses 12 ultrasonic sensors 
 near the front and rear bumper 
 and later changed into a vision system with only cameras 
@@ -78,7 +78,7 @@ for their perception system \footnote{\\\url{https://www.tusimple.com/blogs/tusi
     \begin{subfigure}[b]{0.49\textwidth} 
         \includegraphics[width=\textwidth]{figures/tesla.png} 
         \caption{
-        Tesla model Y's sensing system
+        Tesla Model Y's sensing system
         equipped with cameras (\circled{\small{1}}, 
         \circled{\small{3}}, 
         \circled{\small{4}}, \circled{\small{5}}),
@@ -96,26 +96,26 @@ for their perception system \footnote{\\\url{https://www.tusimple.com/blogs/tusi
     \label{fig:intro-autonomous-vehicles}
 \end{figure} 
 
-The placement of sensors are extremely crucial for many reasons.
-First, a typical high-frequency tracking camera can cost up to serveral thousands US dollars in 2023, 
-let alone sensors with specific industrial or millitary purposes. If a certain sensor layout solution
-can reduce the number of sensors used in, e.g., in a security environment, autonomous vehicle, or in a patrolling robot,
+The placement of sensors is extremely crucial for many reasons.
+First, a typical high-frequency tracking camera can cost up to several thousand US dollars in 2023, 
+let alone sensors with specific industrial or military purposes. If a certain sensor layout solution
+can reduce the number of sensors used in, e.g., in a secure environment, on an autonomous vehicle, or on a patrolling robot,
 the cost for deployment of such sensor systems can be greatly reduced.
 Second, real sensors come with many characteristics as mentioned in \cite{sebastian2005prob},
 range sensors can have noise, unexpected objects blocking the view, sensing failures, random measurements and so on.
-Hence, the objective that a sensor system being more balanced in terms of work load is a reasonable assumption
+Hence, the objective that a sensor system being more balanced in terms of workload is a reasonable assumption
 when quality assurance and fault tolerance are the main concerns for the system. 
-Lastly, a good sensor deployment in systems like surveillance camera system means less human labor from the security personel,
-and less ernergy consumpsion.
+Lastly, a good sensor deployment in systems like surveillance camera systems means less human labor from the security personnel;
+and less energy consumption.
 \section{Background}
 In this section, we provide sufficient background knowledge and terms used in this dissertation, 
-they will be used without explaination in the following chapters. 
+they will be used without explanation in the following chapters. 
 
 \subsection{NP and NP-hardness}
 % In the area of optimization, which this thesis is focusing on, NP-hardness has the 
 % The definitions are taken from \cite{vazirani2001approximation}
 \begin{definition}[Nondeterministic Polynomial (NP)]
-    A language $L\in NP$ if there is a polynomial $p$ and a polynomial time bounded Turing machine M, 
+    A language $L\in NP$ if there is a polynomial $p$ and a polynomial time-bounded Turing machine M, 
     called the {\textit verifier}, such that for each string $x\in \{0, 1\}^*$: 
     \begin{itemize}
         \item if $x\in L$, then there is a string $y$ (the certificate) of polynomially bounded length, i.e., $|y| \leq p(|x|)$,
@@ -127,7 +127,7 @@ they will be used without explaination in the following chapters.
 A colloquial way in \cite{vazirani2001approximation} to describe an NP is the class of problems that have ``short and quickly verifiable'' 
 Yes certificates.
 % NP-complete problems refers to the class of problems such that every problem in NP can be reduced to it.
-And NP-hard problem is the class of problems such that every problem in NP can reduce to it.
+And an NP-hard problem is a problem that every problem in NP can reduce to it.
 Typically, when we call an optimization problem NP-hard, it means the decision version of it is NP-hard.
 \subsection{Integer programming}
 Since most natural optimization problems are NP-hard, mathematical programming tools are often 
@@ -142,7 +142,7 @@ and objective
 \[
     \min a_{11} x_{11} + \dots + a_{1n} x_{1n}.
 \]
-When the variables $x_1, \dots, x_n$ contains continous variables (continuum), the model becomes mixed integer programming problem (MILP).
+When the variables $x_1, \dots, x_n$ contain continuous variables (continuum), the model becomes a mixed integer programming problem (MILP).
 
 % e.g., its usage in Multi-robot Path Planning Problem (MRPP) \cite{HanYu19IROS, GuoHanYu21ICRA}, sensor coverage. 
 Commercial (mixed) integer programming tools include Gurobi \cite{optimization2019gurobi} and IBM CPLEX \cite{cplex2009v12}, while open-source 
@@ -154,18 +154,18 @@ seek performance improvement by constructing different instance formulations.
 \subsection{Approximation algorithm}
 For an optimization problem $\Pi$, OPT($\Pi$), or sometimes OPT, 
 denotes the optimal solution of the problem instance. An $(1+\alpha)$-OPT or a $(1+\alpha)$-optimal solution refer
-to a solution with abjective value of $(1+\alpha)$OPT for a minimization objective. For maximization objective,
+to a solution with an objective value of $(1+\alpha)$OPT for a minimization objective. For the maximization objective,
 the corresponding term is $(1-\alpha)$OPT.
 
 Now we provide the definition of PTAS and FPTAS.
 \begin{definition}[Polynomial Time Approximation Scheme (PTAS)]
     Given any $\varepsilon>0$, if an algorithm $\mathcal A$ runs in polynomial time to the input length. 
-    Then if $\mathcal A$ can provide a $(1+\varepsilon)$-OPT solution, the algorithm is call PTAS.
+    Then if $\mathcal A$ can provide a $(1+\varepsilon)$-OPT solution, the algorithm is called PTAS.
 \end{definition}
 
 \begin{definition}[Fully Polynomial Time Approximation Scheme (FPTAS)]
     Given any $\varepsilon>0$, if an algorithm $\mathcal A$ runs in polynomial time to the input length and $1/\varepsilon$. 
-    Then if $\mathcal A$ gives a $(1+\varepsilon)$-OPT solution, the algorithm is call FPTAS.
+    Then if $\mathcal A$ gives a $(1+\varepsilon)$-OPT solution, the algorithm is called FPTAS.
 \end{definition}
 \section{Problems Studied in the Dissertation}
 In this section, we provide an overview of the problems studied in the later chapters, 
@@ -195,7 +195,7 @@ robots (or other types of autonomous agents) to guard the perimeters of closed 2
 where the perimeter of each region to be guarded may contain multiple disjoint polygonal chains.
 Each robot is responsible for guarding a subset of the perimeter and any perimeter must be guarded
 by at some robot.
-The sensing range of each robot is assumed to be a continous line on top of the perimeter of some regions. 
+The sensing range of each robot is assumed to be a continuous line on top of the perimeter of some regions. 
 Specifically, two problems will be introduced, perimeter guarding with homogeneous sensors (~\ref{fig:intro-opg-ho}),
 and with heterogeneous sensors (~\ref{fig:intro-opg-he}). 
 The homogeneous case can be solved using only classical algorithms. 
@@ -220,14 +220,15 @@ amount of time.
     \caption{Optimal set guarding with 20 sensors to cover the perimeter and interior of a city}
     \label{fig:intro-osg}
 \end{figure}
-Then, we continues with perimeter guarding but uses 2D circles to represent the 
+Then, we continue with perimeter guarding but use 2D circles to represent the 
 coverage range of sensors. The study extends to guarding 2D regions beyond the perimeters. 
-When given a bounded $\mathbb R^2$ to be guarded, and $k$ mobile sensors with variable sensing range of $r_i$, 
-our objective is to minimize $\max r_i$.
+When given a bounded $\mathbb R^2$ to be guarded, and $k$ mobile sensors with variable sensing ranges of $r_1,\dots,r_k$, 
+our objective is to minimize $\max_{i=1}^{k} r_i$.
 Our study shows that even for covering the boundary or interior of a simple polygon, 
-the problem of find the minimum sensing radius is NP-hard to approximate within a factor of 1.152, e.e.,
-unless P=NP, there is no polygnomial solution for finding a $1.152$ optimal solution. 
-However, on the side of computational method, a fully polynomial time approximation algorithm 
+the problem of finding the minimum sensing radius is NP-hard to approximate within a factor of 1.152, i.e.,
+unless P=NP, there is no polynomial solution for finding a $1.152$ optimal solution. 
+However, on the side of computational methods, we develop a fully polynomial time approximation algorithm for covering
+a perimeter with a reasonable assumption of continuous coverage.
 
 
 \begin{figure}[h]
@@ -238,8 +239,8 @@ However, on the side of computational method, a fully polynomial time approximat
 \end{figure}
 
 
-After two chapters's discussion on covering perimeters or regions, which is essentially separating 
-some crtical polygonal regions from the outside workspace. 
+After two chapters' discussion on covering perimeters or regions, which is essentially separating 
+some critical polygonal regions from the outside workspace. 
 The fourth chapter digs deeper into this problem by studying the separation of more than two regions. 
 To simplify the problem, a line-of-sight sensing model will be adopted, where each sensor can cover
 an unobstructed line segment like a laser beam. Also, the regions are assumed to be polygonal.
@@ -265,13 +266,13 @@ Still, integer programming can provide a near-optimal solution for around 20 obj
 The fifth chapter duels with the dynamical setting for mobile sensing robots, 
 and two different but related problems are studied. 
 The first problem is the boundary defense problem in the context of heterogeneous defenders first studied in \cite{adler2022role}.
-It can be seen as an extension of the perimeter defense probelm \cite{shishika2020review}. 
+It can be seen as an extension of the perimeter defense problem \cite{shishika2020review}. 
 In this problem, there are $k$ sensing robots moving on top of a perimeter with different speeds $v_1,\dots,v_k$.
 A sequence of attacks $\langle loc_i, t_i \rangle_{i=1}^{n}$ are given at different time stamps and at different locations.
 The objective is to intercept as many attacks as possible.
 The second problem is the coordinated sweeping problem where a group of robots coordinate to sweep a region 
-with obstacles. Each robots possess a given sensing capabilities, and the sweeping trajectory is 
-given beforehand. The objective of it is to minimize the number of robots used such that the sweep plan 
+with obstacles. Each robot possesses a given sensing capability, and the sweeping trajectory is 
+given beforehand. The objective of it is to minimize the number of robots used such that the sweeping plan 
 can be executed and every point in the workspace is sensed with a certain required quality. 
 
 \begin{figure}[ht]
@@ -283,11 +284,11 @@ can be executed and every point in the workspace is sensed with a certain requir
     \label{fig:intro-surf}
 \end{figure}
 
-The sixth chapter dicusses a real-world application on the placement of UV (ultra violet) lights 
-to cover the surface of for the sanitization purpose. The problem can be seen as an extension
-of the art-gallery problem \cite{o1987art}, an thus computationally intractable.
+The sixth chapter discusses a real-world application in the placement of UV (ultraviolet) lights 
+to cover the surface of an environment for sanitization purposes. The problem can be seen as an extension
+of the art-gallery problem \cite{o1987art}, and thus computationally intractable.
 Still, a combined integer programming and classical local search approach can be used to
-solve the probem effectively. The method is evaluated on three real scenarios: 
+solve the problem effectively. The method is evaluated on three real scenarios: 
 the interior of a bus, a subway or an ICU room. 
 
 
@@ -304,7 +305,7 @@ a visibility-based \cite{lozano1979algorithm} sensing model; in a typical
 setup \cite{o1987art}, the {\em interior} of a polygon must be visible to at 
 least one of the guards, which may be placed on the boundaries, corners, 
 or the interior of the polygon. Finding the optimal number of guards are 
-often NP-hard \cite{lee1986computational}. Alternatively, disc-based sensing 
+often NP-hard \cite{lee1986computational}. Alternatively, a disc-based sensing 
 model may be used, which leads to the classical {\em packing} problem 
 \cite{thue1910dichteste,hales2005proof}, where no overlap is allowed between 
 the sensors' coverage area, the {\em coverage} problem 
@@ -333,7 +334,7 @@ higher
 % of both perimeters and regions, which has much broader applicability. 
 
 As pointed out in \cite{cortes2004coverage,schwager2009decentralized}, 
-distributed sensor coverage, has roots in the study 
+distributed sensor coverage has roots in the study 
 of the facility location optimization problem 
 \cite{weber1929theory,drezner1995facility}, which examines the selection 
 of facility (e.g., warehouses) locations that minimize the cost of delivery 
@@ -397,7 +398,7 @@ In multi-robot task and motion planning problems (e.g.,
 especially ones with a {\em task allocation} element 
 \cite{smith2009monotonic,liu2011multi,liu2013optimal,turpin2014goal,turpin2014capt,SolYu15},
 the (permutation-invariant) target configuration is often mostly 
-known. The goal here is finding a one-to-one mapping between individual 
+known. The goal here is to find a one-to-one mapping between individual 
 robots and the target locations (e.g., deciding a {\em matching}) and 
 then plan (possibly collision-free) trajectories for the robots to reach 
 their respective assigned targets \cite{turpin2014goal,turpin2014capt,SolYu15}.  
@@ -409,14 +410,14 @@ The Graph-Clear problem, formulated in \cite{kolling2007graph}, tasks a group of
 A follow-up work on Line-Clear \cite{kolling2017coordinated} uses line guards
 with more focus on computational geometry in that
 the objective is to minimize the maximum sweep line distance. Both of these problems are
-NP-hard, establishing the difficulties of finding a sweep schedule for a planar environment.
+NP-hard, establishing the difficulties of finding a sweeping schedule for a planar environment.
 The more general pursuit-evasion problem dates back to the research on \emph{search number}
 on a discrete graph \cite{megiddo1988complexity}, 
-followed by studies on pursuit and evasion continuous environment with 
+followed by studies on pursuit and evasion in continuous environments with 
 visibility-based model \cite{guibas1999visibility, suzuki1992searching, lavalle2000algorithm, stiffler2017persistent}. 
 
 When working with known patrolling search frontiers, e.g., vertical sweep lines, 
-this sweepline coverage problem is analogous to the perimeter defense problem by placing guards on a static perimeter
+this sweep line coverage problem is analogous to the perimeter defense problem by placing guards on a static perimeter
 to defend intruders \cite{shishika2020cooperative, macharet2020adaptive, chen2021optimal}.
 Previously, we have also studied a version of static range guard placement problems for securing perimeters and regions \cite{fengyu2020optimally}.
 In contrast to the pursuit-evasion algorithms that deal with searching dynamic and unpredictable targets that could escape, 

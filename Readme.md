@@ -9,3 +9,7 @@ $ pdflatex thesis.tex
 $ biber thesis
 $ pdflatex thesis.tex
 ```
+### Compression (optional)
+```
+$ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dNOPAUSE -dQUIET -dBATCH -dPrinted=false -sOutputFile=thesis-compressed.pdf thesis.pdf
+```

@@ -1,0 +1,25 @@
+
+\chapter{Conclusion \& Future Work}
+\thispagestyle{myheadings}
+In this thesis, we studied the optimal multi-sensor placement problems with different sensing models:
+distance-based line sensor, line-of-sight line sensor, range sensor, mobile line sensor, and mobile point sensing robot.
+Some of the problems are solvable in low polynomial time with traditional methods, while most of them are NP-hard.
+Our way to duel with these intractable problems includes methods like dynamic programming, approximation algorithms,
+local search-type method, integer programming and their combinations. 
+
+In the future, the work in this thesis can be extended in multiple directions.
+
+First, the thesis focus on sensing range as some basic shapes like lines or circles, and they are considered individually.
+A heterogeneous combination of sensors like line sensors used together with range sensors can be very interesting to explore.
+Another possibility is to model the uncertainty of sensors like sensor blackout, which is considered in works like \cite{Olsen2022ICRA}.
+All of these sensing models are used to simplify the sophisticatedness of real-world sensing models of laser beams, radars, lidars and so on.
+So, any model that can drag the problem closer to reality should be valuable to explore.
+
+Second, more realistic constraints related to mobile robots can be added to the problem of sweep line coverage or boundary defense: 
+e.g., for the mobile sensing robot, dynamic constraints like acceleration and turning radius of the robot are not considered in our work, 
+as well as the shape of the robot. 
+Considering these will increase the effectiveness of applying the algorithms developed on real-world mobile sensing robot applications.
+Also, for a mobile sensing robot, other constraints can be modeled such as energy consumption (where acceleration and deceleration matter), and
+blockage of view from each other.
+
+% Third, a missing part in our work 

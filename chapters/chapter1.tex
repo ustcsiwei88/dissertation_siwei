@@ -8,7 +8,7 @@ These will serve as the motivation for this dissertation study
 % and we then introduce the two types of simplified sensing model studied in this thesis, 
 Then, we conduct a literature study of the related work on sensor placement and 
 coverage-related problems. 
-Lastly, some background knowledge of the theories and tools used in this paper will be given. 
+Lastly, some background knowledge of the theories and tools used in this chapter will be given. 
 
 \section{Motivations} 
 Sensor systems are ubiquitous in the modern world. 
@@ -147,17 +147,17 @@ When the variables $x_1, \dots, x_n$ contain continuous variables (continuum), t
 % e.g., its usage in Multi-robot Path Planning Problem (MRPP) \cite{HanYu19IROS, GuoHanYu21ICRA}, sensor coverage. 
 Commercial (mixed) integer programming tools include Gurobi \cite{optimization2019gurobi} and IBM CPLEX \cite{cplex2009v12}, while open-source 
 libraries include SCIP \cite{achterberg2009scip}, CBC \cite{forrest2005cbc}, GLPK \cite{makhorin2008glpk}, and so on. 
-Modern tools, even in the open source branch, are pretty mature and developed, and hard to optimize within the framework itself. 
+Modern tools, even in the open-source branch, are pretty mature and developed, and hard to optimize within the framework itself. 
 While work like \cite{deits2014footstep} in bipedal robot footstep planning and \cite{guo2021spatial} in multi-robot path planning 
 seek performance improvement by constructing different instance formulations.
 
 \subsection{Approximation algorithm}
 For an optimization problem $\Pi$, OPT($\Pi$), or sometimes OPT, 
-denotes the optimal solution of the problem instance. An $(1+\alpha)$-OPT or a $(1+\alpha)$-optimal solution refer
+denotes the optimal solution of the problem instance. An $(1+\alpha)$-OPT or a $(1+\alpha)$-optimal solution refers
 to a solution with an objective value of $(1+\alpha)$OPT for a minimization objective. For the maximization objective,
 the corresponding term is $(1-\alpha)$OPT.
 
-Now we provide the definition of PTAS and FPTAS.
+Now we give the definition of PTAS and FPTAS.
 \begin{definition}[Polynomial Time Approximation Scheme (PTAS)]
     Given any $\varepsilon>0$, if an algorithm $\mathcal A$ runs in polynomial time to the input length. 
     Then if $\mathcal A$ can provide a $(1+\varepsilon)$-OPT solution, the algorithm is called PTAS.
@@ -358,7 +358,7 @@ schwager2009optimal,pavone2009equitable,schwager2009decentralized,
 pierson2017adapting}. 
 %
 In an influential body of work on coverage control \cite{cortes2004coverage,
-martinez2007motion}, a gradient based iterative method is shown to drive 
+martinez2007motion}, a gradient-based iterative method is shown to drive 
 one or multiple mobile sensors to a locally optimal configuration with 
 convergence guarantees. 
 %
@@ -423,7 +423,7 @@ Previously, we have also studied a version of static range guard placement probl
 In contrast to the pursuit-evasion algorithms that deal with searching dynamic and unpredictable targets that could escape, 
 coverage planning/control-related algorithms become more suitable for searching or covering predictable or stationary targets,
 e.g., room sweeping, pesticide and fertilizer spraying, persistent monitoring, and so on 
-\cite{cortes2004coverage, oksanen2009coverage, haksar2020spatial, wei2018coverage, deng2019constrained, 
+\cite{cortes2004coverage, Correia2021icra, oksanen2009coverage, haksar2020spatial, wei2018coverage, deng2019constrained, 
 lan2013planning, cassandras2012optimal, yu2015persistent, palacios2017optimal}. 
 
 % The problem becomes the well-known art-gallery problem \cite{o1987art} when a static deployment of robots is sought after.

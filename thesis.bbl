@@ -2234,6 +2234,48 @@
       \field{title}{Optimally Guarding Perimeters and Regions with Mobile Range Sensors}
       \field{year}{2020}
     \endentry
+    \entry{Correia2021icra}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=377bcd6f2982c2fd692ac0309cc15e47}{%
+           family={Correia\bibnamedelima Marques},
+           familyi={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={João\bibnamedelima Marcos},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=36b2f38f736518c0f6d6ca88ec70384d}{%
+           family={Ramalingam},
+           familyi={R\bibinitperiod},
+           given={Ramya},
+           giveni={R\bibinitperiod}}}%
+        {{hash=daf48d7d8a83e2cdd0c8244dfd610082}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Zherong},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=2ea8f995e9e39a336c9e3e3d5aae1750}{%
+           family={Hauser},
+           familyi={H\bibinitperiod},
+           given={Kris},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{bc4fc2777d0142255eade5194e22f013}
+      \strng{fullhash}{bc4fc2777d0142255eade5194e22f013}
+      \strng{bibnamehash}{bc4fc2777d0142255eade5194e22f013}
+      \strng{authorbibnamehash}{bc4fc2777d0142255eade5194e22f013}
+      \strng{authornamehash}{bc4fc2777d0142255eade5194e22f013}
+      \strng{authorfullhash}{bc4fc2777d0142255eade5194e22f013}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2021 IEEE International Conference on Robotics and Automation (ICRA)}
+      \field{title}{Optimized Coverage Planning for UV Surface Disinfection}
+      \field{year}{2021}
+      \field{pages}{9731\bibrangedash 9737}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/ICRA48506.2021.9561032
+      \endverb
+    \endentry
     \entry{oksanen2009coverage}{article}{}
       \name{author}{2}{}{%
         {{hash=b2ec1920fdc9c158f0fae8d924657330}{%
@@ -3917,6 +3959,7 @@
       \strng{authorbibnamehash}{abb8d28ce8a88590b514a323fd81d605}
       \strng{authornamehash}{abb8d28ce8a88590b514a323fd81d605}
       \strng{authorfullhash}{abb8d28ce8a88590b514a323fd81d605}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
@@ -5248,6 +5291,44 @@
       \endverb
       \verb{url}
       \verb %5Curl%7Bhttps://doc.cgal.org/5.1/Manual/packages.html%5C#PkgAABBTree%7D
+      \endverb
+    \endentry
+    \entry{Olsen2022ICRA}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=1119374b7ce65404526b6936dd6e7590}{%
+           family={Olsen},
+           familyi={O\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod}}}%
+        {{hash=35b4e527dc241a43539cbedeefdb7ac3}{%
+           family={Stiffler},
+           familyi={S\bibinitperiod},
+           given={Nicholas\bibnamedelima M.},
+           giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=62719bed7b95c2b576bf6b784ca15935}{%
+           family={O'Kane},
+           familyi={O\bibinitperiod},
+           given={Jason\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{abb8d28ce8a88590b514a323fd81d605}
+      \strng{fullhash}{abb8d28ce8a88590b514a323fd81d605}
+      \strng{bibnamehash}{abb8d28ce8a88590b514a323fd81d605}
+      \strng{authorbibnamehash}{abb8d28ce8a88590b514a323fd81d605}
+      \strng{authornamehash}{abb8d28ce8a88590b514a323fd81d605}
+      \strng{authorfullhash}{abb8d28ce8a88590b514a323fd81d605}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2022 International Conference on Robotics and Automation (ICRA)}
+      \field{title}{Robust-by-Design Plans for Multi-Robot Pursuit-Evasion}
+      \field{year}{2022}
+      \field{pages}{10716\bibrangedash 10722}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/ICRA46639.2022.9812333
       \endverb
     \endentry
   \enddatalist

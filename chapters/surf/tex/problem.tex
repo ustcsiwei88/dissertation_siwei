@@ -8,11 +8,11 @@ In this study, we explore two common types of coverage models: \emph{visibility}
 %
 In a \emph{visibility}-based sensor coverage model, as the term suggests, a point $p \in S$ is considered covered by a sensor $c$ if $p$ is visible from $c$.
 %, i.e., the straight line path between $p$ and $c$ does not intersect the 3D environment $\mathcal E$. 
-When there are more than one sensor, a point $p$ is covered if it is visible from any sensor $c_i \in \{c_1, \ldots, c_k\}$. 
+When there is more than one sensor, a point $p$ is covered if it is visible from any sensor $c_i \in \{c_1, \ldots, c_k\}$. 
 %
 In a \emph{quality}-based model, the coverage quality of a point $p \in S$ is captured by some function that potentially depends on the sensors, the point $p$, and its neighborhood in $S$. For example, one type of quality measurement can be based on the inverse of the distance between a point $p$ and its closest sensor $c$. 
 
-Formally, we capture the different sensor models under a unified function $f(c_1, \ldots, c_k, p, \mathcal E)$ whose co-domain is non-negative reals, i.e., $f: \mathbb R^{3k + 3} \times \mathcal E \to \mathbb R_+\cup\{0\}$. In what follows, $\mathcal E$ is omitted but understood to be part of the input to $f$. In this paper, the following instantiations are considered:
+Formally, we capture the different sensor models under a unified function $f(c_1, \ldots, c_k, p, \mathcal E)$ whose co-domain is non-negative reals, i.e., $f: \mathbb R^{3k + 3} \times \mathcal E \to \mathbb R_+\cup\{0\}$. In what follows, $\mathcal E$ is omitted but understood to be part of the input to $f$. In this chapter, the following instantiations are considered:
 \begin{itemize}[leftmargin=4mm]
     \item Let $vis(p, c) = 1$ if the point $p$ is visible to the sensor $c$. Otherwise, $vis(p, c) = 0$. For example, an omni-directional visibility model would have $vis(p, c) = 1$ if the open line segment between $p$ and $c$ does not intersect $\mathcal E$. In a model based purely on \textbf{visibility},  
     \begin{align}

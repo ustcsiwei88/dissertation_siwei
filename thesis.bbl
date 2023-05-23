@@ -4304,311 +4304,6 @@
       \field{pages}{403\bibrangedash 419}
       \range{pages}{17}
     \endentry
-    \entry{choset2000coverage}{article}{}
-      \name{author}{1}{}{%
-        {{hash=72811108dcbc25428de5c7e317f511ed}{%
-           family={Choset},
-           familyi={C\bibinitperiod},
-           given={Howie},
-           giveni={H\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{72811108dcbc25428de5c7e317f511ed}
-      \strng{fullhash}{72811108dcbc25428de5c7e317f511ed}
-      \strng{bibnamehash}{72811108dcbc25428de5c7e317f511ed}
-      \strng{authorbibnamehash}{72811108dcbc25428de5c7e317f511ed}
-      \strng{authornamehash}{72811108dcbc25428de5c7e317f511ed}
-      \strng{authorfullhash}{72811108dcbc25428de5c7e317f511ed}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Autonomous Robots}
-      \field{number}{3}
-      \field{title}{Coverage of known spaces: The boustrophedon cellular decomposition}
-      \field{volume}{9}
-      \field{year}{2000}
-      \field{pages}{247\bibrangedash 253}
-      \range{pages}{7}
-    \endentry
-    \entry{huang2001optimal}{inproceedings}{}
-      \name{author}{1}{}{%
-        {{hash=21f7c9a5a901ca6086c42de968e133d9}{%
-           family={Huang},
-           familyi={H\bibinitperiod},
-           given={Wesley\bibnamedelima H},
-           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{21f7c9a5a901ca6086c42de968e133d9}
-      \strng{fullhash}{21f7c9a5a901ca6086c42de968e133d9}
-      \strng{bibnamehash}{21f7c9a5a901ca6086c42de968e133d9}
-      \strng{authorbibnamehash}{21f7c9a5a901ca6086c42de968e133d9}
-      \strng{authornamehash}{21f7c9a5a901ca6086c42de968e133d9}
-      \strng{authorfullhash}{21f7c9a5a901ca6086c42de968e133d9}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings 2001 ICRA. IEEE International Conference on Robotics and Automation (Cat. No. 01CH37164)}
-      \field{title}{Optimal line-sweep-based decompositions for coverage algorithms}
-      \field{volume}{1}
-      \field{year}{2001}
-      \field{pages}{27\bibrangedash 32}
-      \range{pages}{6}
-    \endentry
-    \entry{breitenmoser2010voronoi}{inproceedings}{}
-      \name{author}{5}{}{%
-        {{hash=5c65cc3da1cfb08451fc3cc59c6908e5}{%
-           family={Breitenmoser},
-           familyi={B\bibinitperiod},
-           given={Andreas},
-           giveni={A\bibinitperiod}}}%
-        {{hash=c54985d67e300fac8041d549c20bb2f0}{%
-           family={Schwager},
-           familyi={S\bibinitperiod},
-           given={Mac},
-           giveni={M\bibinitperiod}}}%
-        {{hash=8a4a9744ac5b8e144d593553b42d037c}{%
-           family={Metzger},
-           familyi={M\bibinitperiod},
-           given={Jean-Claude},
-           giveni={J\bibinithyphendelim C\bibinitperiod}}}%
-        {{hash=6ee8958bbf32527489012d8ca7c95ee3}{%
-           family={Siegwart},
-           familyi={S\bibinitperiod},
-           given={Roland},
-           giveni={R\bibinitperiod}}}%
-        {{hash=f74192f92945701041a41bfa429ee111}{%
-           family={Rus},
-           familyi={R\bibinitperiod},
-           given={Daniela},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{8c3eca16e243edce7239c9176dd93190}
-      \strng{fullhash}{8c3eca16e243edce7239c9176dd93190}
-      \strng{bibnamehash}{8c3eca16e243edce7239c9176dd93190}
-      \strng{authorbibnamehash}{8c3eca16e243edce7239c9176dd93190}
-      \strng{authornamehash}{8c3eca16e243edce7239c9176dd93190}
-      \strng{authorfullhash}{8c3eca16e243edce7239c9176dd93190}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2010 IEEE international conference on robotics and automation}
-      \field{title}{Voronoi coverage of non-convex environments with a group of networked robots}
-      \field{year}{2010}
-      \field{pages}{4982\bibrangedash 4989}
-      \range{pages}{8}
-    \endentry
-    \entry{acar2002morse}{article}{}
-      \name{author}{5}{}{%
-        {{hash=9e53fa2c67fdd8f536a59a2a64f6f3cb}{%
-           family={Acar},
-           familyi={A\bibinitperiod},
-           given={Ercan\bibnamedelima U},
-           giveni={E\bibinitperiod\bibinitdelim U\bibinitperiod}}}%
-        {{hash=72811108dcbc25428de5c7e317f511ed}{%
-           family={Choset},
-           familyi={C\bibinitperiod},
-           given={Howie},
-           giveni={H\bibinitperiod}}}%
-        {{hash=12eb353086e603097bb18d6b3bc76555}{%
-           family={Rizzi},
-           familyi={R\bibinitperiod},
-           given={Alfred\bibnamedelima A},
-           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=4a7faddd822b48d3c03e19c00c4f9c66}{%
-           family={Atkar},
-           familyi={A\bibinitperiod},
-           given={Prasad\bibnamedelima N},
-           giveni={P\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
-        {{hash=48638a455feefd161e8212e0dd5f826d}{%
-           family={Hull},
-           familyi={H\bibinitperiod},
-           given={Douglas},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {SAGE Publications Sage UK: London, England}%
-      }
-      \strng{namehash}{c9903482f0bfe2240c373f7d3efe2960}
-      \strng{fullhash}{c9903482f0bfe2240c373f7d3efe2960}
-      \strng{bibnamehash}{c9903482f0bfe2240c373f7d3efe2960}
-      \strng{authorbibnamehash}{c9903482f0bfe2240c373f7d3efe2960}
-      \strng{authornamehash}{c9903482f0bfe2240c373f7d3efe2960}
-      \strng{authorfullhash}{c9903482f0bfe2240c373f7d3efe2960}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{The international journal of robotics research}
-      \field{number}{4}
-      \field{title}{Morse decompositions for coverage tasks}
-      \field{volume}{21}
-      \field{year}{2002}
-      \field{pages}{331\bibrangedash 344}
-      \range{pages}{14}
-    \endentry
-    \entry{lavalle2006sweepline}{inbook}{}
-      \name{author}{1}{}{%
-        {{hash=10b09a560dbab6229987301f9a193d77}{%
-           family={LaValle},
-           familyi={L\bibinitperiod},
-           given={Steven\bibnamedelima M},
-           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Cambridge university press}%
-      }
-      \strng{namehash}{10b09a560dbab6229987301f9a193d77}
-      \strng{fullhash}{10b09a560dbab6229987301f9a193d77}
-      \strng{bibnamehash}{10b09a560dbab6229987301f9a193d77}
-      \strng{authorbibnamehash}{10b09a560dbab6229987301f9a193d77}
-      \strng{authornamehash}{10b09a560dbab6229987301f9a193d77}
-      \strng{authorfullhash}{10b09a560dbab6229987301f9a193d77}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{chapter}{6.2}
-      \field{title}{Planning algorithms}
-      \field{year}{2006}
-    \endentry
-    \entry{kleinberg2006algorithm}{inbook}{}
-      \name{author}{2}{}{%
-        {{hash=e405ae3c720db1b0e447ff5b601b968f}{%
-           family={Kleinberg},
-           familyi={K\bibinitperiod},
-           given={Jon},
-           giveni={J\bibinitperiod}}}%
-        {{hash=b68fe90101326ab15c1bc77e49780304}{%
-           family={Tardos},
-           familyi={T\bibinitperiod},
-           given={Eva},
-           giveni={E\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Pearson Education}%
-      }
-      \strng{namehash}{5f00a850c076daec1a38b3d70f739685}
-      \strng{fullhash}{5f00a850c076daec1a38b3d70f739685}
-      \strng{bibnamehash}{5f00a850c076daec1a38b3d70f739685}
-      \strng{authorbibnamehash}{5f00a850c076daec1a38b3d70f739685}
-      \strng{authornamehash}{5f00a850c076daec1a38b3d70f739685}
-      \strng{authorfullhash}{5f00a850c076daec1a38b3d70f739685}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{chapter}{7.7}
-      \field{title}{Algorithm design}
-      \field{year}{2006}
-    \endentry
-    \entry{cheriyan1989analysis}{article}{}
-      \name{author}{2}{}{%
-        {{hash=7528061412fcda0f10dd09e27a1a7960}{%
-           family={Cheriyan},
-           familyi={C\bibinitperiod},
-           given={Joseph},
-           giveni={J\bibinitperiod}}}%
-        {{hash=1b5a0e2fa2fdabdd747654c5fcfad257}{%
-           family={Maheshwari},
-           familyi={M\bibinitperiod},
-           given={SN},
-           giveni={S\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {SIAM}%
-      }
-      \strng{namehash}{ddb0ac6df27a707fba04be6ce049ba57}
-      \strng{fullhash}{ddb0ac6df27a707fba04be6ce049ba57}
-      \strng{bibnamehash}{ddb0ac6df27a707fba04be6ce049ba57}
-      \strng{authorbibnamehash}{ddb0ac6df27a707fba04be6ce049ba57}
-      \strng{authornamehash}{ddb0ac6df27a707fba04be6ce049ba57}
-      \strng{authorfullhash}{ddb0ac6df27a707fba04be6ce049ba57}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{SIAM Journal on Computing}
-      \field{number}{6}
-      \field{title}{Analysis of preflow push algorithms for maximum network flow}
-      \field{volume}{18}
-      \field{year}{1989}
-      \field{pages}{1057\bibrangedash 1086}
-      \range{pages}{30}
-    \endentry
-    \entry{dinitz1970algorithm}{inproceedings}{}
-      \name{author}{1}{}{%
-        {{hash=236878e09f8e752608aaf0765e1f541a}{%
-           family={Dinitz},
-           familyi={D\bibinitperiod},
-           given={Yefim\bibnamedelima A},
-           giveni={Y\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {Russian Academy of Sciences}%
-      }
-      \strng{namehash}{236878e09f8e752608aaf0765e1f541a}
-      \strng{fullhash}{236878e09f8e752608aaf0765e1f541a}
-      \strng{bibnamehash}{236878e09f8e752608aaf0765e1f541a}
-      \strng{authorbibnamehash}{236878e09f8e752608aaf0765e1f541a}
-      \strng{authornamehash}{236878e09f8e752608aaf0765e1f541a}
-      \strng{authorfullhash}{236878e09f8e752608aaf0765e1f541a}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Doklady Akademii Nauk}
-      \field{number}{4}
-      \field{title}{An algorithm for the solution of the problem of maximal flow in a network with power estimation}
-      \field{volume}{194}
-      \field{year}{1970}
-      \field{pages}{754\bibrangedash 757}
-      \range{pages}{4}
-    \endentry
-    \entry{borradaile2009n}{article}{}
-      \name{author}{2}{}{%
-        {{hash=8fd8149b6f96e049303120d781645b11}{%
-           family={Borradaile},
-           familyi={B\bibinitperiod},
-           given={Glencora},
-           giveni={G\bibinitperiod}}}%
-        {{hash=8fcf65d13cbda16dd45370a516cc1180}{%
-           family={Klein},
-           familyi={K\bibinitperiod},
-           given={Philip},
-           giveni={P\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {ACM New York, NY, USA}%
-      }
-      \strng{namehash}{53d815f950ce2cab2128298d131aca17}
-      \strng{fullhash}{53d815f950ce2cab2128298d131aca17}
-      \strng{bibnamehash}{53d815f950ce2cab2128298d131aca17}
-      \strng{authorbibnamehash}{53d815f950ce2cab2128298d131aca17}
-      \strng{authornamehash}{53d815f950ce2cab2128298d131aca17}
-      \strng{authorfullhash}{53d815f950ce2cab2128298d131aca17}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of the ACM (JACM)}
-      \field{number}{2}
-      \field{title}{An O (n log n) algorithm for maximum st-flow in a directed planar graph}
-      \field{volume}{56}
-      \field{year}{2009}
-      \field{pages}{1\bibrangedash 30}
-      \range{pages}{30}
-    \endentry
     \entry{lykou2020defending}{article}{}
       \name{author}{3}{}{%
         {{hash=3ffb5f56c77845b9c767b2bd3e92d643}{%
@@ -5089,6 +4784,311 @@
       \field{year}{1975}
       \field{pages}{184\bibrangedash 193}
       \range{pages}{10}
+    \endentry
+    \entry{choset2000coverage}{article}{}
+      \name{author}{1}{}{%
+        {{hash=72811108dcbc25428de5c7e317f511ed}{%
+           family={Choset},
+           familyi={C\bibinitperiod},
+           given={Howie},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{72811108dcbc25428de5c7e317f511ed}
+      \strng{fullhash}{72811108dcbc25428de5c7e317f511ed}
+      \strng{bibnamehash}{72811108dcbc25428de5c7e317f511ed}
+      \strng{authorbibnamehash}{72811108dcbc25428de5c7e317f511ed}
+      \strng{authornamehash}{72811108dcbc25428de5c7e317f511ed}
+      \strng{authorfullhash}{72811108dcbc25428de5c7e317f511ed}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Autonomous Robots}
+      \field{number}{3}
+      \field{title}{Coverage of known spaces: The boustrophedon cellular decomposition}
+      \field{volume}{9}
+      \field{year}{2000}
+      \field{pages}{247\bibrangedash 253}
+      \range{pages}{7}
+    \endentry
+    \entry{huang2001optimal}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=21f7c9a5a901ca6086c42de968e133d9}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Wesley\bibnamedelima H},
+           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{21f7c9a5a901ca6086c42de968e133d9}
+      \strng{fullhash}{21f7c9a5a901ca6086c42de968e133d9}
+      \strng{bibnamehash}{21f7c9a5a901ca6086c42de968e133d9}
+      \strng{authorbibnamehash}{21f7c9a5a901ca6086c42de968e133d9}
+      \strng{authornamehash}{21f7c9a5a901ca6086c42de968e133d9}
+      \strng{authorfullhash}{21f7c9a5a901ca6086c42de968e133d9}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings 2001 ICRA. IEEE International Conference on Robotics and Automation (Cat. No. 01CH37164)}
+      \field{title}{Optimal line-sweep-based decompositions for coverage algorithms}
+      \field{volume}{1}
+      \field{year}{2001}
+      \field{pages}{27\bibrangedash 32}
+      \range{pages}{6}
+    \endentry
+    \entry{breitenmoser2010voronoi}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=5c65cc3da1cfb08451fc3cc59c6908e5}{%
+           family={Breitenmoser},
+           familyi={B\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c54985d67e300fac8041d549c20bb2f0}{%
+           family={Schwager},
+           familyi={S\bibinitperiod},
+           given={Mac},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8a4a9744ac5b8e144d593553b42d037c}{%
+           family={Metzger},
+           familyi={M\bibinitperiod},
+           given={Jean-Claude},
+           giveni={J\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=6ee8958bbf32527489012d8ca7c95ee3}{%
+           family={Siegwart},
+           familyi={S\bibinitperiod},
+           given={Roland},
+           giveni={R\bibinitperiod}}}%
+        {{hash=f74192f92945701041a41bfa429ee111}{%
+           family={Rus},
+           familyi={R\bibinitperiod},
+           given={Daniela},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{8c3eca16e243edce7239c9176dd93190}
+      \strng{fullhash}{8c3eca16e243edce7239c9176dd93190}
+      \strng{bibnamehash}{8c3eca16e243edce7239c9176dd93190}
+      \strng{authorbibnamehash}{8c3eca16e243edce7239c9176dd93190}
+      \strng{authornamehash}{8c3eca16e243edce7239c9176dd93190}
+      \strng{authorfullhash}{8c3eca16e243edce7239c9176dd93190}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2010 IEEE international conference on robotics and automation}
+      \field{title}{Voronoi coverage of non-convex environments with a group of networked robots}
+      \field{year}{2010}
+      \field{pages}{4982\bibrangedash 4989}
+      \range{pages}{8}
+    \endentry
+    \entry{acar2002morse}{article}{}
+      \name{author}{5}{}{%
+        {{hash=9e53fa2c67fdd8f536a59a2a64f6f3cb}{%
+           family={Acar},
+           familyi={A\bibinitperiod},
+           given={Ercan\bibnamedelima U},
+           giveni={E\bibinitperiod\bibinitdelim U\bibinitperiod}}}%
+        {{hash=72811108dcbc25428de5c7e317f511ed}{%
+           family={Choset},
+           familyi={C\bibinitperiod},
+           given={Howie},
+           giveni={H\bibinitperiod}}}%
+        {{hash=12eb353086e603097bb18d6b3bc76555}{%
+           family={Rizzi},
+           familyi={R\bibinitperiod},
+           given={Alfred\bibnamedelima A},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=4a7faddd822b48d3c03e19c00c4f9c66}{%
+           family={Atkar},
+           familyi={A\bibinitperiod},
+           given={Prasad\bibnamedelima N},
+           giveni={P\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=48638a455feefd161e8212e0dd5f826d}{%
+           family={Hull},
+           familyi={H\bibinitperiod},
+           given={Douglas},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SAGE Publications Sage UK: London, England}%
+      }
+      \strng{namehash}{c9903482f0bfe2240c373f7d3efe2960}
+      \strng{fullhash}{c9903482f0bfe2240c373f7d3efe2960}
+      \strng{bibnamehash}{c9903482f0bfe2240c373f7d3efe2960}
+      \strng{authorbibnamehash}{c9903482f0bfe2240c373f7d3efe2960}
+      \strng{authornamehash}{c9903482f0bfe2240c373f7d3efe2960}
+      \strng{authorfullhash}{c9903482f0bfe2240c373f7d3efe2960}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The international journal of robotics research}
+      \field{number}{4}
+      \field{title}{Morse decompositions for coverage tasks}
+      \field{volume}{21}
+      \field{year}{2002}
+      \field{pages}{331\bibrangedash 344}
+      \range{pages}{14}
+    \endentry
+    \entry{lavalle2006sweepline}{inbook}{}
+      \name{author}{1}{}{%
+        {{hash=10b09a560dbab6229987301f9a193d77}{%
+           family={LaValle},
+           familyi={L\bibinitperiod},
+           given={Steven\bibnamedelima M},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge university press}%
+      }
+      \strng{namehash}{10b09a560dbab6229987301f9a193d77}
+      \strng{fullhash}{10b09a560dbab6229987301f9a193d77}
+      \strng{bibnamehash}{10b09a560dbab6229987301f9a193d77}
+      \strng{authorbibnamehash}{10b09a560dbab6229987301f9a193d77}
+      \strng{authornamehash}{10b09a560dbab6229987301f9a193d77}
+      \strng{authorfullhash}{10b09a560dbab6229987301f9a193d77}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{chapter}{6.2}
+      \field{title}{Planning algorithms}
+      \field{year}{2006}
+    \endentry
+    \entry{kleinberg2006algorithm}{inbook}{}
+      \name{author}{2}{}{%
+        {{hash=e405ae3c720db1b0e447ff5b601b968f}{%
+           family={Kleinberg},
+           familyi={K\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b68fe90101326ab15c1bc77e49780304}{%
+           family={Tardos},
+           familyi={T\bibinitperiod},
+           given={Eva},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Pearson Education}%
+      }
+      \strng{namehash}{5f00a850c076daec1a38b3d70f739685}
+      \strng{fullhash}{5f00a850c076daec1a38b3d70f739685}
+      \strng{bibnamehash}{5f00a850c076daec1a38b3d70f739685}
+      \strng{authorbibnamehash}{5f00a850c076daec1a38b3d70f739685}
+      \strng{authornamehash}{5f00a850c076daec1a38b3d70f739685}
+      \strng{authorfullhash}{5f00a850c076daec1a38b3d70f739685}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{chapter}{7.7}
+      \field{title}{Algorithm design}
+      \field{year}{2006}
+    \endentry
+    \entry{cheriyan1989analysis}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7528061412fcda0f10dd09e27a1a7960}{%
+           family={Cheriyan},
+           familyi={C\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1b5a0e2fa2fdabdd747654c5fcfad257}{%
+           family={Maheshwari},
+           familyi={M\bibinitperiod},
+           given={SN},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SIAM}%
+      }
+      \strng{namehash}{ddb0ac6df27a707fba04be6ce049ba57}
+      \strng{fullhash}{ddb0ac6df27a707fba04be6ce049ba57}
+      \strng{bibnamehash}{ddb0ac6df27a707fba04be6ce049ba57}
+      \strng{authorbibnamehash}{ddb0ac6df27a707fba04be6ce049ba57}
+      \strng{authornamehash}{ddb0ac6df27a707fba04be6ce049ba57}
+      \strng{authorfullhash}{ddb0ac6df27a707fba04be6ce049ba57}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SIAM Journal on Computing}
+      \field{number}{6}
+      \field{title}{Analysis of preflow push algorithms for maximum network flow}
+      \field{volume}{18}
+      \field{year}{1989}
+      \field{pages}{1057\bibrangedash 1086}
+      \range{pages}{30}
+    \endentry
+    \entry{dinitz1970algorithm}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=236878e09f8e752608aaf0765e1f541a}{%
+           family={Dinitz},
+           familyi={D\bibinitperiod},
+           given={Yefim\bibnamedelima A},
+           giveni={Y\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Russian Academy of Sciences}%
+      }
+      \strng{namehash}{236878e09f8e752608aaf0765e1f541a}
+      \strng{fullhash}{236878e09f8e752608aaf0765e1f541a}
+      \strng{bibnamehash}{236878e09f8e752608aaf0765e1f541a}
+      \strng{authorbibnamehash}{236878e09f8e752608aaf0765e1f541a}
+      \strng{authornamehash}{236878e09f8e752608aaf0765e1f541a}
+      \strng{authorfullhash}{236878e09f8e752608aaf0765e1f541a}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Doklady Akademii Nauk}
+      \field{number}{4}
+      \field{title}{An algorithm for the solution of the problem of maximal flow in a network with power estimation}
+      \field{volume}{194}
+      \field{year}{1970}
+      \field{pages}{754\bibrangedash 757}
+      \range{pages}{4}
+    \endentry
+    \entry{borradaile2009n}{article}{}
+      \name{author}{2}{}{%
+        {{hash=8fd8149b6f96e049303120d781645b11}{%
+           family={Borradaile},
+           familyi={B\bibinitperiod},
+           given={Glencora},
+           giveni={G\bibinitperiod}}}%
+        {{hash=8fcf65d13cbda16dd45370a516cc1180}{%
+           family={Klein},
+           familyi={K\bibinitperiod},
+           given={Philip},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM New York, NY, USA}%
+      }
+      \strng{namehash}{53d815f950ce2cab2128298d131aca17}
+      \strng{fullhash}{53d815f950ce2cab2128298d131aca17}
+      \strng{bibnamehash}{53d815f950ce2cab2128298d131aca17}
+      \strng{authorbibnamehash}{53d815f950ce2cab2128298d131aca17}
+      \strng{authornamehash}{53d815f950ce2cab2128298d131aca17}
+      \strng{authorfullhash}{53d815f950ce2cab2128298d131aca17}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the ACM (JACM)}
+      \field{number}{2}
+      \field{title}{An O (n log n) algorithm for maximum st-flow in a directed planar graph}
+      \field{volume}{56}
+      \field{year}{2009}
+      \field{pages}{1\bibrangedash 30}
+      \range{pages}{30}
     \endentry
     \entry{o2017visibility}{incollection}{}
       \name{author}{1}{}{%

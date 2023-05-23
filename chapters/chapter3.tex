@@ -20,6 +20,28 @@
 \def\dopgt{\textsc{{D-OPG}${}_{\mathrm{2D}}$}\xspace}
 \def\dorgt{\textsc{{D-ORG}${}_{\mathrm{2D}}$}\xspace}
 
+
+In this chapter, we consider the problem of using mobile robots equipped 
+with range sensors to guard (1D) perimeters or (2D) regions. Given 
+a bounded polygonal one- or two-dimensional set to be secured, 
+and $k$ mobile robots where robot $i$'s sensor covers a circular region of 
+radius $r_i$, we seek deployment of the robots so that $\max r_i$ is 
+minimized. That is, we would like to minimize the maximum single-sensor 
+coverage across all sensors. We denote this multi-sensor coverage problem 
+under the umbrella term {\em optimal set guarding with 2D sensors}, or 
+\osgt.\footnote{The subscript is placed here to distinguish our setup 
+from the \opg problem studied in \cite{fenghangaoyu2019efficient}, which assumes 
+a 1D sensing model.} The specific problem for guarding
+perimeters (resp., regions) is denoted as {\em optimal perimeter 
+(resp., region) guarding with 2D sensors}, abbreviated as \opgt (resp., 
+\orgt). Beside direct relevance to sensing, surveillance, and monitoring 
+applications using mobile sensors \cite{batalin2002spreading,
+cortes2004coverage,fenghangaoyu2019efficient}, \osgt applies to other robotics
+related problem domains, e.g., the deployment of ad-hoc mobile wireless 
+networks \cite{correll2009ad,gil2012communication}, in which case an 
+optimal solution to \osgt provides a lower bound on the guaranteed network 
+strength over the targeted 2D region. 
+
 \section{Introduction}\label{sec:osg-intro}
 \input{chapters/osg/texs/01-intro}
 

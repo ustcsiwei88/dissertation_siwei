@@ -1,6 +1,18 @@
 \chapter{Separating Polygonal Sets with Minimum Sets of Lines}
 \thispagestyle{myheadings}
 
+After two chapters' discussion on covering perimeters or regions, which is essentially separating 
+some critical polygonal regions from the outside workspace. 
+This chapter digs deeper into this problem by studying the separation of more than two regions. 
+To simplify the problem, a line-of-sight sensing model will be adopted, where each sensor can cover
+an unobstructed line segment like a laser beam. Also, the regions are assumed to be polygonal.
+
+The objective in this case is to minimize the number of sensors used to separate these polygonal sets 
+at the existence of obstacles.
+% The main objective here is to minimize the number of sensor used.
+The problem is NP-hard even for the problem of separating two sets of regions with the minimum number of lines. 
+Still, integer programming can provide a near-optimal solution for around 20 objects in a reasonable amount of time. 
+
 \section{Introduction}
 \input{chapters/bf/tex/intro}\label{sec:bf-intro}
 

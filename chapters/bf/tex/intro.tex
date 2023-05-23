@@ -11,7 +11,7 @@ Alternatively, the computed line segments can serve as patrolling routes for aut
 %These applications shares the common objective of better coverage or sensing of the environment with guards. 
 %In reality, the types of barriers varies from barriers with range sensibility like lidar, visibility-based barriers like cameras or guards, to physical straight line fences or walls.
 %
-Motivated by the above stated scenarios and inspired by earlier research in robotics on barrier forming \cite{kloder2007barrier,kloder2008partial}, i.e., erecting barriers for separating regions of interest, in this chapter, we examine the variation of finding the minimum number of straight line segments for isolating multiple sets of points of polygons in a two-dimensional workspace. 
+Motivated by the above-stated scenarios and inspired by earlier research in robotics on barrier forming \cite{kloder2007barrier,kloder2008partial}, i.e., erecting barriers for separating regions of interest, in this chapter, we examine the variation of finding the minimum number of straight line segments for isolating multiple sets of points of polygons in a two-dimensional workspace. 
 Fig~\ref{fig:bf-ex}[left] illustrates an instance where three colored polygonal sets are to be separated from each other and the grey polygons are obstacles. Fig~\ref{fig:surf-ex}[right] shows a possible solution which is fairly non-trivial 
 to obtain. 
 %
@@ -55,7 +55,7 @@ In the study of pursuit evasion or more generally differential games \cite{ho196
 % flash light searcher, 1-2 inf searcher
 such scenarios often happen where several agents are tasked to search an environment for hidden rogue agents or to protect critical regions from outsider invaders, which amount to creating and maintaining static or dynamic barriers of some form.  
 %
-Among the approaches taken in finding solutions for these problems, some resort to discretize the environment into graph representations and conduct search over them \cite{kirousis1986searching, sachs2004visibility}, while others adopt probabilistic reasoning \cite{lau2005optimal, yu2011shadow}. 
+Among the approaches taken in finding solutions for these problems, some resort to discretizing the environment into graph representations and conducting search over them \cite{kirousis1986searching, sachs2004visibility}, while others adopt probabilistic reasoning \cite{lau2005optimal, yu2011shadow}. 
 %
 In particular, Tovar et al. \cite{tovar2009sensor} studied a problem that examines how to untangle sensor beam crossings to reason about the state of a robot, and use the insight to build algorithms for driving a robot to a desired state. In a sense, their study can be viewed as studying a problem that is a dual of the problem that we study here. 
 
@@ -71,11 +71,11 @@ To tackle the proposed problem, a novel and efficient network-flow based method 
 In \cite{abrahamsen2020geometric}, the work is extended to multiple groups of objects.
 The following work \cite{kloder2008thesis} includes a similar problem formation to the problem studied in this chapter, where the objective is minimizing the number of fixed-length line segments used. 
 %
-However, that proposed method in \cite{kloder2008thesis} uses Tarski sentence \cite{tarski1949decision} which, to our knowledge, does not have very effective method to duel with.
+However, the proposed method in \cite{kloder2008thesis} uses Tarski sentence \cite{tarski1949decision} which, to our knowledge, does not have very effective method to deal with.
 
 This work is closely related to several problems in computational geometry, especially point set shattering which seeks a complete separation among a single set of points \cite{freimer1991complexity, har2020separating}. 
-Bichromatic point sets or polyherdral separation problem uses wedges, axis-aligned lines, chords, parallel lines, or circles to separate two sets of points or polyhedra \cite{devillers2001separating,armaselu2017geometric,boissonnat2001circular, demaine2005separating}. 
-Work on these problems often put on specific constraints such as working with convex objects or simple polygons without holes, adopting non-crossing or parallel lines as the separator, and so on. 
+Bichromatic point sets or polyhedral separation problem uses wedges, axis-aligned lines, chords, parallel lines, or circles to separate two sets of points or polyhedra \cite{devillers2001separating,armaselu2017geometric,boissonnat2001circular, demaine2005separating}. 
+Work on these problems often introduces specific constraints such as working with convex objects or simple polygons without holes, adopting non-crossing or parallel lines as the separator, and so on. 
 
 \noindent \textbf{Chapter Structure}.
 The rest of the chapter starts with formulating the barrier formation problem and 

@@ -2,6 +2,18 @@
 \chapter{Sweep Line Coverage and Boundary Defense}
 \thispagestyle{myheadings}
 
+This chapter deals with the dynamic setting for mobile sensing robots, 
+and two different but related problems are studied. 
+The first problem is the boundary defense problem in the context of heterogeneous defenders first studied in \cite{adler2022role}.
+It can be seen as an extension of the perimeter defense problem \cite{shishika2020review}. 
+In this problem, there are $k$ sensing robots moving on top of a perimeter with different speeds $v_1,\dots,v_k$.
+A sequence of attacks $\langle loc_i, t_i \rangle_{i=1}^{n}$ are given at different time stamps and at different locations.
+The objective is to intercept as many attacks as possible.
+The second problem is the coordinated sweeping problem where a group of robots coordinate to sweep a region 
+with obstacles. Each robot possesses a given sensing capability, and the sweeping trajectory is 
+given beforehand. The objective of it is to minimize the number of robots used such that the sweeping plan 
+can be executed and every point in the workspace is sensed with a certain required quality. 
+
 \section{Boundary Defense}
 \def\prob{{\texttt{{BDHD}}}\xspace}
 \def\ours{{{{EDP}}}\xspace}

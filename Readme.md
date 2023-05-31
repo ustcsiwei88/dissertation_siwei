@@ -5,7 +5,7 @@ $ sudo apt-get install texlive texlive-formats-extra texlive-bibtex-extra biber 
 ```
 ### Compilation
 ```
-$ pdflatex thesis.tex
+$ pdflatex thesis.tex # hit enter if it shows question mark
 $ biber thesis
 $ pdflatex thesis.tex
 ```

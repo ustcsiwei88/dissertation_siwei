@@ -5318,8 +5318,8 @@
       \strng{authornamehash}{abb8d28ce8a88590b514a323fd81d605}
       \strng{authorfullhash}{abb8d28ce8a88590b514a323fd81d605}
       \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2022 International Conference on Robotics and Automation (ICRA)}

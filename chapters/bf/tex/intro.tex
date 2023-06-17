@@ -35,9 +35,9 @@ Whereas all three settings are NP-hard to optimally solve, we derive an effectiv
 %
 The  method first systematically computes candidate barrier set containing a minimum separating barrier, and then builds a novel integer programming model for finding the minimum barrier. 
 %
-Following a similar approach, we also develop a method that computes solutions for the third setting that is proven to be at least $2$-optimal. 
+Following a similar approach, we also develop a method that computes solutions for the third set that is proven to be at least $2$-optimal. 
 %
-We provide theoretical analysis that shed some light on why the setting involving polygonal sets is more difficult to solve.
+We provide a theoretical analysis that sheds some light on why the setting involving polygonal sets is more difficult to solve.
 %
 Extensive simulation study corroborates the effectiveness of our algorithms. 
 
@@ -50,7 +50,7 @@ Extensive simulation study corroborates the effectiveness of our algorithms.
 
 
 \noindent\textbf{Related Work}.
-Our investigation of barrier forming has its origins from several research areas.
+Our investigation of barrier forming has its origins in several research areas.
 In the study of pursuit evasion or more generally differential games \cite{ho1965differential,isaacs1999differential,hajek2008pursuit,tovar2009sensor,simov2000pursuit,guibas1997visibility,kameda2006online,kirousis1986searching, sachs2004visibility,lau2005optimal, yu2011shadow, olsen2022robust}, 
 % flash light searcher, 1-2 inf searcher
 such scenarios often happen where several agents are tasked to search an environment for hidden rogue agents or to protect critical regions from outsider invaders, which amount to creating and maintaining static or dynamic barriers of some form.  
@@ -61,17 +61,19 @@ In particular, Tovar et al. \cite{tovar2009sensor} studied a problem that examin
 
 %\textcolor{red}{JJ's edit location}
 
-Barrier forming problems can also be seen as a type of sensor coverage problem. 
+The barrier forming problem can also be seen as a type of sensor coverage problem. 
 %
-A series of study of perimeter defense/guarding problems aim at covering the boundaries of some regions to protect them from the outside \cite{shishika2020cooperative, macharet2020adaptive, fenghangaoyu2019efficient, fengyu2020optimally}, which share similar motivations. 
-The barrier forming problem has more flexible solutions by not fixing the specific boundaries to secure for the critical regions,
-which can be more general and closer to reality.
-In \cite{kloder2007barrier}, the authors solved the barrier coverage problem optimally under non-trivial environment to minimize the total length of the barriers between two groups of polygonal objects. 
+A series of studies on perimeter defense/guarding problems aim at covering the boundaries of some regions to protect them from the outside \cite{shishika2020cooperative, macharet2020adaptive, fenghangaoyu2019efficient, fengyu2020optimally}, which share similar motivations. 
+The barrier forming problem has more flexible solutions by not fixing the specific boundaries to secure the critical regions,
+which can be more general and closer to reality in certain cases.
+The concept of barrier coverage originates from \cite{gage1992command}, together with the blanket and sweep coverage. 
+In \cite{kumar2005barrier}, $k$-barrier was studied. 
+In \cite{kloder2007barrier}, the authors solved the min-distance barrier coverage problem optimally under non-trivial environment to minimize the total length of the barriers between two groups of polygonal objects. 
 To tackle the proposed problem, a novel and efficient network-flow based method is applied. 
-In \cite{abrahamsen2020geometric}, the work is extended to multiple groups of objects.
+Multiple groups of objects are tackled in \cite{abrahamsen2020geometric}.
 The following work \cite{kloder2008thesis} includes a similar problem formation to the problem studied in this chapter, where the objective is minimizing the number of fixed-length line segments used. 
 %
-However, the proposed method in \cite{kloder2008thesis} uses Tarski sentence \cite{tarski1949decision} which, to our knowledge, does not have very effective method to deal with.
+However, the proposed method in \cite{kloder2008thesis} uses Tarski sentence \cite{tarski1949decision} which, to our knowledge, does not have a very effective computational tool to deal with.
 
 This work is closely related to several problems in computational geometry, especially point set shattering which seeks a complete separation among a single set of points \cite{freimer1991complexity, har2020separating}. 
 Bichromatic point sets or polyhedral separation problem uses wedges, axis-aligned lines, chords, parallel lines, or circles to separate two sets of points or polyhedra \cite{devillers2001separating,armaselu2017geometric,boissonnat2001circular, demaine2005separating}. 

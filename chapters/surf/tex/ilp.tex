@@ -6,7 +6,7 @@ We work with two discretizations, the surface $S$ to be covered and the space wh
 %For the actual computation, we first work only with samples of $S$. For each sample $p \in S$, we then sample the $2$-sphere $\mathbb S^2$ around $p$ to get a unit vector $\vec{v}$. For each $(p, \vec{v})$, we compute the point $p' \in \mathcal E$ that blocks the ray starting at $p$ in the direction of $\vec{v}$. This information is then used to compute pairwise visibility information between the surface samples and sensor location samples. Such an approach decouples the visibility computation between the two sample sets. 
 
 %
-With the visibility pre-computation performed, we are ready to construct the fully ILP models. For all three problems, recall that we have $S_N = \{o_1, \ldots, o_N\}$ for discretizing the surface $S$ through grid-based sampling. 
+With the visibility pre-computation performed, we are ready to construct the ILP models. For all three problems, recall that we have $S_N = \{o_1, \ldots, o_N\}$ for discretizing the surface $S$ through grid-based sampling. 
 We use boolean variable $y_i$ to indicate whether sample $o_i$ is covered. 
 Candidate sensor locations are also discretized to obtain a sample set $\{c_1, \ldots, c_M\}$, from which $k$ locations would be selected with $z_i$ indicating whether $c_i$ is selected. 
 The ILP model for the Problem~\ref{p:surf-1} is

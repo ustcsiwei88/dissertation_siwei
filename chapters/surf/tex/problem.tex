@@ -1,4 +1,4 @@
-\subsection{Sensor Placement for Optimal Coverage: Formulations}
+\section{Sensor Placement for Optimal Coverage: Formulations}
 Let $\mathcal E \subset \mathbb R^3$ be a bounded three-dimensional workspace that is path-connected, e.g., a hilly terrain or an intensive care unit (ICU) in a hospital. We consider the problem of deploying $k$ ``mobile sensors'', $c_1, \ldots, c_k$, to guard a \emph{critical subset} $S$ embedded in the surface of $\mathcal E$, i.e., $S \subset \partial \mathcal E$ where $\partial$ is the boundary operator. For example, if $\mathcal E$ is a hospital ICU, $S$ may be a part of its interior surface. The sensors are to be deployed to achieve a globally optimal coverage of $S$ satisfying some prescribed objective, to be made more precise as the problems are further grounded for specific sensor models. We denote this broad class of problems as \emph{Sensor Placement for Optimal Coverage} (\spoc). 
 %
 
@@ -12,7 +12,7 @@ When there is more than one sensor, a point $p$ is covered if it is visible from
 %
 In a \emph{quality}-based model, the coverage quality of a point $p \in S$ is captured by some function that potentially depends on the sensors, the point $p$, and its neighborhood in $S$. For example, one type of quality measurement can be based on the inverse of the distance between a point $p$ and its closest sensor $c$. 
 
-Formally, we capture the different sensor models under a unified function $f(c_1, \ldots, c_k, p, \mathcal E)$ whose co-domain is non-negative reals, i.e., $f: \mathbb R^{3k + 3} \times \mathcal E \to \mathbb R_+\cup\{0\}$. In what follows, $\mathcal E$ is omitted but understood to be part of the input to $f$. In this chapter, the following instantiations are considered:
+Formally, we capture the different sensor models under a unified function $f(c_1, \ldots, c_k, p, \mathcal E)$ whose co-domain is non-negative real, i.e., $f: \mathbb R^{3k + 3} \times \mathcal E \to \mathbb R_+\cup\{0\}$. In what follows, $\mathcal E$ is omitted but understood to be part of the input to $f$. In this chapter, the following instantiations are considered:
 \begin{itemize}[leftmargin=4mm]
     \item Let $vis(p, c) = 1$ if the point $p$ is visible to the sensor $c$. Otherwise, $vis(p, c) = 0$. For example, an omni-directional visibility model would have $vis(p, c) = 1$ if the open line segment between $p$ and $c$ does not intersect $\mathcal E$. In a model based purely on \textbf{visibility},  
     \begin{align}
@@ -26,9 +26,7 @@ Formally, we capture the different sensor models under a unified function $f(c_1
     \end{align}
 \end{itemize}
 
-
-
-All above models have direct and practical applications. 
+All the above models have direct and practical applications. 
 A visibility model is applicable to the deployment of a network of $360^{\circ}$ cameras for monitoring. 
 Letting $\phi(p, c_i) = \lVert pc_i\rVert^{-1}$ ($\lVert pc_i\rVert$ denotes the distance between $p$ and $c_i$), 
 the quality maximization model becomes the $k$-center problem \cite{weber1929theory} if we optimize $\min_p f(c_1, \ldots, c_k, p)$, 
@@ -54,18 +52,18 @@ To fully ground the discussion that follows, we formulate three concrete optimiz
 
 \begin{problem}[Cumulative Quality]\label{p:surf-3} 
     Given $S \subset \partial \mathcal E$ with $\mathcal E \subset \mathbb R^{3}$, 
-    $c_i \in \mathbb R^3$, $1 \le i \le k$, and $f(c_1, \ldots, c_k, p)$ from \eqref{f:surf-3} with $\phi(p, c_i) = |lVert pc_i\rVert^{-2}\langle \hat{n}_p, \hat{n}_{pc_i} \rangle$ where $\hat{n}_p$ is the unit normal of $S$ at $p$ and $\hat{n}_{pc_i}$ is the unit vector in the direction from $p$ to $c_i$, 
+    $c_i \in \mathbb R^3$, $1 \le i \le k$, and $f(c_1, \ldots, c_k, p)$ from \eqref{f:surf-3} with $\phi(p, c_i) = |lVert pc_i \rVert^{-2}\langle \hat{n}_p, \hat{n}_{pc_i} \rangle$ where $\hat{n}_p$ is the unit normal of $S$ at $p$ and $\hat{n}_{pc_i}$ is the unit vector in the direction from $p$ to $c_i$, 
     determine a placement of $c_1, \ldots, c_k$ that maximizes the \ul{coverage area where $f$ is above a given threshold} $\Phi > 0$,
-    $supp(f - \Phi) = \{p \in S \mid \sum_{1\le i \le k} \frac{vis(p, c_i)\langle \hat{n}_p, \hat{n}_{pc_i} \rangle}{ \lVert pc_i|rVert ^2} > \Phi \}.$  
+    $supp(f - \Phi) = \{p \in S \mid \sum_{1\le i \le k} \frac{vis(p, c_i)\langle \hat{n}_p, \hat{n}_{pc_i} \rangle}{ \lVert pc_i \rVert ^2} > \Phi \}.$  
 \end{problem}
 
 
-\begin{wrapfigure}[11]{r}{1.4in}
-  \vspace*{-1mm}
-  \begin{overpic}[width=1.4in,tics=5]{chapters/surf/fig/exposure.png}
+\begin{wrapfigure}{r}{1.4in}
+%   \vspace*{-1mm}
+  \begin{overpic}[width=1.4in]{chapters/surf/fig/exposure.png}
 	\end{overpic}
-\vspace*{-3.5mm}
-\caption[Surface exposure]{For a point with the normal shown as the arrow, light sources on the same dotted curve provide same level of exposure.}
+% \vspace*{-3.5mm}
+\caption[Surface exposure]{For a point with the normal shown as the arrow, light sources on the same dotted curve provide the same level of exposure.}
 \label{fig:surf-exposure}
 \end{wrapfigure}
 An implicit assumption for Problem~\ref{p:surf-2} to be meaningful is that an arbitrary $p \in S$ is visible to the closest sensor, 
@@ -80,9 +78,9 @@ A 2D illustration of the three models is given in ~\ref{fig:surf-models}.
 \begin{figure}[ht]
     \vspace{1mm}
 \centering
-\includegraphics[width=0.155\textwidth]{chapters/surf/fig/model1-eps-converted-to.pdf}
-\includegraphics[width=0.155\textwidth]{chapters/surf/fig/model2-eps-converted-to.pdf}
-\includegraphics[width=0.155\textwidth]{chapters/surf/fig/model3-eps-converted-to.pdf}
+\includegraphics[width=0.305\textwidth]{chapters/surf/fig/model1-eps-converted-to.pdf}
+\includegraphics[width=0.305\textwidth]{chapters/surf/fig/model2-eps-converted-to.pdf}
+\includegraphics[width=0.305\textwidth]{chapters/surf/fig/model3-eps-converted-to.pdf}
 \centering
     \vspace{1mm}
 \caption[Illustration of the effects of two sensors]{Illustration of the effects of two sensors (or light sources) under three different models. \
@@ -99,5 +97,5 @@ Problems~\ref{p:surf-1}-\ref{p:surf-3} allow sensor locations to be anywhere in 
 In practice, sensor locations are often limited to a 2D surface. 
 For example, in a museum or a bus, cameras are mounted on walls and ceilings. 
 For drones surveying an area, there is often a preferred height to fly at. 
-With this in mind, whereas algorithms we develop are general, 
-the evaluation is mainly focused on practical settings where sensors locations are confined to some 2D surface.
+With this in mind, whereas the algorithms we develop are general, 
+the evaluation is mainly focused on practical settings where sensor locations are confined to some plane (e.g., the roof of a room).

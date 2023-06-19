@@ -3,7 +3,7 @@ using ILP (or the approximation algorithm for Problem~\ref{p:surf-2}) as the fir
 
 We develop two such routines. The first is generally applicable and straightforward to implement: as the discretization level increases, we move the set of initial sensor locations (computed by Algorithm~\ref{alg:surf-greedy} or ILP) locally, one at a time. More formally, given an initial solution $\mathcal C = \{c_1, \dots, c_k\}$, denote $S_j \subset S$ as the region covered (possibly partially when working with Problem~\ref{p:surf-3}) by the sensor deployed at $c_j$. For each $S_j$, we try improving the quality of the solution by finding a better location for $c_j$ to cover $S_j$ at a finer resolution. Subsequently, $S_j$ can be updated based on the new $c_j$. The process may be repeated until convergence. 
 
-The second local improvement routine is via solving a ``1-cener'' like problem 
+The second local improvement routine is via solving a ``1-center'' like problem 
 and is applicable to Problem~\ref{p:surf-2} and Problem~\ref{p:surf-3}. Due to limited space, 
 we omit the lengthy algorithmic details and give a high-level description. 
 For Problem~\ref{p:surf-2}, a sensor located at $c_j$ is ``responsible'' for visible points of $S$ 

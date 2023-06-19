@@ -15,11 +15,11 @@ Sensor systems are ubiquitous in the modern world.
 To list a few, systems of radar antennas 
 or other sensor sources are frequently used as base stations for signal transmission, 
 or intruder detection system (IDS) for monitoring hazards. 
-Early intruder defense system can date back to ancient times, where 
-watchtowers of the Great Wall of China are used as signal points. 
-It can be seen as sensors from the broad sense 
-since ancient soldiers lit wood to create smoke and inform others when invaders appear. 
-% Surveilence or tracking cameras surveillance and tracking system, 
+Early intruder detection systems can date back to ancient times, where 
+watchtowers of the Great Wall of China were used as signal points. 
+They can be seen as sensors from the broad sense 
+since ancient soldiers lit wood to create smoke and inform others when they see invaders appear. 
+% Surveillance or tracking cameras surveillance and tracking system, 
 \begin{figure}[ht]
     \centering 
     \begin{subfigure}[b]{0.281\textwidth} 
@@ -32,7 +32,7 @@ since ancient soldiers lit wood to create smoke and inform others when invaders 
         \caption{Watch towers on the great wall} 
         \label{fig:intro-great_wall} 
     \end{subfigure}
-    \caption{Two examples of intrusion detection system}
+    \caption{Two examples of intrusion detection systems}
     \label{fig:intro-IDS}
 \end{figure} 
 
@@ -66,11 +66,13 @@ The deployment of sensors is not limited only to deploying sensors static to the
 A notable example is the advent of self-driving cars.
 On top of those autonomous vehicles, sensor systems are indispensable for obstacle avoidance and interactions between vehicles.
 Tesla (~\ref{fig:intro-tesla}) uses 12 ultrasonic sensors 
-near the front and rear bumper 
-and later changed into a vision system with only cameras 
+near the front and rear bumper, as well as other radars and cameras,
+but later changed into a vision system with only cameras 
 \footnote{\url{https://www.tesla.com/en_eu/support/transitioning-tesla-vision}}. 
 And TuSimple, an autonomous truck company, employs a combination of cameras, radars and lidars 
 for their perception system \footnote{\\\url{https://www.tusimple.com/blogs/tusimple-1000-meter-perception-system}}. 
+The layout of these sensors on an autonomous vehicle is important for reducing blind spots and casualties caused by them,
+% and for budget issues caused by the price of those high-accuracy and long-range sensors.
 
 \begin{figure}[ht] 
     \centering 
@@ -124,7 +126,7 @@ they will be used without explanation in the following chapters.
     \end{itemize}
 \end{definition}
 
-A colloquial way in \cite{vazirani2001approximation} to describe an NP is the class of problems that have ``short and quickly verifiable'' 
+A colloquial way in \cite{vazirani2001approximation} to describe NP is the class of problems that have ``short and quickly verifiable'' 
 Yes certificates.
 % NP-complete problems refers to the class of problems such that every problem in NP can be reduced to it.
 And an NP-hard problem is a problem that every problem in NP can reduce to it.
@@ -298,7 +300,7 @@ the interior of a bus, a subway or an ICU room.
 
 \subsection{Coverage-related problems in computational geometry}
 
-As multi-robot coverage problems, this thesis is intimately connected to Art 
+For tackling multi-sensor coverage, problems studied in this thesis are intimately connected to the Art 
 Gallery problems \cite{o1987art,shermer1992recent}, with origins traceable 
 to half a century ago \cite{klee1969every}. Art Gallery problems assume 
 a visibility-based \cite{lozano1979algorithm} sensing model; in a typical 
@@ -318,7 +320,7 @@ account on Art Gallery, packing, and covering, see Chapters 2, 3, and 33 of
 \cite{toth2017handbook}. Despite the existence of a large body of literature 
 performing extensive studies on these intriguing computational geometry 
 problems, these types of research mostly address domains that are 2D and 
-higher
+higher.
 
 
 
@@ -354,11 +356,11 @@ well-studied art gallery problems \cite{o1987art,shermer1992recent}.
 \subsection{Sensor Networks}
 Problems studied in this work can be seen as variants or generalizations of the barrier coverage problem in the area of sensor networks.
 The concept of barrier coverage originates from \cite{gage1992command}, together with the blanket and sweep coverage. 
-In \cite{kumar2005barrier}, $k$-barrier was studied. 
-In \cite{kloder2007barrier}, the authors solved the min-distance barrier coverage problem optimally under non-trivial environment to minimize the total length of the barriers between two groups of polygonal objects. 
-To tackle the proposed problem, a novel and efficient network-flow based method is applied. 
+In a seminal work \cite{kumar2005barrier}, the $k$-barrier problem was formulated and various probabilistic models were studied. 
+In \cite{kloder2007barrier}, the authors solved the min-distance barrier coverage problem optimally under a non-trivial environment to minimize the total length of the barriers between two groups of polygonal objects. 
+To tackle the proposed problem, a novel and efficient network-flow-based method is applied. 
 Multiple groups of objects are tackled in \cite{abrahamsen2020geometric}.
-The following work \cite{kloder2008thesis} includes a similar problem formation to the problem studied in this chapter, where the objective is minimizing the number of fixed-length line segments used. 
+The following work \cite{kloder2008thesis} includes a similar problem formation to the problem studied in ~\ref{ch:bf}, where the objective is minimizing the number of fixed-length line segments used. 
 
 \subsection{Multi-robot coordination} 
 Our work draws inspiration from a long line of multi-robot coverage planning and 
@@ -391,12 +393,12 @@ systems research \cite{arai2002advances,gerkey2004formal,ren2008distributed,bull
 our study is closely related to {\em formation control}, e.g., 
 \cite{ando1999distributed,jadbabaie2003coordination,olfati2004consensus,ren2005consensus,cheng2008almost,mesbahi2010graph,yu2012rendezvous},
 where the goal is to achieve certain {\em distributions} through 
-continuous (often, local sensing based) interactions among the 
+continuous (often, local sensing-based) interactions among the 
 agents or robots. Depending on the particular setting, the 
 distribution in question may be spatial, e.g., rendezvous
 \cite{ando1999distributed,yu2012rendezvous}, or maybe an agreement 
 in agent velocity is sought \cite{jadbabaie2003coordination,ren2005consensus}. 
-In these studies, the resulting formation often have some 
+In these studies, the resulting formations often have some 
 degree-of-freedoms left unspecified. For example, rendezvous 
 results \cite{ando1999distributed,yu2012rendezvous} often come 
 with exponential convergence guarantee, but the location of

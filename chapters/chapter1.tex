@@ -131,7 +131,7 @@ Yes certificates.
 % NP-complete problems refers to the class of problems such that every problem in NP can be reduced to it.
 And an NP-hard problem is a problem that every problem in NP can reduce to it.
 Typically, when we call an optimization problem NP-hard, it means the decision version of it is NP-hard.
-\subsection{Integer programming}
+\subsection{Integer Programming}
 Since most natural optimization problems are NP-hard, mathematical programming tools are often 
 used for solving the problem for its generality and efficiency. Essentially, they take in
 some mathematical models including a set of integral variables $x_1, \dots, x_n$ and a set of constraints,
@@ -153,7 +153,7 @@ Modern tools, even in the open-source branch, are pretty mature and developed, a
 While work like \cite{deits2014footstep} in bipedal robot footstep planning and \cite{guo2021spatial} in multi-robot path planning 
 seek performance improvement by constructing different instance formulations.
 
-\subsection{Approximation algorithm}
+\subsection{Approximation Algorithm}
 For an optimization problem $\Pi$, OPT($\Pi$), or sometimes OPT, 
 denotes the optimal solution of the problem instance. An $(1+\alpha)$-OPT or a $(1+\alpha)$-optimal solution refers
 to a solution with an objective value of $(1+\alpha)$OPT for a minimization objective. For the maximization objective,
@@ -169,7 +169,7 @@ Now we give the definition of PTAS and FPTAS.
     Given any $\varepsilon>0$, if an algorithm $\mathcal A$ runs in polynomial time to the input length and $1/\varepsilon$. 
     Then if $\mathcal A$ gives a $(1+\varepsilon)$-OPT solution, the algorithm is called FPTAS.
 \end{definition}
-\section{Problems Studied in the Dissertation}
+\section{Problems Studied}
 In this section, we provide an overview of the problems studied in the later chapters, 
 where each chapter is independent and self-contained. 
 
@@ -301,7 +301,7 @@ the interior of a bus, a subway or an ICU room.
 
 % On the other hand, 
 
-\subsection{Coverage-related problems in computational geometry}
+\subsection{Coverage Problems in Computational Geometry}
 
 For tackling multi-sensor coverage, problems studied in this thesis are intimately connected to the Art 
 Gallery problems \cite{o1987art,shermer1992recent}, with origins traceable 
@@ -365,7 +365,7 @@ To tackle the proposed problem, a novel and efficient network-flow-based method 
 Multiple groups of objects are tackled in \cite{abrahamsen2020geometric}.
 The following work \cite{kloder2008thesis} includes a similar problem formation to the problem studied in ~\ref{ch:bf}, where the objective is minimizing the number of fixed-length line segments used. 
 
-\subsection{Multi-robot coordination} 
+\subsection{Multi-robot Coordination} 
 Our work draws inspiration from a long line of multi-robot coverage planning and 
 control research, e.g., \cite{cortes2004coverage,martinez2007motion,
 schwager2009optimal,pavone2009equitable,schwager2009decentralized,
@@ -417,7 +417,7 @@ robots and the target locations (e.g., deciding a {\em matching}) and
 then plan (possibly collision-free) trajectories for the robots to reach 
 their respective assigned targets \cite{turpin2014goal,turpin2014capt,SolYu15}.  
 
-\subsection{Search and rescue}
+\subsection{Search and Rescue}
 The study of the dynamic coverage in this dissertation draws inspiration from the study of several 
 lines of related problems. 
 The Graph-Clear problem, formulated in \cite{kolling2007graph}, tasks a group of robots to search and clear an environment with the operations of blocking and clearing.

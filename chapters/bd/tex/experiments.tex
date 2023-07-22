@@ -24,7 +24,7 @@ The results on computational time and interception rate are given in Figs.~\ref{
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=.5\linewidth]{chapters/bd/fig/timecost-v.png}
+    \includegraphics[width=.7\linewidth]{chapters/bd/fig/timecost.pdf}
     \caption[Computation time for DP, ILP and \ours]{Computation time in seconds ($y$-axis) for dynamic programming (DP), integer linear programming (ILP) and \ours for 2 to 7 defenders and up to 400 attack events ($x$-axis). DP quickly becomes intractable as the number of defenders goes beyond $3$; ILP is about 2-3 magnitudes slower than \ours.}
     \label{fig:bd-time_cost}
 \end{figure}
@@ -33,7 +33,7 @@ The results on computational time and interception rate are given in Figs.~\ref{
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=.5\linewidth]{chapters/bd/fig/quality-v.png}
+    \includegraphics[width=.7\linewidth]{chapters/bd/fig/quality.pdf}
     \caption[Solution quality for DP, ILP and \ours]{Solution quality (interception rate) for dynamic programming (DP), integer linear programming (ILP) and \ours  for 2 to 7 defenders. For all settings, \ours achieves optimality nearly identical to the optimal DP and ILP (when DP and ILP can complete the computation). ILP starts to fail as the number of defenders reaches $5$ and the number of events exceeds $300$.}
     \label{fig:bd-quality}
 \end{figure}
@@ -63,7 +63,7 @@ and interception rate, each data point is the average of 20 runs.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=.5\linewidth]{chapters/bd/fig/def_timecost-v.png}
+    \includegraphics[width=.7\linewidth]{chapters/bd/fig/def_timecost.pdf}
     \caption[Computation time in seconds for ILP and EDP algorithms]{Computation time in seconds for ILP and EDP algorithms for $5$ to $30$ defenders and up to $200$ 
     attack events (Limit the number of events because as shown in ~\ref{fig:bd-time_cost}, 
     more events will effectively cripple ILP). \ours consistently demonstrates 1-2 magnitudes faster computation time compared with ILP.}
@@ -72,7 +72,7 @@ and interception rate, each data point is the average of 20 runs.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=.5\linewidth]{chapters/bd/fig/def_quality-v.png}
+    \includegraphics[width=.7\linewidth]{chapters/bd/fig/def_quality.pdf}
     \caption[Solution quality (interception rate) for the ILP and EDP]{Solution quality (interception rate) for the ILP and EDP for 5 to 30 defenders. 
     It is straightforward to observe that \ours achieves defending quality nearly identical to the optimal ILP solution (while ILP is still scalable).}
     \label{fig:bd-def_quality}
@@ -166,9 +166,9 @@ Lastly, in ~\ref{fig:bd-solution_examples}, we provide the interception trajecto
 \begin{figure}[h!]
     \vspace{1mm}
     \centering
-    \includegraphics[width=.5\linewidth]{chapters/bd/fig/ilp_example-v.png}
-    \includegraphics[width=.5\linewidth]{chapters/bd/fig/ls_example-v.png}
-    \includegraphics[width=.5\linewidth]{chapters/bd/fig/inf_horizon_example-v.png}
+    \includegraphics[width=.3\linewidth]{chapters/bd/fig/ilp_example.png}
+    \includegraphics[width=.3\linewidth]{chapters/bd/fig/ls_example.png}
+    \includegraphics[width=.3\linewidth]{chapters/bd/fig/inf_horizon_example.png}
     \caption[The results computed by ILP, \ours, and online \ours]
     {The results computed by ILP, \ours, and online \ours with a horizon of 60, for a sequence of 140 attacks ($x$-axis is the location, $y$-axis is the time of attacks). 
     The number of captured attack events is 71, 70, and 67, respectively.}

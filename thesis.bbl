@@ -121,7 +121,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{International Business Machines Corporation}
       \field{number}{53}
-      \field{title}{V12. 1: User’s Manual for CPLEX}
+      \field{title}{V12. 1: User's Manual for CPLEX}
       \field{volume}{46}
       \field{year}{2009}
       \field{pages}{157}
@@ -1450,8 +1450,8 @@
     \endentry
     \entry{martinez2007motion}{article}{}
       \name{author}{3}{}{%
-        {{hash=9d9099f76526a9cc4407208d34341a69}{%
-           family={Mart{ı́}nez},
+        {{hash=171010f5580394355b525842c335b044}{%
+           family={Mart{í}nez},
            familyi={M\bibinitperiod},
            given={Sonia},
            giveni={S\bibinitperiod}}}%
@@ -1469,12 +1469,12 @@
       \list{publisher}{1}{%
         {IEEE}%
       }
-      \strng{namehash}{148d0c028409876b72514f27ced73c8f}
-      \strng{fullhash}{148d0c028409876b72514f27ced73c8f}
-      \strng{bibnamehash}{148d0c028409876b72514f27ced73c8f}
-      \strng{authorbibnamehash}{148d0c028409876b72514f27ced73c8f}
-      \strng{authornamehash}{148d0c028409876b72514f27ced73c8f}
-      \strng{authorfullhash}{148d0c028409876b72514f27ced73c8f}
+      \strng{namehash}{7946190f79a4a589643380490650ac82}
+      \strng{fullhash}{7946190f79a4a589643380490650ac82}
+      \strng{bibnamehash}{7946190f79a4a589643380490650ac82}
+      \strng{authorbibnamehash}{7946190f79a4a589643380490650ac82}
+      \strng{authornamehash}{7946190f79a4a589643380490650ac82}
+      \strng{authorfullhash}{7946190f79a4a589643380490650ac82}
       \field{sortinit}{4}
       \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
@@ -2613,7 +2613,7 @@
         {{hash=377bcd6f2982c2fd692ac0309cc15e47}{%
            family={Correia\bibnamedelima Marques},
            familyi={C\bibinitperiod\bibinitdelim M\bibinitperiod},
-           given={João\bibnamedelima Marcos},
+           given={Jo{ã}o\bibnamedelima Marcos},
            giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
         {{hash=36b2f38f736518c0f6d6ca88ec70384d}{%
            family={Ramalingam},
@@ -3535,7 +3535,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Acta Math.}
-      \field{title}{Die Theorie der regulären graphs}
+      \field{title}{Die Theorie der regul{ä}ren graphs}
       \field{volume}{15}
       \field{year}{1891}
       \field{pages}{193\bibrangedash 220}

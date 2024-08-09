@@ -1,4 +1,4 @@
-### Install Latex on Ubuntu Desktiop
+### Install Latex at a Linux Distribution (Ubuntu for example)
 First, install the following packages
 ```
 $ sudo apt-get install texlive texlive-formats-extra texlive-bibtex-extra biber texlive-science
